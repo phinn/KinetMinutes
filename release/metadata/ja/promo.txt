@@ -1,0 +1,1 @@
+会議を検知して自動録音、終了と同時に構造化議事録(要約・決定事項・アクション)を生成。文字起こしもAI要約も完全オフライン。Zoom、Teams、Tencent Meeting、Lark、DingTalk に対応。

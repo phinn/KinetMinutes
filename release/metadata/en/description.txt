@@ -1,0 +1,45 @@
+KinetMinutes turns your meetings into structured notes — automatically, privately, and entirely on your Mac.
+
+DETECT · RECORD · NOTES
+Start a call in Zoom, Tencent Meeting, Teams, Feishu (Lark), DingTalk, Discord or Webex and KinetMinutes starts recording. When the meeting ends, local AI generates your notes: a clear summary, agreed decisions, and action items with owners. No "Save transcript" clicking. No uploading.
+
+BUILT FOR PRIVACY
+• 100% on-device: transcription (Whisper) and AI summarization run locally
+• Zero network calls for your audio and notes — works fully offline
+• Audio, transcripts and notes stay in your library; delete everything anytime
+• Perfect for HR interviews, client negotiations, legal and strategy meetings
+
+NOTES, NOT RAW TRANSCRIPTS
+• Summary — the meeting in a few sentences
+• Decisions — what was actually agreed
+• Action items — tasks with owners and due dates
+• Timeline — timestamped key moments, click to the exact point
+• Full transcript when you need every word
+
+CHINESE-FIRST AI
+Optimized for Mandarin + English code-switching, the gap global tools leave open. Whisper models download once and run offline.
+
+MEETING LIBRARY
+Every meeting is searchable across notes and transcripts (full-text search). Rename, tag by source app, and export:
+
+FREE PLAN
+• Base transcription model
+• 5 AI notes per month
+• TXT / SRT export
+
+PRO (one-time purchase, no subscription)
+• Large + Turbo transcription models
+• Unlimited AI notes
+• Markdown export (Notion / Obsidian friendly)
+• Priority support
+
+MENU BAR NATIVE
+Lives in your menu bar. Launch-at-login optional. Native macOS design — no Electron, no browser engine.
+
+WHO IT'S FOR
+• Consultants, sales and customer success who send notes to their teams
+• Managers running weekly syncs and 1:1s
+• HR and interviewers who cannot risk cloud recording
+• Journalists and researchers
+
+Your meetings are yours. KinetMinutes keeps it that way.

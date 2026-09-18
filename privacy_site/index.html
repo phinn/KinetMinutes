@@ -1,0 +1,117 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>KinetMinutes — Local AI Meeting Notes</title>
+<style>
+  :root { color-scheme: light dark; }
+  * { margin: 0; padding: 0; box-sizing: border-box; }
+  body { font-family: -apple-system, "PingFang SC", "Hiragino Sans", "Microsoft YaHei", sans-serif;
+         background: radial-gradient(1200px 600px at 70% -10%, #1a2b52 0%, #0d0f1a 55%);
+         color: #e8eaf2; min-height: 100vh; }
+  .wrap { max-width: 900px; margin: 0 auto; padding: 90px 24px 60px; }
+  .badge { display: inline-block; background: rgba(44,99,246,.15); color: #7fa8ff; border: 1px solid rgba(44,99,246,.4);
+           border-radius: 20px; padding: 5px 16px; font-size: 13px; margin-bottom: 26px; }
+  h1 { font-size: 46px; line-height: 1.2; margin-bottom: 18px; }
+  h1 em { font-style: normal; background: linear-gradient(90deg, #6ec6ff, #b48cff); -webkit-background-clip: text;
+          background-clip: text; color: transparent; }
+  .tag { font-size: 19px; color: #aab3c7; margin-bottom: 40px; }
+  .grid { display: grid; grid-template-columns: repeat(auto-fit, minmax(240px, 1fr)); gap: 16px; margin: 40px 0; }
+  .card { background: rgba(21,24,39,.85); border: 1px solid #262b3f; border-radius: 16px; padding: 24px; }
+  .card h3 { font-size: 16px; margin-bottom: 8px; color: #fff; }
+  .card p { font-size: 14px; color: #9aa3b8; line-height: 1.7; }
+  .cta { display: inline-block; background: #2c63f6; color: #fff; border-radius: 12px; padding: 14px 34px;
+         font-size: 16px; text-decoration: none; margin: 20px 0 8px; }
+  .cta:hover { background: #1e51e0; }
+  .store { color: #8a93ab; font-size: 13px; margin-bottom: 40px; }
+  .links a { color: #7fa8ff; text-decoration: none; margin-right: 22px; font-size: 14px; }
+  footer { margin-top: 80px; color: #6b7386; font-size: 13px; }
+  section[data-lang] { display: none; }
+  section[data-lang].show { display: block; }
+  .langbar { position: fixed; top: 18px; right: 22px; display: flex; gap: 8px; z-index: 10; }
+  .langbar button { background: rgba(28,32,51,.9); color: #aab2c8; border: 1px solid #2c3149; border-radius: 18px;
+                    padding: 6px 14px; cursor: pointer; font-size: 13px; }
+  .langbar button.on { background: #2c63f6; color: #fff; border-color: #2c63f6; }
+</style>
+</head>
+<body>
+<div class="langbar">
+  <button data-l="en" class="on">EN</button>
+  <button data-l="zh-Hans">简体</button>
+  <button data-l="zh-Hant">繁體</button>
+  <button data-l="ja">日本語</button>
+</div>
+<div class="wrap">
+
+<section data-lang="en" class="show">
+  <div class="badge">macOS · Menu bar · Local AI</div>
+  <h1>Meeting notes,<br>written <em>while you talk</em>.</h1>
+  <div class="tag">KinetMinutes detects your meetings, records, and writes structured notes — summary, decisions, action items — fully offline. Your voice never leaves your Mac.</div>
+  <div class="grid">
+    <div class="card"><h3>🔒 Zero upload</h3><p>On-device Whisper transcription + local AI summarization. Works with the network off. Built for HR interviews, client negotiations, strategy meetings.</p></div>
+    <div class="card"><h3>📝 Notes, not transcripts</h3><p>Summary, agreed decisions, action items with owners, and a timestamped timeline. Click any line to the exact moment.</p></div>
+    <div class="card"><h3>🇨🇳 Chinese-first</h3><p>Deep optimization for Mandarin + English code-switching. Works with Zoom, Tencent Meeting, Teams, Feishu, DingTalk.</p></div>
+    <div class="card"><h3>🔍 Searchable library</h3><p>Full-text search across all notes and transcripts. Export Markdown / TXT / SRT — Notion & Obsidian friendly.</p></div>
+  </div>
+  <a class="cta" href="https://apps.apple.com/">Download on the Mac App Store</a>
+  <div class="store">Free to start · Pro one-time purchase, no subscription</div>
+  <div class="links"><a href="privacy.html">Privacy Policy</a></div>
+</section>
+
+<section data-lang="zh-Hans">
+  <div class="badge">macOS · 菜单栏 · 本地 AI</div>
+  <h1>你只管开会,<br><em>纪要它来写</em>。</h1>
+  <div class="tag">KinetMinutes 检测到会议自动开录,散会即得结构化纪要:摘要、决议、待办(含负责人)。全部本地运行,声音不出你的 Mac。</div>
+  <div class="grid">
+    <div class="card"><h3>🔒 零上传</h3><p>端侧 Whisper 转写 + 本地 AI 总结,断网可用。HR 面谈、客户谈判、战略会的放心之选。</p></div>
+    <div class="card"><h3>📝 纪要,不是逐字稿</h3><p>摘要、决议、带负责人的待办、带时间戳的时间线。点击任意条目直达原声。</p></div>
+    <div class="card"><h3>🇨🇳 中文优先</h3><p>针对普通话 + 中英混说深度优化。支持 Zoom、腾讯会议、Teams、飞书、钉钉。</p></div>
+    <div class="card"><h3>🔍 会议库全文搜索</h3><p>纪要+逐字稿全文搜索,导出 Markdown / TXT / SRT,兼容 Notion 与 Obsidian。</p></div>
+  </div>
+  <a class="cta" href="https://apps.apple.com/">在 Mac App Store 下载</a>
+  <div class="store">免费开始 · Pro 一次性买断,无订阅</div>
+  <div class="links"><a href="privacy.html">隐私政策</a></div>
+</section>
+
+<section data-lang="zh-Hant">
+  <div class="badge">macOS · 選單列 · 本地 AI</div>
+  <h1>你只管開會,<br><em>紀要它來寫</em>。</h1>
+  <div class="tag">KinetMinutes 偵測到會議自動開錄,散會即得結構化紀要:摘要、決議、待辦(含負責人)。全部本機執行,聲音不出你的 Mac。</div>
+  <div class="grid">
+    <div class="card"><h3>🔒 零上傳</h3><p>端側 Whisper 轉寫 + 本地 AI 總結,斷網可用。</p></div>
+    <div class="card"><h3>📝 紀要,不是逐字稿</h3><p>摘要、決議、帶負責人的待辦、帶時間戳的時間軸。</p></div>
+    <div class="card"><h3>🈶 中文優先</h3><p>針對普通話 + 中英混說深度優化。支援 Zoom、騰訊會議、Teams、飛書、釘釘。</p></div>
+    <div class="card"><h3>🔍 會議庫全文搜尋</h3><p>紀要+逐字稿全文搜尋,匯出 Markdown / TXT / SRT。</p></div>
+  </div>
+  <a class="cta" href="https://apps.apple.com/">在 Mac App Store 下載</a>
+  <div class="store">免費開始 · Pro 一次性買斷,無訂閱</div>
+  <div class="links"><a href="privacy.html">隱私政策</a></div>
+</section>
+
+<section data-lang="ja">
+  <div class="badge">macOS · メニューバー · ローカル AI</div>
+  <h1>会議に集中する。<br><em>議事録は AI が書く</em>。</h1>
+  <div class="tag">KinetMinutes は会議を検知して自動録音、終了と同時に構造化議事録(要約・決定事項・アクション)を生成。完全オフライン、音声はこの Mac から出ません。</div>
+  <div class="grid">
+    <div class="card"><h3>🔒 ゼロ送信</h3><p>オンデバイス Whisper + ローカル AI。オフラインで完全動作。面談・商談に。</p></div>
+    <div class="card"><h3>📝 議事録,not 文字起こし</h3><p>要約・決定事項・担当者付きアクション・タイムスタンプ付きタイムライン。</p></div>
+    <div class="card"><h3>🌐 会議アプリ対応</h3><p>Zoom、Tencent Meeting、Teams、Lark、DingTalk。</p></div>
+    <div class="card"><h3>🔍 全文検索</h3><p>議事録と文字起こしを全文検索。Markdown / TXT / SRT 書き出し。</p></div>
+  </div>
+  <a class="cta" href="https://apps.apple.com/">Mac App Store でダウンロード</a>
+  <div class="store">無料で開始 · Pro は買い切り</div>
+  <div class="links"><a href="privacy.html">プライバシーポリシー</a></div>
+</section>
+
+<footer>© 2026 Kinet · phinn@kinet.app</footer>
+</div>
+<script>
+  document.querySelectorAll('.langbar button').forEach(b => b.onclick = () => {
+    document.querySelectorAll('.langbar button').forEach(x => x.classList.remove('on'));
+    b.classList.add('on');
+    document.querySelectorAll('section[data-lang]').forEach(s => s.classList.toggle('show', s.dataset.lang === b.dataset.l));
+  });
+</script>
+</body>
+</html>

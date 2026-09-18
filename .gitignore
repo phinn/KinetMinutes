@@ -1,0 +1,3 @@
+.kinet-snapshots/
+*.xcodeproj
+.DS_Store

@@ -10,7 +10,7 @@ final class LibraryWindowController: NSWindowController, NSWindowDelegate {
     private var privacyPane: PrivacyPane!
 
     convenience init() {
-        let win = NSWindow(contentRect: NSRect(x: 0, y: 0, width: 980, height: 640),
+        let win = NSWindow(contentRect: NSRect(x: 0, y: 0, width: 1280, height: 800),
                            styleMask: [.titled, .closable, .resizable, .miniaturizable],
                            backing: .buffered, defer: false)
         win.title = L10n.string("Meeting Library")
@@ -41,7 +41,7 @@ final class LibraryWindowController: NSWindowController, NSWindowDelegate {
 
     private func buildUI() {
         guard let win = window else { return }
-        let content = NSView(frame: NSRect(x: 0, y: 0, width: 980, height: 640))
+        let content = NSView(frame: NSRect(x: 0, y: 0, width: 1280, height: 800))
         win.contentView = content
         split = NSSplitView()
         split.isVertical = true
@@ -97,7 +97,7 @@ final class LibraryWindowController: NSWindowController, NSWindowDelegate {
 
         // Frame-based layout: split fills content, left pane pinned at 300.
         // (Constraint-based pinning made NSWindow shrink to fit the panes — known trap.)
-        split.frame = NSRect(x: 0, y: 0, width: 980, height: 640)
+        split.frame = NSRect(x: 0, y: 0, width: 1280, height: 800)
         split.autoresizingMask = [.width, .height]
         split.setPosition(300, ofDividerAt: 0)
         DispatchQueue.main.async { self.split.setPosition(300, ofDividerAt: 0) }

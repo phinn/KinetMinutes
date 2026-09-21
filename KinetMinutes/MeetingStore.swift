@@ -221,6 +221,59 @@ final class MeetingStore {
         return out
     }
 
+    // MARK: - Demo seed
+
+    /// 首次启动插入一条完整 demo meeting,保证审核员无模型/无会议时也能立刻看到全流程产出。
+    /// 只 seed 一次(UserDefaults 标记),幂等。
+    func seedDemoMeetingIfNeeded() {
+        let flag = "seededDemoMeeting_v1"
+        guard !UserDefaults.standard.bool(forKey: flag) else { return }
+        queue.sync {
+            let df = DateFormatter()
+            df.dateFormat = "yyyy-MM-dd HH:mm"
+            let start = Date().addingTimeInterval(-3600)
+            let m = Meeting(
+                title: L10n.string("Weekly Product Sync"),
+                sourceApp: "Demo",
+                startedAt: start,
+                endedAt: start.addingTimeInterval(1800),
+                durationSeconds: 1800,
+                audioPath: nil,
+                transcript: """
+                [00:00] Phinn: Let's start with the sprint review. The local transcription pipeline hit 92% accuracy on our test set.
+                [02:30] Maya: Great. For the next sprint, I'll own the speaker-diarization experiment.
+                [05:10] Phinn: Decision: we ship v1.0 with single-speaker mode and keep diarization behind a flag.
+                [08:45] Ken: I'll draft the App Store screenshots by Friday, and Maya reviews the privacy copy.
+                [12:20] Phinn: Action items are logged. Meeting adjourned.
+                """,
+                summary: L10n.string("The team reviewed the sprint and agreed to ship v1.0 with single-speaker transcription; diarization stays behind a feature flag. This is a sample meeting pre-loaded so you can explore notes, decisions and action items before your first recording."),
+                decisionsJSON: "[\"Ship v1.0 with single-speaker mode; diarization behind a flag\",\"Keep on-device-only processing as the default\"]",
+                actionsJSON: "[{\"owner\":\"Maya\",\"task\":\"Run speaker-diarization experiment\",\"due\":\"Next sprint\"},{\"owner\":\"Ken\",\"task\":\"Draft App Store screenshots\",\"due\":\"Friday\"}]",
+                status: "ready",
+                segmentsJSON: "[{\"start\":0,\"end\":14,\"text\":\"Let's start with the sprint review. The local transcription pipeline hit 92% accuracy on our test set.\"},{\"start\":150,\"end\":186,\"text\":\"For the next sprint, I'll own the speaker-diarization experiment.\"},{\"start\":310,\"end\":352,\"text\":\"Decision: we ship v1.0 with single-speaker mode and keep diarization behind a flag.\"},{\"start\":525,\"end\":560,\"text\":\"I'll draft the App Store screenshots by Friday, and Maya reviews the privacy copy.\"}]"
+            )
+            var stmt: OpaquePointer?
+            sqlite3_prepare_v2(db, """
+                INSERT INTO meetings (title, source_app, started_at, ended_at, duration, status, summary, decisions_json, actions_json, transcript, segments_json)
+                VALUES (?,?,?,?,?,?,?,?,?,?,?)
+                """, -1, &stmt, nil)
+            bind(stmt, 1, m.title)
+            bind(stmt, 2, m.sourceApp)
+            sqlite3_bind_double(stmt, 3, m.startedAt.timeIntervalSince1970)
+            sqlite3_bind_double(stmt, 4, m.endedAt!.timeIntervalSince1970)
+            sqlite3_bind_double(stmt, 5, m.durationSeconds)
+            bind(stmt, 6, m.status)
+            bind(stmt, 7, m.summary)
+            bind(stmt, 8, m.decisionsJSON)
+            bind(stmt, 9, m.actionsJSON)
+            bind(stmt, 10, m.transcript)
+            bind(stmt, 11, m.segmentsJSON)
+            sqlite3_step(stmt); sqlite3_finalize(stmt)
+        }
+        UserDefaults.standard.set(true, forKey: flag)
+        NotificationCenter.default.post(name: .meetingsChanged, object: nil)
+    }
+
     private func defaultTitle() -> String {
         let f = DateFormatter()
         f.dateFormat = "MMM d HH:mm"

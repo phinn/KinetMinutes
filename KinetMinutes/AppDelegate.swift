@@ -21,6 +21,7 @@ final class AppDelegate: NSObject, NSApplicationDelegate {
         NSApp.setActivationPolicy(.accessory)   // menu-bar app
         UNUserNotificationCenter.current().requestAuthorization(options: [.alert, .sound]) { _, _ in }
         store.migrateIfNeeded()
+        store.seedDemoMeetingIfNeeded()   // review notes 承诺的 pre-seeded demo meeting(90 秒复测路径依赖它)
         recorder.onLevelChange = { [weak self] level in self?.updateIcon(recording: self?.recorder.isRecording ?? false, level: level) }
         pipeline.onStateChange = { [weak self] in self?.refreshStatusMenu() }
         buildStatusMenu()

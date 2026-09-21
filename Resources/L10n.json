@@ -54,7 +54,8 @@
     "mic": "Mic",
     "system": "System",
     "Meeting notes": "Meeting notes",
-    "Failed": "Failed"
+    "Failed": "Failed",
+    "Weekly Product Sync": "Weekly Product Sync"
   },
   "zh-Hans": {
     "Standby — no meeting": "待命——未在开会",
@@ -111,7 +112,8 @@
     "mic": "麦克风",
     "system": "系统音频",
     "Meeting notes": "会议纪要",
-    "Failed": "失败"
+    "Failed": "失败",
+    "Weekly Product Sync": "每周产品例会"
   },
   "zh-Hant": {
     "Standby — no meeting": "待命——未在開會",
@@ -168,7 +170,8 @@
     "mic": "麥克風",
     "system": "系統音訊",
     "Meeting notes": "會議紀要",
-    "Failed": "失敗"
+    "Failed": "失敗",
+    "Weekly Product Sync": "每週產品例會"
   },
   "ja": {
     "Standby — no meeting": "待機中 — 会議なし",
@@ -225,6 +228,7 @@
     "mic": "マイク",
     "system": "システム音声",
     "Meeting notes": "議事録",
-    "Failed": "失敗"
+    "Failed": "失敗",
+    "Weekly Product Sync": "週次プロダクト同期"
   }
 }

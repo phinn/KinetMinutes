@@ -1,0 +1,1 @@
+../../InstallationBuildProductsLocation/Applications/KinetMinutes.app

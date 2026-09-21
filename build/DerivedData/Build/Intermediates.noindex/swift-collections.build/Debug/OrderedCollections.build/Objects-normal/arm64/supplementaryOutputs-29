@@ -1,0 +1,44 @@
+{
+  "/Users/phinn/Documents/kinet/KinetMinutes/build/DerivedData/SourcePackages/checkouts/swift-collections/Sources/OrderedCollections/OrderedSet/OrderedSet+Partial SetAlgebra symmetricDifference.swift" : {
+    "const-values" : "/Users/phinn/Documents/kinet/KinetMinutes/build/DerivedData/Build/Intermediates.noindex/swift-collections.build/Debug/OrderedCollections.build/Objects-normal/arm64/OrderedSet+Partial SetAlgebra symmetricDifference.swiftconstvalues",
+    "dependencies" : "/Users/phinn/Documents/kinet/KinetMinutes/build/DerivedData/Build/Intermediates.noindex/swift-collections.build/Debug/OrderedCollections.build/Objects-normal/arm64/OrderedSet+Partial SetAlgebra symmetricDifference.d",
+    "diagnostics" : "/Users/phinn/Documents/kinet/KinetMinutes/build/DerivedData/Build/Intermediates.noindex/swift-collections.build/Debug/OrderedCollections.build/Objects-normal/arm64/OrderedSet+Partial SetAlgebra symmetricDifference.dia",
+    "object" : "/Users/phinn/Documents/kinet/KinetMinutes/build/DerivedData/Build/Intermediates.noindex/swift-collections.build/Debug/OrderedCollections.build/Objects-normal/arm64/OrderedSet+Partial SetAlgebra symmetricDifference.o",
+    "swift-dependencies" : "/Users/phinn/Documents/kinet/KinetMinutes/build/DerivedData/Build/Intermediates.noindex/swift-collections.build/Debug/OrderedCollections.build/Objects-normal/arm64/OrderedSet+Partial SetAlgebra symmetricDifference.swiftdeps"
+  },
+  "/Users/phinn/Documents/kinet/KinetMinutes/build/DerivedData/SourcePackages/checkouts/swift-collections/Sources/OrderedCollections/OrderedSet/OrderedSet+Partial SetAlgebra union.swift" : {
+    "const-values" : "/Users/phinn/Documents/kinet/KinetMinutes/build/DerivedData/Build/Intermediates.noindex/swift-collections.build/Debug/OrderedCollections.build/Objects-normal/arm64/OrderedSet+Partial SetAlgebra union.swiftconstvalues",
+    "dependencies" : "/Users/phinn/Documents/kinet/KinetMinutes/build/DerivedData/Build/Intermediates.noindex/swift-collections.build/Debug/OrderedCollections.build/Objects-normal/arm64/OrderedSet+Partial SetAlgebra union.d",
+    "diagnostics" : "/Users/phinn/Documents/kinet/KinetMinutes/build/DerivedData/Build/Intermediates.noindex/swift-collections.build/Debug/OrderedCollections.build/Objects-normal/arm64/OrderedSet+Partial SetAlgebra union.dia",
+    "object" : "/Users/phinn/Documents/kinet/KinetMinutes/build/DerivedData/Build/Intermediates.noindex/swift-collections.build/Debug/OrderedCollections.build/Objects-normal/arm64/OrderedSet+Partial SetAlgebra union.o",
+    "swift-dependencies" : "/Users/phinn/Documents/kinet/KinetMinutes/build/DerivedData/Build/Intermediates.noindex/swift-collections.build/Debug/OrderedCollections.build/Objects-normal/arm64/OrderedSet+Partial SetAlgebra union.swiftdeps"
+  },
+  "/Users/phinn/Documents/kinet/KinetMinutes/build/DerivedData/SourcePackages/checkouts/swift-collections/Sources/OrderedCollections/OrderedSet/OrderedSet+Partial SetAlgebra+Basics.swift" : {
+    "const-values" : "/Users/phinn/Documents/kinet/KinetMinutes/build/DerivedData/Build/Intermediates.noindex/swift-collections.build/Debug/OrderedCollections.build/Objects-normal/arm64/OrderedSet+Partial SetAlgebra+Basics.swiftconstvalues",
+    "dependencies" : "/Users/phinn/Documents/kinet/KinetMinutes/build/DerivedData/Build/Intermediates.noindex/swift-collections.build/Debug/OrderedCollections.build/Objects-normal/arm64/OrderedSet+Partial SetAlgebra+Basics.d",
+    "diagnostics" : "/Users/phinn/Documents/kinet/KinetMinutes/build/DerivedData/Build/Intermediates.noindex/swift-collections.build/Debug/OrderedCollections.build/Objects-normal/arm64/OrderedSet+Partial SetAlgebra+Basics.dia",
+    "object" : "/Users/phinn/Documents/kinet/KinetMinutes/build/DerivedData/Build/Intermediates.noindex/swift-collections.build/Debug/OrderedCollections.build/Objects-normal/arm64/OrderedSet+Partial SetAlgebra+Basics.o",
+    "swift-dependencies" : "/Users/phinn/Documents/kinet/KinetMinutes/build/DerivedData/Build/Intermediates.noindex/swift-collections.build/Debug/OrderedCollections.build/Objects-normal/arm64/OrderedSet+Partial SetAlgebra+Basics.swiftdeps"
+  },
+  "/Users/phinn/Documents/kinet/KinetMinutes/build/DerivedData/SourcePackages/checkouts/swift-collections/Sources/OrderedCollections/OrderedSet/OrderedSet+RandomAccessCollection.swift" : {
+    "const-values" : "/Users/phinn/Documents/kinet/KinetMinutes/build/DerivedData/Build/Intermediates.noindex/swift-collections.build/Debug/OrderedCollections.build/Objects-normal/arm64/OrderedSet+RandomAccessCollection.swiftconstvalues",
+    "dependencies" : "/Users/phinn/Documents/kinet/KinetMinutes/build/DerivedData/Build/Intermediates.noindex/swift-collections.build/Debug/OrderedCollections.build/Objects-normal/arm64/OrderedSet+RandomAccessCollection.d",
+    "diagnostics" : "/Users/phinn/Documents/kinet/KinetMinutes/build/DerivedData/Build/Intermediates.noindex/swift-collections.build/Debug/OrderedCollections.build/Objects-normal/arm64/OrderedSet+RandomAccessCollection.dia",
+    "object" : "/Users/phinn/Documents/kinet/KinetMinutes/build/DerivedData/Build/Intermediates.noindex/swift-collections.build/Debug/OrderedCollections.build/Objects-normal/arm64/OrderedSet+RandomAccessCollection.o",
+    "swift-dependencies" : "/Users/phinn/Documents/kinet/KinetMinutes/build/DerivedData/Build/Intermediates.noindex/swift-collections.build/Debug/OrderedCollections.build/Objects-normal/arm64/OrderedSet+RandomAccessCollection.swiftdeps"
+  },
+  "/Users/phinn/Documents/kinet/KinetMinutes/build/DerivedData/SourcePackages/checkouts/swift-collections/Sources/OrderedCollections/OrderedSet/OrderedSet+ReserveCapacity.swift" : {
+    "const-values" : "/Users/phinn/Documents/kinet/KinetMinutes/build/DerivedData/Build/Intermediates.noindex/swift-collections.build/Debug/OrderedCollections.build/Objects-normal/arm64/OrderedSet+ReserveCapacity.swiftconstvalues",
+    "dependencies" : "/Users/phinn/Documents/kinet/KinetMinutes/build/DerivedData/Build/Intermediates.noindex/swift-collections.build/Debug/OrderedCollections.build/Objects-normal/arm64/OrderedSet+ReserveCapacity.d",
+    "diagnostics" : "/Users/phinn/Documents/kinet/KinetMinutes/build/DerivedData/Build/Intermediates.noindex/swift-collections.build/Debug/OrderedCollections.build/Objects-normal/arm64/OrderedSet+ReserveCapacity.dia",
+    "object" : "/Users/phinn/Documents/kinet/KinetMinutes/build/DerivedData/Build/Intermediates.noindex/swift-collections.build/Debug/OrderedCollections.build/Objects-normal/arm64/OrderedSet+ReserveCapacity.o",
+    "swift-dependencies" : "/Users/phinn/Documents/kinet/KinetMinutes/build/DerivedData/Build/Intermediates.noindex/swift-collections.build/Debug/OrderedCollections.build/Objects-normal/arm64/OrderedSet+ReserveCapacity.swiftdeps"
+  },
+  "/Users/phinn/Documents/kinet/KinetMinutes/build/DerivedData/SourcePackages/checkouts/swift-collections/Sources/OrderedCollections/OrderedSet/OrderedSet+Sendable.swift" : {
+    "const-values" : "/Users/phinn/Documents/kinet/KinetMinutes/build/DerivedData/Build/Intermediates.noindex/swift-collections.build/Debug/OrderedCollections.build/Objects-normal/arm64/OrderedSet+Sendable.swiftconstvalues",
+    "dependencies" : "/Users/phinn/Documents/kinet/KinetMinutes/build/DerivedData/Build/Intermediates.noindex/swift-collections.build/Debug/OrderedCollections.build/Objects-normal/arm64/OrderedSet+Sendable.d",
+    "diagnostics" : "/Users/phinn/Documents/kinet/KinetMinutes/build/DerivedData/Build/Intermediates.noindex/swift-collections.build/Debug/OrderedCollections.build/Objects-normal/arm64/OrderedSet+Sendable.dia",
+    "object" : "/Users/phinn/Documents/kinet/KinetMinutes/build/DerivedData/Build/Intermediates.noindex/swift-collections.build/Debug/OrderedCollections.build/Objects-normal/arm64/OrderedSet+Sendable.o",
+    "swift-dependencies" : "/Users/phinn/Documents/kinet/KinetMinutes/build/DerivedData/Build/Intermediates.noindex/swift-collections.build/Debug/OrderedCollections.build/Objects-normal/arm64/OrderedSet+Sendable.swiftdeps"
+  }
+}

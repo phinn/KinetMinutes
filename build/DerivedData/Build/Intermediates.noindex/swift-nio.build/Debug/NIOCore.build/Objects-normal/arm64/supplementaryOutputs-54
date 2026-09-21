@@ -1,0 +1,51 @@
+{
+  "/Users/phinn/Documents/kinet/KinetMinutes/build/DerivedData/SourcePackages/checkouts/swift-nio/Sources/NIOCore/ChannelHandler.swift" : {
+    "const-values" : "/Users/phinn/Documents/kinet/KinetMinutes/build/DerivedData/Build/Intermediates.noindex/swift-nio.build/Debug/NIOCore.build/Objects-normal/arm64/ChannelHandler.swiftconstvalues",
+    "dependencies" : "/Users/phinn/Documents/kinet/KinetMinutes/build/DerivedData/Build/Intermediates.noindex/swift-nio.build/Debug/NIOCore.build/Objects-normal/arm64/ChannelHandler.d",
+    "diagnostics" : "/Users/phinn/Documents/kinet/KinetMinutes/build/DerivedData/Build/Intermediates.noindex/swift-nio.build/Debug/NIOCore.build/Objects-normal/arm64/ChannelHandler.dia",
+    "object" : "/Users/phinn/Documents/kinet/KinetMinutes/build/DerivedData/Build/Intermediates.noindex/swift-nio.build/Debug/NIOCore.build/Objects-normal/arm64/ChannelHandler.o",
+    "swift-dependencies" : "/Users/phinn/Documents/kinet/KinetMinutes/build/DerivedData/Build/Intermediates.noindex/swift-nio.build/Debug/NIOCore.build/Objects-normal/arm64/ChannelHandler.swiftdeps"
+  },
+  "/Users/phinn/Documents/kinet/KinetMinutes/build/DerivedData/SourcePackages/checkouts/swift-nio/Sources/NIOCore/ChannelHandlers.swift" : {
+    "const-values" : "/Users/phinn/Documents/kinet/KinetMinutes/build/DerivedData/Build/Intermediates.noindex/swift-nio.build/Debug/NIOCore.build/Objects-normal/arm64/ChannelHandlers.swiftconstvalues",
+    "dependencies" : "/Users/phinn/Documents/kinet/KinetMinutes/build/DerivedData/Build/Intermediates.noindex/swift-nio.build/Debug/NIOCore.build/Objects-normal/arm64/ChannelHandlers.d",
+    "diagnostics" : "/Users/phinn/Documents/kinet/KinetMinutes/build/DerivedData/Build/Intermediates.noindex/swift-nio.build/Debug/NIOCore.build/Objects-normal/arm64/ChannelHandlers.dia",
+    "object" : "/Users/phinn/Documents/kinet/KinetMinutes/build/DerivedData/Build/Intermediates.noindex/swift-nio.build/Debug/NIOCore.build/Objects-normal/arm64/ChannelHandlers.o",
+    "swift-dependencies" : "/Users/phinn/Documents/kinet/KinetMinutes/build/DerivedData/Build/Intermediates.noindex/swift-nio.build/Debug/NIOCore.build/Objects-normal/arm64/ChannelHandlers.swiftdeps"
+  },
+  "/Users/phinn/Documents/kinet/KinetMinutes/build/DerivedData/SourcePackages/checkouts/swift-nio/Sources/NIOCore/ChannelInvoker.swift" : {
+    "const-values" : "/Users/phinn/Documents/kinet/KinetMinutes/build/DerivedData/Build/Intermediates.noindex/swift-nio.build/Debug/NIOCore.build/Objects-normal/arm64/ChannelInvoker.swiftconstvalues",
+    "dependencies" : "/Users/phinn/Documents/kinet/KinetMinutes/build/DerivedData/Build/Intermediates.noindex/swift-nio.build/Debug/NIOCore.build/Objects-normal/arm64/ChannelInvoker.d",
+    "diagnostics" : "/Users/phinn/Documents/kinet/KinetMinutes/build/DerivedData/Build/Intermediates.noindex/swift-nio.build/Debug/NIOCore.build/Objects-normal/arm64/ChannelInvoker.dia",
+    "object" : "/Users/phinn/Documents/kinet/KinetMinutes/build/DerivedData/Build/Intermediates.noindex/swift-nio.build/Debug/NIOCore.build/Objects-normal/arm64/ChannelInvoker.o",
+    "swift-dependencies" : "/Users/phinn/Documents/kinet/KinetMinutes/build/DerivedData/Build/Intermediates.noindex/swift-nio.build/Debug/NIOCore.build/Objects-normal/arm64/ChannelInvoker.swiftdeps"
+  },
+  "/Users/phinn/Documents/kinet/KinetMinutes/build/DerivedData/SourcePackages/checkouts/swift-nio/Sources/NIOCore/ChannelOption.swift" : {
+    "const-values" : "/Users/phinn/Documents/kinet/KinetMinutes/build/DerivedData/Build/Intermediates.noindex/swift-nio.build/Debug/NIOCore.build/Objects-normal/arm64/ChannelOption.swiftconstvalues",
+    "dependencies" : "/Users/phinn/Documents/kinet/KinetMinutes/build/DerivedData/Build/Intermediates.noindex/swift-nio.build/Debug/NIOCore.build/Objects-normal/arm64/ChannelOption.d",
+    "diagnostics" : "/Users/phinn/Documents/kinet/KinetMinutes/build/DerivedData/Build/Intermediates.noindex/swift-nio.build/Debug/NIOCore.build/Objects-normal/arm64/ChannelOption.dia",
+    "object" : "/Users/phinn/Documents/kinet/KinetMinutes/build/DerivedData/Build/Intermediates.noindex/swift-nio.build/Debug/NIOCore.build/Objects-normal/arm64/ChannelOption.o",
+    "swift-dependencies" : "/Users/phinn/Documents/kinet/KinetMinutes/build/DerivedData/Build/Intermediates.noindex/swift-nio.build/Debug/NIOCore.build/Objects-normal/arm64/ChannelOption.swiftdeps"
+  },
+  "/Users/phinn/Documents/kinet/KinetMinutes/build/DerivedData/SourcePackages/checkouts/swift-nio/Sources/NIOCore/ChannelPipeline.swift" : {
+    "const-values" : "/Users/phinn/Documents/kinet/KinetMinutes/build/DerivedData/Build/Intermediates.noindex/swift-nio.build/Debug/NIOCore.build/Objects-normal/arm64/ChannelPipeline.swiftconstvalues",
+    "dependencies" : "/Users/phinn/Documents/kinet/KinetMinutes/build/DerivedData/Build/Intermediates.noindex/swift-nio.build/Debug/NIOCore.build/Objects-normal/arm64/ChannelPipeline.d",
+    "diagnostics" : "/Users/phinn/Documents/kinet/KinetMinutes/build/DerivedData/Build/Intermediates.noindex/swift-nio.build/Debug/NIOCore.build/Objects-normal/arm64/ChannelPipeline.dia",
+    "object" : "/Users/phinn/Documents/kinet/KinetMinutes/build/DerivedData/Build/Intermediates.noindex/swift-nio.build/Debug/NIOCore.build/Objects-normal/arm64/ChannelPipeline.o",
+    "swift-dependencies" : "/Users/phinn/Documents/kinet/KinetMinutes/build/DerivedData/Build/Intermediates.noindex/swift-nio.build/Debug/NIOCore.build/Objects-normal/arm64/ChannelPipeline.swiftdeps"
+  },
+  "/Users/phinn/Documents/kinet/KinetMinutes/build/DerivedData/SourcePackages/checkouts/swift-nio/Sources/NIOCore/CircularBuffer.swift" : {
+    "const-values" : "/Users/phinn/Documents/kinet/KinetMinutes/build/DerivedData/Build/Intermediates.noindex/swift-nio.build/Debug/NIOCore.build/Objects-normal/arm64/CircularBuffer.swiftconstvalues",
+    "dependencies" : "/Users/phinn/Documents/kinet/KinetMinutes/build/DerivedData/Build/Intermediates.noindex/swift-nio.build/Debug/NIOCore.build/Objects-normal/arm64/CircularBuffer.d",
+    "diagnostics" : "/Users/phinn/Documents/kinet/KinetMinutes/build/DerivedData/Build/Intermediates.noindex/swift-nio.build/Debug/NIOCore.build/Objects-normal/arm64/CircularBuffer.dia",
+    "object" : "/Users/phinn/Documents/kinet/KinetMinutes/build/DerivedData/Build/Intermediates.noindex/swift-nio.build/Debug/NIOCore.build/Objects-normal/arm64/CircularBuffer.o",
+    "swift-dependencies" : "/Users/phinn/Documents/kinet/KinetMinutes/build/DerivedData/Build/Intermediates.noindex/swift-nio.build/Debug/NIOCore.build/Objects-normal/arm64/CircularBuffer.swiftdeps"
+  },
+  "/Users/phinn/Documents/kinet/KinetMinutes/build/DerivedData/SourcePackages/checkouts/swift-nio/Sources/NIOCore/Codec.swift" : {
+    "const-values" : "/Users/phinn/Documents/kinet/KinetMinutes/build/DerivedData/Build/Intermediates.noindex/swift-nio.build/Debug/NIOCore.build/Objects-normal/arm64/Codec.swiftconstvalues",
+    "dependencies" : "/Users/phinn/Documents/kinet/KinetMinutes/build/DerivedData/Build/Intermediates.noindex/swift-nio.build/Debug/NIOCore.build/Objects-normal/arm64/Codec.d",
+    "diagnostics" : "/Users/phinn/Documents/kinet/KinetMinutes/build/DerivedData/Build/Intermediates.noindex/swift-nio.build/Debug/NIOCore.build/Objects-normal/arm64/Codec.dia",
+    "object" : "/Users/phinn/Documents/kinet/KinetMinutes/build/DerivedData/Build/Intermediates.noindex/swift-nio.build/Debug/NIOCore.build/Objects-normal/arm64/Codec.o",
+    "swift-dependencies" : "/Users/phinn/Documents/kinet/KinetMinutes/build/DerivedData/Build/Intermediates.noindex/swift-nio.build/Debug/NIOCore.build/Objects-normal/arm64/Codec.swiftdeps"
+  }
+}

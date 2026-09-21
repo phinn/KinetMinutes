@@ -1,0 +1,30 @@
+{
+  "/Users/phinn/Documents/kinet/KinetMinutes/build/DerivedData/SourcePackages/checkouts/WhisperKit/Sources/ArgmaxCore/External/Hub/HubApi.swift" : {
+    "const-values" : "/Users/phinn/Documents/kinet/KinetMinutes/build/DerivedData/Build/Intermediates.noindex/argmax-oss-swift.build/Debug/ArgmaxCore.build/Objects-normal/arm64/HubApi.swiftconstvalues",
+    "dependencies" : "/Users/phinn/Documents/kinet/KinetMinutes/build/DerivedData/Build/Intermediates.noindex/argmax-oss-swift.build/Debug/ArgmaxCore.build/Objects-normal/arm64/HubApi.d",
+    "diagnostics" : "/Users/phinn/Documents/kinet/KinetMinutes/build/DerivedData/Build/Intermediates.noindex/argmax-oss-swift.build/Debug/ArgmaxCore.build/Objects-normal/arm64/HubApi.dia",
+    "object" : "/Users/phinn/Documents/kinet/KinetMinutes/build/DerivedData/Build/Intermediates.noindex/argmax-oss-swift.build/Debug/ArgmaxCore.build/Objects-normal/arm64/HubApi.o",
+    "swift-dependencies" : "/Users/phinn/Documents/kinet/KinetMinutes/build/DerivedData/Build/Intermediates.noindex/argmax-oss-swift.build/Debug/ArgmaxCore.build/Objects-normal/arm64/HubApi.swiftdeps"
+  },
+  "/Users/phinn/Documents/kinet/KinetMinutes/build/DerivedData/SourcePackages/checkouts/WhisperKit/Sources/ArgmaxCore/External/Tokenizers/BPETokenizer.swift" : {
+    "const-values" : "/Users/phinn/Documents/kinet/KinetMinutes/build/DerivedData/Build/Intermediates.noindex/argmax-oss-swift.build/Debug/ArgmaxCore.build/Objects-normal/arm64/BPETokenizer.swiftconstvalues",
+    "dependencies" : "/Users/phinn/Documents/kinet/KinetMinutes/build/DerivedData/Build/Intermediates.noindex/argmax-oss-swift.build/Debug/ArgmaxCore.build/Objects-normal/arm64/BPETokenizer.d",
+    "diagnostics" : "/Users/phinn/Documents/kinet/KinetMinutes/build/DerivedData/Build/Intermediates.noindex/argmax-oss-swift.build/Debug/ArgmaxCore.build/Objects-normal/arm64/BPETokenizer.dia",
+    "object" : "/Users/phinn/Documents/kinet/KinetMinutes/build/DerivedData/Build/Intermediates.noindex/argmax-oss-swift.build/Debug/ArgmaxCore.build/Objects-normal/arm64/BPETokenizer.o",
+    "swift-dependencies" : "/Users/phinn/Documents/kinet/KinetMinutes/build/DerivedData/Build/Intermediates.noindex/argmax-oss-swift.build/Debug/ArgmaxCore.build/Objects-normal/arm64/BPETokenizer.swiftdeps"
+  },
+  "/Users/phinn/Documents/kinet/KinetMinutes/build/DerivedData/SourcePackages/checkouts/WhisperKit/Sources/ArgmaxCore/External/Tokenizers/BertTokenizer.swift" : {
+    "const-values" : "/Users/phinn/Documents/kinet/KinetMinutes/build/DerivedData/Build/Intermediates.noindex/argmax-oss-swift.build/Debug/ArgmaxCore.build/Objects-normal/arm64/BertTokenizer.swiftconstvalues",
+    "dependencies" : "/Users/phinn/Documents/kinet/KinetMinutes/build/DerivedData/Build/Intermediates.noindex/argmax-oss-swift.build/Debug/ArgmaxCore.build/Objects-normal/arm64/BertTokenizer.d",
+    "diagnostics" : "/Users/phinn/Documents/kinet/KinetMinutes/build/DerivedData/Build/Intermediates.noindex/argmax-oss-swift.build/Debug/ArgmaxCore.build/Objects-normal/arm64/BertTokenizer.dia",
+    "object" : "/Users/phinn/Documents/kinet/KinetMinutes/build/DerivedData/Build/Intermediates.noindex/argmax-oss-swift.build/Debug/ArgmaxCore.build/Objects-normal/arm64/BertTokenizer.o",
+    "swift-dependencies" : "/Users/phinn/Documents/kinet/KinetMinutes/build/DerivedData/Build/Intermediates.noindex/argmax-oss-swift.build/Debug/ArgmaxCore.build/Objects-normal/arm64/BertTokenizer.swiftdeps"
+  },
+  "/Users/phinn/Documents/kinet/KinetMinutes/build/DerivedData/SourcePackages/checkouts/WhisperKit/Sources/ArgmaxCore/External/Tokenizers/ByteEncoder.swift" : {
+    "const-values" : "/Users/phinn/Documents/kinet/KinetMinutes/build/DerivedData/Build/Intermediates.noindex/argmax-oss-swift.build/Debug/ArgmaxCore.build/Objects-normal/arm64/ByteEncoder.swiftconstvalues",
+    "dependencies" : "/Users/phinn/Documents/kinet/KinetMinutes/build/DerivedData/Build/Intermediates.noindex/argmax-oss-swift.build/Debug/ArgmaxCore.build/Objects-normal/arm64/ByteEncoder.d",
+    "diagnostics" : "/Users/phinn/Documents/kinet/KinetMinutes/build/DerivedData/Build/Intermediates.noindex/argmax-oss-swift.build/Debug/ArgmaxCore.build/Objects-normal/arm64/ByteEncoder.dia",
+    "object" : "/Users/phinn/Documents/kinet/KinetMinutes/build/DerivedData/Build/Intermediates.noindex/argmax-oss-swift.build/Debug/ArgmaxCore.build/Objects-normal/arm64/ByteEncoder.o",
+    "swift-dependencies" : "/Users/phinn/Documents/kinet/KinetMinutes/build/DerivedData/Build/Intermediates.noindex/argmax-oss-swift.build/Debug/ArgmaxCore.build/Objects-normal/arm64/ByteEncoder.swiftdeps"
+  }
+}

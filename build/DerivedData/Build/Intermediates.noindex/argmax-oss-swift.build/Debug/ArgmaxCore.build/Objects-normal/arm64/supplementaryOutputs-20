@@ -1,0 +1,23 @@
+{
+  "/Users/phinn/Documents/kinet/KinetMinutes/build/DerivedData/SourcePackages/checkouts/WhisperKit/Sources/ArgmaxCore/ModelState.swift" : {
+    "const-values" : "/Users/phinn/Documents/kinet/KinetMinutes/build/DerivedData/Build/Intermediates.noindex/argmax-oss-swift.build/Debug/ArgmaxCore.build/Objects-normal/arm64/ModelState.swiftconstvalues",
+    "dependencies" : "/Users/phinn/Documents/kinet/KinetMinutes/build/DerivedData/Build/Intermediates.noindex/argmax-oss-swift.build/Debug/ArgmaxCore.build/Objects-normal/arm64/ModelState.d",
+    "diagnostics" : "/Users/phinn/Documents/kinet/KinetMinutes/build/DerivedData/Build/Intermediates.noindex/argmax-oss-swift.build/Debug/ArgmaxCore.build/Objects-normal/arm64/ModelState.dia",
+    "object" : "/Users/phinn/Documents/kinet/KinetMinutes/build/DerivedData/Build/Intermediates.noindex/argmax-oss-swift.build/Debug/ArgmaxCore.build/Objects-normal/arm64/ModelState.o",
+    "swift-dependencies" : "/Users/phinn/Documents/kinet/KinetMinutes/build/DerivedData/Build/Intermediates.noindex/argmax-oss-swift.build/Debug/ArgmaxCore.build/Objects-normal/arm64/ModelState.swiftdeps"
+  },
+  "/Users/phinn/Documents/kinet/KinetMinutes/build/DerivedData/SourcePackages/checkouts/WhisperKit/Sources/ArgmaxCore/ModelUtilities.swift" : {
+    "const-values" : "/Users/phinn/Documents/kinet/KinetMinutes/build/DerivedData/Build/Intermediates.noindex/argmax-oss-swift.build/Debug/ArgmaxCore.build/Objects-normal/arm64/ModelUtilities.swiftconstvalues",
+    "dependencies" : "/Users/phinn/Documents/kinet/KinetMinutes/build/DerivedData/Build/Intermediates.noindex/argmax-oss-swift.build/Debug/ArgmaxCore.build/Objects-normal/arm64/ModelUtilities.d",
+    "diagnostics" : "/Users/phinn/Documents/kinet/KinetMinutes/build/DerivedData/Build/Intermediates.noindex/argmax-oss-swift.build/Debug/ArgmaxCore.build/Objects-normal/arm64/ModelUtilities.dia",
+    "object" : "/Users/phinn/Documents/kinet/KinetMinutes/build/DerivedData/Build/Intermediates.noindex/argmax-oss-swift.build/Debug/ArgmaxCore.build/Objects-normal/arm64/ModelUtilities.o",
+    "swift-dependencies" : "/Users/phinn/Documents/kinet/KinetMinutes/build/DerivedData/Build/Intermediates.noindex/argmax-oss-swift.build/Debug/ArgmaxCore.build/Objects-normal/arm64/ModelUtilities.swiftdeps"
+  },
+  "/Users/phinn/Documents/kinet/KinetMinutes/build/DerivedData/SourcePackages/checkouts/WhisperKit/Sources/ArgmaxCore/TokenizerWrapper.swift" : {
+    "const-values" : "/Users/phinn/Documents/kinet/KinetMinutes/build/DerivedData/Build/Intermediates.noindex/argmax-oss-swift.build/Debug/ArgmaxCore.build/Objects-normal/arm64/TokenizerWrapper.swiftconstvalues",
+    "dependencies" : "/Users/phinn/Documents/kinet/KinetMinutes/build/DerivedData/Build/Intermediates.noindex/argmax-oss-swift.build/Debug/ArgmaxCore.build/Objects-normal/arm64/TokenizerWrapper.d",
+    "diagnostics" : "/Users/phinn/Documents/kinet/KinetMinutes/build/DerivedData/Build/Intermediates.noindex/argmax-oss-swift.build/Debug/ArgmaxCore.build/Objects-normal/arm64/TokenizerWrapper.dia",
+    "object" : "/Users/phinn/Documents/kinet/KinetMinutes/build/DerivedData/Build/Intermediates.noindex/argmax-oss-swift.build/Debug/ArgmaxCore.build/Objects-normal/arm64/TokenizerWrapper.o",
+    "swift-dependencies" : "/Users/phinn/Documents/kinet/KinetMinutes/build/DerivedData/Build/Intermediates.noindex/argmax-oss-swift.build/Debug/ArgmaxCore.build/Objects-normal/arm64/TokenizerWrapper.swiftdeps"
+  }
+}

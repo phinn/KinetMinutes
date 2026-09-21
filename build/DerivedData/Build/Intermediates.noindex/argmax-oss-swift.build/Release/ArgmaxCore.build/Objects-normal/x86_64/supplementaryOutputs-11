@@ -1,0 +1,12 @@
+{
+  "/Users/phinn/Documents/kinet/KinetMinutes/build/DerivedData/SourcePackages/checkouts/WhisperKit/Sources/ArgmaxCore/ArgmaxCoreError.swift" : {
+    "abi-baseline-json" : "/Users/phinn/Documents/kinet/KinetMinutes/build/DerivedData/Build/Intermediates.noindex/argmax-oss-swift.build/Release/ArgmaxCore.build/Objects-normal/x86_64/ArgmaxCore.abi.json",
+    "const-values" : "/Users/phinn/Documents/kinet/KinetMinutes/build/DerivedData/Build/Intermediates.noindex/argmax-oss-swift.build/Release/ArgmaxCore.build/Objects-normal/x86_64/ArgmaxCore-primary.swiftconstvalues",
+    "dependencies" : "/Users/phinn/Documents/kinet/KinetMinutes/build/DerivedData/Build/Intermediates.noindex/argmax-oss-swift.build/Release/ArgmaxCore.build/Objects-normal/x86_64/ArgmaxCore-primary.d",
+    "diagnostics" : "/Users/phinn/Documents/kinet/KinetMinutes/build/DerivedData/Build/Intermediates.noindex/argmax-oss-swift.build/Release/ArgmaxCore.build/Objects-normal/x86_64/ArgmaxCore-primary.dia",
+    "objc-header" : "/Users/phinn/Documents/kinet/KinetMinutes/build/DerivedData/Build/Intermediates.noindex/argmax-oss-swift.build/Release/ArgmaxCore.build/Objects-normal/x86_64/ArgmaxCore-Swift.h",
+    "swiftdoc" : "/Users/phinn/Documents/kinet/KinetMinutes/build/DerivedData/Build/Intermediates.noindex/argmax-oss-swift.build/Release/ArgmaxCore.build/Objects-normal/x86_64/ArgmaxCore.swiftdoc",
+    "swiftmodule" : "/Users/phinn/Documents/kinet/KinetMinutes/build/DerivedData/Build/Intermediates.noindex/argmax-oss-swift.build/Release/ArgmaxCore.build/Objects-normal/x86_64/ArgmaxCore.swiftmodule",
+    "swiftsourceinfo" : "/Users/phinn/Documents/kinet/KinetMinutes/build/DerivedData/Build/Intermediates.noindex/argmax-oss-swift.build/Release/ArgmaxCore.build/Objects-normal/x86_64/ArgmaxCore.swiftsourceinfo"
+  }
+}

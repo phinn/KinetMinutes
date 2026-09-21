@@ -1,0 +1,23 @@
+{
+  "/Users/phinn/Documents/kinet/KinetMinutes/build/DerivedData/SourcePackages/checkouts/WhisperKit/Sources/WhisperKit/Core/Audio/EnergyVAD.swift" : {
+    "const-values" : "/Users/phinn/Documents/kinet/KinetMinutes/build/DerivedData/Build/Intermediates.noindex/argmax-oss-swift.build/Debug/WhisperKit.build/Objects-normal/arm64/EnergyVAD.swiftconstvalues",
+    "dependencies" : "/Users/phinn/Documents/kinet/KinetMinutes/build/DerivedData/Build/Intermediates.noindex/argmax-oss-swift.build/Debug/WhisperKit.build/Objects-normal/arm64/EnergyVAD.d",
+    "diagnostics" : "/Users/phinn/Documents/kinet/KinetMinutes/build/DerivedData/Build/Intermediates.noindex/argmax-oss-swift.build/Debug/WhisperKit.build/Objects-normal/arm64/EnergyVAD.dia",
+    "object" : "/Users/phinn/Documents/kinet/KinetMinutes/build/DerivedData/Build/Intermediates.noindex/argmax-oss-swift.build/Debug/WhisperKit.build/Objects-normal/arm64/EnergyVAD.o",
+    "swift-dependencies" : "/Users/phinn/Documents/kinet/KinetMinutes/build/DerivedData/Build/Intermediates.noindex/argmax-oss-swift.build/Debug/WhisperKit.build/Objects-normal/arm64/EnergyVAD.swiftdeps"
+  },
+  "/Users/phinn/Documents/kinet/KinetMinutes/build/DerivedData/SourcePackages/checkouts/WhisperKit/Sources/WhisperKit/Core/Audio/VoiceActivityDetector.swift" : {
+    "const-values" : "/Users/phinn/Documents/kinet/KinetMinutes/build/DerivedData/Build/Intermediates.noindex/argmax-oss-swift.build/Debug/WhisperKit.build/Objects-normal/arm64/VoiceActivityDetector.swiftconstvalues",
+    "dependencies" : "/Users/phinn/Documents/kinet/KinetMinutes/build/DerivedData/Build/Intermediates.noindex/argmax-oss-swift.build/Debug/WhisperKit.build/Objects-normal/arm64/VoiceActivityDetector.d",
+    "diagnostics" : "/Users/phinn/Documents/kinet/KinetMinutes/build/DerivedData/Build/Intermediates.noindex/argmax-oss-swift.build/Debug/WhisperKit.build/Objects-normal/arm64/VoiceActivityDetector.dia",
+    "object" : "/Users/phinn/Documents/kinet/KinetMinutes/build/DerivedData/Build/Intermediates.noindex/argmax-oss-swift.build/Debug/WhisperKit.build/Objects-normal/arm64/VoiceActivityDetector.o",
+    "swift-dependencies" : "/Users/phinn/Documents/kinet/KinetMinutes/build/DerivedData/Build/Intermediates.noindex/argmax-oss-swift.build/Debug/WhisperKit.build/Objects-normal/arm64/VoiceActivityDetector.swiftdeps"
+  },
+  "/Users/phinn/Documents/kinet/KinetMinutes/build/DerivedData/SourcePackages/checkouts/WhisperKit/Sources/WhisperKit/Core/AudioEncoder.swift" : {
+    "const-values" : "/Users/phinn/Documents/kinet/KinetMinutes/build/DerivedData/Build/Intermediates.noindex/argmax-oss-swift.build/Debug/WhisperKit.build/Objects-normal/arm64/AudioEncoder.swiftconstvalues",
+    "dependencies" : "/Users/phinn/Documents/kinet/KinetMinutes/build/DerivedData/Build/Intermediates.noindex/argmax-oss-swift.build/Debug/WhisperKit.build/Objects-normal/arm64/AudioEncoder.d",
+    "diagnostics" : "/Users/phinn/Documents/kinet/KinetMinutes/build/DerivedData/Build/Intermediates.noindex/argmax-oss-swift.build/Debug/WhisperKit.build/Objects-normal/arm64/AudioEncoder.dia",
+    "object" : "/Users/phinn/Documents/kinet/KinetMinutes/build/DerivedData/Build/Intermediates.noindex/argmax-oss-swift.build/Debug/WhisperKit.build/Objects-normal/arm64/AudioEncoder.o",
+    "swift-dependencies" : "/Users/phinn/Documents/kinet/KinetMinutes/build/DerivedData/Build/Intermediates.noindex/argmax-oss-swift.build/Debug/WhisperKit.build/Objects-normal/arm64/AudioEncoder.swiftdeps"
+  }
+}

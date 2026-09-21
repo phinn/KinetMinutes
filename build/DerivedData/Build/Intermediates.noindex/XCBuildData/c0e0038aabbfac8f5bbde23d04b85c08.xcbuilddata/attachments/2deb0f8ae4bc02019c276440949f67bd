@@ -1,0 +1,186 @@
+{
+  "" : {
+    "const-values" : "/Users/phinn/Documents/kinet/KinetMinutes/build/DerivedData/Build/Intermediates.noindex/argmax-oss-swift.build/Release/ArgmaxCore.build/Objects-normal/arm64/ArgmaxCore-primary.swiftconstvalues",
+    "dependencies" : "/Users/phinn/Documents/kinet/KinetMinutes/build/DerivedData/Build/Intermediates.noindex/argmax-oss-swift.build/Release/ArgmaxCore.build/Objects-normal/arm64/ArgmaxCore-primary.d",
+    "diagnostics" : "/Users/phinn/Documents/kinet/KinetMinutes/build/DerivedData/Build/Intermediates.noindex/argmax-oss-swift.build/Release/ArgmaxCore.build/Objects-normal/arm64/ArgmaxCore-primary.dia",
+    "emit-module-dependencies" : "/Users/phinn/Documents/kinet/KinetMinutes/build/DerivedData/Build/Intermediates.noindex/argmax-oss-swift.build/Release/ArgmaxCore.build/Objects-normal/arm64/ArgmaxCore-primary-emit-module.d",
+    "emit-module-diagnostics" : "/Users/phinn/Documents/kinet/KinetMinutes/build/DerivedData/Build/Intermediates.noindex/argmax-oss-swift.build/Release/ArgmaxCore.build/Objects-normal/arm64/ArgmaxCore-primary-emit-module.dia",
+    "pch" : "/Users/phinn/Documents/kinet/KinetMinutes/build/DerivedData/Build/Intermediates.noindex/argmax-oss-swift.build/Release/ArgmaxCore.build/Objects-normal/arm64/ArgmaxCore-primary-Bridging-header.pch",
+    "swift-dependencies" : "/Users/phinn/Documents/kinet/KinetMinutes/build/DerivedData/Build/Intermediates.noindex/argmax-oss-swift.build/Release/ArgmaxCore.build/Objects-normal/arm64/ArgmaxCore-primary.swiftdeps"
+  },
+  "/Users/phinn/Documents/kinet/KinetMinutes/build/DerivedData/SourcePackages/checkouts/WhisperKit/Sources/ArgmaxCore/ArgmaxCoreError.swift" : {
+    "index-unit-output-path" : "/argmax-oss-swift.build/Release/ArgmaxCore.build/Objects-normal/arm64/ArgmaxCoreError.o",
+    "llvm-bc" : "/Users/phinn/Documents/kinet/KinetMinutes/build/DerivedData/Build/Intermediates.noindex/argmax-oss-swift.build/Release/ArgmaxCore.build/Objects-normal/arm64/ArgmaxCoreError.bc",
+    "object" : "/Users/phinn/Documents/kinet/KinetMinutes/build/DerivedData/Build/Intermediates.noindex/argmax-oss-swift.build/Release/ArgmaxCore.build/Objects-normal/arm64/ArgmaxCoreError.o"
+  },
+  "/Users/phinn/Documents/kinet/KinetMinutes/build/DerivedData/SourcePackages/checkouts/WhisperKit/Sources/ArgmaxCore/AutoTokenizerWrapper.swift" : {
+    "index-unit-output-path" : "/argmax-oss-swift.build/Release/ArgmaxCore.build/Objects-normal/arm64/AutoTokenizerWrapper.o",
+    "llvm-bc" : "/Users/phinn/Documents/kinet/KinetMinutes/build/DerivedData/Build/Intermediates.noindex/argmax-oss-swift.build/Release/ArgmaxCore.build/Objects-normal/arm64/AutoTokenizerWrapper.bc",
+    "object" : "/Users/phinn/Documents/kinet/KinetMinutes/build/DerivedData/Build/Intermediates.noindex/argmax-oss-swift.build/Release/ArgmaxCore.build/Objects-normal/arm64/AutoTokenizerWrapper.o"
+  },
+  "/Users/phinn/Documents/kinet/KinetMinutes/build/DerivedData/SourcePackages/checkouts/WhisperKit/Sources/ArgmaxCore/ConcurrencyUtilities.swift" : {
+    "index-unit-output-path" : "/argmax-oss-swift.build/Release/ArgmaxCore.build/Objects-normal/arm64/ConcurrencyUtilities.o",
+    "llvm-bc" : "/Users/phinn/Documents/kinet/KinetMinutes/build/DerivedData/Build/Intermediates.noindex/argmax-oss-swift.build/Release/ArgmaxCore.build/Objects-normal/arm64/ConcurrencyUtilities.bc",
+    "object" : "/Users/phinn/Documents/kinet/KinetMinutes/build/DerivedData/Build/Intermediates.noindex/argmax-oss-swift.build/Release/ArgmaxCore.build/Objects-normal/arm64/ConcurrencyUtilities.o"
+  },
+  "/Users/phinn/Documents/kinet/KinetMinutes/build/DerivedData/SourcePackages/checkouts/WhisperKit/Sources/ArgmaxCore/External/Hub/BinaryDistinct.swift" : {
+    "index-unit-output-path" : "/argmax-oss-swift.build/Release/ArgmaxCore.build/Objects-normal/arm64/BinaryDistinct.o",
+    "llvm-bc" : "/Users/phinn/Documents/kinet/KinetMinutes/build/DerivedData/Build/Intermediates.noindex/argmax-oss-swift.build/Release/ArgmaxCore.build/Objects-normal/arm64/BinaryDistinct.bc",
+    "object" : "/Users/phinn/Documents/kinet/KinetMinutes/build/DerivedData/Build/Intermediates.noindex/argmax-oss-swift.build/Release/ArgmaxCore.build/Objects-normal/arm64/BinaryDistinct.o"
+  },
+  "/Users/phinn/Documents/kinet/KinetMinutes/build/DerivedData/SourcePackages/checkouts/WhisperKit/Sources/ArgmaxCore/External/Hub/Config.swift" : {
+    "index-unit-output-path" : "/argmax-oss-swift.build/Release/ArgmaxCore.build/Objects-normal/arm64/Config.o",
+    "llvm-bc" : "/Users/phinn/Documents/kinet/KinetMinutes/build/DerivedData/Build/Intermediates.noindex/argmax-oss-swift.build/Release/ArgmaxCore.build/Objects-normal/arm64/Config.bc",
+    "object" : "/Users/phinn/Documents/kinet/KinetMinutes/build/DerivedData/Build/Intermediates.noindex/argmax-oss-swift.build/Release/ArgmaxCore.build/Objects-normal/arm64/Config.o"
+  },
+  "/Users/phinn/Documents/kinet/KinetMinutes/build/DerivedData/SourcePackages/checkouts/WhisperKit/Sources/ArgmaxCore/External/Hub/Downloader.swift" : {
+    "index-unit-output-path" : "/argmax-oss-swift.build/Release/ArgmaxCore.build/Objects-normal/arm64/Downloader.o",
+    "llvm-bc" : "/Users/phinn/Documents/kinet/KinetMinutes/build/DerivedData/Build/Intermediates.noindex/argmax-oss-swift.build/Release/ArgmaxCore.build/Objects-normal/arm64/Downloader.bc",
+    "object" : "/Users/phinn/Documents/kinet/KinetMinutes/build/DerivedData/Build/Intermediates.noindex/argmax-oss-swift.build/Release/ArgmaxCore.build/Objects-normal/arm64/Downloader.o"
+  },
+  "/Users/phinn/Documents/kinet/KinetMinutes/build/DerivedData/SourcePackages/checkouts/WhisperKit/Sources/ArgmaxCore/External/Hub/Extensions/JSONSerialization+BOM.swift" : {
+    "index-unit-output-path" : "/argmax-oss-swift.build/Release/ArgmaxCore.build/Objects-normal/arm64/JSONSerialization+BOM.o",
+    "llvm-bc" : "/Users/phinn/Documents/kinet/KinetMinutes/build/DerivedData/Build/Intermediates.noindex/argmax-oss-swift.build/Release/ArgmaxCore.build/Objects-normal/arm64/JSONSerialization+BOM.bc",
+    "object" : "/Users/phinn/Documents/kinet/KinetMinutes/build/DerivedData/Build/Intermediates.noindex/argmax-oss-swift.build/Release/ArgmaxCore.build/Objects-normal/arm64/JSONSerialization+BOM.o"
+  },
+  "/Users/phinn/Documents/kinet/KinetMinutes/build/DerivedData/SourcePackages/checkouts/WhisperKit/Sources/ArgmaxCore/External/Hub/Hub.swift" : {
+    "index-unit-output-path" : "/argmax-oss-swift.build/Release/ArgmaxCore.build/Objects-normal/arm64/Hub.o",
+    "llvm-bc" : "/Users/phinn/Documents/kinet/KinetMinutes/build/DerivedData/Build/Intermediates.noindex/argmax-oss-swift.build/Release/ArgmaxCore.build/Objects-normal/arm64/Hub.bc",
+    "object" : "/Users/phinn/Documents/kinet/KinetMinutes/build/DerivedData/Build/Intermediates.noindex/argmax-oss-swift.build/Release/ArgmaxCore.build/Objects-normal/arm64/Hub.o"
+  },
+  "/Users/phinn/Documents/kinet/KinetMinutes/build/DerivedData/SourcePackages/checkouts/WhisperKit/Sources/ArgmaxCore/External/Hub/HubApi.swift" : {
+    "index-unit-output-path" : "/argmax-oss-swift.build/Release/ArgmaxCore.build/Objects-normal/arm64/HubApi.o",
+    "llvm-bc" : "/Users/phinn/Documents/kinet/KinetMinutes/build/DerivedData/Build/Intermediates.noindex/argmax-oss-swift.build/Release/ArgmaxCore.build/Objects-normal/arm64/HubApi.bc",
+    "object" : "/Users/phinn/Documents/kinet/KinetMinutes/build/DerivedData/Build/Intermediates.noindex/argmax-oss-swift.build/Release/ArgmaxCore.build/Objects-normal/arm64/HubApi.o"
+  },
+  "/Users/phinn/Documents/kinet/KinetMinutes/build/DerivedData/SourcePackages/checkouts/WhisperKit/Sources/ArgmaxCore/External/Tokenizers/BPETokenizer.swift" : {
+    "index-unit-output-path" : "/argmax-oss-swift.build/Release/ArgmaxCore.build/Objects-normal/arm64/BPETokenizer.o",
+    "llvm-bc" : "/Users/phinn/Documents/kinet/KinetMinutes/build/DerivedData/Build/Intermediates.noindex/argmax-oss-swift.build/Release/ArgmaxCore.build/Objects-normal/arm64/BPETokenizer.bc",
+    "object" : "/Users/phinn/Documents/kinet/KinetMinutes/build/DerivedData/Build/Intermediates.noindex/argmax-oss-swift.build/Release/ArgmaxCore.build/Objects-normal/arm64/BPETokenizer.o"
+  },
+  "/Users/phinn/Documents/kinet/KinetMinutes/build/DerivedData/SourcePackages/checkouts/WhisperKit/Sources/ArgmaxCore/External/Tokenizers/BertTokenizer.swift" : {
+    "index-unit-output-path" : "/argmax-oss-swift.build/Release/ArgmaxCore.build/Objects-normal/arm64/BertTokenizer.o",
+    "llvm-bc" : "/Users/phinn/Documents/kinet/KinetMinutes/build/DerivedData/Build/Intermediates.noindex/argmax-oss-swift.build/Release/ArgmaxCore.build/Objects-normal/arm64/BertTokenizer.bc",
+    "object" : "/Users/phinn/Documents/kinet/KinetMinutes/build/DerivedData/Build/Intermediates.noindex/argmax-oss-swift.build/Release/ArgmaxCore.build/Objects-normal/arm64/BertTokenizer.o"
+  },
+  "/Users/phinn/Documents/kinet/KinetMinutes/build/DerivedData/SourcePackages/checkouts/WhisperKit/Sources/ArgmaxCore/External/Tokenizers/ByteEncoder.swift" : {
+    "index-unit-output-path" : "/argmax-oss-swift.build/Release/ArgmaxCore.build/Objects-normal/arm64/ByteEncoder.o",
+    "llvm-bc" : "/Users/phinn/Documents/kinet/KinetMinutes/build/DerivedData/Build/Intermediates.noindex/argmax-oss-swift.build/Release/ArgmaxCore.build/Objects-normal/arm64/ByteEncoder.bc",
+    "object" : "/Users/phinn/Documents/kinet/KinetMinutes/build/DerivedData/Build/Intermediates.noindex/argmax-oss-swift.build/Release/ArgmaxCore.build/Objects-normal/arm64/ByteEncoder.o"
+  },
+  "/Users/phinn/Documents/kinet/KinetMinutes/build/DerivedData/SourcePackages/checkouts/WhisperKit/Sources/ArgmaxCore/External/Tokenizers/Decoder.swift" : {
+    "index-unit-output-path" : "/argmax-oss-swift.build/Release/ArgmaxCore.build/Objects-normal/arm64/Decoder.o",
+    "llvm-bc" : "/Users/phinn/Documents/kinet/KinetMinutes/build/DerivedData/Build/Intermediates.noindex/argmax-oss-swift.build/Release/ArgmaxCore.build/Objects-normal/arm64/Decoder.bc",
+    "object" : "/Users/phinn/Documents/kinet/KinetMinutes/build/DerivedData/Build/Intermediates.noindex/argmax-oss-swift.build/Release/ArgmaxCore.build/Objects-normal/arm64/Decoder.o"
+  },
+  "/Users/phinn/Documents/kinet/KinetMinutes/build/DerivedData/SourcePackages/checkouts/WhisperKit/Sources/ArgmaxCore/External/Tokenizers/Normalizer.swift" : {
+    "index-unit-output-path" : "/argmax-oss-swift.build/Release/ArgmaxCore.build/Objects-normal/arm64/Normalizer.o",
+    "llvm-bc" : "/Users/phinn/Documents/kinet/KinetMinutes/build/DerivedData/Build/Intermediates.noindex/argmax-oss-swift.build/Release/ArgmaxCore.build/Objects-normal/arm64/Normalizer.bc",
+    "object" : "/Users/phinn/Documents/kinet/KinetMinutes/build/DerivedData/Build/Intermediates.noindex/argmax-oss-swift.build/Release/ArgmaxCore.build/Objects-normal/arm64/Normalizer.o"
+  },
+  "/Users/phinn/Documents/kinet/KinetMinutes/build/DerivedData/SourcePackages/checkouts/WhisperKit/Sources/ArgmaxCore/External/Tokenizers/PostProcessor.swift" : {
+    "index-unit-output-path" : "/argmax-oss-swift.build/Release/ArgmaxCore.build/Objects-normal/arm64/PostProcessor.o",
+    "llvm-bc" : "/Users/phinn/Documents/kinet/KinetMinutes/build/DerivedData/Build/Intermediates.noindex/argmax-oss-swift.build/Release/ArgmaxCore.build/Objects-normal/arm64/PostProcessor.bc",
+    "object" : "/Users/phinn/Documents/kinet/KinetMinutes/build/DerivedData/Build/Intermediates.noindex/argmax-oss-swift.build/Release/ArgmaxCore.build/Objects-normal/arm64/PostProcessor.o"
+  },
+  "/Users/phinn/Documents/kinet/KinetMinutes/build/DerivedData/SourcePackages/checkouts/WhisperKit/Sources/ArgmaxCore/External/Tokenizers/PreTokenizer.swift" : {
+    "index-unit-output-path" : "/argmax-oss-swift.build/Release/ArgmaxCore.build/Objects-normal/arm64/PreTokenizer.o",
+    "llvm-bc" : "/Users/phinn/Documents/kinet/KinetMinutes/build/DerivedData/Build/Intermediates.noindex/argmax-oss-swift.build/Release/ArgmaxCore.build/Objects-normal/arm64/PreTokenizer.bc",
+    "object" : "/Users/phinn/Documents/kinet/KinetMinutes/build/DerivedData/Build/Intermediates.noindex/argmax-oss-swift.build/Release/ArgmaxCore.build/Objects-normal/arm64/PreTokenizer.o"
+  },
+  "/Users/phinn/Documents/kinet/KinetMinutes/build/DerivedData/SourcePackages/checkouts/WhisperKit/Sources/ArgmaxCore/External/Tokenizers/String+PreTokenization.swift" : {
+    "index-unit-output-path" : "/argmax-oss-swift.build/Release/ArgmaxCore.build/Objects-normal/arm64/String+PreTokenization.o",
+    "llvm-bc" : "/Users/phinn/Documents/kinet/KinetMinutes/build/DerivedData/Build/Intermediates.noindex/argmax-oss-swift.build/Release/ArgmaxCore.build/Objects-normal/arm64/String+PreTokenization.bc",
+    "object" : "/Users/phinn/Documents/kinet/KinetMinutes/build/DerivedData/Build/Intermediates.noindex/argmax-oss-swift.build/Release/ArgmaxCore.build/Objects-normal/arm64/String+PreTokenization.o"
+  },
+  "/Users/phinn/Documents/kinet/KinetMinutes/build/DerivedData/SourcePackages/checkouts/WhisperKit/Sources/ArgmaxCore/External/Tokenizers/TokenLattice.swift" : {
+    "index-unit-output-path" : "/argmax-oss-swift.build/Release/ArgmaxCore.build/Objects-normal/arm64/TokenLattice.o",
+    "llvm-bc" : "/Users/phinn/Documents/kinet/KinetMinutes/build/DerivedData/Build/Intermediates.noindex/argmax-oss-swift.build/Release/ArgmaxCore.build/Objects-normal/arm64/TokenLattice.bc",
+    "object" : "/Users/phinn/Documents/kinet/KinetMinutes/build/DerivedData/Build/Intermediates.noindex/argmax-oss-swift.build/Release/ArgmaxCore.build/Objects-normal/arm64/TokenLattice.o"
+  },
+  "/Users/phinn/Documents/kinet/KinetMinutes/build/DerivedData/SourcePackages/checkouts/WhisperKit/Sources/ArgmaxCore/External/Tokenizers/Tokenizer.swift" : {
+    "index-unit-output-path" : "/argmax-oss-swift.build/Release/ArgmaxCore.build/Objects-normal/arm64/Tokenizer.o",
+    "llvm-bc" : "/Users/phinn/Documents/kinet/KinetMinutes/build/DerivedData/Build/Intermediates.noindex/argmax-oss-swift.build/Release/ArgmaxCore.build/Objects-normal/arm64/Tokenizer.bc",
+    "object" : "/Users/phinn/Documents/kinet/KinetMinutes/build/DerivedData/Build/Intermediates.noindex/argmax-oss-swift.build/Release/ArgmaxCore.build/Objects-normal/arm64/Tokenizer.o"
+  },
+  "/Users/phinn/Documents/kinet/KinetMinutes/build/DerivedData/SourcePackages/checkouts/WhisperKit/Sources/ArgmaxCore/External/Tokenizers/Trie.swift" : {
+    "index-unit-output-path" : "/argmax-oss-swift.build/Release/ArgmaxCore.build/Objects-normal/arm64/Trie.o",
+    "llvm-bc" : "/Users/phinn/Documents/kinet/KinetMinutes/build/DerivedData/Build/Intermediates.noindex/argmax-oss-swift.build/Release/ArgmaxCore.build/Objects-normal/arm64/Trie.bc",
+    "object" : "/Users/phinn/Documents/kinet/KinetMinutes/build/DerivedData/Build/Intermediates.noindex/argmax-oss-swift.build/Release/ArgmaxCore.build/Objects-normal/arm64/Trie.o"
+  },
+  "/Users/phinn/Documents/kinet/KinetMinutes/build/DerivedData/SourcePackages/checkouts/WhisperKit/Sources/ArgmaxCore/External/Tokenizers/UnigramTokenizer.swift" : {
+    "index-unit-output-path" : "/argmax-oss-swift.build/Release/ArgmaxCore.build/Objects-normal/arm64/UnigramTokenizer.o",
+    "llvm-bc" : "/Users/phinn/Documents/kinet/KinetMinutes/build/DerivedData/Build/Intermediates.noindex/argmax-oss-swift.build/Release/ArgmaxCore.build/Objects-normal/arm64/UnigramTokenizer.bc",
+    "object" : "/Users/phinn/Documents/kinet/KinetMinutes/build/DerivedData/Build/Intermediates.noindex/argmax-oss-swift.build/Release/ArgmaxCore.build/Objects-normal/arm64/UnigramTokenizer.o"
+  },
+  "/Users/phinn/Documents/kinet/KinetMinutes/build/DerivedData/SourcePackages/checkouts/WhisperKit/Sources/ArgmaxCore/External/Tokenizers/Utils.swift" : {
+    "index-unit-output-path" : "/argmax-oss-swift.build/Release/ArgmaxCore.build/Objects-normal/arm64/Utils.o",
+    "llvm-bc" : "/Users/phinn/Documents/kinet/KinetMinutes/build/DerivedData/Build/Intermediates.noindex/argmax-oss-swift.build/Release/ArgmaxCore.build/Objects-normal/arm64/Utils.bc",
+    "object" : "/Users/phinn/Documents/kinet/KinetMinutes/build/DerivedData/Build/Intermediates.noindex/argmax-oss-swift.build/Release/ArgmaxCore.build/Objects-normal/arm64/Utils.o"
+  },
+  "/Users/phinn/Documents/kinet/KinetMinutes/build/DerivedData/SourcePackages/checkouts/WhisperKit/Sources/ArgmaxCore/FloatType.swift" : {
+    "index-unit-output-path" : "/argmax-oss-swift.build/Release/ArgmaxCore.build/Objects-normal/arm64/FloatType.o",
+    "llvm-bc" : "/Users/phinn/Documents/kinet/KinetMinutes/build/DerivedData/Build/Intermediates.noindex/argmax-oss-swift.build/Release/ArgmaxCore.build/Objects-normal/arm64/FloatType.bc",
+    "object" : "/Users/phinn/Documents/kinet/KinetMinutes/build/DerivedData/Build/Intermediates.noindex/argmax-oss-swift.build/Release/ArgmaxCore.build/Objects-normal/arm64/FloatType.o"
+  },
+  "/Users/phinn/Documents/kinet/KinetMinutes/build/DerivedData/SourcePackages/checkouts/WhisperKit/Sources/ArgmaxCore/FoundationExtensions.swift" : {
+    "index-unit-output-path" : "/argmax-oss-swift.build/Release/ArgmaxCore.build/Objects-normal/arm64/FoundationExtensions.o",
+    "llvm-bc" : "/Users/phinn/Documents/kinet/KinetMinutes/build/DerivedData/Build/Intermediates.noindex/argmax-oss-swift.build/Release/ArgmaxCore.build/Objects-normal/arm64/FoundationExtensions.bc",
+    "object" : "/Users/phinn/Documents/kinet/KinetMinutes/build/DerivedData/Build/Intermediates.noindex/argmax-oss-swift.build/Release/ArgmaxCore.build/Objects-normal/arm64/FoundationExtensions.o"
+  },
+  "/Users/phinn/Documents/kinet/KinetMinutes/build/DerivedData/SourcePackages/checkouts/WhisperKit/Sources/ArgmaxCore/HubWrapper.swift" : {
+    "index-unit-output-path" : "/argmax-oss-swift.build/Release/ArgmaxCore.build/Objects-normal/arm64/HubWrapper.o",
+    "llvm-bc" : "/Users/phinn/Documents/kinet/KinetMinutes/build/DerivedData/Build/Intermediates.noindex/argmax-oss-swift.build/Release/ArgmaxCore.build/Objects-normal/arm64/HubWrapper.bc",
+    "object" : "/Users/phinn/Documents/kinet/KinetMinutes/build/DerivedData/Build/Intermediates.noindex/argmax-oss-swift.build/Release/ArgmaxCore.build/Objects-normal/arm64/HubWrapper.o"
+  },
+  "/Users/phinn/Documents/kinet/KinetMinutes/build/DerivedData/SourcePackages/checkouts/WhisperKit/Sources/ArgmaxCore/Logging.swift" : {
+    "index-unit-output-path" : "/argmax-oss-swift.build/Release/ArgmaxCore.build/Objects-normal/arm64/Logging.o",
+    "llvm-bc" : "/Users/phinn/Documents/kinet/KinetMinutes/build/DerivedData/Build/Intermediates.noindex/argmax-oss-swift.build/Release/ArgmaxCore.build/Objects-normal/arm64/Logging.bc",
+    "object" : "/Users/phinn/Documents/kinet/KinetMinutes/build/DerivedData/Build/Intermediates.noindex/argmax-oss-swift.build/Release/ArgmaxCore.build/Objects-normal/arm64/Logging.o"
+  },
+  "/Users/phinn/Documents/kinet/KinetMinutes/build/DerivedData/SourcePackages/checkouts/WhisperKit/Sources/ArgmaxCore/MLModelExtensions.swift" : {
+    "index-unit-output-path" : "/argmax-oss-swift.build/Release/ArgmaxCore.build/Objects-normal/arm64/MLModelExtensions.o",
+    "llvm-bc" : "/Users/phinn/Documents/kinet/KinetMinutes/build/DerivedData/Build/Intermediates.noindex/argmax-oss-swift.build/Release/ArgmaxCore.build/Objects-normal/arm64/MLModelExtensions.bc",
+    "object" : "/Users/phinn/Documents/kinet/KinetMinutes/build/DerivedData/Build/Intermediates.noindex/argmax-oss-swift.build/Release/ArgmaxCore.build/Objects-normal/arm64/MLModelExtensions.o"
+  },
+  "/Users/phinn/Documents/kinet/KinetMinutes/build/DerivedData/SourcePackages/checkouts/WhisperKit/Sources/ArgmaxCore/MLModelLoading.swift" : {
+    "index-unit-output-path" : "/argmax-oss-swift.build/Release/ArgmaxCore.build/Objects-normal/arm64/MLModelLoading.o",
+    "llvm-bc" : "/Users/phinn/Documents/kinet/KinetMinutes/build/DerivedData/Build/Intermediates.noindex/argmax-oss-swift.build/Release/ArgmaxCore.build/Objects-normal/arm64/MLModelLoading.bc",
+    "object" : "/Users/phinn/Documents/kinet/KinetMinutes/build/DerivedData/Build/Intermediates.noindex/argmax-oss-swift.build/Release/ArgmaxCore.build/Objects-normal/arm64/MLModelLoading.o"
+  },
+  "/Users/phinn/Documents/kinet/KinetMinutes/build/DerivedData/SourcePackages/checkouts/WhisperKit/Sources/ArgmaxCore/MLMultiArrayExtensions.swift" : {
+    "index-unit-output-path" : "/argmax-oss-swift.build/Release/ArgmaxCore.build/Objects-normal/arm64/MLMultiArrayExtensions.o",
+    "llvm-bc" : "/Users/phinn/Documents/kinet/KinetMinutes/build/DerivedData/Build/Intermediates.noindex/argmax-oss-swift.build/Release/ArgmaxCore.build/Objects-normal/arm64/MLMultiArrayExtensions.bc",
+    "object" : "/Users/phinn/Documents/kinet/KinetMinutes/build/DerivedData/Build/Intermediates.noindex/argmax-oss-swift.build/Release/ArgmaxCore.build/Objects-normal/arm64/MLMultiArrayExtensions.o"
+  },
+  "/Users/phinn/Documents/kinet/KinetMinutes/build/DerivedData/SourcePackages/checkouts/WhisperKit/Sources/ArgmaxCore/MLTensorExtensions.swift" : {
+    "index-unit-output-path" : "/argmax-oss-swift.build/Release/ArgmaxCore.build/Objects-normal/arm64/MLTensorExtensions.o",
+    "llvm-bc" : "/Users/phinn/Documents/kinet/KinetMinutes/build/DerivedData/Build/Intermediates.noindex/argmax-oss-swift.build/Release/ArgmaxCore.build/Objects-normal/arm64/MLTensorExtensions.bc",
+    "object" : "/Users/phinn/Documents/kinet/KinetMinutes/build/DerivedData/Build/Intermediates.noindex/argmax-oss-swift.build/Release/ArgmaxCore.build/Objects-normal/arm64/MLTensorExtensions.o"
+  },
+  "/Users/phinn/Documents/kinet/KinetMinutes/build/DerivedData/SourcePackages/checkouts/WhisperKit/Sources/ArgmaxCore/ModelDownloader.swift" : {
+    "index-unit-output-path" : "/argmax-oss-swift.build/Release/ArgmaxCore.build/Objects-normal/arm64/ModelDownloader.o",
+    "llvm-bc" : "/Users/phinn/Documents/kinet/KinetMinutes/build/DerivedData/Build/Intermediates.noindex/argmax-oss-swift.build/Release/ArgmaxCore.build/Objects-normal/arm64/ModelDownloader.bc",
+    "object" : "/Users/phinn/Documents/kinet/KinetMinutes/build/DerivedData/Build/Intermediates.noindex/argmax-oss-swift.build/Release/ArgmaxCore.build/Objects-normal/arm64/ModelDownloader.o"
+  },
+  "/Users/phinn/Documents/kinet/KinetMinutes/build/DerivedData/SourcePackages/checkouts/WhisperKit/Sources/ArgmaxCore/ModelManager.swift" : {
+    "index-unit-output-path" : "/argmax-oss-swift.build/Release/ArgmaxCore.build/Objects-normal/arm64/ModelManager.o",
+    "llvm-bc" : "/Users/phinn/Documents/kinet/KinetMinutes/build/DerivedData/Build/Intermediates.noindex/argmax-oss-swift.build/Release/ArgmaxCore.build/Objects-normal/arm64/ModelManager.bc",
+    "object" : "/Users/phinn/Documents/kinet/KinetMinutes/build/DerivedData/Build/Intermediates.noindex/argmax-oss-swift.build/Release/ArgmaxCore.build/Objects-normal/arm64/ModelManager.o"
+  },
+  "/Users/phinn/Documents/kinet/KinetMinutes/build/DerivedData/SourcePackages/checkouts/WhisperKit/Sources/ArgmaxCore/ModelState.swift" : {
+    "index-unit-output-path" : "/argmax-oss-swift.build/Release/ArgmaxCore.build/Objects-normal/arm64/ModelState.o",
+    "llvm-bc" : "/Users/phinn/Documents/kinet/KinetMinutes/build/DerivedData/Build/Intermediates.noindex/argmax-oss-swift.build/Release/ArgmaxCore.build/Objects-normal/arm64/ModelState.bc",
+    "object" : "/Users/phinn/Documents/kinet/KinetMinutes/build/DerivedData/Build/Intermediates.noindex/argmax-oss-swift.build/Release/ArgmaxCore.build/Objects-normal/arm64/ModelState.o"
+  },
+  "/Users/phinn/Documents/kinet/KinetMinutes/build/DerivedData/SourcePackages/checkouts/WhisperKit/Sources/ArgmaxCore/ModelUtilities.swift" : {
+    "index-unit-output-path" : "/argmax-oss-swift.build/Release/ArgmaxCore.build/Objects-normal/arm64/ModelUtilities.o",
+    "llvm-bc" : "/Users/phinn/Documents/kinet/KinetMinutes/build/DerivedData/Build/Intermediates.noindex/argmax-oss-swift.build/Release/ArgmaxCore.build/Objects-normal/arm64/ModelUtilities.bc",
+    "object" : "/Users/phinn/Documents/kinet/KinetMinutes/build/DerivedData/Build/Intermediates.noindex/argmax-oss-swift.build/Release/ArgmaxCore.build/Objects-normal/arm64/ModelUtilities.o"
+  },
+  "/Users/phinn/Documents/kinet/KinetMinutes/build/DerivedData/SourcePackages/checkouts/WhisperKit/Sources/ArgmaxCore/TokenizerWrapper.swift" : {
+    "index-unit-output-path" : "/argmax-oss-swift.build/Release/ArgmaxCore.build/Objects-normal/arm64/TokenizerWrapper.o",
+    "llvm-bc" : "/Users/phinn/Documents/kinet/KinetMinutes/build/DerivedData/Build/Intermediates.noindex/argmax-oss-swift.build/Release/ArgmaxCore.build/Objects-normal/arm64/TokenizerWrapper.bc",
+    "object" : "/Users/phinn/Documents/kinet/KinetMinutes/build/DerivedData/Build/Intermediates.noindex/argmax-oss-swift.build/Release/ArgmaxCore.build/Objects-normal/arm64/TokenizerWrapper.o"
+  }
+}

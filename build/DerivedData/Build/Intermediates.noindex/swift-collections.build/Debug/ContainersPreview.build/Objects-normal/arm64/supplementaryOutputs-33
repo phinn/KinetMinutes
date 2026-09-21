@@ -1,0 +1,30 @@
+{
+  "/Users/phinn/Documents/kinet/KinetMinutes/build/DerivedData/SourcePackages/checkouts/swift-collections/Sources/ContainersPreview/Protocols/BorrowingIteratorProtocol.swift" : {
+    "const-values" : "/Users/phinn/Documents/kinet/KinetMinutes/build/DerivedData/Build/Intermediates.noindex/swift-collections.build/Debug/ContainersPreview.build/Objects-normal/arm64/BorrowingIteratorProtocol.swiftconstvalues",
+    "dependencies" : "/Users/phinn/Documents/kinet/KinetMinutes/build/DerivedData/Build/Intermediates.noindex/swift-collections.build/Debug/ContainersPreview.build/Objects-normal/arm64/BorrowingIteratorProtocol.d",
+    "diagnostics" : "/Users/phinn/Documents/kinet/KinetMinutes/build/DerivedData/Build/Intermediates.noindex/swift-collections.build/Debug/ContainersPreview.build/Objects-normal/arm64/BorrowingIteratorProtocol.dia",
+    "object" : "/Users/phinn/Documents/kinet/KinetMinutes/build/DerivedData/Build/Intermediates.noindex/swift-collections.build/Debug/ContainersPreview.build/Objects-normal/arm64/BorrowingIteratorProtocol.o",
+    "swift-dependencies" : "/Users/phinn/Documents/kinet/KinetMinutes/build/DerivedData/Build/Intermediates.noindex/swift-collections.build/Debug/ContainersPreview.build/Objects-normal/arm64/BorrowingIteratorProtocol.swiftdeps"
+  },
+  "/Users/phinn/Documents/kinet/KinetMinutes/build/DerivedData/SourcePackages/checkouts/swift-collections/Sources/ContainersPreview/Protocols/BorrowingSequence+Algorithms.swift" : {
+    "const-values" : "/Users/phinn/Documents/kinet/KinetMinutes/build/DerivedData/Build/Intermediates.noindex/swift-collections.build/Debug/ContainersPreview.build/Objects-normal/arm64/BorrowingSequence+Algorithms.swiftconstvalues",
+    "dependencies" : "/Users/phinn/Documents/kinet/KinetMinutes/build/DerivedData/Build/Intermediates.noindex/swift-collections.build/Debug/ContainersPreview.build/Objects-normal/arm64/BorrowingSequence+Algorithms.d",
+    "diagnostics" : "/Users/phinn/Documents/kinet/KinetMinutes/build/DerivedData/Build/Intermediates.noindex/swift-collections.build/Debug/ContainersPreview.build/Objects-normal/arm64/BorrowingSequence+Algorithms.dia",
+    "object" : "/Users/phinn/Documents/kinet/KinetMinutes/build/DerivedData/Build/Intermediates.noindex/swift-collections.build/Debug/ContainersPreview.build/Objects-normal/arm64/BorrowingSequence+Algorithms.o",
+    "swift-dependencies" : "/Users/phinn/Documents/kinet/KinetMinutes/build/DerivedData/Build/Intermediates.noindex/swift-collections.build/Debug/ContainersPreview.build/Objects-normal/arm64/BorrowingSequence+Algorithms.swiftdeps"
+  },
+  "/Users/phinn/Documents/kinet/KinetMinutes/build/DerivedData/SourcePackages/checkouts/swift-collections/Sources/ContainersPreview/Protocols/BorrowingSequence+Standard Conformances.swift" : {
+    "const-values" : "/Users/phinn/Documents/kinet/KinetMinutes/build/DerivedData/Build/Intermediates.noindex/swift-collections.build/Debug/ContainersPreview.build/Objects-normal/arm64/BorrowingSequence+Standard Conformances.swiftconstvalues",
+    "dependencies" : "/Users/phinn/Documents/kinet/KinetMinutes/build/DerivedData/Build/Intermediates.noindex/swift-collections.build/Debug/ContainersPreview.build/Objects-normal/arm64/BorrowingSequence+Standard Conformances.d",
+    "diagnostics" : "/Users/phinn/Documents/kinet/KinetMinutes/build/DerivedData/Build/Intermediates.noindex/swift-collections.build/Debug/ContainersPreview.build/Objects-normal/arm64/BorrowingSequence+Standard Conformances.dia",
+    "object" : "/Users/phinn/Documents/kinet/KinetMinutes/build/DerivedData/Build/Intermediates.noindex/swift-collections.build/Debug/ContainersPreview.build/Objects-normal/arm64/BorrowingSequence+Standard Conformances.o",
+    "swift-dependencies" : "/Users/phinn/Documents/kinet/KinetMinutes/build/DerivedData/Build/Intermediates.noindex/swift-collections.build/Debug/ContainersPreview.build/Objects-normal/arm64/BorrowingSequence+Standard Conformances.swiftdeps"
+  },
+  "/Users/phinn/Documents/kinet/KinetMinutes/build/DerivedData/SourcePackages/checkouts/swift-collections/Sources/ContainersPreview/Protocols/BorrowingSequence+Utilities.swift" : {
+    "const-values" : "/Users/phinn/Documents/kinet/KinetMinutes/build/DerivedData/Build/Intermediates.noindex/swift-collections.build/Debug/ContainersPreview.build/Objects-normal/arm64/BorrowingSequence+Utilities.swiftconstvalues",
+    "dependencies" : "/Users/phinn/Documents/kinet/KinetMinutes/build/DerivedData/Build/Intermediates.noindex/swift-collections.build/Debug/ContainersPreview.build/Objects-normal/arm64/BorrowingSequence+Utilities.d",
+    "diagnostics" : "/Users/phinn/Documents/kinet/KinetMinutes/build/DerivedData/Build/Intermediates.noindex/swift-collections.build/Debug/ContainersPreview.build/Objects-normal/arm64/BorrowingSequence+Utilities.dia",
+    "object" : "/Users/phinn/Documents/kinet/KinetMinutes/build/DerivedData/Build/Intermediates.noindex/swift-collections.build/Debug/ContainersPreview.build/Objects-normal/arm64/BorrowingSequence+Utilities.o",
+    "swift-dependencies" : "/Users/phinn/Documents/kinet/KinetMinutes/build/DerivedData/Build/Intermediates.noindex/swift-collections.build/Debug/ContainersPreview.build/Objects-normal/arm64/BorrowingSequence+Utilities.swiftdeps"
+  }
+}

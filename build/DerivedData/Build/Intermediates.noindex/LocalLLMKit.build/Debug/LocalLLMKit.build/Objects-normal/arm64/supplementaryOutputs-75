@@ -1,0 +1,23 @@
+{
+  "/Users/phinn/Documents/kinet/LocalLLMKit/Sources/LocalLLMKit/AnthropicProvider.swift" : {
+    "const-values" : "/Users/phinn/Documents/kinet/KinetMinutes/build/DerivedData/Build/Intermediates.noindex/LocalLLMKit.build/Debug/LocalLLMKit.build/Objects-normal/arm64/AnthropicProvider.swiftconstvalues",
+    "dependencies" : "/Users/phinn/Documents/kinet/KinetMinutes/build/DerivedData/Build/Intermediates.noindex/LocalLLMKit.build/Debug/LocalLLMKit.build/Objects-normal/arm64/AnthropicProvider.d",
+    "diagnostics" : "/Users/phinn/Documents/kinet/KinetMinutes/build/DerivedData/Build/Intermediates.noindex/LocalLLMKit.build/Debug/LocalLLMKit.build/Objects-normal/arm64/AnthropicProvider.dia",
+    "object" : "/Users/phinn/Documents/kinet/KinetMinutes/build/DerivedData/Build/Intermediates.noindex/LocalLLMKit.build/Debug/LocalLLMKit.build/Objects-normal/arm64/AnthropicProvider.o",
+    "swift-dependencies" : "/Users/phinn/Documents/kinet/KinetMinutes/build/DerivedData/Build/Intermediates.noindex/LocalLLMKit.build/Debug/LocalLLMKit.build/Objects-normal/arm64/AnthropicProvider.swiftdeps"
+  },
+  "/Users/phinn/Documents/kinet/LocalLLMKit/Sources/LocalLLMKit/AppleFoundationModelsProvider.swift" : {
+    "const-values" : "/Users/phinn/Documents/kinet/KinetMinutes/build/DerivedData/Build/Intermediates.noindex/LocalLLMKit.build/Debug/LocalLLMKit.build/Objects-normal/arm64/AppleFoundationModelsProvider.swiftconstvalues",
+    "dependencies" : "/Users/phinn/Documents/kinet/KinetMinutes/build/DerivedData/Build/Intermediates.noindex/LocalLLMKit.build/Debug/LocalLLMKit.build/Objects-normal/arm64/AppleFoundationModelsProvider.d",
+    "diagnostics" : "/Users/phinn/Documents/kinet/KinetMinutes/build/DerivedData/Build/Intermediates.noindex/LocalLLMKit.build/Debug/LocalLLMKit.build/Objects-normal/arm64/AppleFoundationModelsProvider.dia",
+    "object" : "/Users/phinn/Documents/kinet/KinetMinutes/build/DerivedData/Build/Intermediates.noindex/LocalLLMKit.build/Debug/LocalLLMKit.build/Objects-normal/arm64/AppleFoundationModelsProvider.o",
+    "swift-dependencies" : "/Users/phinn/Documents/kinet/KinetMinutes/build/DerivedData/Build/Intermediates.noindex/LocalLLMKit.build/Debug/LocalLLMKit.build/Objects-normal/arm64/AppleFoundationModelsProvider.swiftdeps"
+  },
+  "/Users/phinn/Documents/kinet/LocalLLMKit/Sources/LocalLLMKit/CoreMLProvider.swift" : {
+    "const-values" : "/Users/phinn/Documents/kinet/KinetMinutes/build/DerivedData/Build/Intermediates.noindex/LocalLLMKit.build/Debug/LocalLLMKit.build/Objects-normal/arm64/CoreMLProvider.swiftconstvalues",
+    "dependencies" : "/Users/phinn/Documents/kinet/KinetMinutes/build/DerivedData/Build/Intermediates.noindex/LocalLLMKit.build/Debug/LocalLLMKit.build/Objects-normal/arm64/CoreMLProvider.d",
+    "diagnostics" : "/Users/phinn/Documents/kinet/KinetMinutes/build/DerivedData/Build/Intermediates.noindex/LocalLLMKit.build/Debug/LocalLLMKit.build/Objects-normal/arm64/CoreMLProvider.dia",
+    "object" : "/Users/phinn/Documents/kinet/KinetMinutes/build/DerivedData/Build/Intermediates.noindex/LocalLLMKit.build/Debug/LocalLLMKit.build/Objects-normal/arm64/CoreMLProvider.o",
+    "swift-dependencies" : "/Users/phinn/Documents/kinet/KinetMinutes/build/DerivedData/Build/Intermediates.noindex/LocalLLMKit.build/Debug/LocalLLMKit.build/Objects-normal/arm64/CoreMLProvider.swiftdeps"
+  }
+}

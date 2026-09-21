@@ -1,6 +1,11 @@
+import AVFoundation
+import AppKit
+import CoreAudio
+
 // LibraryWindowController.swift — meeting library: list + detail (notes/timeline/transcript/export)
 
 import AppKit
+import AVFoundation
 
 final class LibraryWindowController: NSWindowController, NSWindowDelegate {
     private var split: NSSplitView!
@@ -144,6 +149,7 @@ extension LibraryWindowController: NSTableViewDataSource, NSTableViewDelegate {
         title.font = .systemFont(ofSize: 13, weight: .semibold)
         let f = DateFormatter(); f.dateFormat = "MMM d HH:mm"
         var sub = f.string(from: m.startedAt) + " · \(m.sourceApp) · \(Int(m.durationSeconds / 60)) " + L10n.string("Minutes")
+        if !m.tags.isEmpty { sub += " · " + m.tags.map { "#\($0)" }.joined(separator: " ") }   // F07 tags
         if m.status == "processing" { sub += " · " + L10n.string("Generating…") }
         if m.status == "failed" { sub += " · " + L10n.string("Failed") }
         let subL = NSTextField(labelWithString: sub)
@@ -159,6 +165,23 @@ extension LibraryWindowController: NSTableViewDataSource, NSTableViewDelegate {
     }
 }
 
+// F06: intercept kmplay:// link clicks (default would NSWorkspace.open an
+// unregistered scheme). Returning true from the delegate method stops that.
+final class TimelineTextView: NSTextView {
+    var onPlayLink: ((Double) -> Void)?
+}
+
+extension DetailView: NSTextViewDelegate {
+    func textView(_ textView: NSTextView, clickedOn link: Any, at charIndex: Int) -> Bool {
+        guard let url = link as? URL, url.scheme == "kmplay",
+              let sec = Double(url.host ?? String(url.absoluteString.dropFirst("kmplay://".count))) else {
+            return true   // swallow other links; we don't open web links from notes
+        }
+        play(from: sec)
+        return true
+    }
+}
+
 // MARK: - Detail
 
 final class DetailView: NSView {
@@ -167,9 +190,11 @@ final class DetailView: NSView {
         L10n.string("Summary"), L10n.string("Decisions"), L10n.string("Action Items"),
         L10n.string("Timeline"), L10n.string("Transcript")
     ], trackingMode: .momentary, target: nil, action: nil)
-    private let text = NSTextView()
+    private let text = TimelineTextView()
     private let exportBtn = NSButton(title: L10n.string("Export"), target: nil, action: nil)
     private let deleteBtn = NSButton(title: L10n.string("Delete"), target: nil, action: nil)
+    private let renameBtn = NSButton(title: L10n.string("Rename"), target: nil, action: nil)
+    private var player: AVAudioPlayer?   // F06: timeline click → play from timestamp
 
     override init(frame: NSRect) {
         super.init(frame: frame)
@@ -178,6 +203,7 @@ final class DetailView: NSView {
         tabs.translatesAutoresizingMaskIntoConstraints = false
 
         text.isEditable = false
+        text.delegate = self
         text.textContainer?.containerSize = NSSize(width: CGFloat.greatestFiniteMagnitude, height: .greatestFiniteMagnitude)
         text.textContainer?.widthTracksTextView = true
         let scroll = NSScrollView()
@@ -191,11 +217,15 @@ final class DetailView: NSView {
         deleteBtn.bezelStyle = .rounded
         deleteBtn.target = self; deleteBtn.action = #selector(deleteMeeting)
         deleteBtn.translatesAutoresizingMaskIntoConstraints = false
+        renameBtn.bezelStyle = .rounded
+        renameBtn.target = self; renameBtn.action = #selector(renameMeeting)   // F07: title editable
+        renameBtn.translatesAutoresizingMaskIntoConstraints = false
 
         addSubview(tabs)
         addSubview(scroll)
         addSubview(exportBtn)
         addSubview(deleteBtn)
+        addSubview(renameBtn)
         scroll.identifier = NSUserInterfaceItemIdentifier("scroll")
         NSLayoutConstraint.activate([
             tabs.topAnchor.constraint(equalTo: topAnchor, constant: 12),
@@ -204,6 +234,8 @@ final class DetailView: NSView {
             exportBtn.trailingAnchor.constraint(equalTo: trailingAnchor, constant: -16),
             deleteBtn.centerYAnchor.constraint(equalTo: tabs.centerYAnchor),
             deleteBtn.trailingAnchor.constraint(equalTo: exportBtn.leadingAnchor, constant: -8),
+            renameBtn.centerYAnchor.constraint(equalTo: tabs.centerYAnchor),
+            renameBtn.trailingAnchor.constraint(equalTo: deleteBtn.leadingAnchor, constant: -8),
             scroll.topAnchor.constraint(equalTo: tabs.bottomAnchor, constant: 8),
             scroll.leadingAnchor.constraint(equalTo: leadingAnchor, constant: 16),
             scroll.trailingAnchor.constraint(equalTo: trailingAnchor, constant: -16),
@@ -220,7 +252,28 @@ final class DetailView: NSView {
         tabs.isHidden = meeting == nil
         exportBtn.isHidden = meeting == nil
         deleteBtn.isHidden = meeting == nil
+        renameBtn.isHidden = meeting == nil
+        if meeting == nil { player?.stop(); player = nil }
         tabChanged()
+    }
+
+    @objc private func renameMeeting() {
+        guard let m = meeting else { return }
+        let alert = NSAlert()
+        alert.messageText = L10n.string("Rename")
+        let field = NSTextField(frame: NSRect(x: 0, y: 0, width: 280, height: 24))
+        field.stringValue = m.title
+        alert.accessoryView = field
+        alert.addButton(withTitle: L10n.string("OK"))
+        alert.addButton(withTitle: L10n.string("Cancel"))
+        alert.window.initialFirstResponder = field
+        if alert.runModal() == .alertFirstButtonReturn {
+            let t = field.stringValue.trimmingCharacters(in: .whitespacesAndNewlines)
+            if !t.isEmpty {
+                MeetingStore.shared.update(m.id, title: t)
+                NotificationCenter.default.post(name: .meetingsChanged, object: nil)
+            }
+        }
     }
 
     @objc private func tabChanged() {
@@ -237,19 +290,56 @@ final class DetailView: NSView {
         case 2:
             text.string = m.actions.map { a in "☐ \(a.task)" + (a.owner.isEmpty ? "" : " — \(a.owner)") + (a.due.isEmpty ? "" : " (\(a.due))") }.joined(separator: "\n")
         case 3:
-            text.string = m.segments.map { g -> String in
-                let s = Int(g.start)
-                return String(format: "[%02d:%02d] ", s / 60, s % 60) + g.text
-            }.joined(separator: "\n\n")
+            // F06: timestamps are click-to-play links ([MM:SS](kmplay://s))
+            text.textStorage?.setAttributedString(Self.timelineAttr(from: m.segments))
         default:
             text.string = m.transcript ?? ""
         }
     }
 
+    /// F06: build timeline with clickable [MM:SS] links that seek the audio player.
+    static func timelineAttr(from segments: [Meeting.Segment]) -> NSAttributedString {
+        let out = NSMutableAttributedString()
+        for (i, g) in segments.enumerated() {
+            let s = Int(g.start)
+            let stamp = String(format: "[%02d:%02d]", s / 60, s % 60)
+            let link = NSAttributedString(string: stamp + " ", attributes: [
+                .link: URL(string: "kmplay://\(g.start)")!,
+                .foregroundColor: NSColor.controlAccentColor,
+                .font: NSFont.monospacedDigitSystemFont(ofSize: 12, weight: .semibold)
+            ])
+            let body = NSAttributedString(string: g.text + (i == segments.count - 1 ? "" : "\n\n"), attributes: [
+                .font: NSFont.systemFont(ofSize: 13),
+                .foregroundColor: NSColor.labelColor
+            ])
+            out.append(link); out.append(body)
+        }
+        return out
+    }
+
+    /// F06: play the meeting audio from `seconds`; tapping a timestamp seeks here.
+    private func play(from seconds: Double) {
+        guard let m = meeting else { return }
+        let store = MeetingStore.shared
+        let sysTrack = store.audioDir.appendingPathComponent("meeting-\(m.id).sys.caf")
+        let micTrack = store.audioDir.appendingPathComponent("meeting-\(m.id).caf")
+        let path = FileManager.default.fileExists(atPath: sysTrack.path) ? sysTrack : micTrack
+        guard FileManager.default.fileExists(atPath: path.path) else {
+            (NSApp.delegate as? AppDelegate)?.notify(title: L10n.string("No audio"), body: L10n.string("Recording file not found"))
+            return
+        }
+        if player == nil || player?.url != path {
+            player = try? AVAudioPlayer(contentsOf: path)
+            player?.prepareToPlay()
+        }
+        player?.currentTime = seconds
+        player?.play()
+    }
+
     @objc private func exportSheet() {
         guard let m = meeting else { return }
         let menu = NSMenu()
-        [("Export as Markdown", "md"), ("Export as TXT", "txt"), ("Export as SRT", "srt")].forEach { label, ext in
+        [("Export as Markdown", "md"), ("Export as TXT", "txt"), ("Export as SRT", "srt"), ("Export as PDF", "pdf")].forEach { label, ext in
             let it = NSMenuItem(title: L10n.string(label), action: #selector(doExport(_:)), keyEquivalent: "")
             it.target = self
             it.representedObject = ext
@@ -264,6 +354,7 @@ final class DetailView: NSView {
         switch ext {
         case "md": Exporters.save(Exporters.markdown(for: m), name: safeName, ext: "md")
         case "srt": Exporters.save(Exporters.srt(for: m), name: safeName, ext: "srt")
+        case "pdf": Exporters.savePDF(Exporters.markdown(for: m), name: safeName)   // F08: PDF via Cocoa text drawing
         default: Exporters.save(Exporters.txt(for: m), name: safeName, ext: "txt")
         }
     }
@@ -282,3 +373,5 @@ final class DetailView: NSView {
         }
     }
 }
+
+

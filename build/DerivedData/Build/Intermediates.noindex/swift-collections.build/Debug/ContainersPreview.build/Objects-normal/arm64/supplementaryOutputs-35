@@ -1,0 +1,30 @@
+{
+  "/Users/phinn/Documents/kinet/KinetMinutes/build/DerivedData/SourcePackages/checkouts/swift-collections/Sources/ContainersPreview/Protocols/Container/Container.swift" : {
+    "const-values" : "/Users/phinn/Documents/kinet/KinetMinutes/build/DerivedData/Build/Intermediates.noindex/swift-collections.build/Debug/ContainersPreview.build/Objects-normal/arm64/Container.swiftconstvalues",
+    "dependencies" : "/Users/phinn/Documents/kinet/KinetMinutes/build/DerivedData/Build/Intermediates.noindex/swift-collections.build/Debug/ContainersPreview.build/Objects-normal/arm64/Container.d",
+    "diagnostics" : "/Users/phinn/Documents/kinet/KinetMinutes/build/DerivedData/Build/Intermediates.noindex/swift-collections.build/Debug/ContainersPreview.build/Objects-normal/arm64/Container.dia",
+    "object" : "/Users/phinn/Documents/kinet/KinetMinutes/build/DerivedData/Build/Intermediates.noindex/swift-collections.build/Debug/ContainersPreview.build/Objects-normal/arm64/Container.o",
+    "swift-dependencies" : "/Users/phinn/Documents/kinet/KinetMinutes/build/DerivedData/Build/Intermediates.noindex/swift-collections.build/Debug/ContainersPreview.build/Objects-normal/arm64/Container.swiftdeps"
+  },
+  "/Users/phinn/Documents/kinet/KinetMinutes/build/DerivedData/SourcePackages/checkouts/swift-collections/Sources/ContainersPreview/Protocols/Container/ContainerIterator.swift" : {
+    "const-values" : "/Users/phinn/Documents/kinet/KinetMinutes/build/DerivedData/Build/Intermediates.noindex/swift-collections.build/Debug/ContainersPreview.build/Objects-normal/arm64/ContainerIterator.swiftconstvalues",
+    "dependencies" : "/Users/phinn/Documents/kinet/KinetMinutes/build/DerivedData/Build/Intermediates.noindex/swift-collections.build/Debug/ContainersPreview.build/Objects-normal/arm64/ContainerIterator.d",
+    "diagnostics" : "/Users/phinn/Documents/kinet/KinetMinutes/build/DerivedData/Build/Intermediates.noindex/swift-collections.build/Debug/ContainersPreview.build/Objects-normal/arm64/ContainerIterator.dia",
+    "object" : "/Users/phinn/Documents/kinet/KinetMinutes/build/DerivedData/Build/Intermediates.noindex/swift-collections.build/Debug/ContainersPreview.build/Objects-normal/arm64/ContainerIterator.o",
+    "swift-dependencies" : "/Users/phinn/Documents/kinet/KinetMinutes/build/DerivedData/Build/Intermediates.noindex/swift-collections.build/Debug/ContainersPreview.build/Objects-normal/arm64/ContainerIterator.swiftdeps"
+  },
+  "/Users/phinn/Documents/kinet/KinetMinutes/build/DerivedData/SourcePackages/checkouts/swift-collections/Sources/ContainersPreview/Protocols/Container/DynamicContainer.swift" : {
+    "const-values" : "/Users/phinn/Documents/kinet/KinetMinutes/build/DerivedData/Build/Intermediates.noindex/swift-collections.build/Debug/ContainersPreview.build/Objects-normal/arm64/DynamicContainer.swiftconstvalues",
+    "dependencies" : "/Users/phinn/Documents/kinet/KinetMinutes/build/DerivedData/Build/Intermediates.noindex/swift-collections.build/Debug/ContainersPreview.build/Objects-normal/arm64/DynamicContainer.d",
+    "diagnostics" : "/Users/phinn/Documents/kinet/KinetMinutes/build/DerivedData/Build/Intermediates.noindex/swift-collections.build/Debug/ContainersPreview.build/Objects-normal/arm64/DynamicContainer.dia",
+    "object" : "/Users/phinn/Documents/kinet/KinetMinutes/build/DerivedData/Build/Intermediates.noindex/swift-collections.build/Debug/ContainersPreview.build/Objects-normal/arm64/DynamicContainer.o",
+    "swift-dependencies" : "/Users/phinn/Documents/kinet/KinetMinutes/build/DerivedData/Build/Intermediates.noindex/swift-collections.build/Debug/ContainersPreview.build/Objects-normal/arm64/DynamicContainer.swiftdeps"
+  },
+  "/Users/phinn/Documents/kinet/KinetMinutes/build/DerivedData/SourcePackages/checkouts/swift-collections/Sources/ContainersPreview/Protocols/Container/MutableContainer.swift" : {
+    "const-values" : "/Users/phinn/Documents/kinet/KinetMinutes/build/DerivedData/Build/Intermediates.noindex/swift-collections.build/Debug/ContainersPreview.build/Objects-normal/arm64/MutableContainer.swiftconstvalues",
+    "dependencies" : "/Users/phinn/Documents/kinet/KinetMinutes/build/DerivedData/Build/Intermediates.noindex/swift-collections.build/Debug/ContainersPreview.build/Objects-normal/arm64/MutableContainer.d",
+    "diagnostics" : "/Users/phinn/Documents/kinet/KinetMinutes/build/DerivedData/Build/Intermediates.noindex/swift-collections.build/Debug/ContainersPreview.build/Objects-normal/arm64/MutableContainer.dia",
+    "object" : "/Users/phinn/Documents/kinet/KinetMinutes/build/DerivedData/Build/Intermediates.noindex/swift-collections.build/Debug/ContainersPreview.build/Objects-normal/arm64/MutableContainer.o",
+    "swift-dependencies" : "/Users/phinn/Documents/kinet/KinetMinutes/build/DerivedData/Build/Intermediates.noindex/swift-collections.build/Debug/ContainersPreview.build/Objects-normal/arm64/MutableContainer.swiftdeps"
+  }
+}

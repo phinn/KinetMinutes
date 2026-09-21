@@ -1,0 +1,71 @@
+{
+  "" : {
+    "const-values" : "/Users/phinn/Documents/kinet/KinetMinutes/build/DerivedData/Build/Intermediates.noindex/KinetMinutes.build/Release/KinetMinutes.build/Objects-normal/x86_64/KinetMinutes-primary.swiftconstvalues",
+    "dependencies" : "/Users/phinn/Documents/kinet/KinetMinutes/build/DerivedData/Build/Intermediates.noindex/KinetMinutes.build/Release/KinetMinutes.build/Objects-normal/x86_64/KinetMinutes-primary.d",
+    "diagnostics" : "/Users/phinn/Documents/kinet/KinetMinutes/build/DerivedData/Build/Intermediates.noindex/KinetMinutes.build/Release/KinetMinutes.build/Objects-normal/x86_64/KinetMinutes-primary.dia",
+    "emit-module-dependencies" : "/Users/phinn/Documents/kinet/KinetMinutes/build/DerivedData/Build/Intermediates.noindex/KinetMinutes.build/Release/KinetMinutes.build/Objects-normal/x86_64/KinetMinutes-primary-emit-module.d",
+    "emit-module-diagnostics" : "/Users/phinn/Documents/kinet/KinetMinutes/build/DerivedData/Build/Intermediates.noindex/KinetMinutes.build/Release/KinetMinutes.build/Objects-normal/x86_64/KinetMinutes-primary-emit-module.dia",
+    "pch" : "/Users/phinn/Documents/kinet/KinetMinutes/build/DerivedData/Build/Intermediates.noindex/KinetMinutes.build/Release/KinetMinutes.build/Objects-normal/x86_64/KinetMinutes-primary-Bridging-header.pch",
+    "swift-dependencies" : "/Users/phinn/Documents/kinet/KinetMinutes/build/DerivedData/Build/Intermediates.noindex/KinetMinutes.build/Release/KinetMinutes.build/Objects-normal/x86_64/KinetMinutes-primary.swiftdeps"
+  },
+  "/Users/phinn/Documents/kinet/KinetMinutes/KinetMinutes/AppDelegate.swift" : {
+    "index-unit-output-path" : "/KinetMinutes.build/Release/KinetMinutes.build/Objects-normal/x86_64/AppDelegate.o",
+    "llvm-bc" : "/Users/phinn/Documents/kinet/KinetMinutes/build/DerivedData/Build/Intermediates.noindex/KinetMinutes.build/Release/KinetMinutes.build/Objects-normal/x86_64/AppDelegate.bc",
+    "object" : "/Users/phinn/Documents/kinet/KinetMinutes/build/DerivedData/Build/Intermediates.noindex/KinetMinutes.build/Release/KinetMinutes.build/Objects-normal/x86_64/AppDelegate.o"
+  },
+  "/Users/phinn/Documents/kinet/KinetMinutes/KinetMinutes/Exporters.swift" : {
+    "index-unit-output-path" : "/KinetMinutes.build/Release/KinetMinutes.build/Objects-normal/x86_64/Exporters.o",
+    "llvm-bc" : "/Users/phinn/Documents/kinet/KinetMinutes/build/DerivedData/Build/Intermediates.noindex/KinetMinutes.build/Release/KinetMinutes.build/Objects-normal/x86_64/Exporters.bc",
+    "object" : "/Users/phinn/Documents/kinet/KinetMinutes/build/DerivedData/Build/Intermediates.noindex/KinetMinutes.build/Release/KinetMinutes.build/Objects-normal/x86_64/Exporters.o"
+  },
+  "/Users/phinn/Documents/kinet/KinetMinutes/KinetMinutes/L10n.swift" : {
+    "index-unit-output-path" : "/KinetMinutes.build/Release/KinetMinutes.build/Objects-normal/x86_64/L10n.o",
+    "llvm-bc" : "/Users/phinn/Documents/kinet/KinetMinutes/build/DerivedData/Build/Intermediates.noindex/KinetMinutes.build/Release/KinetMinutes.build/Objects-normal/x86_64/L10n.bc",
+    "object" : "/Users/phinn/Documents/kinet/KinetMinutes/build/DerivedData/Build/Intermediates.noindex/KinetMinutes.build/Release/KinetMinutes.build/Objects-normal/x86_64/L10n.o"
+  },
+  "/Users/phinn/Documents/kinet/KinetMinutes/KinetMinutes/LibraryWindowController.swift" : {
+    "index-unit-output-path" : "/KinetMinutes.build/Release/KinetMinutes.build/Objects-normal/x86_64/LibraryWindowController.o",
+    "llvm-bc" : "/Users/phinn/Documents/kinet/KinetMinutes/build/DerivedData/Build/Intermediates.noindex/KinetMinutes.build/Release/KinetMinutes.build/Objects-normal/x86_64/LibraryWindowController.bc",
+    "object" : "/Users/phinn/Documents/kinet/KinetMinutes/build/DerivedData/Build/Intermediates.noindex/KinetMinutes.build/Release/KinetMinutes.build/Objects-normal/x86_64/LibraryWindowController.o"
+  },
+  "/Users/phinn/Documents/kinet/KinetMinutes/KinetMinutes/MeetingDetector.swift" : {
+    "index-unit-output-path" : "/KinetMinutes.build/Release/KinetMinutes.build/Objects-normal/x86_64/MeetingDetector.o",
+    "llvm-bc" : "/Users/phinn/Documents/kinet/KinetMinutes/build/DerivedData/Build/Intermediates.noindex/KinetMinutes.build/Release/KinetMinutes.build/Objects-normal/x86_64/MeetingDetector.bc",
+    "object" : "/Users/phinn/Documents/kinet/KinetMinutes/build/DerivedData/Build/Intermediates.noindex/KinetMinutes.build/Release/KinetMinutes.build/Objects-normal/x86_64/MeetingDetector.o"
+  },
+  "/Users/phinn/Documents/kinet/KinetMinutes/KinetMinutes/MeetingRecorder.swift" : {
+    "index-unit-output-path" : "/KinetMinutes.build/Release/KinetMinutes.build/Objects-normal/x86_64/MeetingRecorder.o",
+    "llvm-bc" : "/Users/phinn/Documents/kinet/KinetMinutes/build/DerivedData/Build/Intermediates.noindex/KinetMinutes.build/Release/KinetMinutes.build/Objects-normal/x86_64/MeetingRecorder.bc",
+    "object" : "/Users/phinn/Documents/kinet/KinetMinutes/build/DerivedData/Build/Intermediates.noindex/KinetMinutes.build/Release/KinetMinutes.build/Objects-normal/x86_64/MeetingRecorder.o"
+  },
+  "/Users/phinn/Documents/kinet/KinetMinutes/KinetMinutes/MeetingStore.swift" : {
+    "index-unit-output-path" : "/KinetMinutes.build/Release/KinetMinutes.build/Objects-normal/x86_64/MeetingStore.o",
+    "llvm-bc" : "/Users/phinn/Documents/kinet/KinetMinutes/build/DerivedData/Build/Intermediates.noindex/KinetMinutes.build/Release/KinetMinutes.build/Objects-normal/x86_64/MeetingStore.bc",
+    "object" : "/Users/phinn/Documents/kinet/KinetMinutes/build/DerivedData/Build/Intermediates.noindex/KinetMinutes.build/Release/KinetMinutes.build/Objects-normal/x86_64/MeetingStore.o"
+  },
+  "/Users/phinn/Documents/kinet/KinetMinutes/KinetMinutes/MinutesPipeline.swift" : {
+    "index-unit-output-path" : "/KinetMinutes.build/Release/KinetMinutes.build/Objects-normal/x86_64/MinutesPipeline.o",
+    "llvm-bc" : "/Users/phinn/Documents/kinet/KinetMinutes/build/DerivedData/Build/Intermediates.noindex/KinetMinutes.build/Release/KinetMinutes.build/Objects-normal/x86_64/MinutesPipeline.bc",
+    "object" : "/Users/phinn/Documents/kinet/KinetMinutes/build/DerivedData/Build/Intermediates.noindex/KinetMinutes.build/Release/KinetMinutes.build/Objects-normal/x86_64/MinutesPipeline.o"
+  },
+  "/Users/phinn/Documents/kinet/KinetMinutes/KinetMinutes/PrivacyPane.swift" : {
+    "index-unit-output-path" : "/KinetMinutes.build/Release/KinetMinutes.build/Objects-normal/x86_64/PrivacyPane.o",
+    "llvm-bc" : "/Users/phinn/Documents/kinet/KinetMinutes/build/DerivedData/Build/Intermediates.noindex/KinetMinutes.build/Release/KinetMinutes.build/Objects-normal/x86_64/PrivacyPane.bc",
+    "object" : "/Users/phinn/Documents/kinet/KinetMinutes/build/DerivedData/Build/Intermediates.noindex/KinetMinutes.build/Release/KinetMinutes.build/Objects-normal/x86_64/PrivacyPane.o"
+  },
+  "/Users/phinn/Documents/kinet/KinetMinutes/KinetMinutes/SystemAudioTap.swift" : {
+    "index-unit-output-path" : "/KinetMinutes.build/Release/KinetMinutes.build/Objects-normal/x86_64/SystemAudioTap.o",
+    "llvm-bc" : "/Users/phinn/Documents/kinet/KinetMinutes/build/DerivedData/Build/Intermediates.noindex/KinetMinutes.build/Release/KinetMinutes.build/Objects-normal/x86_64/SystemAudioTap.bc",
+    "object" : "/Users/phinn/Documents/kinet/KinetMinutes/build/DerivedData/Build/Intermediates.noindex/KinetMinutes.build/Release/KinetMinutes.build/Objects-normal/x86_64/SystemAudioTap.o"
+  },
+  "/Users/phinn/Documents/kinet/KinetMinutes/KinetMinutes/main.swift" : {
+    "index-unit-output-path" : "/KinetMinutes.build/Release/KinetMinutes.build/Objects-normal/x86_64/main.o",
+    "llvm-bc" : "/Users/phinn/Documents/kinet/KinetMinutes/build/DerivedData/Build/Intermediates.noindex/KinetMinutes.build/Release/KinetMinutes.build/Objects-normal/x86_64/main.bc",
+    "object" : "/Users/phinn/Documents/kinet/KinetMinutes/build/DerivedData/Build/Intermediates.noindex/KinetMinutes.build/Release/KinetMinutes.build/Objects-normal/x86_64/main.o"
+  },
+  "/Users/phinn/Documents/kinet/KinetMinutes/build/DerivedData/Build/Intermediates.noindex/KinetMinutes.build/Release/KinetMinutes.build/DerivedSources/GeneratedAssetSymbols.swift" : {
+    "index-unit-output-path" : "/KinetMinutes.build/Release/KinetMinutes.build/Objects-normal/x86_64/GeneratedAssetSymbols.o",
+    "llvm-bc" : "/Users/phinn/Documents/kinet/KinetMinutes/build/DerivedData/Build/Intermediates.noindex/KinetMinutes.build/Release/KinetMinutes.build/Objects-normal/x86_64/GeneratedAssetSymbols.bc",
+    "object" : "/Users/phinn/Documents/kinet/KinetMinutes/build/DerivedData/Build/Intermediates.noindex/KinetMinutes.build/Release/KinetMinutes.build/Objects-normal/x86_64/GeneratedAssetSymbols.o"
+  }
+}

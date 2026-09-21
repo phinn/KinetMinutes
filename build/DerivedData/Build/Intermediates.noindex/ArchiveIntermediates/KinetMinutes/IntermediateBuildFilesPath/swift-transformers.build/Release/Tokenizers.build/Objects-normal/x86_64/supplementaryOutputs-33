@@ -1,0 +1,12 @@
+{
+  "/Users/phinn/Documents/kinet/KinetMinutes/build/DerivedData/SourcePackages/checkouts/swift-transformers/Sources/Tokenizers/BPETokenizer.swift" : {
+    "abi-baseline-json" : "/Users/phinn/Documents/kinet/KinetMinutes/build/DerivedData/Build/Intermediates.noindex/ArchiveIntermediates/KinetMinutes/IntermediateBuildFilesPath/swift-transformers.build/Release/Tokenizers.build/Objects-normal/x86_64/Tokenizers.abi.json",
+    "const-values" : "/Users/phinn/Documents/kinet/KinetMinutes/build/DerivedData/Build/Intermediates.noindex/ArchiveIntermediates/KinetMinutes/IntermediateBuildFilesPath/swift-transformers.build/Release/Tokenizers.build/Objects-normal/x86_64/Tokenizers-primary.swiftconstvalues",
+    "dependencies" : "/Users/phinn/Documents/kinet/KinetMinutes/build/DerivedData/Build/Intermediates.noindex/ArchiveIntermediates/KinetMinutes/IntermediateBuildFilesPath/swift-transformers.build/Release/Tokenizers.build/Objects-normal/x86_64/Tokenizers-primary.d",
+    "diagnostics" : "/Users/phinn/Documents/kinet/KinetMinutes/build/DerivedData/Build/Intermediates.noindex/ArchiveIntermediates/KinetMinutes/IntermediateBuildFilesPath/swift-transformers.build/Release/Tokenizers.build/Objects-normal/x86_64/Tokenizers-primary.dia",
+    "objc-header" : "/Users/phinn/Documents/kinet/KinetMinutes/build/DerivedData/Build/Intermediates.noindex/ArchiveIntermediates/KinetMinutes/IntermediateBuildFilesPath/swift-transformers.build/Release/Tokenizers.build/Objects-normal/x86_64/Tokenizers-Swift.h",
+    "swiftdoc" : "/Users/phinn/Documents/kinet/KinetMinutes/build/DerivedData/Build/Intermediates.noindex/ArchiveIntermediates/KinetMinutes/IntermediateBuildFilesPath/swift-transformers.build/Release/Tokenizers.build/Objects-normal/x86_64/Tokenizers.swiftdoc",
+    "swiftmodule" : "/Users/phinn/Documents/kinet/KinetMinutes/build/DerivedData/Build/Intermediates.noindex/ArchiveIntermediates/KinetMinutes/IntermediateBuildFilesPath/swift-transformers.build/Release/Tokenizers.build/Objects-normal/x86_64/Tokenizers.swiftmodule",
+    "swiftsourceinfo" : "/Users/phinn/Documents/kinet/KinetMinutes/build/DerivedData/Build/Intermediates.noindex/ArchiveIntermediates/KinetMinutes/IntermediateBuildFilesPath/swift-transformers.build/Release/Tokenizers.build/Objects-normal/x86_64/Tokenizers.swiftsourceinfo"
+  }
+}

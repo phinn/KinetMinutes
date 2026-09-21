@@ -1,0 +1,12 @@
+{
+  "/Users/phinn/Documents/kinet/KinetMinutes/build/DerivedData/SourcePackages/checkouts/swift-collections/Sources/InternalCollectionsUtilities/Debugging.swift" : {
+    "abi-baseline-json" : "/Users/phinn/Documents/kinet/KinetMinutes/build/DerivedData/Build/Intermediates.noindex/swift-collections.build/Release/InternalCollectionsUtilities.build/Objects-normal/x86_64/InternalCollectionsUtilities.abi.json",
+    "const-values" : "/Users/phinn/Documents/kinet/KinetMinutes/build/DerivedData/Build/Intermediates.noindex/swift-collections.build/Release/InternalCollectionsUtilities.build/Objects-normal/x86_64/InternalCollectionsUtilities-primary.swiftconstvalues",
+    "dependencies" : "/Users/phinn/Documents/kinet/KinetMinutes/build/DerivedData/Build/Intermediates.noindex/swift-collections.build/Release/InternalCollectionsUtilities.build/Objects-normal/x86_64/InternalCollectionsUtilities-primary.d",
+    "diagnostics" : "/Users/phinn/Documents/kinet/KinetMinutes/build/DerivedData/Build/Intermediates.noindex/swift-collections.build/Release/InternalCollectionsUtilities.build/Objects-normal/x86_64/InternalCollectionsUtilities-primary.dia",
+    "objc-header" : "/Users/phinn/Documents/kinet/KinetMinutes/build/DerivedData/Build/Intermediates.noindex/swift-collections.build/Release/InternalCollectionsUtilities.build/Objects-normal/x86_64/InternalCollectionsUtilities-Swift.h",
+    "swiftdoc" : "/Users/phinn/Documents/kinet/KinetMinutes/build/DerivedData/Build/Intermediates.noindex/swift-collections.build/Release/InternalCollectionsUtilities.build/Objects-normal/x86_64/InternalCollectionsUtilities.swiftdoc",
+    "swiftmodule" : "/Users/phinn/Documents/kinet/KinetMinutes/build/DerivedData/Build/Intermediates.noindex/swift-collections.build/Release/InternalCollectionsUtilities.build/Objects-normal/x86_64/InternalCollectionsUtilities.swiftmodule",
+    "swiftsourceinfo" : "/Users/phinn/Documents/kinet/KinetMinutes/build/DerivedData/Build/Intermediates.noindex/swift-collections.build/Release/InternalCollectionsUtilities.build/Objects-normal/x86_64/InternalCollectionsUtilities.swiftsourceinfo"
+  }
+}

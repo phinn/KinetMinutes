@@ -42,7 +42,16 @@ final class MinutesPipeline {
         onStateChange?()
         defer { isProcessing = false; onStateChange?() }
 
-        guard let m = MeetingStore.shared.meeting(id: meetingID), let audioPath = m.audioPath else { return }
+        guard var m = MeetingStore.shared.meeting(id: meetingID) else { return }
+
+        // F03 双轨:prefer the system track (far end = meeting audio); fall back to mic.
+        let store = MeetingStore.shared
+        let sysTrack = store.audioDir.appendingPathComponent("meeting-\(meetingID).sys.caf").path
+        let micTrack = m.audioPath
+            ?? store.audioDir.appendingPathComponent("meeting-\(meetingID).caf").path
+        let audioPath = FileManager.default.fileExists(atPath: sysTrack) ? sysTrack : micTrack
+        m.audioPath = audioPath
+        guard FileManager.default.fileExists(atPath: audioPath) else { return }
 
         // 0. free wall
         if !Self.isPro(), Self.notesUsedThisMonth() >= Self.freeMonthlyLimit {

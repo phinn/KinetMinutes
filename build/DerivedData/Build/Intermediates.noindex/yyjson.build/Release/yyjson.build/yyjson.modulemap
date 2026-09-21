@@ -1,0 +1,4 @@
+module yyjson {
+umbrella header "/Users/phinn/Documents/kinet/KinetMinutes/build/DerivedData/SourcePackages/checkouts/yyjson/src/yyjson.h"
+export *
+}

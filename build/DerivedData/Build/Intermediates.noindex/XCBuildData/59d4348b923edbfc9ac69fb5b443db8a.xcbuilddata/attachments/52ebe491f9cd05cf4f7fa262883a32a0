@@ -1,0 +1,49 @@
+{
+  "" : {
+    "diagnostics" : "/Users/phinn/Documents/kinet/KinetMinutes/build/DerivedData/Build/Intermediates.noindex/EventSource.build/Debug/EventSource.build/Objects-normal/arm64/EventSource-primary.dia",
+    "emit-module-dependencies" : "/Users/phinn/Documents/kinet/KinetMinutes/build/DerivedData/Build/Intermediates.noindex/EventSource.build/Debug/EventSource.build/Objects-normal/arm64/EventSource-primary-emit-module.d",
+    "emit-module-diagnostics" : "/Users/phinn/Documents/kinet/KinetMinutes/build/DerivedData/Build/Intermediates.noindex/EventSource.build/Debug/EventSource.build/Objects-normal/arm64/EventSource-primary-emit-module.dia",
+    "pch" : "/Users/phinn/Documents/kinet/KinetMinutes/build/DerivedData/Build/Intermediates.noindex/EventSource.build/Debug/EventSource.build/Objects-normal/arm64/EventSource-primary-Bridging-header.pch",
+    "swift-dependencies" : "/Users/phinn/Documents/kinet/KinetMinutes/build/DerivedData/Build/Intermediates.noindex/EventSource.build/Debug/EventSource.build/Objects-normal/arm64/EventSource-primary.swiftdeps"
+  },
+  "/Users/phinn/Documents/kinet/KinetMinutes/build/DerivedData/SourcePackages/checkouts/EventSource/Sources/EventSource/AsyncEventsSequence.swift" : {
+    "const-values" : "/Users/phinn/Documents/kinet/KinetMinutes/build/DerivedData/Build/Intermediates.noindex/EventSource.build/Debug/EventSource.build/Objects-normal/arm64/AsyncEventsSequence.swiftconstvalues",
+    "dependencies" : "/Users/phinn/Documents/kinet/KinetMinutes/build/DerivedData/Build/Intermediates.noindex/EventSource.build/Debug/EventSource.build/Objects-normal/arm64/AsyncEventsSequence.d",
+    "diagnostics" : "/Users/phinn/Documents/kinet/KinetMinutes/build/DerivedData/Build/Intermediates.noindex/EventSource.build/Debug/EventSource.build/Objects-normal/arm64/AsyncEventsSequence.dia",
+    "index-unit-output-path" : "/EventSource.build/Debug/EventSource.build/Objects-normal/arm64/AsyncEventsSequence.o",
+    "llvm-bc" : "/Users/phinn/Documents/kinet/KinetMinutes/build/DerivedData/Build/Intermediates.noindex/EventSource.build/Debug/EventSource.build/Objects-normal/arm64/AsyncEventsSequence.bc",
+    "object" : "/Users/phinn/Documents/kinet/KinetMinutes/build/DerivedData/Build/Intermediates.noindex/EventSource.build/Debug/EventSource.build/Objects-normal/arm64/AsyncEventsSequence.o",
+    "swift-dependencies" : "/Users/phinn/Documents/kinet/KinetMinutes/build/DerivedData/Build/Intermediates.noindex/EventSource.build/Debug/EventSource.build/Objects-normal/arm64/AsyncEventsSequence.swiftdeps",
+    "swiftmodule" : "/Users/phinn/Documents/kinet/KinetMinutes/build/DerivedData/Build/Intermediates.noindex/EventSource.build/Debug/EventSource.build/Objects-normal/arm64/AsyncEventsSequence~partial.swiftmodule"
+  },
+  "/Users/phinn/Documents/kinet/KinetMinutes/build/DerivedData/SourcePackages/checkouts/EventSource/Sources/EventSource/AsyncSequence+Events.swift" : {
+    "const-values" : "/Users/phinn/Documents/kinet/KinetMinutes/build/DerivedData/Build/Intermediates.noindex/EventSource.build/Debug/EventSource.build/Objects-normal/arm64/AsyncSequence+Events.swiftconstvalues",
+    "dependencies" : "/Users/phinn/Documents/kinet/KinetMinutes/build/DerivedData/Build/Intermediates.noindex/EventSource.build/Debug/EventSource.build/Objects-normal/arm64/AsyncSequence+Events.d",
+    "diagnostics" : "/Users/phinn/Documents/kinet/KinetMinutes/build/DerivedData/Build/Intermediates.noindex/EventSource.build/Debug/EventSource.build/Objects-normal/arm64/AsyncSequence+Events.dia",
+    "index-unit-output-path" : "/EventSource.build/Debug/EventSource.build/Objects-normal/arm64/AsyncSequence+Events.o",
+    "llvm-bc" : "/Users/phinn/Documents/kinet/KinetMinutes/build/DerivedData/Build/Intermediates.noindex/EventSource.build/Debug/EventSource.build/Objects-normal/arm64/AsyncSequence+Events.bc",
+    "object" : "/Users/phinn/Documents/kinet/KinetMinutes/build/DerivedData/Build/Intermediates.noindex/EventSource.build/Debug/EventSource.build/Objects-normal/arm64/AsyncSequence+Events.o",
+    "swift-dependencies" : "/Users/phinn/Documents/kinet/KinetMinutes/build/DerivedData/Build/Intermediates.noindex/EventSource.build/Debug/EventSource.build/Objects-normal/arm64/AsyncSequence+Events.swiftdeps",
+    "swiftmodule" : "/Users/phinn/Documents/kinet/KinetMinutes/build/DerivedData/Build/Intermediates.noindex/EventSource.build/Debug/EventSource.build/Objects-normal/arm64/AsyncSequence+Events~partial.swiftmodule"
+  },
+  "/Users/phinn/Documents/kinet/KinetMinutes/build/DerivedData/SourcePackages/checkouts/EventSource/Sources/EventSource/EventSource+AsyncHTTPClient.swift" : {
+    "const-values" : "/Users/phinn/Documents/kinet/KinetMinutes/build/DerivedData/Build/Intermediates.noindex/EventSource.build/Debug/EventSource.build/Objects-normal/arm64/EventSource+AsyncHTTPClient.swiftconstvalues",
+    "dependencies" : "/Users/phinn/Documents/kinet/KinetMinutes/build/DerivedData/Build/Intermediates.noindex/EventSource.build/Debug/EventSource.build/Objects-normal/arm64/EventSource+AsyncHTTPClient.d",
+    "diagnostics" : "/Users/phinn/Documents/kinet/KinetMinutes/build/DerivedData/Build/Intermediates.noindex/EventSource.build/Debug/EventSource.build/Objects-normal/arm64/EventSource+AsyncHTTPClient.dia",
+    "index-unit-output-path" : "/EventSource.build/Debug/EventSource.build/Objects-normal/arm64/EventSource+AsyncHTTPClient.o",
+    "llvm-bc" : "/Users/phinn/Documents/kinet/KinetMinutes/build/DerivedData/Build/Intermediates.noindex/EventSource.build/Debug/EventSource.build/Objects-normal/arm64/EventSource+AsyncHTTPClient.bc",
+    "object" : "/Users/phinn/Documents/kinet/KinetMinutes/build/DerivedData/Build/Intermediates.noindex/EventSource.build/Debug/EventSource.build/Objects-normal/arm64/EventSource+AsyncHTTPClient.o",
+    "swift-dependencies" : "/Users/phinn/Documents/kinet/KinetMinutes/build/DerivedData/Build/Intermediates.noindex/EventSource.build/Debug/EventSource.build/Objects-normal/arm64/EventSource+AsyncHTTPClient.swiftdeps",
+    "swiftmodule" : "/Users/phinn/Documents/kinet/KinetMinutes/build/DerivedData/Build/Intermediates.noindex/EventSource.build/Debug/EventSource.build/Objects-normal/arm64/EventSource+AsyncHTTPClient~partial.swiftmodule"
+  },
+  "/Users/phinn/Documents/kinet/KinetMinutes/build/DerivedData/SourcePackages/checkouts/EventSource/Sources/EventSource/EventSource.swift" : {
+    "const-values" : "/Users/phinn/Documents/kinet/KinetMinutes/build/DerivedData/Build/Intermediates.noindex/EventSource.build/Debug/EventSource.build/Objects-normal/arm64/EventSource.swiftconstvalues",
+    "dependencies" : "/Users/phinn/Documents/kinet/KinetMinutes/build/DerivedData/Build/Intermediates.noindex/EventSource.build/Debug/EventSource.build/Objects-normal/arm64/EventSource.d",
+    "diagnostics" : "/Users/phinn/Documents/kinet/KinetMinutes/build/DerivedData/Build/Intermediates.noindex/EventSource.build/Debug/EventSource.build/Objects-normal/arm64/EventSource.dia",
+    "index-unit-output-path" : "/EventSource.build/Debug/EventSource.build/Objects-normal/arm64/EventSource.o",
+    "llvm-bc" : "/Users/phinn/Documents/kinet/KinetMinutes/build/DerivedData/Build/Intermediates.noindex/EventSource.build/Debug/EventSource.build/Objects-normal/arm64/EventSource.bc",
+    "object" : "/Users/phinn/Documents/kinet/KinetMinutes/build/DerivedData/Build/Intermediates.noindex/EventSource.build/Debug/EventSource.build/Objects-normal/arm64/EventSource.o",
+    "swift-dependencies" : "/Users/phinn/Documents/kinet/KinetMinutes/build/DerivedData/Build/Intermediates.noindex/EventSource.build/Debug/EventSource.build/Objects-normal/arm64/EventSource.swiftdeps",
+    "swiftmodule" : "/Users/phinn/Documents/kinet/KinetMinutes/build/DerivedData/Build/Intermediates.noindex/EventSource.build/Debug/EventSource.build/Objects-normal/arm64/EventSource~partial.swiftmodule"
+  }
+}

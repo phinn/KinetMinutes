@@ -1,0 +1,12 @@
+{
+  "/Users/phinn/Documents/kinet/KinetMinutes/build/DerivedData/SourcePackages/checkouts/swift-transformers/Sources/Generation/Decoders.swift" : {
+    "abi-baseline-json" : "/Users/phinn/Documents/kinet/KinetMinutes/build/DerivedData/Build/Intermediates.noindex/ArchiveIntermediates/KinetMinutes/IntermediateBuildFilesPath/swift-transformers.build/Release/Generation.build/Objects-normal/arm64/Generation.abi.json",
+    "const-values" : "/Users/phinn/Documents/kinet/KinetMinutes/build/DerivedData/Build/Intermediates.noindex/ArchiveIntermediates/KinetMinutes/IntermediateBuildFilesPath/swift-transformers.build/Release/Generation.build/Objects-normal/arm64/Generation-primary.swiftconstvalues",
+    "dependencies" : "/Users/phinn/Documents/kinet/KinetMinutes/build/DerivedData/Build/Intermediates.noindex/ArchiveIntermediates/KinetMinutes/IntermediateBuildFilesPath/swift-transformers.build/Release/Generation.build/Objects-normal/arm64/Generation-primary.d",
+    "diagnostics" : "/Users/phinn/Documents/kinet/KinetMinutes/build/DerivedData/Build/Intermediates.noindex/ArchiveIntermediates/KinetMinutes/IntermediateBuildFilesPath/swift-transformers.build/Release/Generation.build/Objects-normal/arm64/Generation-primary.dia",
+    "objc-header" : "/Users/phinn/Documents/kinet/KinetMinutes/build/DerivedData/Build/Intermediates.noindex/ArchiveIntermediates/KinetMinutes/IntermediateBuildFilesPath/swift-transformers.build/Release/Generation.build/Objects-normal/arm64/Generation-Swift.h",
+    "swiftdoc" : "/Users/phinn/Documents/kinet/KinetMinutes/build/DerivedData/Build/Intermediates.noindex/ArchiveIntermediates/KinetMinutes/IntermediateBuildFilesPath/swift-transformers.build/Release/Generation.build/Objects-normal/arm64/Generation.swiftdoc",
+    "swiftmodule" : "/Users/phinn/Documents/kinet/KinetMinutes/build/DerivedData/Build/Intermediates.noindex/ArchiveIntermediates/KinetMinutes/IntermediateBuildFilesPath/swift-transformers.build/Release/Generation.build/Objects-normal/arm64/Generation.swiftmodule",
+    "swiftsourceinfo" : "/Users/phinn/Documents/kinet/KinetMinutes/build/DerivedData/Build/Intermediates.noindex/ArchiveIntermediates/KinetMinutes/IntermediateBuildFilesPath/swift-transformers.build/Release/Generation.build/Objects-normal/arm64/Generation.swiftsourceinfo"
+  }
+}

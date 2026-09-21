@@ -1,0 +1,69 @@
+{
+  "" : {
+    "diagnostics" : "/Users/phinn/Documents/kinet/KinetMinutes/build/DerivedData/Build/Intermediates.noindex/swift-nio.build/Debug/NIOConcurrencyHelpers.build/Objects-normal/arm64/NIOConcurrencyHelpers-primary.dia",
+    "emit-module-dependencies" : "/Users/phinn/Documents/kinet/KinetMinutes/build/DerivedData/Build/Intermediates.noindex/swift-nio.build/Debug/NIOConcurrencyHelpers.build/Objects-normal/arm64/NIOConcurrencyHelpers-primary-emit-module.d",
+    "emit-module-diagnostics" : "/Users/phinn/Documents/kinet/KinetMinutes/build/DerivedData/Build/Intermediates.noindex/swift-nio.build/Debug/NIOConcurrencyHelpers.build/Objects-normal/arm64/NIOConcurrencyHelpers-primary-emit-module.dia",
+    "pch" : "/Users/phinn/Documents/kinet/KinetMinutes/build/DerivedData/Build/Intermediates.noindex/swift-nio.build/Debug/NIOConcurrencyHelpers.build/Objects-normal/arm64/NIOConcurrencyHelpers-primary-Bridging-header.pch",
+    "swift-dependencies" : "/Users/phinn/Documents/kinet/KinetMinutes/build/DerivedData/Build/Intermediates.noindex/swift-nio.build/Debug/NIOConcurrencyHelpers.build/Objects-normal/arm64/NIOConcurrencyHelpers-primary.swiftdeps"
+  },
+  "/Users/phinn/Documents/kinet/KinetMinutes/build/DerivedData/SourcePackages/checkouts/swift-nio/Sources/NIOConcurrencyHelpers/NIOAtomic.swift" : {
+    "const-values" : "/Users/phinn/Documents/kinet/KinetMinutes/build/DerivedData/Build/Intermediates.noindex/swift-nio.build/Debug/NIOConcurrencyHelpers.build/Objects-normal/arm64/NIOAtomic.swiftconstvalues",
+    "dependencies" : "/Users/phinn/Documents/kinet/KinetMinutes/build/DerivedData/Build/Intermediates.noindex/swift-nio.build/Debug/NIOConcurrencyHelpers.build/Objects-normal/arm64/NIOAtomic.d",
+    "diagnostics" : "/Users/phinn/Documents/kinet/KinetMinutes/build/DerivedData/Build/Intermediates.noindex/swift-nio.build/Debug/NIOConcurrencyHelpers.build/Objects-normal/arm64/NIOAtomic.dia",
+    "index-unit-output-path" : "/swift-nio.build/Debug/NIOConcurrencyHelpers.build/Objects-normal/arm64/NIOAtomic.o",
+    "llvm-bc" : "/Users/phinn/Documents/kinet/KinetMinutes/build/DerivedData/Build/Intermediates.noindex/swift-nio.build/Debug/NIOConcurrencyHelpers.build/Objects-normal/arm64/NIOAtomic.bc",
+    "object" : "/Users/phinn/Documents/kinet/KinetMinutes/build/DerivedData/Build/Intermediates.noindex/swift-nio.build/Debug/NIOConcurrencyHelpers.build/Objects-normal/arm64/NIOAtomic.o",
+    "swift-dependencies" : "/Users/phinn/Documents/kinet/KinetMinutes/build/DerivedData/Build/Intermediates.noindex/swift-nio.build/Debug/NIOConcurrencyHelpers.build/Objects-normal/arm64/NIOAtomic.swiftdeps",
+    "swiftmodule" : "/Users/phinn/Documents/kinet/KinetMinutes/build/DerivedData/Build/Intermediates.noindex/swift-nio.build/Debug/NIOConcurrencyHelpers.build/Objects-normal/arm64/NIOAtomic~partial.swiftmodule"
+  },
+  "/Users/phinn/Documents/kinet/KinetMinutes/build/DerivedData/SourcePackages/checkouts/swift-nio/Sources/NIOConcurrencyHelpers/NIOLock.swift" : {
+    "const-values" : "/Users/phinn/Documents/kinet/KinetMinutes/build/DerivedData/Build/Intermediates.noindex/swift-nio.build/Debug/NIOConcurrencyHelpers.build/Objects-normal/arm64/NIOLock.swiftconstvalues",
+    "dependencies" : "/Users/phinn/Documents/kinet/KinetMinutes/build/DerivedData/Build/Intermediates.noindex/swift-nio.build/Debug/NIOConcurrencyHelpers.build/Objects-normal/arm64/NIOLock.d",
+    "diagnostics" : "/Users/phinn/Documents/kinet/KinetMinutes/build/DerivedData/Build/Intermediates.noindex/swift-nio.build/Debug/NIOConcurrencyHelpers.build/Objects-normal/arm64/NIOLock.dia",
+    "index-unit-output-path" : "/swift-nio.build/Debug/NIOConcurrencyHelpers.build/Objects-normal/arm64/NIOLock.o",
+    "llvm-bc" : "/Users/phinn/Documents/kinet/KinetMinutes/build/DerivedData/Build/Intermediates.noindex/swift-nio.build/Debug/NIOConcurrencyHelpers.build/Objects-normal/arm64/NIOLock.bc",
+    "object" : "/Users/phinn/Documents/kinet/KinetMinutes/build/DerivedData/Build/Intermediates.noindex/swift-nio.build/Debug/NIOConcurrencyHelpers.build/Objects-normal/arm64/NIOLock.o",
+    "swift-dependencies" : "/Users/phinn/Documents/kinet/KinetMinutes/build/DerivedData/Build/Intermediates.noindex/swift-nio.build/Debug/NIOConcurrencyHelpers.build/Objects-normal/arm64/NIOLock.swiftdeps",
+    "swiftmodule" : "/Users/phinn/Documents/kinet/KinetMinutes/build/DerivedData/Build/Intermediates.noindex/swift-nio.build/Debug/NIOConcurrencyHelpers.build/Objects-normal/arm64/NIOLock~partial.swiftmodule"
+  },
+  "/Users/phinn/Documents/kinet/KinetMinutes/build/DerivedData/SourcePackages/checkouts/swift-nio/Sources/NIOConcurrencyHelpers/NIOLockedValueBox.swift" : {
+    "const-values" : "/Users/phinn/Documents/kinet/KinetMinutes/build/DerivedData/Build/Intermediates.noindex/swift-nio.build/Debug/NIOConcurrencyHelpers.build/Objects-normal/arm64/NIOLockedValueBox.swiftconstvalues",
+    "dependencies" : "/Users/phinn/Documents/kinet/KinetMinutes/build/DerivedData/Build/Intermediates.noindex/swift-nio.build/Debug/NIOConcurrencyHelpers.build/Objects-normal/arm64/NIOLockedValueBox.d",
+    "diagnostics" : "/Users/phinn/Documents/kinet/KinetMinutes/build/DerivedData/Build/Intermediates.noindex/swift-nio.build/Debug/NIOConcurrencyHelpers.build/Objects-normal/arm64/NIOLockedValueBox.dia",
+    "index-unit-output-path" : "/swift-nio.build/Debug/NIOConcurrencyHelpers.build/Objects-normal/arm64/NIOLockedValueBox.o",
+    "llvm-bc" : "/Users/phinn/Documents/kinet/KinetMinutes/build/DerivedData/Build/Intermediates.noindex/swift-nio.build/Debug/NIOConcurrencyHelpers.build/Objects-normal/arm64/NIOLockedValueBox.bc",
+    "object" : "/Users/phinn/Documents/kinet/KinetMinutes/build/DerivedData/Build/Intermediates.noindex/swift-nio.build/Debug/NIOConcurrencyHelpers.build/Objects-normal/arm64/NIOLockedValueBox.o",
+    "swift-dependencies" : "/Users/phinn/Documents/kinet/KinetMinutes/build/DerivedData/Build/Intermediates.noindex/swift-nio.build/Debug/NIOConcurrencyHelpers.build/Objects-normal/arm64/NIOLockedValueBox.swiftdeps",
+    "swiftmodule" : "/Users/phinn/Documents/kinet/KinetMinutes/build/DerivedData/Build/Intermediates.noindex/swift-nio.build/Debug/NIOConcurrencyHelpers.build/Objects-normal/arm64/NIOLockedValueBox~partial.swiftmodule"
+  },
+  "/Users/phinn/Documents/kinet/KinetMinutes/build/DerivedData/SourcePackages/checkouts/swift-nio/Sources/NIOConcurrencyHelpers/NIOThreadPoolWorkAvailable.swift" : {
+    "const-values" : "/Users/phinn/Documents/kinet/KinetMinutes/build/DerivedData/Build/Intermediates.noindex/swift-nio.build/Debug/NIOConcurrencyHelpers.build/Objects-normal/arm64/NIOThreadPoolWorkAvailable.swiftconstvalues",
+    "dependencies" : "/Users/phinn/Documents/kinet/KinetMinutes/build/DerivedData/Build/Intermediates.noindex/swift-nio.build/Debug/NIOConcurrencyHelpers.build/Objects-normal/arm64/NIOThreadPoolWorkAvailable.d",
+    "diagnostics" : "/Users/phinn/Documents/kinet/KinetMinutes/build/DerivedData/Build/Intermediates.noindex/swift-nio.build/Debug/NIOConcurrencyHelpers.build/Objects-normal/arm64/NIOThreadPoolWorkAvailable.dia",
+    "index-unit-output-path" : "/swift-nio.build/Debug/NIOConcurrencyHelpers.build/Objects-normal/arm64/NIOThreadPoolWorkAvailable.o",
+    "llvm-bc" : "/Users/phinn/Documents/kinet/KinetMinutes/build/DerivedData/Build/Intermediates.noindex/swift-nio.build/Debug/NIOConcurrencyHelpers.build/Objects-normal/arm64/NIOThreadPoolWorkAvailable.bc",
+    "object" : "/Users/phinn/Documents/kinet/KinetMinutes/build/DerivedData/Build/Intermediates.noindex/swift-nio.build/Debug/NIOConcurrencyHelpers.build/Objects-normal/arm64/NIOThreadPoolWorkAvailable.o",
+    "swift-dependencies" : "/Users/phinn/Documents/kinet/KinetMinutes/build/DerivedData/Build/Intermediates.noindex/swift-nio.build/Debug/NIOConcurrencyHelpers.build/Objects-normal/arm64/NIOThreadPoolWorkAvailable.swiftdeps",
+    "swiftmodule" : "/Users/phinn/Documents/kinet/KinetMinutes/build/DerivedData/Build/Intermediates.noindex/swift-nio.build/Debug/NIOConcurrencyHelpers.build/Objects-normal/arm64/NIOThreadPoolWorkAvailable~partial.swiftmodule"
+  },
+  "/Users/phinn/Documents/kinet/KinetMinutes/build/DerivedData/SourcePackages/checkouts/swift-nio/Sources/NIOConcurrencyHelpers/atomics.swift" : {
+    "const-values" : "/Users/phinn/Documents/kinet/KinetMinutes/build/DerivedData/Build/Intermediates.noindex/swift-nio.build/Debug/NIOConcurrencyHelpers.build/Objects-normal/arm64/atomics.swiftconstvalues",
+    "dependencies" : "/Users/phinn/Documents/kinet/KinetMinutes/build/DerivedData/Build/Intermediates.noindex/swift-nio.build/Debug/NIOConcurrencyHelpers.build/Objects-normal/arm64/atomics.d",
+    "diagnostics" : "/Users/phinn/Documents/kinet/KinetMinutes/build/DerivedData/Build/Intermediates.noindex/swift-nio.build/Debug/NIOConcurrencyHelpers.build/Objects-normal/arm64/atomics.dia",
+    "index-unit-output-path" : "/swift-nio.build/Debug/NIOConcurrencyHelpers.build/Objects-normal/arm64/atomics.o",
+    "llvm-bc" : "/Users/phinn/Documents/kinet/KinetMinutes/build/DerivedData/Build/Intermediates.noindex/swift-nio.build/Debug/NIOConcurrencyHelpers.build/Objects-normal/arm64/atomics.bc",
+    "object" : "/Users/phinn/Documents/kinet/KinetMinutes/build/DerivedData/Build/Intermediates.noindex/swift-nio.build/Debug/NIOConcurrencyHelpers.build/Objects-normal/arm64/atomics.o",
+    "swift-dependencies" : "/Users/phinn/Documents/kinet/KinetMinutes/build/DerivedData/Build/Intermediates.noindex/swift-nio.build/Debug/NIOConcurrencyHelpers.build/Objects-normal/arm64/atomics.swiftdeps",
+    "swiftmodule" : "/Users/phinn/Documents/kinet/KinetMinutes/build/DerivedData/Build/Intermediates.noindex/swift-nio.build/Debug/NIOConcurrencyHelpers.build/Objects-normal/arm64/atomics~partial.swiftmodule"
+  },
+  "/Users/phinn/Documents/kinet/KinetMinutes/build/DerivedData/SourcePackages/checkouts/swift-nio/Sources/NIOConcurrencyHelpers/lock.swift" : {
+    "const-values" : "/Users/phinn/Documents/kinet/KinetMinutes/build/DerivedData/Build/Intermediates.noindex/swift-nio.build/Debug/NIOConcurrencyHelpers.build/Objects-normal/arm64/lock.swiftconstvalues",
+    "dependencies" : "/Users/phinn/Documents/kinet/KinetMinutes/build/DerivedData/Build/Intermediates.noindex/swift-nio.build/Debug/NIOConcurrencyHelpers.build/Objects-normal/arm64/lock.d",
+    "diagnostics" : "/Users/phinn/Documents/kinet/KinetMinutes/build/DerivedData/Build/Intermediates.noindex/swift-nio.build/Debug/NIOConcurrencyHelpers.build/Objects-normal/arm64/lock.dia",
+    "index-unit-output-path" : "/swift-nio.build/Debug/NIOConcurrencyHelpers.build/Objects-normal/arm64/lock.o",
+    "llvm-bc" : "/Users/phinn/Documents/kinet/KinetMinutes/build/DerivedData/Build/Intermediates.noindex/swift-nio.build/Debug/NIOConcurrencyHelpers.build/Objects-normal/arm64/lock.bc",
+    "object" : "/Users/phinn/Documents/kinet/KinetMinutes/build/DerivedData/Build/Intermediates.noindex/swift-nio.build/Debug/NIOConcurrencyHelpers.build/Objects-normal/arm64/lock.o",
+    "swift-dependencies" : "/Users/phinn/Documents/kinet/KinetMinutes/build/DerivedData/Build/Intermediates.noindex/swift-nio.build/Debug/NIOConcurrencyHelpers.build/Objects-normal/arm64/lock.swiftdeps",
+    "swiftmodule" : "/Users/phinn/Documents/kinet/KinetMinutes/build/DerivedData/Build/Intermediates.noindex/swift-nio.build/Debug/NIOConcurrencyHelpers.build/Objects-normal/arm64/lock~partial.swiftmodule"
+  }
+}

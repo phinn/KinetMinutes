@@ -70,6 +70,50 @@ enum Exporters {
         try? content.data(using: .utf8)?.write(to: url)
     }
 
+    /// F08 Pro: PDF export. Renders the markdown-ish content via Cocoa text
+    /// system (NSAttributedString → NSPrintOperation PDF) — no deps, CJK-safe.
+    static func savePDF(_ content: String, name: String) {
+        let panel = NSSavePanel()
+        panel.nameFieldStringValue = name
+        panel.allowedContentTypes = [.pdf]
+        guard panel.runModal() == .OK, let url = panel.url else { return }
+
+        // plain-text render of the markdown structure (headers bolded by line)
+        let para = NSMutableParagraphStyle()
+        para.lineSpacing = 3
+        let attr = NSMutableAttributedString()
+        for line in content.components(separatedBy: "\n") {
+            let bold = line.hasPrefix("#")
+            let font: NSFont = bold ? .boldSystemFont(ofSize: line.hasPrefix("# ") ? 16 : 13)
+                                    : .systemFont(ofSize: 11)
+            attr.append(NSAttributedString(string: line + "\n", attributes: [
+                .font: font, .paragraphStyle: para
+            ]))
+        }
+
+        // A4-ish page, 72 dpi points
+        let pageRect = NSRect(x: 0, y: 0, width: 595, height: 842)
+        let margin: CGFloat = 48
+        let textView = NSTextView(frame: NSRect(x: margin, y: margin,
+                                                width: pageRect.width - margin * 2,
+                                                height: pageRect.height - margin * 2))
+        textView.textStorage?.setAttributedString(attr)
+
+        let printInfo = NSPrintInfo()
+        printInfo.horizontalPagination = .fit
+        printInfo.verticalPagination = .automatic
+        printInfo.topMargin = margin; printInfo.bottomMargin = margin
+        printInfo.leftMargin = margin; printInfo.rightMargin = margin
+        printInfo.paperSize = pageRect.size
+        printInfo.jobDisposition = .save
+        printInfo.dictionary()[NSPrintInfo.AttributeKey.jobSavingURL] = url
+
+        let op = NSPrintOperation(view: textView, printInfo: printInfo)
+        op.showsPrintPanel = false
+        op.showsProgressPanel = false
+        op.run()
+    }
+
     private static func timeString(_ t: Double) -> String {
         let s = Int(t)
         return String(format: "%02d:%02d", s / 60, s % 60)

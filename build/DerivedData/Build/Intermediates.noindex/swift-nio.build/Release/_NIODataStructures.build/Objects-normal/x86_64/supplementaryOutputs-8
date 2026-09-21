@@ -1,0 +1,12 @@
+{
+  "/Users/phinn/Documents/kinet/KinetMinutes/build/DerivedData/SourcePackages/checkouts/swift-nio/Sources/_NIODataStructures/Heap.swift" : {
+    "abi-baseline-json" : "/Users/phinn/Documents/kinet/KinetMinutes/build/DerivedData/Build/Intermediates.noindex/swift-nio.build/Release/_NIODataStructures.build/Objects-normal/x86_64/_NIODataStructures.abi.json",
+    "const-values" : "/Users/phinn/Documents/kinet/KinetMinutes/build/DerivedData/Build/Intermediates.noindex/swift-nio.build/Release/_NIODataStructures.build/Objects-normal/x86_64/_NIODataStructures-primary.swiftconstvalues",
+    "dependencies" : "/Users/phinn/Documents/kinet/KinetMinutes/build/DerivedData/Build/Intermediates.noindex/swift-nio.build/Release/_NIODataStructures.build/Objects-normal/x86_64/_NIODataStructures-primary.d",
+    "diagnostics" : "/Users/phinn/Documents/kinet/KinetMinutes/build/DerivedData/Build/Intermediates.noindex/swift-nio.build/Release/_NIODataStructures.build/Objects-normal/x86_64/_NIODataStructures-primary.dia",
+    "objc-header" : "/Users/phinn/Documents/kinet/KinetMinutes/build/DerivedData/Build/Intermediates.noindex/swift-nio.build/Release/_NIODataStructures.build/Objects-normal/x86_64/_NIODataStructures-Swift.h",
+    "swiftdoc" : "/Users/phinn/Documents/kinet/KinetMinutes/build/DerivedData/Build/Intermediates.noindex/swift-nio.build/Release/_NIODataStructures.build/Objects-normal/x86_64/_NIODataStructures.swiftdoc",
+    "swiftmodule" : "/Users/phinn/Documents/kinet/KinetMinutes/build/DerivedData/Build/Intermediates.noindex/swift-nio.build/Release/_NIODataStructures.build/Objects-normal/x86_64/_NIODataStructures.swiftmodule",
+    "swiftsourceinfo" : "/Users/phinn/Documents/kinet/KinetMinutes/build/DerivedData/Build/Intermediates.noindex/swift-nio.build/Release/_NIODataStructures.build/Objects-normal/x86_64/_NIODataStructures.swiftsourceinfo"
+  }
+}

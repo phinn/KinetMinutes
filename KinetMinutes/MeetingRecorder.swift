@@ -1,7 +1,8 @@
-// MeetingRecorder.swift — mic recording via AVAudioEngine (macOS: no AVAudioSession).
-// Writes CAF at hardware format; level meter feeds the menu-bar icon.
-// macOS 14.4+ also exposes AVAudioMixerSinkNode for system-audio taps; we gate that
-// behind #available and fall back to mic-only on older runtimes.
+// MeetingRecorder.swift — dual-track recording (PRD F03):
+//   mic track   = AVAudioEngine input tap   → meeting-<id>.caf
+//   system track= Core Audio process tap    → meeting-<id>.sys.caf (far end)
+// Both 48 kHz mono PCM16. Crash recovery: orphaned meetings stuck in
+// "recording"/"processing" are finalized on next launch.
 
 import AVFoundation
 import AppKit
@@ -19,11 +20,29 @@ final class MeetingRecorder: NSObject {
     private(set) var lastLevel: Float = 0
     private var levelTimer: Timer?
     private(set) var usedSystemAudio = false
+    private let systemTap = SystemAudioTap()
 
     var elapsedString: String {
         guard let s = startedAt else { return "0:00" }
         let t = Int(Date().timeIntervalSince(s))
         return String(format: "%d:%02d", t / 60, t % 60)
+    }
+
+    /// F03 crash recovery: at launch, close out meetings left mid-flight by a crash.
+    /// Audio files on disk are intact (CAF written incrementally), so mark them
+    /// "ready to process" with whatever duration we know.
+    static func recoverOrphanedMeetings() {
+        let store = MeetingStore.shared
+        for m in store.allMeetings() where m.status == "recording" || m.status == "processing" {
+            let sysTrack = store.audioDir.appendingPathComponent("meeting-\(m.id).sys.caf")
+            let micTrack = store.audioDir.appendingPathComponent("meeting-\(m.id).caf")
+            let hasAudio = FileManager.default.fileExists(atPath: micTrack.path) || FileManager.default.fileExists(atPath: sysTrack.path)
+            if hasAudio {
+                store.update(m.id, status: "ready_to_process", endedAt: m.startedAt)
+            } else {
+                store.update(m.id, status: "failed", endedAt: m.startedAt)
+            }
+        }
     }
 
     func start(meetingID: Int64) {
@@ -100,9 +119,11 @@ final class MeetingRecorder: NSObject {
         self.isRecording = true
         self.currentMeetingID = meetingID
         self.startedAt = Date()
+        // system track (far end): best effort — mic-only if the tap fails
+        usedSystemAudio = systemTap.start(url: store.audioDir.appendingPathComponent("meeting-\(meetingID).sys.caf"))
         levelTimer = Timer.scheduledTimer(withTimeInterval: 0.3, repeats: true) { [weak self] _ in
             guard let self else { return }
-            self.onLevelChange?(self.lastLevel)
+            self.onLevelChange?(max(self.lastLevel, self.systemTap.lastLevel))
             (NSApp.delegate as? AppDelegate)?.refreshStatusMenu()
         }
     }
@@ -117,6 +138,7 @@ final class MeetingRecorder: NSObject {
         engine = nil
         file = nil
         converter = nil
+        systemTap.stop()
         isRecording = false
         let duration = startedAt.map { Date().timeIntervalSince($0) } ?? 0
         startedAt = nil

@@ -1,0 +1,12 @@
+{
+  "/Users/phinn/Documents/kinet/KinetMinutes/KinetMinutes/AppDelegate.swift" : {
+    "abi-baseline-json" : "/Users/phinn/Documents/kinet/KinetMinutes/build/DerivedData/Build/Intermediates.noindex/KinetMinutes.build/Release/KinetMinutes.build/Objects-normal/x86_64/KinetMinutes.abi.json",
+    "const-values" : "/Users/phinn/Documents/kinet/KinetMinutes/build/DerivedData/Build/Intermediates.noindex/KinetMinutes.build/Release/KinetMinutes.build/Objects-normal/x86_64/KinetMinutes-primary.swiftconstvalues",
+    "dependencies" : "/Users/phinn/Documents/kinet/KinetMinutes/build/DerivedData/Build/Intermediates.noindex/KinetMinutes.build/Release/KinetMinutes.build/Objects-normal/x86_64/KinetMinutes-primary.d",
+    "diagnostics" : "/Users/phinn/Documents/kinet/KinetMinutes/build/DerivedData/Build/Intermediates.noindex/KinetMinutes.build/Release/KinetMinutes.build/Objects-normal/x86_64/KinetMinutes-primary.dia",
+    "objc-header" : "/Users/phinn/Documents/kinet/KinetMinutes/build/DerivedData/Build/Intermediates.noindex/KinetMinutes.build/Release/KinetMinutes.build/Objects-normal/x86_64/KinetMinutes-Swift.h",
+    "swiftdoc" : "/Users/phinn/Documents/kinet/KinetMinutes/build/DerivedData/Build/Intermediates.noindex/KinetMinutes.build/Release/KinetMinutes.build/Objects-normal/x86_64/KinetMinutes.swiftdoc",
+    "swiftmodule" : "/Users/phinn/Documents/kinet/KinetMinutes/build/DerivedData/Build/Intermediates.noindex/KinetMinutes.build/Release/KinetMinutes.build/Objects-normal/x86_64/KinetMinutes.swiftmodule",
+    "swiftsourceinfo" : "/Users/phinn/Documents/kinet/KinetMinutes/build/DerivedData/Build/Intermediates.noindex/KinetMinutes.build/Release/KinetMinutes.build/Objects-normal/x86_64/KinetMinutes.swiftsourceinfo"
+  }
+}

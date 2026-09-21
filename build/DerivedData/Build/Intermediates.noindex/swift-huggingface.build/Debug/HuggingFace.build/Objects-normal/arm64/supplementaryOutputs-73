@@ -1,0 +1,37 @@
+{
+  "/Users/phinn/Documents/kinet/KinetMinutes/build/DerivedData/SourcePackages/checkouts/swift-huggingface/Sources/HuggingFace/Shared/CacheLocationProvider.swift" : {
+    "const-values" : "/Users/phinn/Documents/kinet/KinetMinutes/build/DerivedData/Build/Intermediates.noindex/swift-huggingface.build/Debug/HuggingFace.build/Objects-normal/arm64/CacheLocationProvider.swiftconstvalues",
+    "dependencies" : "/Users/phinn/Documents/kinet/KinetMinutes/build/DerivedData/Build/Intermediates.noindex/swift-huggingface.build/Debug/HuggingFace.build/Objects-normal/arm64/CacheLocationProvider.d",
+    "diagnostics" : "/Users/phinn/Documents/kinet/KinetMinutes/build/DerivedData/Build/Intermediates.noindex/swift-huggingface.build/Debug/HuggingFace.build/Objects-normal/arm64/CacheLocationProvider.dia",
+    "object" : "/Users/phinn/Documents/kinet/KinetMinutes/build/DerivedData/Build/Intermediates.noindex/swift-huggingface.build/Debug/HuggingFace.build/Objects-normal/arm64/CacheLocationProvider.o",
+    "swift-dependencies" : "/Users/phinn/Documents/kinet/KinetMinutes/build/DerivedData/Build/Intermediates.noindex/swift-huggingface.build/Debug/HuggingFace.build/Objects-normal/arm64/CacheLocationProvider.swiftdeps"
+  },
+  "/Users/phinn/Documents/kinet/KinetMinutes/build/DerivedData/SourcePackages/checkouts/swift-huggingface/Sources/HuggingFace/Shared/Extensions/Data+Extensions.swift" : {
+    "const-values" : "/Users/phinn/Documents/kinet/KinetMinutes/build/DerivedData/Build/Intermediates.noindex/swift-huggingface.build/Debug/HuggingFace.build/Objects-normal/arm64/Data+Extensions.swiftconstvalues",
+    "dependencies" : "/Users/phinn/Documents/kinet/KinetMinutes/build/DerivedData/Build/Intermediates.noindex/swift-huggingface.build/Debug/HuggingFace.build/Objects-normal/arm64/Data+Extensions.d",
+    "diagnostics" : "/Users/phinn/Documents/kinet/KinetMinutes/build/DerivedData/Build/Intermediates.noindex/swift-huggingface.build/Debug/HuggingFace.build/Objects-normal/arm64/Data+Extensions.dia",
+    "object" : "/Users/phinn/Documents/kinet/KinetMinutes/build/DerivedData/Build/Intermediates.noindex/swift-huggingface.build/Debug/HuggingFace.build/Objects-normal/arm64/Data+Extensions.o",
+    "swift-dependencies" : "/Users/phinn/Documents/kinet/KinetMinutes/build/DerivedData/Build/Intermediates.noindex/swift-huggingface.build/Debug/HuggingFace.build/Objects-normal/arm64/Data+Extensions.swiftdeps"
+  },
+  "/Users/phinn/Documents/kinet/KinetMinutes/build/DerivedData/SourcePackages/checkouts/swift-huggingface/Sources/HuggingFace/Shared/Extensions/JSONDecoder+Extensions.swift" : {
+    "const-values" : "/Users/phinn/Documents/kinet/KinetMinutes/build/DerivedData/Build/Intermediates.noindex/swift-huggingface.build/Debug/HuggingFace.build/Objects-normal/arm64/JSONDecoder+Extensions.swiftconstvalues",
+    "dependencies" : "/Users/phinn/Documents/kinet/KinetMinutes/build/DerivedData/Build/Intermediates.noindex/swift-huggingface.build/Debug/HuggingFace.build/Objects-normal/arm64/JSONDecoder+Extensions.d",
+    "diagnostics" : "/Users/phinn/Documents/kinet/KinetMinutes/build/DerivedData/Build/Intermediates.noindex/swift-huggingface.build/Debug/HuggingFace.build/Objects-normal/arm64/JSONDecoder+Extensions.dia",
+    "object" : "/Users/phinn/Documents/kinet/KinetMinutes/build/DerivedData/Build/Intermediates.noindex/swift-huggingface.build/Debug/HuggingFace.build/Objects-normal/arm64/JSONDecoder+Extensions.o",
+    "swift-dependencies" : "/Users/phinn/Documents/kinet/KinetMinutes/build/DerivedData/Build/Intermediates.noindex/swift-huggingface.build/Debug/HuggingFace.build/Objects-normal/arm64/JSONDecoder+Extensions.swiftdeps"
+  },
+  "/Users/phinn/Documents/kinet/KinetMinutes/build/DerivedData/SourcePackages/checkouts/swift-huggingface/Sources/HuggingFace/Shared/Extensions/URL+Extensions.swift" : {
+    "const-values" : "/Users/phinn/Documents/kinet/KinetMinutes/build/DerivedData/Build/Intermediates.noindex/swift-huggingface.build/Debug/HuggingFace.build/Objects-normal/arm64/URL+Extensions.swiftconstvalues",
+    "dependencies" : "/Users/phinn/Documents/kinet/KinetMinutes/build/DerivedData/Build/Intermediates.noindex/swift-huggingface.build/Debug/HuggingFace.build/Objects-normal/arm64/URL+Extensions.d",
+    "diagnostics" : "/Users/phinn/Documents/kinet/KinetMinutes/build/DerivedData/Build/Intermediates.noindex/swift-huggingface.build/Debug/HuggingFace.build/Objects-normal/arm64/URL+Extensions.dia",
+    "object" : "/Users/phinn/Documents/kinet/KinetMinutes/build/DerivedData/Build/Intermediates.noindex/swift-huggingface.build/Debug/HuggingFace.build/Objects-normal/arm64/URL+Extensions.o",
+    "swift-dependencies" : "/Users/phinn/Documents/kinet/KinetMinutes/build/DerivedData/Build/Intermediates.noindex/swift-huggingface.build/Debug/HuggingFace.build/Objects-normal/arm64/URL+Extensions.swiftdeps"
+  },
+  "/Users/phinn/Documents/kinet/KinetMinutes/build/DerivedData/SourcePackages/checkouts/swift-huggingface/Sources/HuggingFace/Shared/Extensions/URLSession+Linux.swift" : {
+    "const-values" : "/Users/phinn/Documents/kinet/KinetMinutes/build/DerivedData/Build/Intermediates.noindex/swift-huggingface.build/Debug/HuggingFace.build/Objects-normal/arm64/URLSession+Linux.swiftconstvalues",
+    "dependencies" : "/Users/phinn/Documents/kinet/KinetMinutes/build/DerivedData/Build/Intermediates.noindex/swift-huggingface.build/Debug/HuggingFace.build/Objects-normal/arm64/URLSession+Linux.d",
+    "diagnostics" : "/Users/phinn/Documents/kinet/KinetMinutes/build/DerivedData/Build/Intermediates.noindex/swift-huggingface.build/Debug/HuggingFace.build/Objects-normal/arm64/URLSession+Linux.dia",
+    "object" : "/Users/phinn/Documents/kinet/KinetMinutes/build/DerivedData/Build/Intermediates.noindex/swift-huggingface.build/Debug/HuggingFace.build/Objects-normal/arm64/URLSession+Linux.o",
+    "swift-dependencies" : "/Users/phinn/Documents/kinet/KinetMinutes/build/DerivedData/Build/Intermediates.noindex/swift-huggingface.build/Debug/HuggingFace.build/Objects-normal/arm64/URLSession+Linux.swiftdeps"
+  }
+}

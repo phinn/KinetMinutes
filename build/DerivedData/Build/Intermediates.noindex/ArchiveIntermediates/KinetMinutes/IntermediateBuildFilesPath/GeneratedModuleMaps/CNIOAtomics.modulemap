@@ -1,0 +1,4 @@
+module CNIOAtomics {
+umbrella header "/Users/phinn/Documents/kinet/KinetMinutes/build/DerivedData/SourcePackages/checkouts/swift-nio/Sources/CNIOAtomics/include/CNIOAtomics.h"
+export *
+}

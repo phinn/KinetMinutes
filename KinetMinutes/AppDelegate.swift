@@ -4,6 +4,7 @@
 
 import Cocoa
 import UserNotifications
+import ServiceManagement
 
 final class AppDelegate: NSObject, NSApplicationDelegate {
     static var shared: AppDelegate { NSApp.delegate as! AppDelegate }
@@ -22,6 +23,12 @@ final class AppDelegate: NSObject, NSApplicationDelegate {
         UNUserNotificationCenter.current().requestAuthorization(options: [.alert, .sound]) { _, _ in }
         store.migrateIfNeeded()
         store.seedDemoMeetingIfNeeded()   // review notes 承诺的 pre-seeded demo meeting(90 秒复测路径依赖它)
+        MeetingRecorder.recoverOrphanedMeetings()   // F03: crash recovery — finalize meetings left mid-flight
+        // any recovered meetings can now be re-processed from the library
+        for m in store.allMeetings() where m.status == "ready_to_process" {
+            store.update(m.id, status: "processing")
+            Task.detached { await MinutesPipeline.shared.process(meetingID: m.id) }
+        }
         recorder.onLevelChange = { [weak self] level in self?.updateIcon(recording: self?.recorder.isRecording ?? false, level: level) }
         pipeline.onStateChange = { [weak self] in self?.refreshStatusMenu() }
         buildStatusMenu()
@@ -125,6 +132,12 @@ final class AppDelegate: NSObject, NSApplicationDelegate {
         auto.state = UserDefaults.standard.bool(forKey: "autoRecord") ? .on : .off
         menu.addItem(auto)
 
+        // F01: optional launch-at-login (SMAppService, macOS 13+)
+        let login = NSMenuItem(title: L10n.string("Launch at Login"), action: #selector(toggleLoginItem), keyEquivalent: "")
+        login.target = self
+        login.state = SMAppService.mainApp.status == .enabled ? .on : .off
+        menu.addItem(login)
+
         menu.addItem(.separator())
         let quit = NSMenuItem(title: L10n.string("Quit KinetMinutes"), action: #selector(NSApplication.terminate(_:)), keyEquivalent: "q")
         menu.addItem(quit)
@@ -145,6 +158,24 @@ final class AppDelegate: NSObject, NSApplicationDelegate {
     @objc func toggleAutoRecord() {
         let d = UserDefaults.standard
         d.set(!d.bool(forKey: "autoRecord"), forKey: "autoRecord")
+        buildStatusMenu()
+    }
+
+    // F01: launch at login via SMAppService
+    @objc func toggleLoginItem() {
+        let svc = SMAppService.mainApp
+        do {
+            switch svc.status {
+            case .enabled: try svc.unregister()
+            case .notRegistered: try svc.register()
+            case .requiresApproval:
+                try svc.register()   // user approves in System Settings; state picks up next check
+            case .notFound: break
+            @unknown default: break
+            }
+        } catch {
+            notify(title: L10n.string("Cannot start recording"), body: error.localizedDescription)
+        }
         buildStatusMenu()
     }
 

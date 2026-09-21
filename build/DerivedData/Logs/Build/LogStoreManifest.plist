@@ -1,0 +1,53 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE plist PUBLIC "-//Apple//DTD PLIST 1.0//EN" "http://www.apple.com/DTDs/PropertyList-1.0.dtd">
+<plist version="1.0">
+<dict>
+	<key>logFormatVersion</key>
+	<integer>12</integer>
+	<key>logs</key>
+	<dict>
+		<key>4155150C-FAA7-494F-8F3A-280BCE556C32</key>
+		<dict>
+			<key>className</key>
+			<string>IDECommandLineBuildLog</string>
+			<key>documentTypeString</key>
+			<string>&lt;nil&gt;</string>
+			<key>domainType</key>
+			<string>Xcode.IDEActivityLogDomainType.BuildLog</string>
+			<key>fileName</key>
+			<string>4155150C-FAA7-494F-8F3A-280BCE556C32.xcactivitylog</string>
+			<key>hasPrimaryLog</key>
+			<true/>
+			<key>primaryObservable</key>
+			<dict>
+				<key>highLevelStatus</key>
+				<string>E</string>
+				<key>totalNumberOfAnalyzerIssues</key>
+				<integer>0</integer>
+				<key>totalNumberOfErrors</key>
+				<integer>8</integer>
+				<key>totalNumberOfTestFailures</key>
+				<integer>0</integer>
+				<key>totalNumberOfWarnings</key>
+				<integer>28</integer>
+			</dict>
+			<key>schemeIdentifier-containerName</key>
+			<string>KinetMinutes project</string>
+			<key>schemeIdentifier-schemeName</key>
+			<string>KinetMinutes</string>
+			<key>schemeIdentifier-sharedScheme</key>
+			<integer>1</integer>
+			<key>signature</key>
+			<string>Building project KinetMinutes with scheme KinetMinutes and configuration Release</string>
+			<key>timeStartedRecording</key>
+			<real>811702435.49039102</real>
+			<key>timeStoppedRecording</key>
+			<real>811702438.44267797</real>
+			<key>title</key>
+			<string>Building project KinetMinutes with scheme KinetMinutes and configuration Release</string>
+			<key>uniqueIdentifier</key>
+			<string>4155150C-FAA7-494F-8F3A-280BCE556C32</string>
+		</dict>
+	</dict>
+</dict>
+</plist>

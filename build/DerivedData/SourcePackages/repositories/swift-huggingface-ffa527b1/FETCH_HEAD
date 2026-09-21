@@ -1,0 +1,98 @@
+64ca433fd35f3feded830efa8b027ede1d8f5d16	not-for-merge	branch 'buckets-download' of https://github.com/huggingface/swift-huggingface
+c21205d880a075fab8cf82d1853afb7ee8730558	not-for-merge	branch 'ci' of https://github.com/huggingface/swift-huggingface
+f2f99991f2d7d8fdb3187e4fd539cd2facf5c13d	not-for-merge	branch 'main' of https://github.com/huggingface/swift-huggingface
+18b82e2ed1fb9adc54402adb7b14257137ffe9bb	not-for-merge	branch 'mattt/async-get-token' of https://github.com/huggingface/swift-huggingface
+429be03402b02b1d24fd706c8db0747e5b1c07bb	not-for-merge	branch 'mattt/cache-directory' of https://github.com/huggingface/swift-huggingface
+5feb9e0eaf6c2d8be77c66e4b552f27d0faa893c	not-for-merge	branch 'mattt/expand-test-coverage' of https://github.com/huggingface/swift-huggingface
+32b7ce09588242ab248df1bad96705930cb13cac	not-for-merge	branch 'mattt/files' of https://github.com/huggingface/swift-huggingface
+5d1a7b853446ce01e5e39e7b9ca75e1570a90413	not-for-merge	branch 'mattt/fix-dataset-fetch' of https://github.com/huggingface/swift-huggingface
+b5c218df9de4b9a6a6c162db2f3b79dfef20927a	not-for-merge	branch 'mattt/hub-cache' of https://github.com/huggingface/swift-huggingface
+d5e88d4d9b500e80695bf5f069044576b7fee1cb	not-for-merge	branch 'mattt/huggingface-swift-xet' of https://github.com/huggingface/swift-huggingface
+e4912b10c9747a16f1978fef634e10d583687f52	not-for-merge	branch 'mattt/macos-13' of https://github.com/huggingface/swift-huggingface
+abf577d8d82028a301d12d985df3544d1f81020e	not-for-merge	branch 'mattt/snapshot' of https://github.com/huggingface/swift-huggingface
+74afa71a4b755eadcbd4acbbf8aefc6bb38f0ac5	not-for-merge	branch 'mattt/transfer' of https://github.com/huggingface/swift-huggingface
+c21205d880a075fab8cf82d1853afb7ee8730558	not-for-merge	'refs/pull/1/head' of https://github.com/huggingface/swift-huggingface
+cc26bb11371571ebc5d095e295170652c3ad2bc3	not-for-merge	'refs/pull/10/head' of https://github.com/huggingface/swift-huggingface
+bf1bdfd191fb165fac4dfcc4ee9d067865a4b023	not-for-merge	'refs/pull/11/head' of https://github.com/huggingface/swift-huggingface
+070e2092d5ba1804ca9591f744ef353809c3882f	not-for-merge	'refs/pull/12/head' of https://github.com/huggingface/swift-huggingface
+fae128a3c478e4e6dab0b9fda0ccf3d2681b0705	not-for-merge	'refs/pull/16/head' of https://github.com/huggingface/swift-huggingface
+e82f01774a18b87a62b233dfa09b94261b2cd799	not-for-merge	'refs/pull/18/head' of https://github.com/huggingface/swift-huggingface
+32b7ce09588242ab248df1bad96705930cb13cac	not-for-merge	'refs/pull/2/head' of https://github.com/huggingface/swift-huggingface
+6a736702e97098cd7bff368c4f83490b8417b98f	not-for-merge	'refs/pull/20/head' of https://github.com/huggingface/swift-huggingface
+b9833240eb6d52919f73f239983a20b670003bc9	not-for-merge	'refs/pull/21/head' of https://github.com/huggingface/swift-huggingface
+c11beccdf264eaf821add0ecacd2e04a7f6184c3	not-for-merge	'refs/pull/21/merge' of https://github.com/huggingface/swift-huggingface
+aff6acd4a4d84fd3a190541bae4f4c5333e797a1	not-for-merge	'refs/pull/22/head' of https://github.com/huggingface/swift-huggingface
+bb064da0e7e2c4055d584488978c1663c775555d	not-for-merge	'refs/pull/23/head' of https://github.com/huggingface/swift-huggingface
+85d98512f1f82c2170b5c4d9efeeb96918ecae59	not-for-merge	'refs/pull/24/head' of https://github.com/huggingface/swift-huggingface
+ff0d8e85cc2f69e3748a5496b6d34cf6bb80ed15	not-for-merge	'refs/pull/25/head' of https://github.com/huggingface/swift-huggingface
+d1e20c97fac54c6c7f4d334949a1f265009b52a3	not-for-merge	'refs/pull/26/head' of https://github.com/huggingface/swift-huggingface
+f0845c8ffc8475acf1cdab01a9ce21d47cec6af5	not-for-merge	'refs/pull/28/head' of https://github.com/huggingface/swift-huggingface
+63202a63c82f16ccfb3a6ce6834137070018b3a0	not-for-merge	'refs/pull/29/head' of https://github.com/huggingface/swift-huggingface
+b10517c3a58b12f86ac667f1218a90d9259d9974	not-for-merge	'refs/pull/3/head' of https://github.com/huggingface/swift-huggingface
+d385fb426f6fa6fb198d5830634e84fc8ca02990	not-for-merge	'refs/pull/30/head' of https://github.com/huggingface/swift-huggingface
+0587cf2b5958a8cf90e3558666b795b565ecada7	not-for-merge	'refs/pull/31/head' of https://github.com/huggingface/swift-huggingface
+c1517bd41674b215b89d34aad2fa47a0791f0c04	not-for-merge	'refs/pull/32/head' of https://github.com/huggingface/swift-huggingface
+e998d748891fb81eae187a5ef2b2c33fbc7532fa	not-for-merge	'refs/pull/33/head' of https://github.com/huggingface/swift-huggingface
+abf577d8d82028a301d12d985df3544d1f81020e	not-for-merge	'refs/pull/34/head' of https://github.com/huggingface/swift-huggingface
+41adcdf528b60bd5c8722c390bff630ad0dee576	not-for-merge	'refs/pull/35/head' of https://github.com/huggingface/swift-huggingface
+a509242a145efebd50f38c4404ac71ed687146f9	not-for-merge	'refs/pull/36/head' of https://github.com/huggingface/swift-huggingface
+54fb31cee77b04052e4e9cf0222431b3e140bc8e	not-for-merge	'refs/pull/37/head' of https://github.com/huggingface/swift-huggingface
+5feb9e0eaf6c2d8be77c66e4b552f27d0faa893c	not-for-merge	'refs/pull/38/head' of https://github.com/huggingface/swift-huggingface
+5d1a7b853446ce01e5e39e7b9ca75e1570a90413	not-for-merge	'refs/pull/39/head' of https://github.com/huggingface/swift-huggingface
+079dde76aaa0db83fbccd17e844471a6989531c9	not-for-merge	'refs/pull/4/head' of https://github.com/huggingface/swift-huggingface
+429be03402b02b1d24fd706c8db0747e5b1c07bb	not-for-merge	'refs/pull/40/head' of https://github.com/huggingface/swift-huggingface
+196700677027ab2c51f9f74ad9274920579d54cf	not-for-merge	'refs/pull/41/head' of https://github.com/huggingface/swift-huggingface
+fb35e43bed9d1724a26fcbf31bb4c43d6d3a95b1	not-for-merge	'refs/pull/41/merge' of https://github.com/huggingface/swift-huggingface
+a6a7730740c54a3e7df706c6d503c3d0795dc89e	not-for-merge	'refs/pull/42/head' of https://github.com/huggingface/swift-huggingface
+e0c26a6e13ea234c7592f8076470aba45b405007	not-for-merge	'refs/pull/43/head' of https://github.com/huggingface/swift-huggingface
+d5e88d4d9b500e80695bf5f069044576b7fee1cb	not-for-merge	'refs/pull/44/head' of https://github.com/huggingface/swift-huggingface
+dfd63511297dcfb61af095a8a84aef1b449c1f14	not-for-merge	'refs/pull/45/head' of https://github.com/huggingface/swift-huggingface
+a0eb4871a6fabeda3489b2f5753e1a559e4682e4	not-for-merge	'refs/pull/46/head' of https://github.com/huggingface/swift-huggingface
+496fe67a9033089e579d393fa3577b8097a0be95	not-for-merge	'refs/pull/49/head' of https://github.com/huggingface/swift-huggingface
+74afa71a4b755eadcbd4acbbf8aefc6bb38f0ac5	not-for-merge	'refs/pull/5/head' of https://github.com/huggingface/swift-huggingface
+4abcf1485f3e06456140a1e0d33e72fa0bff273a	not-for-merge	'refs/pull/50/head' of https://github.com/huggingface/swift-huggingface
+ad5bd632ed01eb66a04cc7ccf209be082d9476f1	not-for-merge	'refs/pull/54/head' of https://github.com/huggingface/swift-huggingface
+242ac49aef459a2b0cd57077bfe8796f33f181ad	not-for-merge	'refs/pull/55/head' of https://github.com/huggingface/swift-huggingface
+64ca433fd35f3feded830efa8b027ede1d8f5d16	not-for-merge	'refs/pull/56/head' of https://github.com/huggingface/swift-huggingface
+0f50dce0d2db42c6f283fb159479b1b84ba48e3d	not-for-merge	'refs/pull/56/merge' of https://github.com/huggingface/swift-huggingface
+0a2d71e52527efc3a352f5500f6be71c904392be	not-for-merge	'refs/pull/57/head' of https://github.com/huggingface/swift-huggingface
+5c608861f9712cbf71a0c420f2909f6e31bae5e1	not-for-merge	'refs/pull/58/head' of https://github.com/huggingface/swift-huggingface
+cc656f4c66646a97288e43a182ae64e0aa5e326f	not-for-merge	'refs/pull/59/head' of https://github.com/huggingface/swift-huggingface
+b5c218df9de4b9a6a6c162db2f3b79dfef20927a	not-for-merge	'refs/pull/6/head' of https://github.com/huggingface/swift-huggingface
+26853e0d5d12ef24ac628b335af816cef465e9f0	not-for-merge	'refs/pull/60/head' of https://github.com/huggingface/swift-huggingface
+d27a1607305ab966cc52a413179bd952310684a8	not-for-merge	'refs/pull/64/head' of https://github.com/huggingface/swift-huggingface
+9b2ae95971cb367381dc9e4386cc9fd95d554f1a	not-for-merge	'refs/pull/65/head' of https://github.com/huggingface/swift-huggingface
+c094cfcd59f18b33e7f89b40d65b90bc335c8f02	not-for-merge	'refs/pull/66/head' of https://github.com/huggingface/swift-huggingface
+c79da99dfa279ccec06fa59521675fa565ef0bec	not-for-merge	'refs/pull/67/head' of https://github.com/huggingface/swift-huggingface
+61835295bfce6edf31da3f27bb02621abd858de3	not-for-merge	'refs/pull/68/head' of https://github.com/huggingface/swift-huggingface
+14efd56741f5ee614b0bd9cc2e6efaea19e095b9	not-for-merge	'refs/pull/69/head' of https://github.com/huggingface/swift-huggingface
+1451cc0772f980532ba1b2d45babde52cec74ef5	not-for-merge	'refs/pull/69/merge' of https://github.com/huggingface/swift-huggingface
+e4912b10c9747a16f1978fef634e10d583687f52	not-for-merge	'refs/pull/7/head' of https://github.com/huggingface/swift-huggingface
+afd54095347306b2adcf16382e8745978cca1471	not-for-merge	'refs/pull/70/head' of https://github.com/huggingface/swift-huggingface
+f711ea2f78668fba10a581336d26abfc35b8ba26	not-for-merge	'refs/pull/71/head' of https://github.com/huggingface/swift-huggingface
+00f2c5162d3f398f6359abbee356abf63f8d52d3	not-for-merge	'refs/pull/72/head' of https://github.com/huggingface/swift-huggingface
+bc8c728226766ba1fa232f49d5a7c5a2239a47b4	not-for-merge	'refs/pull/73/head' of https://github.com/huggingface/swift-huggingface
+73cffeba73b0aef1b7206efc1a730b8b06bc615b	not-for-merge	'refs/pull/74/head' of https://github.com/huggingface/swift-huggingface
+781c9787ee2b3cf9c490169feab6d3f83688aa14	not-for-merge	'refs/pull/75/head' of https://github.com/huggingface/swift-huggingface
+f6592c2b9b62936b40186defe9b01ec9d260113c	not-for-merge	'refs/pull/76/head' of https://github.com/huggingface/swift-huggingface
+bf92d45073c5d172175a3f2d5c2e9975a7b17bec	not-for-merge	'refs/pull/77/head' of https://github.com/huggingface/swift-huggingface
+18b82e2ed1fb9adc54402adb7b14257137ffe9bb	not-for-merge	'refs/pull/8/head' of https://github.com/huggingface/swift-huggingface
+e478c89a3da84f13c5359ce45ff11871a2a779c0	not-for-merge	'refs/pull/9/head' of https://github.com/huggingface/swift-huggingface
+fce583132fb90cd42d575dd9180d31901ae94595	not-for-merge	tag '0.1.0' of https://github.com/huggingface/swift-huggingface
+9ebe9cb568ff9ebe2f1bcd3ae7d925fbb45ec8d2	not-for-merge	tag '0.10.0' of https://github.com/huggingface/swift-huggingface
+b5403ed09403f674601fd1123e07c5b32914d16f	not-for-merge	tag '0.10.1' of https://github.com/huggingface/swift-huggingface
+b6de25db2207e515037ceb031280a2d3eb5ccb84	not-for-merge	tag '0.10.2' of https://github.com/huggingface/swift-huggingface
+f2f99991f2d7d8fdb3187e4fd539cd2facf5c13d	not-for-merge	tag '0.11.0' of https://github.com/huggingface/swift-huggingface
+311777c109f10ebadb30af1f6f85ad23c3073a00	not-for-merge	tag '0.2.0' of https://github.com/huggingface/swift-huggingface
+43c25aca087626ee2ff4063a5730992146b87ea1	not-for-merge	tag '0.3.0' of https://github.com/huggingface/swift-huggingface
+e9e663cc88803cddea04cb1e7ba52fd876fbd80d	not-for-merge	tag '0.4.0' of https://github.com/huggingface/swift-huggingface
+1c12f94f8598d14574a3be18996d80c8b27d5b42	not-for-merge	tag '0.4.1' of https://github.com/huggingface/swift-huggingface
+49abc5179471f799b1d690790521a13cb5cffa64	not-for-merge	tag '0.5.0' of https://github.com/huggingface/swift-huggingface
+053f97c9e120bc3169ce99d6299ec0522f0ad82c	not-for-merge	tag '0.5.1' of https://github.com/huggingface/swift-huggingface
+fae128a3c478e4e6dab0b9fda0ccf3d2681b0705	not-for-merge	tag '0.6.0' of https://github.com/huggingface/swift-huggingface
+521274468b9ebc00021a2b5aba7f0b1f481abf9c	not-for-merge	tag '0.6.1' of https://github.com/huggingface/swift-huggingface
+0cafd982bbd09e61485cb28fcbb3a4f0ad9e8b0c	not-for-merge	tag '0.7.0' of https://github.com/huggingface/swift-huggingface
+38299d303036e7c1f5014e199679b0de1c322501	not-for-merge	tag '0.7.1' of https://github.com/huggingface/swift-huggingface
+7198b0633394b688859917249f1295542683790d	not-for-merge	tag '0.8.0' of https://github.com/huggingface/swift-huggingface
+de01c0ab8fd537bbd8216cea7f774275178501a2	not-for-merge	tag '0.8.1' of https://github.com/huggingface/swift-huggingface
+b721959445b617d0bf03910b2b4aced345fd93bf	not-for-merge	tag '0.9.0' of https://github.com/huggingface/swift-huggingface

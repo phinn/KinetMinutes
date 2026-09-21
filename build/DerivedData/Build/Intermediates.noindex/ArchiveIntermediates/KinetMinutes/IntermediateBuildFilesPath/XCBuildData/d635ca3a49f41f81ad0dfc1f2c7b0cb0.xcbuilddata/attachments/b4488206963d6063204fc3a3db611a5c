@@ -1,0 +1,16 @@
+{
+  "" : {
+    "const-values" : "/Users/phinn/Documents/kinet/KinetMinutes/build/DerivedData/Build/Intermediates.noindex/ArchiveIntermediates/KinetMinutes/IntermediateBuildFilesPath/swift-nio.build/Release/_NIOBase64.build/Objects-normal/arm64/_NIOBase64-primary.swiftconstvalues",
+    "dependencies" : "/Users/phinn/Documents/kinet/KinetMinutes/build/DerivedData/Build/Intermediates.noindex/ArchiveIntermediates/KinetMinutes/IntermediateBuildFilesPath/swift-nio.build/Release/_NIOBase64.build/Objects-normal/arm64/_NIOBase64-primary.d",
+    "diagnostics" : "/Users/phinn/Documents/kinet/KinetMinutes/build/DerivedData/Build/Intermediates.noindex/ArchiveIntermediates/KinetMinutes/IntermediateBuildFilesPath/swift-nio.build/Release/_NIOBase64.build/Objects-normal/arm64/_NIOBase64-primary.dia",
+    "emit-module-dependencies" : "/Users/phinn/Documents/kinet/KinetMinutes/build/DerivedData/Build/Intermediates.noindex/ArchiveIntermediates/KinetMinutes/IntermediateBuildFilesPath/swift-nio.build/Release/_NIOBase64.build/Objects-normal/arm64/_NIOBase64-primary-emit-module.d",
+    "emit-module-diagnostics" : "/Users/phinn/Documents/kinet/KinetMinutes/build/DerivedData/Build/Intermediates.noindex/ArchiveIntermediates/KinetMinutes/IntermediateBuildFilesPath/swift-nio.build/Release/_NIOBase64.build/Objects-normal/arm64/_NIOBase64-primary-emit-module.dia",
+    "pch" : "/Users/phinn/Documents/kinet/KinetMinutes/build/DerivedData/Build/Intermediates.noindex/ArchiveIntermediates/KinetMinutes/IntermediateBuildFilesPath/swift-nio.build/Release/_NIOBase64.build/Objects-normal/arm64/_NIOBase64-primary-Bridging-header.pch",
+    "swift-dependencies" : "/Users/phinn/Documents/kinet/KinetMinutes/build/DerivedData/Build/Intermediates.noindex/ArchiveIntermediates/KinetMinutes/IntermediateBuildFilesPath/swift-nio.build/Release/_NIOBase64.build/Objects-normal/arm64/_NIOBase64-primary.swiftdeps"
+  },
+  "/Users/phinn/Documents/kinet/KinetMinutes/build/DerivedData/SourcePackages/checkouts/swift-nio/Sources/_NIOBase64/Base64.swift" : {
+    "index-unit-output-path" : "/swift-nio.build/Release/_NIOBase64.build/Objects-normal/arm64/Base64.o",
+    "llvm-bc" : "/Users/phinn/Documents/kinet/KinetMinutes/build/DerivedData/Build/Intermediates.noindex/ArchiveIntermediates/KinetMinutes/IntermediateBuildFilesPath/swift-nio.build/Release/_NIOBase64.build/Objects-normal/arm64/Base64.bc",
+    "object" : "/Users/phinn/Documents/kinet/KinetMinutes/build/DerivedData/Build/Intermediates.noindex/ArchiveIntermediates/KinetMinutes/IntermediateBuildFilesPath/swift-nio.build/Release/_NIOBase64.build/Objects-normal/arm64/Base64.o"
+  }
+}

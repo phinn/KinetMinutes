@@ -1,0 +1,12 @@
+{
+  "/Users/phinn/Documents/kinet/LocalLLMKit/Sources/LocalLLMKitTranscription/AudioDecoder.swift" : {
+    "abi-baseline-json" : "/Users/phinn/Documents/kinet/KinetMinutes/build/DerivedData/Build/Intermediates.noindex/ArchiveIntermediates/KinetMinutes/IntermediateBuildFilesPath/LocalLLMKit.build/Release/LocalLLMKitTranscription.build/Objects-normal/arm64/LocalLLMKitTranscription.abi.json",
+    "const-values" : "/Users/phinn/Documents/kinet/KinetMinutes/build/DerivedData/Build/Intermediates.noindex/ArchiveIntermediates/KinetMinutes/IntermediateBuildFilesPath/LocalLLMKit.build/Release/LocalLLMKitTranscription.build/Objects-normal/arm64/LocalLLMKitTranscription-primary.swiftconstvalues",
+    "dependencies" : "/Users/phinn/Documents/kinet/KinetMinutes/build/DerivedData/Build/Intermediates.noindex/ArchiveIntermediates/KinetMinutes/IntermediateBuildFilesPath/LocalLLMKit.build/Release/LocalLLMKitTranscription.build/Objects-normal/arm64/LocalLLMKitTranscription-primary.d",
+    "diagnostics" : "/Users/phinn/Documents/kinet/KinetMinutes/build/DerivedData/Build/Intermediates.noindex/ArchiveIntermediates/KinetMinutes/IntermediateBuildFilesPath/LocalLLMKit.build/Release/LocalLLMKitTranscription.build/Objects-normal/arm64/LocalLLMKitTranscription-primary.dia",
+    "objc-header" : "/Users/phinn/Documents/kinet/KinetMinutes/build/DerivedData/Build/Intermediates.noindex/ArchiveIntermediates/KinetMinutes/IntermediateBuildFilesPath/LocalLLMKit.build/Release/LocalLLMKitTranscription.build/Objects-normal/arm64/LocalLLMKitTranscription-Swift.h",
+    "swiftdoc" : "/Users/phinn/Documents/kinet/KinetMinutes/build/DerivedData/Build/Intermediates.noindex/ArchiveIntermediates/KinetMinutes/IntermediateBuildFilesPath/LocalLLMKit.build/Release/LocalLLMKitTranscription.build/Objects-normal/arm64/LocalLLMKitTranscription.swiftdoc",
+    "swiftmodule" : "/Users/phinn/Documents/kinet/KinetMinutes/build/DerivedData/Build/Intermediates.noindex/ArchiveIntermediates/KinetMinutes/IntermediateBuildFilesPath/LocalLLMKit.build/Release/LocalLLMKitTranscription.build/Objects-normal/arm64/LocalLLMKitTranscription.swiftmodule",
+    "swiftsourceinfo" : "/Users/phinn/Documents/kinet/KinetMinutes/build/DerivedData/Build/Intermediates.noindex/ArchiveIntermediates/KinetMinutes/IntermediateBuildFilesPath/LocalLLMKit.build/Release/LocalLLMKitTranscription.build/Objects-normal/arm64/LocalLLMKitTranscription.swiftsourceinfo"
+  }
+}

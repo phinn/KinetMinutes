@@ -1,0 +1,246 @@
+2026-09-21 16:16:18 +0000 [MT] Initial pipeline context: <IDEDistributionProcessingPipelineContext: 0x7722488900; archive(resolved)="<IDEArchive: 0x7721f14070>", distributionTask(resolved)="2", distributionDestination(resolved)="1", distributionMethod(resolved)="<IDEDistributionMethodMacAppStoreDistribution: 0x7720397ed0>", team(resolved)="<IDEProvisioningBasicTeam: 0x771f9a47c0; teamID='M92UKS6NA2', teamName='(null)'>">
+	Chain (15, self inclusive):
+	<IDEDistributionProcessingPipelineContext: 0x7722488900; archive = "<IDEArchive: 0x7721f14070>", distributionMethod="<IDEDistributionMethodMacAppStoreDistribution: 0x7720397ed0>", team="<IDEProvisioningBasicTeam: 0x771f9a47c0; teamID='M92UKS6NA2', teamName='(null)'>">
+	<IDEDistributionProcessingPipelineContext: 0x7722488300; archive = "<IDEArchive: 0x7721f14070>", distributionMethod="<IDEDistributionMethodMacAppStoreDistribution: 0x7720397ed0>", team="<IDEProvisioningBasicTeam: 0x771f9a47c0; teamID='M92UKS6NA2', teamName='(null)'>">
+	<IDEDistributionContext: 0x77208d2f80; archive = "<IDEArchive: 0x7721f14070>", distributionMethod="<IDEDistributionMethodMacAppStoreDistribution: 0x7720397ed0>", team="<IDEProvisioningBasicTeam: 0x771f9a47c0; teamID='M92UKS6NA2', teamName='(null)'>">
+	<IDEDistributionContext: 0x77208d2d00; archive = "<IDEArchive: 0x7721f14070>", distributionMethod="<IDEDistributionMethodMacAppStoreDistribution: 0x7720397ed0>", team="<IDEProvisioningBasicTeam: 0x771f9a47c0; teamID='M92UKS6NA2', teamName='(null)'>">
+	<IDEDistributionContext: 0x77208d2a80; archive = "<IDEArchive: 0x7721f14070>", distributionMethod="<IDEDistributionMethodMacAppStoreDistribution: 0x7720397ed0>", team="<IDEProvisioningBasicTeam: 0x771f9a47c0; teamID='M92UKS6NA2', teamName='(null)'>">
+	<IDEDistributionContext: 0x77208d2800; archive = "<IDEArchive: 0x7721f14070>", distributionMethod="<IDEDistributionMethodMacAppStoreDistribution: 0x7720397ed0>", team="<IDEProvisioningBasicTeam: 0x771f9a47c0; teamID='M92UKS6NA2', teamName='(null)'>">
+	<IDEDistributionContext: 0x77208d2580; archive = "<IDEArchive: 0x7721f14070>", distributionMethod="<IDEDistributionMethodMacAppStoreDistribution: 0x7720397ed0>", team="<IDEProvisioningBasicTeam: 0x771f9a47c0; teamID='M92UKS6NA2', teamName='(null)'>">
+	<IDEDistributionContext: 0x77208d2300; archive = "<IDEArchive: 0x7721f14070>", distributionMethod="<IDEDistributionMethodMacAppStoreDistribution: 0x7720397ed0>", team="<IDEProvisioningBasicTeam: 0x771f9a47c0; teamID='M92UKS6NA2', teamName='(null)'>">
+	<IDEDistributionContext: 0x77208d2080; archive = "<IDEArchive: 0x7721f14070>", distributionMethod="<IDEDistributionMethodMacAppStoreDistribution: 0x7720397ed0>", team="<IDEProvisioningBasicTeam: 0x771f9a47c0; teamID='M92UKS6NA2', teamName='(null)'>">
+	<IDEDistributionContext: 0x77208d0c80; archive = "<IDEArchive: 0x7721f14070>", distributionMethod="<IDEDistributionMethodMacAppStoreDistribution: 0x7720397ed0>", team="<IDEProvisioningBasicTeam: 0x771f9a47c0; teamID='M92UKS6NA2', teamName='(null)'>">
+	<IDEDistributionContext: 0x77208d0a00; archive = "<IDEArchive: 0x7721f14070>", distributionMethod="<IDEDistributionMethodMacAppStoreDistribution: 0x7720397ed0>", team="<IDEProvisioningBasicTeam: 0x771f9a47c0; teamID='M92UKS6NA2', teamName='(null)'>">
+	<IDEDistributionContext: 0x77208d0780; archive = "<IDEArchive: 0x7721f14070>", distributionMethod="<IDEDistributionMethodMacAppStoreDistribution: 0x7720397ed0>", team="<IDEProvisioningBasicTeam: 0x771f9a47c0; teamID='M92UKS6NA2', teamName='(null)'>">
+	<IDEDistributionContext: 0x77208d0500; archive = "<IDEArchive: 0x7721f14070>", distributionMethod="<IDEDistributionMethodMacAppStoreDistribution: 0x7720397ed0>", team="(null)">
+	<IDEDistributionContext: 0x77208d0000; archive = "<IDEArchive: 0x7721f14070>", distributionMethod="<IDEDistributionMethodMacAppStoreDistribution: 0x7720397ed0>", team="(null)">
+	<IDEDistributionContext: 0x10522d680; archive = "<IDEArchive: 0x7721f14070>", distributionMethod="(null)", team="(null)">
+</IDEDistributionProcessingPipelineContext: 0x7722488900>
+2026-09-21 16:16:18 +0000 [MT] Processing step: IDEDistributionCreateDestRootStep
+2026-09-21 16:16:18 +0000 [MT] Processing step: IDEDistributionCopyItemStep
+2026-09-21 16:16:18 +0000 [MT] Running /usr/bin/ditto '-V' '/Users/phinn/Documents/kinet/KinetMinutes/build/KinetMinutes.xcarchive/Products/Applications/KinetMinutes.app' '/var/folders/6m/g65b975d4p9c4gr0lzhr53sm0000gn/T/XcodeDistPipeline.~~~SByCJa/Root/Applications/KinetMinutes.app'
+2026-09-21 16:16:18 +0000  >>> Copying /Users/phinn/Documents/kinet/KinetMinutes/build/KinetMinutes.xcarchive/Products/Applications/KinetMinutes.app 
+2026-09-21 16:16:18 +0000  copying file ./Contents/_CodeSignature/CodeResources ... 
+2026-09-21 16:16:18 +0000  hardlinked ./Contents/_CodeSignature/CodeResources
+2026-09-21 16:16:18 +0000  copying file ./Contents/MacOS/KinetMinutes ... 
+2026-09-21 16:16:18 +0000  hardlinked ./Contents/MacOS/KinetMinutes
+2026-09-21 16:16:18 +0000  copying file ./Contents/Resources/swift-transformers_Hub.bundle/Contents/Resources/gpt2_tokenizer_config.json ... 
+2026-09-21 16:16:18 +0000  hardlinked ./Contents/Resources/swift-transformers_Hub.bundle/Contents/Resources/gpt2_tokenizer_config.json
+2026-09-21 16:16:18 +0000  copying file ./Contents/Resources/swift-transformers_Hub.bundle/Contents/Resources/t5_tokenizer_config.json ... 
+2026-09-21 16:16:18 +0000  hardlinked ./Contents/Resources/swift-transformers_Hub.bundle/Contents/Resources/t5_tokenizer_config.json
+2026-09-21 16:16:18 +0000  copying file ./Contents/Resources/swift-transformers_Hub.bundle/Contents/Info.plist ... 
+2026-09-21 16:16:18 +0000  hardlinked ./Contents/Resources/swift-transformers_Hub.bundle/Contents/Info.plist
+2026-09-21 16:16:18 +0000  copying file ./Contents/Resources/swift-crypto_Crypto.bundle/Contents/Resources/PrivacyInfo.xcprivacy ... 
+2026-09-21 16:16:18 +0000  hardlinked ./Contents/Resources/swift-crypto_Crypto.bundle/Contents/Resources/PrivacyInfo.xcprivacy
+2026-09-21 16:16:18 +0000  copying file ./Contents/Resources/swift-crypto_Crypto.bundle/Contents/Info.plist ... 
+2026-09-21 16:16:18 +0000  hardlinked ./Contents/Resources/swift-crypto_Crypto.bundle/Contents/Info.plist
+2026-09-21 16:16:18 +0000  copying file ./Contents/Resources/AppIcon.icns ... 
+2026-09-21 16:16:18 +0000  hardlinked ./Contents/Resources/AppIcon.icns
+2026-09-21 16:16:18 +0000  copying file ./Contents/Resources/L10n.json ... 
+2026-09-21 16:16:18 +0000  hardlinked ./Contents/Resources/L10n.json
+2026-09-21 16:16:18 +0000  copying file ./Contents/Resources/Assets.car ... 
+2026-09-21 16:16:18 +0000  hardlinked ./Contents/Resources/Assets.car
+2026-09-21 16:16:18 +0000  copying file ./Contents/Resources/PrivacyInfo.xcprivacy ... 
+2026-09-21 16:16:18 +0000  hardlinked ./Contents/Resources/PrivacyInfo.xcprivacy
+2026-09-21 16:16:18 +0000  copying file ./Contents/Frameworks/libswiftCompatibilitySpan.dylib ... 
+2026-09-21 16:16:18 +0000  hardlinked ./Contents/Frameworks/libswiftCompatibilitySpan.dylib
+2026-09-21 16:16:18 +0000  copying symlink ./Contents/Frameworks/llama.framework/Resources ... 
+2026-09-21 16:16:18 +0000  linked ./Contents/Frameworks/llama.framework/Resources
+2026-09-21 16:16:18 +0000  copying file ./Contents/Frameworks/llama.framework/Versions/A/_CodeSignature/CodeResources ... 
+2026-09-21 16:16:18 +0000  hardlinked ./Contents/Frameworks/llama.framework/Versions/A/_CodeSignature/CodeResources
+2026-09-21 16:16:18 +0000  copying file ./Contents/Frameworks/llama.framework/Versions/A/Resources/Info.plist ... 
+2026-09-21 16:16:18 +0000  hardlinked ./Contents/Frameworks/llama.framework/Versions/A/Resources/Info.plist
+2026-09-21 16:16:18 +0000  copying file ./Contents/Frameworks/llama.framework/Versions/A/llama ... 
+2026-09-21 16:16:18 +0000  hardlinked ./Contents/Frameworks/llama.framework/Versions/A/llama
+2026-09-21 16:16:18 +0000  copying symlink ./Contents/Frameworks/llama.framework/Versions/Current ... 
+2026-09-21 16:16:18 +0000  linked ./Contents/Frameworks/llama.framework/Versions/Current
+2026-09-21 16:16:18 +0000  copying symlink ./Contents/Frameworks/llama.framework/llama ... 
+2026-09-21 16:16:18 +0000  linked ./Contents/Frameworks/llama.framework/llama
+2026-09-21 16:16:18 +0000  copying file ./Contents/Info.plist ... 
+2026-09-21 16:16:18 +0000  hardlinked ./Contents/Info.plist
+2026-09-21 16:16:18 +0000  copying file ./Contents/PkgInfo ... 
+2026-09-21 16:16:18 +0000  hardlinked ./Contents/PkgInfo
+2026-09-21 16:16:18 +0000 [MT] /usr/bin/ditto exited with 0
+2026-09-21 16:16:18 +0000 [MT] Processing step: IDEDistributionEmbedProfileStep
+2026-09-21 16:16:18 +0000 [MT] Skipping profile for item: <IDEDistributionItem: 0x772247cd80; bundleID='org.ggml.llama', path='<DVTFilePath:0x772247c180:'/Users/phinn/Documents/kinet/KinetMinutes/build/KinetMinutes.xcarchive/Products/Applications/KinetMinutes.app/Contents/Frameworks/llama.framework/Versions/A'>', codeSigningInfo='<_DVTCodeSigningInformation_Path: 0x772247cc60; isSigned='1', isAdHocSigned='0', signingCertificate='<DVTSigningCertificate: 0x772254bb40; name='Apple Development: phinnsunny@gmail.com (N9ZL5RV6F2)', hash='08858C2DC01C497926C16EBDDD9C91E5CEA729AA', serialNumber='25C6BDAE06251ADE94F6D2F25D74E095', certificateKinds='(
+    "1.2.840.113635.100.6.1.12",
+    "1.2.840.113635.100.6.1.2"
+), issueDate='2026-05-20 18:55:17 +0000''>', entitlements='(null)', teamID='M92UKS6NA2', identifier='org.ggml.llama', executablePath='<DVTFilePath:0x772247c600:'/Users/phinn/Documents/kinet/KinetMinutes/build/KinetMinutes.xcarchive/Products/Applications/KinetMinutes.app/Contents/Frameworks/llama.framework/Versions/A/llama'>', hardenedRuntime='1'>'>
+2026-09-21 16:16:18 +0000 [MT] Skipping profile for item: <IDEDistributionItem: 0x772247cf00; bundleID='com.apple.dt.runtime.swiftCompatibilitySpan', path='<DVTFilePath:0x7721f17d40:'/Users/phinn/Documents/kinet/KinetMinutes/build/KinetMinutes.xcarchive/Products/Applications/KinetMinutes.app/Contents/Frameworks/libswiftCompatibilitySpan.dylib'>', codeSigningInfo='<_DVTCodeSigningInformation_Path: 0x772247cf60; isSigned='1', isAdHocSigned='0', signingCertificate='<DVTSigningCertificate: 0x772254bb40; name='Apple Development: phinnsunny@gmail.com (N9ZL5RV6F2)', hash='08858C2DC01C497926C16EBDDD9C91E5CEA729AA', serialNumber='25C6BDAE06251ADE94F6D2F25D74E095', certificateKinds='(
+    "1.2.840.113635.100.6.1.12",
+    "1.2.840.113635.100.6.1.2"
+), issueDate='2026-05-20 18:55:17 +0000''>', entitlements='(null)', teamID='M92UKS6NA2', identifier='com.apple.dt.runtime.swiftCompatibilitySpan', executablePath='<DVTFilePath:0x7721f17d40:'/Users/phinn/Documents/kinet/KinetMinutes/build/KinetMinutes.xcarchive/Products/Applications/KinetMinutes.app/Contents/Frameworks/libswiftCompatibilitySpan.dylib'>', hardenedRuntime='0'>'>
+2026-09-21 16:16:18 +0000 [MT] Processing step: IDEDistributionInfoPlistStep
+2026-09-21 16:16:18 +0000 [MT] Skipping setting DTXcodeBuildDistribution because toolsBuildVersionName was nil.
+2026-09-21 16:16:18 +0000 [MT] No Info.plist file URL found for item at path "/var/folders/6m/g65b975d4p9c4gr0lzhr53sm0000gn/T/XcodeDistPipeline.~~~SByCJa/Root/Applications/KinetMinutes.app/Contents/Frameworks/libswiftCompatibilitySpan.dylib".
+2026-09-21 16:16:18 +0000 [MT] Skipping setting DTXcodeBuildDistribution because toolsBuildVersionName was nil.
+2026-09-21 16:16:18 +0000 [MT] Processing step: IDEDistributionItemRemovalStep
+2026-09-21 16:16:18 +0000 [MT] Processing step: IDEDistributionAppThinningPlistStep
+2026-09-21 16:16:18 +0000 [MT] Processing step: IDEDistributionSymbolsStep
+2026-09-21 16:16:18 +0000 [MT] Writing /var/folders/6m/g65b975d4p9c4gr0lzhr53sm0000gn/T/XcodeDistPipeline.~~~SByCJa/Symbols/6280A03B-E6CB-35D1-9A11-9BC21A4C1CFA.symbols
+2026-09-21 16:16:18 +0000 [MT] Writing /var/folders/6m/g65b975d4p9c4gr0lzhr53sm0000gn/T/XcodeDistPipeline.~~~SByCJa/Symbols/6B605775-FD05-378B-AFFD-5D86EFA16204.symbols
+2026-09-21 16:16:18 +0000 [MT] Writing /var/folders/6m/g65b975d4p9c4gr0lzhr53sm0000gn/T/XcodeDistPipeline.~~~SByCJa/Symbols/6280A03B-E6CB-35D1-9A11-9BC21A4C1CFA.symbols
+2026-09-21 16:16:18 +0000 [MT] Writing /var/folders/6m/g65b975d4p9c4gr0lzhr53sm0000gn/T/XcodeDistPipeline.~~~SByCJa/Symbols/6B605775-FD05-378B-AFFD-5D86EFA16204.symbols
+2026-09-21 16:16:18 +0000 [MT] Writing /var/folders/6m/g65b975d4p9c4gr0lzhr53sm0000gn/T/XcodeDistPipeline.~~~SByCJa/Symbols/F385DDC8-C990-3653-8D2F-985EEF2FAAAB.symbols
+2026-09-21 16:16:18 +0000 [MT] Writing /var/folders/6m/g65b975d4p9c4gr0lzhr53sm0000gn/T/XcodeDistPipeline.~~~SByCJa/Symbols/2D8AF0C5-80F2-3B22-863C-C04C221B474E.symbols
+2026-09-21 16:16:18 +0000 [MT] Writing /var/folders/6m/g65b975d4p9c4gr0lzhr53sm0000gn/T/XcodeDistPipeline.~~~SByCJa/Symbols/F385DDC8-C990-3653-8D2F-985EEF2FAAAB.symbols
+2026-09-21 16:16:18 +0000 [MT] Writing /var/folders/6m/g65b975d4p9c4gr0lzhr53sm0000gn/T/XcodeDistPipeline.~~~SByCJa/Symbols/2D8AF0C5-80F2-3B22-863C-C04C221B474E.symbols
+2026-09-21 16:16:18 +0000 [MT] Processing step: IDEDistributionCopyAppleProvidedContentStep
+2026-09-21 16:16:18 +0000 [MT] Running /usr/bin/ditto '-V' '/Users/phinn/Documents/kinet/KinetMinutes/build/KinetMinutes.xcarchive/Signatures' '/var/folders/6m/g65b975d4p9c4gr0lzhr53sm0000gn/T/XcodeDistPipeline.~~~SByCJa/Root/Signatures'
+2026-09-21 16:16:18 +0000  >>> Copying /Users/phinn/Documents/kinet/KinetMinutes/build/KinetMinutes.xcarchive/Signatures 
+2026-09-21 16:16:18 +0000  copying file ./llama.xcframework-macos.signature ... 
+2026-09-21 16:16:18 +0000  hardlinked ./llama.xcframework-macos.signature
+2026-09-21 16:16:18 +0000 [MT] /usr/bin/ditto exited with 0
+2026-09-21 16:16:18 +0000 [MT] Processing step: IDEDistributionAppThinningStep
+2026-09-21 16:16:18 +0000 [MT] Skipping step: IDEDistributionAppThinningStep because it said so
+2026-09-21 16:16:18 +0000 [MT] Processing step: IDEDistributionArchThinningStep
+2026-09-21 16:16:18 +0000 [MT] Archs to thin for item /Users/phinn/Documents/kinet/KinetMinutes/build/KinetMinutes.xcarchive/Products/Applications/KinetMinutes.app/Contents/Frameworks/llama.framework/Versions/A are []
+2026-09-21 16:16:18 +0000 [MT] Archs to thin for item /Users/phinn/Documents/kinet/KinetMinutes/build/KinetMinutes.xcarchive/Products/Applications/KinetMinutes.app/Contents/Frameworks/libswiftCompatibilitySpan.dylib are []
+2026-09-21 16:16:18 +0000 [MT] Archs to thin for item /Users/phinn/Documents/kinet/KinetMinutes/build/KinetMinutes.xcarchive/Products/Applications/KinetMinutes.app are []
+2026-09-21 16:16:18 +0000 [MT] Processing step: IDEDistributionODRStep
+2026-09-21 16:16:18 +0000 [MT] Processing step: IDEDistributionStripXattrsStep
+2026-09-21 16:16:18 +0000 [MT] Skipping stripping extended attributes because the codesign step will strip them.
+2026-09-21 16:16:18 +0000 [MT] Skipping stripping extended attributes because the codesign step will strip them.
+2026-09-21 16:16:18 +0000 [MT] Skipping stripping extended attributes because the codesign step will strip them.
+2026-09-21 16:16:18 +0000 [MT] Processing step: IDEDistributionCodesignStep
+2026-09-21 16:16:18 +0000 [MT] Entitlements for <IDEDistributionItem: 0x772247cd80; bundleID='org.ggml.llama', path='<DVTFilePath:0x772247c180:'/Users/phinn/Documents/kinet/KinetMinutes/build/KinetMinutes.xcarchive/Products/Applications/KinetMinutes.app/Contents/Frameworks/llama.framework/Versions/A'>', codeSigningInfo='<_DVTCodeSigningInformation_Path: 0x772247cc60; isSigned='1', isAdHocSigned='0', signingCertificate='<DVTSigningCertificate: 0x772254bb40; name='Apple Development: phinnsunny@gmail.com (N9ZL5RV6F2)', hash='08858C2DC01C497926C16EBDDD9C91E5CEA729AA', serialNumber='25C6BDAE06251ADE94F6D2F25D74E095', certificateKinds='(
+    "1.2.840.113635.100.6.1.12",
+    "1.2.840.113635.100.6.1.2"
+), issueDate='2026-05-20 18:55:17 +0000''>', entitlements='(null)', teamID='M92UKS6NA2', identifier='org.ggml.llama', executablePath='<DVTFilePath:0x772247c600:'/Users/phinn/Documents/kinet/KinetMinutes/build/KinetMinutes.xcarchive/Products/Applications/KinetMinutes.app/Contents/Frameworks/llama.framework/Versions/A/llama'>', hardenedRuntime='1'>'>: {
+}
+2026-09-21 16:16:18 +0000 [MT] Associated App Clip Identifiers Filter: Skipping because "com.apple.developer.associated-appclip-app-identifiers" is not present
+2026-09-21 16:16:18 +0000 [MT] Entitlements for <IDEDistributionItem: 0x772247cd80; bundleID='org.ggml.llama', path='<DVTFilePath:0x772247c180:'/Users/phinn/Documents/kinet/KinetMinutes/build/KinetMinutes.xcarchive/Products/Applications/KinetMinutes.app/Contents/Frameworks/llama.framework/Versions/A'>', codeSigningInfo='<_DVTCodeSigningInformation_Path: 0x772247cc60; isSigned='1', isAdHocSigned='0', signingCertificate='<DVTSigningCertificate: 0x772254a100; name='Apple Development: phinnsunny@gmail.com (N9ZL5RV6F2)', hash='08858C2DC01C497926C16EBDDD9C91E5CEA729AA', serialNumber='25C6BDAE06251ADE94F6D2F25D74E095', certificateKinds='(
+    "1.2.840.113635.100.6.1.12",
+    "1.2.840.113635.100.6.1.2"
+), issueDate='2026-05-20 18:55:17 +0000''>', entitlements='(null)', teamID='M92UKS6NA2', identifier='org.ggml.llama', executablePath='<DVTFilePath:0x772247c600:'/Users/phinn/Documents/kinet/KinetMinutes/build/KinetMinutes.xcarchive/Products/Applications/KinetMinutes.app/Contents/Frameworks/llama.framework/Versions/A/llama'>', hardenedRuntime='1'>'> are: {
+}
+2026-09-21 16:16:18 +0000 [MT] Writing entitlements for <IDEDistributionItem: 0x772247cd80; bundleID='org.ggml.llama', path='<DVTFilePath:0x772247c180:'/Users/phinn/Documents/kinet/KinetMinutes/build/KinetMinutes.xcarchive/Products/Applications/KinetMinutes.app/Contents/Frameworks/llama.framework/Versions/A'>', codeSigningInfo='<_DVTCodeSigningInformation_Path: 0x772247cc60; isSigned='1', isAdHocSigned='0', signingCertificate='<DVTSigningCertificate: 0x772254a100; name='Apple Development: phinnsunny@gmail.com (N9ZL5RV6F2)', hash='08858C2DC01C497926C16EBDDD9C91E5CEA729AA', serialNumber='25C6BDAE06251ADE94F6D2F25D74E095', certificateKinds='(
+    "1.2.840.113635.100.6.1.12",
+    "1.2.840.113635.100.6.1.2"
+), issueDate='2026-05-20 18:55:17 +0000''>', entitlements='(null)', teamID='M92UKS6NA2', identifier='org.ggml.llama', executablePath='<DVTFilePath:0x772247c600:'/Users/phinn/Documents/kinet/KinetMinutes/build/KinetMinutes.xcarchive/Products/Applications/KinetMinutes.app/Contents/Frameworks/llama.framework/Versions/A/llama'>', hardenedRuntime='1'>'> to: /var/folders/6m/g65b975d4p9c4gr0lzhr53sm0000gn/T/XcodeDistPipeline.~~~SByCJa/entitlements~~~64AOum
+2026-09-21 16:16:18 +0000 [MT] invoking codesign: <NSConcreteTask: 0x77224bb1b0; launchPath='/usr/bin/codesign', arguments='(
+    "-f",
+    "-s",
+    91E5737634276C6E3995845AAD95CB053F9E0E03,
+    "--entitlements",
+    "/var/folders/6m/g65b975d4p9c4gr0lzhr53sm0000gn/T/XcodeDistPipeline.~~~SByCJa/entitlements~~~64AOum",
+    "--preserve-metadata=identifier,flags,runtime,launch-constraints,library-constraints",
+    "--generate-entitlement-der",
+    "--strip-disallowed-xattrs",
+    "-vvv",
+    "/var/folders/6m/g65b975d4p9c4gr0lzhr53sm0000gn/T/XcodeDistPipeline.~~~SByCJa/Root/Applications/KinetMinutes.app/Contents/Frameworks/llama.framework/Versions/A"
+)'>
+2026-09-21 16:16:18 +0000 [MT] codesign output: /var/folders/6m/g65b975d4p9c4gr0lzhr53sm0000gn/T/XcodeDistPipeline.~~~SByCJa/Root/Applications/KinetMinutes.app/Contents/Frameworks/llama.framework/Versions/A: replacing existing signature
+/var/folders/6m/g65b975d4p9c4gr0lzhr53sm0000gn/T/XcodeDistPipeline.~~~SByCJa/Root/Applications/KinetMinutes.app/Contents/Frameworks/llama.framework/Versions/A: signed bundle with Mach-O universal (x86_64 arm64) [org.ggml.llama]
+2026-09-21 16:16:18 +0000 [MT] Entitlements for <IDEDistributionItem: 0x772247cf00; bundleID='com.apple.dt.runtime.swiftCompatibilitySpan', path='<DVTFilePath:0x7721f17d40:'/Users/phinn/Documents/kinet/KinetMinutes/build/KinetMinutes.xcarchive/Products/Applications/KinetMinutes.app/Contents/Frameworks/libswiftCompatibilitySpan.dylib'>', codeSigningInfo='<_DVTCodeSigningInformation_Path: 0x772247cf60; isSigned='1', isAdHocSigned='0', signingCertificate='<DVTSigningCertificate: 0x772254bb40; name='Apple Development: phinnsunny@gmail.com (N9ZL5RV6F2)', hash='08858C2DC01C497926C16EBDDD9C91E5CEA729AA', serialNumber='25C6BDAE06251ADE94F6D2F25D74E095', certificateKinds='(
+    "1.2.840.113635.100.6.1.12",
+    "1.2.840.113635.100.6.1.2"
+), issueDate='2026-05-20 18:55:17 +0000''>', entitlements='(null)', teamID='M92UKS6NA2', identifier='com.apple.dt.runtime.swiftCompatibilitySpan', executablePath='<DVTFilePath:0x7721f17d40:'/Users/phinn/Documents/kinet/KinetMinutes/build/KinetMinutes.xcarchive/Products/Applications/KinetMinutes.app/Contents/Frameworks/libswiftCompatibilitySpan.dylib'>', hardenedRuntime='0'>'>: {
+}
+2026-09-21 16:16:18 +0000 [MT] Associated App Clip Identifiers Filter: Skipping because "com.apple.developer.associated-appclip-app-identifiers" is not present
+2026-09-21 16:16:18 +0000 [MT] Entitlements for <IDEDistributionItem: 0x772247cf00; bundleID='com.apple.dt.runtime.swiftCompatibilitySpan', path='<DVTFilePath:0x7721f17d40:'/Users/phinn/Documents/kinet/KinetMinutes/build/KinetMinutes.xcarchive/Products/Applications/KinetMinutes.app/Contents/Frameworks/libswiftCompatibilitySpan.dylib'>', codeSigningInfo='<_DVTCodeSigningInformation_Path: 0x772247cf60; isSigned='1', isAdHocSigned='0', signingCertificate='<DVTSigningCertificate: 0x772254a100; name='Apple Development: phinnsunny@gmail.com (N9ZL5RV6F2)', hash='08858C2DC01C497926C16EBDDD9C91E5CEA729AA', serialNumber='25C6BDAE06251ADE94F6D2F25D74E095', certificateKinds='(
+    "1.2.840.113635.100.6.1.12",
+    "1.2.840.113635.100.6.1.2"
+), issueDate='2026-05-20 18:55:17 +0000''>', entitlements='(null)', teamID='M92UKS6NA2', identifier='com.apple.dt.runtime.swiftCompatibilitySpan', executablePath='<DVTFilePath:0x7721f17d40:'/Users/phinn/Documents/kinet/KinetMinutes/build/KinetMinutes.xcarchive/Products/Applications/KinetMinutes.app/Contents/Frameworks/libswiftCompatibilitySpan.dylib'>', hardenedRuntime='0'>'> are: {
+}
+2026-09-21 16:16:18 +0000 [MT] Writing entitlements for <IDEDistributionItem: 0x772247cf00; bundleID='com.apple.dt.runtime.swiftCompatibilitySpan', path='<DVTFilePath:0x7721f17d40:'/Users/phinn/Documents/kinet/KinetMinutes/build/KinetMinutes.xcarchive/Products/Applications/KinetMinutes.app/Contents/Frameworks/libswiftCompatibilitySpan.dylib'>', codeSigningInfo='<_DVTCodeSigningInformation_Path: 0x772247cf60; isSigned='1', isAdHocSigned='0', signingCertificate='<DVTSigningCertificate: 0x772254a100; name='Apple Development: phinnsunny@gmail.com (N9ZL5RV6F2)', hash='08858C2DC01C497926C16EBDDD9C91E5CEA729AA', serialNumber='25C6BDAE06251ADE94F6D2F25D74E095', certificateKinds='(
+    "1.2.840.113635.100.6.1.12",
+    "1.2.840.113635.100.6.1.2"
+), issueDate='2026-05-20 18:55:17 +0000''>', entitlements='(null)', teamID='M92UKS6NA2', identifier='com.apple.dt.runtime.swiftCompatibilitySpan', executablePath='<DVTFilePath:0x7721f17d40:'/Users/phinn/Documents/kinet/KinetMinutes/build/KinetMinutes.xcarchive/Products/Applications/KinetMinutes.app/Contents/Frameworks/libswiftCompatibilitySpan.dylib'>', hardenedRuntime='0'>'> to: /var/folders/6m/g65b975d4p9c4gr0lzhr53sm0000gn/T/XcodeDistPipeline.~~~SByCJa/entitlements~~~rqt8nR
+2026-09-21 16:16:18 +0000 [MT] invoking codesign: <NSConcreteTask: 0x77224bb020; launchPath='/usr/bin/codesign', arguments='(
+    "-f",
+    "-s",
+    91E5737634276C6E3995845AAD95CB053F9E0E03,
+    "--entitlements",
+    "/var/folders/6m/g65b975d4p9c4gr0lzhr53sm0000gn/T/XcodeDistPipeline.~~~SByCJa/entitlements~~~rqt8nR",
+    "--preserve-metadata=identifier,flags,runtime,launch-constraints,library-constraints",
+    "--generate-entitlement-der",
+    "--strip-disallowed-xattrs",
+    "-vvv",
+    "/var/folders/6m/g65b975d4p9c4gr0lzhr53sm0000gn/T/XcodeDistPipeline.~~~SByCJa/Root/Applications/KinetMinutes.app/Contents/Frameworks/libswiftCompatibilitySpan.dylib"
+)'>
+2026-09-21 16:16:19 +0000 [MT] codesign output: /var/folders/6m/g65b975d4p9c4gr0lzhr53sm0000gn/T/XcodeDistPipeline.~~~SByCJa/Root/Applications/KinetMinutes.app/Contents/Frameworks/libswiftCompatibilitySpan.dylib: replacing existing signature
+/var/folders/6m/g65b975d4p9c4gr0lzhr53sm0000gn/T/XcodeDistPipeline.~~~SByCJa/Root/Applications/KinetMinutes.app/Contents/Frameworks/libswiftCompatibilitySpan.dylib: signed Mach-O universal (x86_64 arm64e arm64) [com.apple.dt.runtime.swiftCompatibilitySpan]
+2026-09-21 16:16:19 +0000 [MT] Entitlements for <IDEDistributionItem: 0x772247cd20; bundleID='com.kinet.minutes.app', path='<DVTFilePath:0x7721f140e0:'/Users/phinn/Documents/kinet/KinetMinutes/build/KinetMinutes.xcarchive/Products/Applications/KinetMinutes.app'>', codeSigningInfo='<_DVTCodeSigningInformation_Path: 0x772247cfc0; isSigned='1', isAdHocSigned='0', signingCertificate='<DVTSigningCertificate: 0x772254bb40; name='Apple Development: phinnsunny@gmail.com (N9ZL5RV6F2)', hash='08858C2DC01C497926C16EBDDD9C91E5CEA729AA', serialNumber='25C6BDAE06251ADE94F6D2F25D74E095', certificateKinds='(
+    "1.2.840.113635.100.6.1.12",
+    "1.2.840.113635.100.6.1.2"
+), issueDate='2026-05-20 18:55:17 +0000''>', entitlements='{
+    "com.apple.security.app-sandbox" = 1;
+    "com.apple.security.device.audio-input" = 1;
+    "com.apple.security.files.user-selected.read-write" = 1;
+    "com.apple.security.network.client" = 1;
+}', teamID='M92UKS6NA2', identifier='com.kinet.minutes.app', executablePath='<DVTFilePath:0x7721edb060:'/Users/phinn/Documents/kinet/KinetMinutes/build/KinetMinutes.xcarchive/Products/Applications/KinetMinutes.app/Contents/MacOS/KinetMinutes'>', hardenedRuntime='1'>'>: {
+    "com.apple.application-identifier" = "M92UKS6NA2.com.kinet.minutes.app";
+    "com.apple.developer.team-identifier" = M92UKS6NA2;
+    "com.apple.security.app-sandbox" = 1;
+    "com.apple.security.device.audio-input" = 1;
+    "com.apple.security.files.user-selected.read-write" = 1;
+    "com.apple.security.network.client" = 1;
+}
+2026-09-21 16:16:19 +0000 [MT] Associated App Clip Identifiers Filter: Skipping because "com.apple.developer.associated-appclip-app-identifiers" is not present
+2026-09-21 16:16:19 +0000 [MT] Entitlements for <IDEDistributionItem: 0x772247cd20; bundleID='com.kinet.minutes.app', path='<DVTFilePath:0x7721f140e0:'/Users/phinn/Documents/kinet/KinetMinutes/build/KinetMinutes.xcarchive/Products/Applications/KinetMinutes.app'>', codeSigningInfo='<_DVTCodeSigningInformation_Path: 0x772247cfc0; isSigned='1', isAdHocSigned='0', signingCertificate='<DVTSigningCertificate: 0x772254a100; name='Apple Development: phinnsunny@gmail.com (N9ZL5RV6F2)', hash='08858C2DC01C497926C16EBDDD9C91E5CEA729AA', serialNumber='25C6BDAE06251ADE94F6D2F25D74E095', certificateKinds='(
+    "1.2.840.113635.100.6.1.12",
+    "1.2.840.113635.100.6.1.2"
+), issueDate='2026-05-20 18:55:17 +0000''>', entitlements='{
+    "com.apple.security.app-sandbox" = 1;
+    "com.apple.security.device.audio-input" = 1;
+    "com.apple.security.files.user-selected.read-write" = 1;
+    "com.apple.security.network.client" = 1;
+}', teamID='M92UKS6NA2', identifier='com.kinet.minutes.app', executablePath='<DVTFilePath:0x7721edb060:'/Users/phinn/Documents/kinet/KinetMinutes/build/KinetMinutes.xcarchive/Products/Applications/KinetMinutes.app/Contents/MacOS/KinetMinutes'>', hardenedRuntime='1'>'> are: {
+    "com.apple.application-identifier" = "M92UKS6NA2.com.kinet.minutes.app";
+    "com.apple.developer.team-identifier" = M92UKS6NA2;
+    "com.apple.security.app-sandbox" = 1;
+    "com.apple.security.device.audio-input" = 1;
+    "com.apple.security.files.user-selected.read-write" = 1;
+    "com.apple.security.network.client" = 1;
+}
+2026-09-21 16:16:19 +0000 [MT] Writing entitlements for <IDEDistributionItem: 0x772247cd20; bundleID='com.kinet.minutes.app', path='<DVTFilePath:0x7721f140e0:'/Users/phinn/Documents/kinet/KinetMinutes/build/KinetMinutes.xcarchive/Products/Applications/KinetMinutes.app'>', codeSigningInfo='<_DVTCodeSigningInformation_Path: 0x772247cfc0; isSigned='1', isAdHocSigned='0', signingCertificate='<DVTSigningCertificate: 0x772254a100; name='Apple Development: phinnsunny@gmail.com (N9ZL5RV6F2)', hash='08858C2DC01C497926C16EBDDD9C91E5CEA729AA', serialNumber='25C6BDAE06251ADE94F6D2F25D74E095', certificateKinds='(
+    "1.2.840.113635.100.6.1.12",
+    "1.2.840.113635.100.6.1.2"
+), issueDate='2026-05-20 18:55:17 +0000''>', entitlements='{
+    "com.apple.security.app-sandbox" = 1;
+    "com.apple.security.device.audio-input" = 1;
+    "com.apple.security.files.user-selected.read-write" = 1;
+    "com.apple.security.network.client" = 1;
+}', teamID='M92UKS6NA2', identifier='com.kinet.minutes.app', executablePath='<DVTFilePath:0x7721edb060:'/Users/phinn/Documents/kinet/KinetMinutes/build/KinetMinutes.xcarchive/Products/Applications/KinetMinutes.app/Contents/MacOS/KinetMinutes'>', hardenedRuntime='1'>'> to: /var/folders/6m/g65b975d4p9c4gr0lzhr53sm0000gn/T/XcodeDistPipeline.~~~SByCJa/entitlements~~~OECXme
+2026-09-21 16:16:19 +0000 [MT] invoking codesign: <NSConcreteTask: 0x77224bb020; launchPath='/usr/bin/codesign', arguments='(
+    "-f",
+    "-s",
+    91E5737634276C6E3995845AAD95CB053F9E0E03,
+    "--entitlements",
+    "/var/folders/6m/g65b975d4p9c4gr0lzhr53sm0000gn/T/XcodeDistPipeline.~~~SByCJa/entitlements~~~OECXme",
+    "--preserve-metadata=identifier,flags,runtime,launch-constraints,library-constraints",
+    "--generate-entitlement-der",
+    "--strip-disallowed-xattrs",
+    "-vvv",
+    "/var/folders/6m/g65b975d4p9c4gr0lzhr53sm0000gn/T/XcodeDistPipeline.~~~SByCJa/Root/Applications/KinetMinutes.app"
+)'>
+2026-09-21 16:16:19 +0000 [MT] codesign output: /var/folders/6m/g65b975d4p9c4gr0lzhr53sm0000gn/T/XcodeDistPipeline.~~~SByCJa/Root/Applications/KinetMinutes.app: replacing existing signature
+/var/folders/6m/g65b975d4p9c4gr0lzhr53sm0000gn/T/XcodeDistPipeline.~~~SByCJa/Root/Applications/KinetMinutes.app: signed app bundle with Mach-O universal (x86_64 arm64) [com.kinet.minutes.app]
+2026-09-21 16:16:19 +0000 [MT] Processing step: IDEDistributionZipODRItemStep
+2026-09-21 16:16:19 +0000 [MT] Skipping step: IDEDistributionZipODRItemStep because it said so
+2026-09-21 16:16:19 +0000 [MT] Skipping step: IDEDistributionZipODRItemStep because it said so
+2026-09-21 16:16:19 +0000 [MT] Skipping step: IDEDistributionZipODRItemStep because it said so
+2026-09-21 16:16:19 +0000 [MT] Processing step: IDEDistributionCreatePKGStep
+2026-09-21 16:16:19 +0000 [MT] Running /usr/bin/productbuild '--sign' '3rd Party Mac Developer Installer: JUNJIE SHEN (M92UKS6NA2)' '--symbolication' '/var/folders/6m/g65b975d4p9c4gr0lzhr53sm0000gn/T/XcodeDistPipeline.~~~SByCJa/Symbols' '--component' '/var/folders/6m/g65b975d4p9c4gr0lzhr53sm0000gn/T/XcodeDistPipeline.~~~SByCJa/Root/Applications/KinetMinutes.app' '/Applications' '--extra-signatures' '/var/folders/6m/g65b975d4p9c4gr0lzhr53sm0000gn/T/XcodeDistPipeline.~~~SByCJa/Root/Signatures' '/var/folders/6m/g65b975d4p9c4gr0lzhr53sm0000gn/T/XcodeDistPipeline.~~~SByCJa/Packages/KinetMinutes.pkg'
+2026-09-21 16:16:19 +0000  write: Permission denied
+write: Permission denied
+2026-09-21 16:16:19 +0000  write: Permission denied
+write: Permission denied
+2026-09-21 16:16:24 +0000  productbuild: Adding component at /var/folders/6m/g65b975d4p9c4gr0lzhr53sm0000gn/T/XcodeDistPipeline.~~~SByCJa/Root/Applications/KinetMinutes.app
+productbuild: Signing product with identity "3rd Party Mac Developer Installer: JUNJIE SHEN (M92UKS6NA2)" from keychain /Users/phinn/Library/Keychains/login.keychain-db
+productbuild: Adding certificate "Apple Worldwide Developer Relations Certification Authority"
+productbuild: Adding certificate "Apple Root CA"
+productbuild: Wrote product to /var/folders/6m/g65b975d4p9c4gr0lzhr53sm0000gn/T/XcodeDistPipeline.~~~SByCJa/Packages/KinetMinutes.pkg
+productbuild: Supported OS versions: [Min: 14.0, Before: None]
+2026-09-21 16:16:24 +0000 [MT] /usr/bin/productbuild exited with 0
+2026-09-21 16:16:24 +0000 [MT] Processing step: IDEDistributionAppStoreInformationStep
+2026-09-21 16:16:24 +0000 [MT] Skipping step: IDEDistributionAppStoreInformationStep because it said so
+2026-09-21 16:16:24 +0000 [MT] Processing step: IDEDistributionGenerateProcessedDistributionItems
+2026-09-21 16:16:24 +0000 [MT] IDEDistributionItem init <DVTFilePath:0x7722501960:'/var/folders/6m/g65b975d4p9c4gr0lzhr53sm0000gn/T/XcodeDistPipeline.~~~SByCJa/Root/Applications/KinetMinutes.app/Contents/Frameworks/libswiftCompatibilitySpan.dylib'>
+2026-09-21 16:16:24 +0000 [MT] Unable to determine platform from macho "/var/folders/6m/g65b975d4p9c4gr0lzhr53sm0000gn/T/XcodeDistPipeline.~~~SByCJa/Root/Applications/KinetMinutes.app/Contents/Frameworks/libswiftCompatibilitySpan.dylib". Failed with error: "Failed to discover platform for executable /var/folders/6m/g65b975d4p9c4gr0lzhr53sm0000gn/T/XcodeDistPipeline.~~~SByCJa/Root/Applications/KinetMinutes.app/Contents/Frameworks/libswiftCompatibilitySpan.dylib"
+2026-09-21 16:16:24 +0000 [MT] [OPTIONAL] Can't have a profile, not a bundle at <DVTFilePath:0x7722501960:'/var/folders/6m/g65b975d4p9c4gr0lzhr53sm0000gn/T/XcodeDistPipeline.~~~SByCJa/Root/Applications/KinetMinutes.app/Contents/Frameworks/libswiftCompatibilitySpan.dylib'>
+2026-09-21 16:16:24 +0000 [MT] IDEDistributionItem init <DVTFilePath:0x772247e700:'/var/folders/6m/g65b975d4p9c4gr0lzhr53sm0000gn/T/XcodeDistPipeline.~~~SByCJa/Root/Applications/KinetMinutes.app/Contents/Frameworks/llama.framework/Versions/A'>
+2026-09-21 16:16:24 +0000 [MT] IDEDistributionItem init <DVTFilePath:0x77225016c0:'/var/folders/6m/g65b975d4p9c4gr0lzhr53sm0000gn/T/XcodeDistPipeline.~~~SByCJa/Root/Applications/KinetMinutes.app'>
+2026-09-21 16:16:24 +0000 [MT] Processing step: IDEDistributionCreateManifestStep
+2026-09-21 16:16:24 +0000 [MT] Skipping step: IDEDistributionCreateManifestStep because it said so

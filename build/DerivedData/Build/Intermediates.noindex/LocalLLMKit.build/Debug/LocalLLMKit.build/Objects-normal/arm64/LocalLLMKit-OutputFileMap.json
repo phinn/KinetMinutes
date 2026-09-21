@@ -1,0 +1,229 @@
+{
+  "" : {
+    "diagnostics" : "/Users/phinn/Documents/kinet/KinetMinutes/build/DerivedData/Build/Intermediates.noindex/LocalLLMKit.build/Debug/LocalLLMKit.build/Objects-normal/arm64/LocalLLMKit-primary.dia",
+    "emit-module-dependencies" : "/Users/phinn/Documents/kinet/KinetMinutes/build/DerivedData/Build/Intermediates.noindex/LocalLLMKit.build/Debug/LocalLLMKit.build/Objects-normal/arm64/LocalLLMKit-primary-emit-module.d",
+    "emit-module-diagnostics" : "/Users/phinn/Documents/kinet/KinetMinutes/build/DerivedData/Build/Intermediates.noindex/LocalLLMKit.build/Debug/LocalLLMKit.build/Objects-normal/arm64/LocalLLMKit-primary-emit-module.dia",
+    "pch" : "/Users/phinn/Documents/kinet/KinetMinutes/build/DerivedData/Build/Intermediates.noindex/LocalLLMKit.build/Debug/LocalLLMKit.build/Objects-normal/arm64/LocalLLMKit-primary-Bridging-header.pch",
+    "swift-dependencies" : "/Users/phinn/Documents/kinet/KinetMinutes/build/DerivedData/Build/Intermediates.noindex/LocalLLMKit.build/Debug/LocalLLMKit.build/Objects-normal/arm64/LocalLLMKit-primary.swiftdeps"
+  },
+  "/Users/phinn/Documents/kinet/LocalLLMKit/Sources/LocalLLMKit/AnthropicProvider.swift" : {
+    "const-values" : "/Users/phinn/Documents/kinet/KinetMinutes/build/DerivedData/Build/Intermediates.noindex/LocalLLMKit.build/Debug/LocalLLMKit.build/Objects-normal/arm64/AnthropicProvider.swiftconstvalues",
+    "dependencies" : "/Users/phinn/Documents/kinet/KinetMinutes/build/DerivedData/Build/Intermediates.noindex/LocalLLMKit.build/Debug/LocalLLMKit.build/Objects-normal/arm64/AnthropicProvider.d",
+    "diagnostics" : "/Users/phinn/Documents/kinet/KinetMinutes/build/DerivedData/Build/Intermediates.noindex/LocalLLMKit.build/Debug/LocalLLMKit.build/Objects-normal/arm64/AnthropicProvider.dia",
+    "index-unit-output-path" : "/LocalLLMKit.build/Debug/LocalLLMKit.build/Objects-normal/arm64/AnthropicProvider.o",
+    "llvm-bc" : "/Users/phinn/Documents/kinet/KinetMinutes/build/DerivedData/Build/Intermediates.noindex/LocalLLMKit.build/Debug/LocalLLMKit.build/Objects-normal/arm64/AnthropicProvider.bc",
+    "object" : "/Users/phinn/Documents/kinet/KinetMinutes/build/DerivedData/Build/Intermediates.noindex/LocalLLMKit.build/Debug/LocalLLMKit.build/Objects-normal/arm64/AnthropicProvider.o",
+    "swift-dependencies" : "/Users/phinn/Documents/kinet/KinetMinutes/build/DerivedData/Build/Intermediates.noindex/LocalLLMKit.build/Debug/LocalLLMKit.build/Objects-normal/arm64/AnthropicProvider.swiftdeps",
+    "swiftmodule" : "/Users/phinn/Documents/kinet/KinetMinutes/build/DerivedData/Build/Intermediates.noindex/LocalLLMKit.build/Debug/LocalLLMKit.build/Objects-normal/arm64/AnthropicProvider~partial.swiftmodule"
+  },
+  "/Users/phinn/Documents/kinet/LocalLLMKit/Sources/LocalLLMKit/AppleFoundationModelsProvider.swift" : {
+    "const-values" : "/Users/phinn/Documents/kinet/KinetMinutes/build/DerivedData/Build/Intermediates.noindex/LocalLLMKit.build/Debug/LocalLLMKit.build/Objects-normal/arm64/AppleFoundationModelsProvider.swiftconstvalues",
+    "dependencies" : "/Users/phinn/Documents/kinet/KinetMinutes/build/DerivedData/Build/Intermediates.noindex/LocalLLMKit.build/Debug/LocalLLMKit.build/Objects-normal/arm64/AppleFoundationModelsProvider.d",
+    "diagnostics" : "/Users/phinn/Documents/kinet/KinetMinutes/build/DerivedData/Build/Intermediates.noindex/LocalLLMKit.build/Debug/LocalLLMKit.build/Objects-normal/arm64/AppleFoundationModelsProvider.dia",
+    "index-unit-output-path" : "/LocalLLMKit.build/Debug/LocalLLMKit.build/Objects-normal/arm64/AppleFoundationModelsProvider.o",
+    "llvm-bc" : "/Users/phinn/Documents/kinet/KinetMinutes/build/DerivedData/Build/Intermediates.noindex/LocalLLMKit.build/Debug/LocalLLMKit.build/Objects-normal/arm64/AppleFoundationModelsProvider.bc",
+    "object" : "/Users/phinn/Documents/kinet/KinetMinutes/build/DerivedData/Build/Intermediates.noindex/LocalLLMKit.build/Debug/LocalLLMKit.build/Objects-normal/arm64/AppleFoundationModelsProvider.o",
+    "swift-dependencies" : "/Users/phinn/Documents/kinet/KinetMinutes/build/DerivedData/Build/Intermediates.noindex/LocalLLMKit.build/Debug/LocalLLMKit.build/Objects-normal/arm64/AppleFoundationModelsProvider.swiftdeps",
+    "swiftmodule" : "/Users/phinn/Documents/kinet/KinetMinutes/build/DerivedData/Build/Intermediates.noindex/LocalLLMKit.build/Debug/LocalLLMKit.build/Objects-normal/arm64/AppleFoundationModelsProvider~partial.swiftmodule"
+  },
+  "/Users/phinn/Documents/kinet/LocalLLMKit/Sources/LocalLLMKit/CoreMLProvider.swift" : {
+    "const-values" : "/Users/phinn/Documents/kinet/KinetMinutes/build/DerivedData/Build/Intermediates.noindex/LocalLLMKit.build/Debug/LocalLLMKit.build/Objects-normal/arm64/CoreMLProvider.swiftconstvalues",
+    "dependencies" : "/Users/phinn/Documents/kinet/KinetMinutes/build/DerivedData/Build/Intermediates.noindex/LocalLLMKit.build/Debug/LocalLLMKit.build/Objects-normal/arm64/CoreMLProvider.d",
+    "diagnostics" : "/Users/phinn/Documents/kinet/KinetMinutes/build/DerivedData/Build/Intermediates.noindex/LocalLLMKit.build/Debug/LocalLLMKit.build/Objects-normal/arm64/CoreMLProvider.dia",
+    "index-unit-output-path" : "/LocalLLMKit.build/Debug/LocalLLMKit.build/Objects-normal/arm64/CoreMLProvider.o",
+    "llvm-bc" : "/Users/phinn/Documents/kinet/KinetMinutes/build/DerivedData/Build/Intermediates.noindex/LocalLLMKit.build/Debug/LocalLLMKit.build/Objects-normal/arm64/CoreMLProvider.bc",
+    "object" : "/Users/phinn/Documents/kinet/KinetMinutes/build/DerivedData/Build/Intermediates.noindex/LocalLLMKit.build/Debug/LocalLLMKit.build/Objects-normal/arm64/CoreMLProvider.o",
+    "swift-dependencies" : "/Users/phinn/Documents/kinet/KinetMinutes/build/DerivedData/Build/Intermediates.noindex/LocalLLMKit.build/Debug/LocalLLMKit.build/Objects-normal/arm64/CoreMLProvider.swiftdeps",
+    "swiftmodule" : "/Users/phinn/Documents/kinet/KinetMinutes/build/DerivedData/Build/Intermediates.noindex/LocalLLMKit.build/Debug/LocalLLMKit.build/Objects-normal/arm64/CoreMLProvider~partial.swiftmodule"
+  },
+  "/Users/phinn/Documents/kinet/LocalLLMKit/Sources/LocalLLMKit/DashScopeProvider.swift" : {
+    "const-values" : "/Users/phinn/Documents/kinet/KinetMinutes/build/DerivedData/Build/Intermediates.noindex/LocalLLMKit.build/Debug/LocalLLMKit.build/Objects-normal/arm64/DashScopeProvider.swiftconstvalues",
+    "dependencies" : "/Users/phinn/Documents/kinet/KinetMinutes/build/DerivedData/Build/Intermediates.noindex/LocalLLMKit.build/Debug/LocalLLMKit.build/Objects-normal/arm64/DashScopeProvider.d",
+    "diagnostics" : "/Users/phinn/Documents/kinet/KinetMinutes/build/DerivedData/Build/Intermediates.noindex/LocalLLMKit.build/Debug/LocalLLMKit.build/Objects-normal/arm64/DashScopeProvider.dia",
+    "index-unit-output-path" : "/LocalLLMKit.build/Debug/LocalLLMKit.build/Objects-normal/arm64/DashScopeProvider.o",
+    "llvm-bc" : "/Users/phinn/Documents/kinet/KinetMinutes/build/DerivedData/Build/Intermediates.noindex/LocalLLMKit.build/Debug/LocalLLMKit.build/Objects-normal/arm64/DashScopeProvider.bc",
+    "object" : "/Users/phinn/Documents/kinet/KinetMinutes/build/DerivedData/Build/Intermediates.noindex/LocalLLMKit.build/Debug/LocalLLMKit.build/Objects-normal/arm64/DashScopeProvider.o",
+    "swift-dependencies" : "/Users/phinn/Documents/kinet/KinetMinutes/build/DerivedData/Build/Intermediates.noindex/LocalLLMKit.build/Debug/LocalLLMKit.build/Objects-normal/arm64/DashScopeProvider.swiftdeps",
+    "swiftmodule" : "/Users/phinn/Documents/kinet/KinetMinutes/build/DerivedData/Build/Intermediates.noindex/LocalLLMKit.build/Debug/LocalLLMKit.build/Objects-normal/arm64/DashScopeProvider~partial.swiftmodule"
+  },
+  "/Users/phinn/Documents/kinet/LocalLLMKit/Sources/LocalLLMKit/DoubaoProvider.swift" : {
+    "const-values" : "/Users/phinn/Documents/kinet/KinetMinutes/build/DerivedData/Build/Intermediates.noindex/LocalLLMKit.build/Debug/LocalLLMKit.build/Objects-normal/arm64/DoubaoProvider.swiftconstvalues",
+    "dependencies" : "/Users/phinn/Documents/kinet/KinetMinutes/build/DerivedData/Build/Intermediates.noindex/LocalLLMKit.build/Debug/LocalLLMKit.build/Objects-normal/arm64/DoubaoProvider.d",
+    "diagnostics" : "/Users/phinn/Documents/kinet/KinetMinutes/build/DerivedData/Build/Intermediates.noindex/LocalLLMKit.build/Debug/LocalLLMKit.build/Objects-normal/arm64/DoubaoProvider.dia",
+    "index-unit-output-path" : "/LocalLLMKit.build/Debug/LocalLLMKit.build/Objects-normal/arm64/DoubaoProvider.o",
+    "llvm-bc" : "/Users/phinn/Documents/kinet/KinetMinutes/build/DerivedData/Build/Intermediates.noindex/LocalLLMKit.build/Debug/LocalLLMKit.build/Objects-normal/arm64/DoubaoProvider.bc",
+    "object" : "/Users/phinn/Documents/kinet/KinetMinutes/build/DerivedData/Build/Intermediates.noindex/LocalLLMKit.build/Debug/LocalLLMKit.build/Objects-normal/arm64/DoubaoProvider.o",
+    "swift-dependencies" : "/Users/phinn/Documents/kinet/KinetMinutes/build/DerivedData/Build/Intermediates.noindex/LocalLLMKit.build/Debug/LocalLLMKit.build/Objects-normal/arm64/DoubaoProvider.swiftdeps",
+    "swiftmodule" : "/Users/phinn/Documents/kinet/KinetMinutes/build/DerivedData/Build/Intermediates.noindex/LocalLLMKit.build/Debug/LocalLLMKit.build/Objects-normal/arm64/DoubaoProvider~partial.swiftmodule"
+  },
+  "/Users/phinn/Documents/kinet/LocalLLMKit/Sources/LocalLLMKit/EmbeddingService.swift" : {
+    "const-values" : "/Users/phinn/Documents/kinet/KinetMinutes/build/DerivedData/Build/Intermediates.noindex/LocalLLMKit.build/Debug/LocalLLMKit.build/Objects-normal/arm64/EmbeddingService.swiftconstvalues",
+    "dependencies" : "/Users/phinn/Documents/kinet/KinetMinutes/build/DerivedData/Build/Intermediates.noindex/LocalLLMKit.build/Debug/LocalLLMKit.build/Objects-normal/arm64/EmbeddingService.d",
+    "diagnostics" : "/Users/phinn/Documents/kinet/KinetMinutes/build/DerivedData/Build/Intermediates.noindex/LocalLLMKit.build/Debug/LocalLLMKit.build/Objects-normal/arm64/EmbeddingService.dia",
+    "index-unit-output-path" : "/LocalLLMKit.build/Debug/LocalLLMKit.build/Objects-normal/arm64/EmbeddingService.o",
+    "llvm-bc" : "/Users/phinn/Documents/kinet/KinetMinutes/build/DerivedData/Build/Intermediates.noindex/LocalLLMKit.build/Debug/LocalLLMKit.build/Objects-normal/arm64/EmbeddingService.bc",
+    "object" : "/Users/phinn/Documents/kinet/KinetMinutes/build/DerivedData/Build/Intermediates.noindex/LocalLLMKit.build/Debug/LocalLLMKit.build/Objects-normal/arm64/EmbeddingService.o",
+    "swift-dependencies" : "/Users/phinn/Documents/kinet/KinetMinutes/build/DerivedData/Build/Intermediates.noindex/LocalLLMKit.build/Debug/LocalLLMKit.build/Objects-normal/arm64/EmbeddingService.swiftdeps",
+    "swiftmodule" : "/Users/phinn/Documents/kinet/KinetMinutes/build/DerivedData/Build/Intermediates.noindex/LocalLLMKit.build/Debug/LocalLLMKit.build/Objects-normal/arm64/EmbeddingService~partial.swiftmodule"
+  },
+  "/Users/phinn/Documents/kinet/LocalLLMKit/Sources/LocalLLMKit/GeminiProvider.swift" : {
+    "const-values" : "/Users/phinn/Documents/kinet/KinetMinutes/build/DerivedData/Build/Intermediates.noindex/LocalLLMKit.build/Debug/LocalLLMKit.build/Objects-normal/arm64/GeminiProvider.swiftconstvalues",
+    "dependencies" : "/Users/phinn/Documents/kinet/KinetMinutes/build/DerivedData/Build/Intermediates.noindex/LocalLLMKit.build/Debug/LocalLLMKit.build/Objects-normal/arm64/GeminiProvider.d",
+    "diagnostics" : "/Users/phinn/Documents/kinet/KinetMinutes/build/DerivedData/Build/Intermediates.noindex/LocalLLMKit.build/Debug/LocalLLMKit.build/Objects-normal/arm64/GeminiProvider.dia",
+    "index-unit-output-path" : "/LocalLLMKit.build/Debug/LocalLLMKit.build/Objects-normal/arm64/GeminiProvider.o",
+    "llvm-bc" : "/Users/phinn/Documents/kinet/KinetMinutes/build/DerivedData/Build/Intermediates.noindex/LocalLLMKit.build/Debug/LocalLLMKit.build/Objects-normal/arm64/GeminiProvider.bc",
+    "object" : "/Users/phinn/Documents/kinet/KinetMinutes/build/DerivedData/Build/Intermediates.noindex/LocalLLMKit.build/Debug/LocalLLMKit.build/Objects-normal/arm64/GeminiProvider.o",
+    "swift-dependencies" : "/Users/phinn/Documents/kinet/KinetMinutes/build/DerivedData/Build/Intermediates.noindex/LocalLLMKit.build/Debug/LocalLLMKit.build/Objects-normal/arm64/GeminiProvider.swiftdeps",
+    "swiftmodule" : "/Users/phinn/Documents/kinet/KinetMinutes/build/DerivedData/Build/Intermediates.noindex/LocalLLMKit.build/Debug/LocalLLMKit.build/Objects-normal/arm64/GeminiProvider~partial.swiftmodule"
+  },
+  "/Users/phinn/Documents/kinet/LocalLLMKit/Sources/LocalLLMKit/LLMConfig.swift" : {
+    "const-values" : "/Users/phinn/Documents/kinet/KinetMinutes/build/DerivedData/Build/Intermediates.noindex/LocalLLMKit.build/Debug/LocalLLMKit.build/Objects-normal/arm64/LLMConfig.swiftconstvalues",
+    "dependencies" : "/Users/phinn/Documents/kinet/KinetMinutes/build/DerivedData/Build/Intermediates.noindex/LocalLLMKit.build/Debug/LocalLLMKit.build/Objects-normal/arm64/LLMConfig.d",
+    "diagnostics" : "/Users/phinn/Documents/kinet/KinetMinutes/build/DerivedData/Build/Intermediates.noindex/LocalLLMKit.build/Debug/LocalLLMKit.build/Objects-normal/arm64/LLMConfig.dia",
+    "index-unit-output-path" : "/LocalLLMKit.build/Debug/LocalLLMKit.build/Objects-normal/arm64/LLMConfig.o",
+    "llvm-bc" : "/Users/phinn/Documents/kinet/KinetMinutes/build/DerivedData/Build/Intermediates.noindex/LocalLLMKit.build/Debug/LocalLLMKit.build/Objects-normal/arm64/LLMConfig.bc",
+    "object" : "/Users/phinn/Documents/kinet/KinetMinutes/build/DerivedData/Build/Intermediates.noindex/LocalLLMKit.build/Debug/LocalLLMKit.build/Objects-normal/arm64/LLMConfig.o",
+    "swift-dependencies" : "/Users/phinn/Documents/kinet/KinetMinutes/build/DerivedData/Build/Intermediates.noindex/LocalLLMKit.build/Debug/LocalLLMKit.build/Objects-normal/arm64/LLMConfig.swiftdeps",
+    "swiftmodule" : "/Users/phinn/Documents/kinet/KinetMinutes/build/DerivedData/Build/Intermediates.noindex/LocalLLMKit.build/Debug/LocalLLMKit.build/Objects-normal/arm64/LLMConfig~partial.swiftmodule"
+  },
+  "/Users/phinn/Documents/kinet/LocalLLMKit/Sources/LocalLLMKit/LLMProvider.swift" : {
+    "const-values" : "/Users/phinn/Documents/kinet/KinetMinutes/build/DerivedData/Build/Intermediates.noindex/LocalLLMKit.build/Debug/LocalLLMKit.build/Objects-normal/arm64/LLMProvider.swiftconstvalues",
+    "dependencies" : "/Users/phinn/Documents/kinet/KinetMinutes/build/DerivedData/Build/Intermediates.noindex/LocalLLMKit.build/Debug/LocalLLMKit.build/Objects-normal/arm64/LLMProvider.d",
+    "diagnostics" : "/Users/phinn/Documents/kinet/KinetMinutes/build/DerivedData/Build/Intermediates.noindex/LocalLLMKit.build/Debug/LocalLLMKit.build/Objects-normal/arm64/LLMProvider.dia",
+    "index-unit-output-path" : "/LocalLLMKit.build/Debug/LocalLLMKit.build/Objects-normal/arm64/LLMProvider.o",
+    "llvm-bc" : "/Users/phinn/Documents/kinet/KinetMinutes/build/DerivedData/Build/Intermediates.noindex/LocalLLMKit.build/Debug/LocalLLMKit.build/Objects-normal/arm64/LLMProvider.bc",
+    "object" : "/Users/phinn/Documents/kinet/KinetMinutes/build/DerivedData/Build/Intermediates.noindex/LocalLLMKit.build/Debug/LocalLLMKit.build/Objects-normal/arm64/LLMProvider.o",
+    "swift-dependencies" : "/Users/phinn/Documents/kinet/KinetMinutes/build/DerivedData/Build/Intermediates.noindex/LocalLLMKit.build/Debug/LocalLLMKit.build/Objects-normal/arm64/LLMProvider.swiftdeps",
+    "swiftmodule" : "/Users/phinn/Documents/kinet/KinetMinutes/build/DerivedData/Build/Intermediates.noindex/LocalLLMKit.build/Debug/LocalLLMKit.build/Objects-normal/arm64/LLMProvider~partial.swiftmodule"
+  },
+  "/Users/phinn/Documents/kinet/LocalLLMKit/Sources/LocalLLMKit/LLMService.swift" : {
+    "const-values" : "/Users/phinn/Documents/kinet/KinetMinutes/build/DerivedData/Build/Intermediates.noindex/LocalLLMKit.build/Debug/LocalLLMKit.build/Objects-normal/arm64/LLMService.swiftconstvalues",
+    "dependencies" : "/Users/phinn/Documents/kinet/KinetMinutes/build/DerivedData/Build/Intermediates.noindex/LocalLLMKit.build/Debug/LocalLLMKit.build/Objects-normal/arm64/LLMService.d",
+    "diagnostics" : "/Users/phinn/Documents/kinet/KinetMinutes/build/DerivedData/Build/Intermediates.noindex/LocalLLMKit.build/Debug/LocalLLMKit.build/Objects-normal/arm64/LLMService.dia",
+    "index-unit-output-path" : "/LocalLLMKit.build/Debug/LocalLLMKit.build/Objects-normal/arm64/LLMService.o",
+    "llvm-bc" : "/Users/phinn/Documents/kinet/KinetMinutes/build/DerivedData/Build/Intermediates.noindex/LocalLLMKit.build/Debug/LocalLLMKit.build/Objects-normal/arm64/LLMService.bc",
+    "object" : "/Users/phinn/Documents/kinet/KinetMinutes/build/DerivedData/Build/Intermediates.noindex/LocalLLMKit.build/Debug/LocalLLMKit.build/Objects-normal/arm64/LLMService.o",
+    "swift-dependencies" : "/Users/phinn/Documents/kinet/KinetMinutes/build/DerivedData/Build/Intermediates.noindex/LocalLLMKit.build/Debug/LocalLLMKit.build/Objects-normal/arm64/LLMService.swiftdeps",
+    "swiftmodule" : "/Users/phinn/Documents/kinet/KinetMinutes/build/DerivedData/Build/Intermediates.noindex/LocalLLMKit.build/Debug/LocalLLMKit.build/Objects-normal/arm64/LLMService~partial.swiftmodule"
+  },
+  "/Users/phinn/Documents/kinet/LocalLLMKit/Sources/LocalLLMKit/LlamaCppProvider.swift" : {
+    "const-values" : "/Users/phinn/Documents/kinet/KinetMinutes/build/DerivedData/Build/Intermediates.noindex/LocalLLMKit.build/Debug/LocalLLMKit.build/Objects-normal/arm64/LlamaCppProvider.swiftconstvalues",
+    "dependencies" : "/Users/phinn/Documents/kinet/KinetMinutes/build/DerivedData/Build/Intermediates.noindex/LocalLLMKit.build/Debug/LocalLLMKit.build/Objects-normal/arm64/LlamaCppProvider.d",
+    "diagnostics" : "/Users/phinn/Documents/kinet/KinetMinutes/build/DerivedData/Build/Intermediates.noindex/LocalLLMKit.build/Debug/LocalLLMKit.build/Objects-normal/arm64/LlamaCppProvider.dia",
+    "index-unit-output-path" : "/LocalLLMKit.build/Debug/LocalLLMKit.build/Objects-normal/arm64/LlamaCppProvider.o",
+    "llvm-bc" : "/Users/phinn/Documents/kinet/KinetMinutes/build/DerivedData/Build/Intermediates.noindex/LocalLLMKit.build/Debug/LocalLLMKit.build/Objects-normal/arm64/LlamaCppProvider.bc",
+    "object" : "/Users/phinn/Documents/kinet/KinetMinutes/build/DerivedData/Build/Intermediates.noindex/LocalLLMKit.build/Debug/LocalLLMKit.build/Objects-normal/arm64/LlamaCppProvider.o",
+    "swift-dependencies" : "/Users/phinn/Documents/kinet/KinetMinutes/build/DerivedData/Build/Intermediates.noindex/LocalLLMKit.build/Debug/LocalLLMKit.build/Objects-normal/arm64/LlamaCppProvider.swiftdeps",
+    "swiftmodule" : "/Users/phinn/Documents/kinet/KinetMinutes/build/DerivedData/Build/Intermediates.noindex/LocalLLMKit.build/Debug/LocalLLMKit.build/Objects-normal/arm64/LlamaCppProvider~partial.swiftmodule"
+  },
+  "/Users/phinn/Documents/kinet/LocalLLMKit/Sources/LocalLLMKit/LlamaCppProviderV2.swift" : {
+    "const-values" : "/Users/phinn/Documents/kinet/KinetMinutes/build/DerivedData/Build/Intermediates.noindex/LocalLLMKit.build/Debug/LocalLLMKit.build/Objects-normal/arm64/LlamaCppProviderV2.swiftconstvalues",
+    "dependencies" : "/Users/phinn/Documents/kinet/KinetMinutes/build/DerivedData/Build/Intermediates.noindex/LocalLLMKit.build/Debug/LocalLLMKit.build/Objects-normal/arm64/LlamaCppProviderV2.d",
+    "diagnostics" : "/Users/phinn/Documents/kinet/KinetMinutes/build/DerivedData/Build/Intermediates.noindex/LocalLLMKit.build/Debug/LocalLLMKit.build/Objects-normal/arm64/LlamaCppProviderV2.dia",
+    "index-unit-output-path" : "/LocalLLMKit.build/Debug/LocalLLMKit.build/Objects-normal/arm64/LlamaCppProviderV2.o",
+    "llvm-bc" : "/Users/phinn/Documents/kinet/KinetMinutes/build/DerivedData/Build/Intermediates.noindex/LocalLLMKit.build/Debug/LocalLLMKit.build/Objects-normal/arm64/LlamaCppProviderV2.bc",
+    "object" : "/Users/phinn/Documents/kinet/KinetMinutes/build/DerivedData/Build/Intermediates.noindex/LocalLLMKit.build/Debug/LocalLLMKit.build/Objects-normal/arm64/LlamaCppProviderV2.o",
+    "swift-dependencies" : "/Users/phinn/Documents/kinet/KinetMinutes/build/DerivedData/Build/Intermediates.noindex/LocalLLMKit.build/Debug/LocalLLMKit.build/Objects-normal/arm64/LlamaCppProviderV2.swiftdeps",
+    "swiftmodule" : "/Users/phinn/Documents/kinet/KinetMinutes/build/DerivedData/Build/Intermediates.noindex/LocalLLMKit.build/Debug/LocalLLMKit.build/Objects-normal/arm64/LlamaCppProviderV2~partial.swiftmodule"
+  },
+  "/Users/phinn/Documents/kinet/LocalLLMKit/Sources/LocalLLMKit/MoonshotProvider.swift" : {
+    "const-values" : "/Users/phinn/Documents/kinet/KinetMinutes/build/DerivedData/Build/Intermediates.noindex/LocalLLMKit.build/Debug/LocalLLMKit.build/Objects-normal/arm64/MoonshotProvider.swiftconstvalues",
+    "dependencies" : "/Users/phinn/Documents/kinet/KinetMinutes/build/DerivedData/Build/Intermediates.noindex/LocalLLMKit.build/Debug/LocalLLMKit.build/Objects-normal/arm64/MoonshotProvider.d",
+    "diagnostics" : "/Users/phinn/Documents/kinet/KinetMinutes/build/DerivedData/Build/Intermediates.noindex/LocalLLMKit.build/Debug/LocalLLMKit.build/Objects-normal/arm64/MoonshotProvider.dia",
+    "index-unit-output-path" : "/LocalLLMKit.build/Debug/LocalLLMKit.build/Objects-normal/arm64/MoonshotProvider.o",
+    "llvm-bc" : "/Users/phinn/Documents/kinet/KinetMinutes/build/DerivedData/Build/Intermediates.noindex/LocalLLMKit.build/Debug/LocalLLMKit.build/Objects-normal/arm64/MoonshotProvider.bc",
+    "object" : "/Users/phinn/Documents/kinet/KinetMinutes/build/DerivedData/Build/Intermediates.noindex/LocalLLMKit.build/Debug/LocalLLMKit.build/Objects-normal/arm64/MoonshotProvider.o",
+    "swift-dependencies" : "/Users/phinn/Documents/kinet/KinetMinutes/build/DerivedData/Build/Intermediates.noindex/LocalLLMKit.build/Debug/LocalLLMKit.build/Objects-normal/arm64/MoonshotProvider.swiftdeps",
+    "swiftmodule" : "/Users/phinn/Documents/kinet/KinetMinutes/build/DerivedData/Build/Intermediates.noindex/LocalLLMKit.build/Debug/LocalLLMKit.build/Objects-normal/arm64/MoonshotProvider~partial.swiftmodule"
+  },
+  "/Users/phinn/Documents/kinet/LocalLLMKit/Sources/LocalLLMKit/OllamaProvider.swift" : {
+    "const-values" : "/Users/phinn/Documents/kinet/KinetMinutes/build/DerivedData/Build/Intermediates.noindex/LocalLLMKit.build/Debug/LocalLLMKit.build/Objects-normal/arm64/OllamaProvider.swiftconstvalues",
+    "dependencies" : "/Users/phinn/Documents/kinet/KinetMinutes/build/DerivedData/Build/Intermediates.noindex/LocalLLMKit.build/Debug/LocalLLMKit.build/Objects-normal/arm64/OllamaProvider.d",
+    "diagnostics" : "/Users/phinn/Documents/kinet/KinetMinutes/build/DerivedData/Build/Intermediates.noindex/LocalLLMKit.build/Debug/LocalLLMKit.build/Objects-normal/arm64/OllamaProvider.dia",
+    "index-unit-output-path" : "/LocalLLMKit.build/Debug/LocalLLMKit.build/Objects-normal/arm64/OllamaProvider.o",
+    "llvm-bc" : "/Users/phinn/Documents/kinet/KinetMinutes/build/DerivedData/Build/Intermediates.noindex/LocalLLMKit.build/Debug/LocalLLMKit.build/Objects-normal/arm64/OllamaProvider.bc",
+    "object" : "/Users/phinn/Documents/kinet/KinetMinutes/build/DerivedData/Build/Intermediates.noindex/LocalLLMKit.build/Debug/LocalLLMKit.build/Objects-normal/arm64/OllamaProvider.o",
+    "swift-dependencies" : "/Users/phinn/Documents/kinet/KinetMinutes/build/DerivedData/Build/Intermediates.noindex/LocalLLMKit.build/Debug/LocalLLMKit.build/Objects-normal/arm64/OllamaProvider.swiftdeps",
+    "swiftmodule" : "/Users/phinn/Documents/kinet/KinetMinutes/build/DerivedData/Build/Intermediates.noindex/LocalLLMKit.build/Debug/LocalLLMKit.build/Objects-normal/arm64/OllamaProvider~partial.swiftmodule"
+  },
+  "/Users/phinn/Documents/kinet/LocalLLMKit/Sources/LocalLLMKit/OpenAIProvider.swift" : {
+    "const-values" : "/Users/phinn/Documents/kinet/KinetMinutes/build/DerivedData/Build/Intermediates.noindex/LocalLLMKit.build/Debug/LocalLLMKit.build/Objects-normal/arm64/OpenAIProvider.swiftconstvalues",
+    "dependencies" : "/Users/phinn/Documents/kinet/KinetMinutes/build/DerivedData/Build/Intermediates.noindex/LocalLLMKit.build/Debug/LocalLLMKit.build/Objects-normal/arm64/OpenAIProvider.d",
+    "diagnostics" : "/Users/phinn/Documents/kinet/KinetMinutes/build/DerivedData/Build/Intermediates.noindex/LocalLLMKit.build/Debug/LocalLLMKit.build/Objects-normal/arm64/OpenAIProvider.dia",
+    "index-unit-output-path" : "/LocalLLMKit.build/Debug/LocalLLMKit.build/Objects-normal/arm64/OpenAIProvider.o",
+    "llvm-bc" : "/Users/phinn/Documents/kinet/KinetMinutes/build/DerivedData/Build/Intermediates.noindex/LocalLLMKit.build/Debug/LocalLLMKit.build/Objects-normal/arm64/OpenAIProvider.bc",
+    "object" : "/Users/phinn/Documents/kinet/KinetMinutes/build/DerivedData/Build/Intermediates.noindex/LocalLLMKit.build/Debug/LocalLLMKit.build/Objects-normal/arm64/OpenAIProvider.o",
+    "swift-dependencies" : "/Users/phinn/Documents/kinet/KinetMinutes/build/DerivedData/Build/Intermediates.noindex/LocalLLMKit.build/Debug/LocalLLMKit.build/Objects-normal/arm64/OpenAIProvider.swiftdeps",
+    "swiftmodule" : "/Users/phinn/Documents/kinet/KinetMinutes/build/DerivedData/Build/Intermediates.noindex/LocalLLMKit.build/Debug/LocalLLMKit.build/Objects-normal/arm64/OpenAIProvider~partial.swiftmodule"
+  },
+  "/Users/phinn/Documents/kinet/LocalLLMKit/Sources/LocalLLMKit/Participant.swift" : {
+    "const-values" : "/Users/phinn/Documents/kinet/KinetMinutes/build/DerivedData/Build/Intermediates.noindex/LocalLLMKit.build/Debug/LocalLLMKit.build/Objects-normal/arm64/Participant.swiftconstvalues",
+    "dependencies" : "/Users/phinn/Documents/kinet/KinetMinutes/build/DerivedData/Build/Intermediates.noindex/LocalLLMKit.build/Debug/LocalLLMKit.build/Objects-normal/arm64/Participant.d",
+    "diagnostics" : "/Users/phinn/Documents/kinet/KinetMinutes/build/DerivedData/Build/Intermediates.noindex/LocalLLMKit.build/Debug/LocalLLMKit.build/Objects-normal/arm64/Participant.dia",
+    "index-unit-output-path" : "/LocalLLMKit.build/Debug/LocalLLMKit.build/Objects-normal/arm64/Participant.o",
+    "llvm-bc" : "/Users/phinn/Documents/kinet/KinetMinutes/build/DerivedData/Build/Intermediates.noindex/LocalLLMKit.build/Debug/LocalLLMKit.build/Objects-normal/arm64/Participant.bc",
+    "object" : "/Users/phinn/Documents/kinet/KinetMinutes/build/DerivedData/Build/Intermediates.noindex/LocalLLMKit.build/Debug/LocalLLMKit.build/Objects-normal/arm64/Participant.o",
+    "swift-dependencies" : "/Users/phinn/Documents/kinet/KinetMinutes/build/DerivedData/Build/Intermediates.noindex/LocalLLMKit.build/Debug/LocalLLMKit.build/Objects-normal/arm64/Participant.swiftdeps",
+    "swiftmodule" : "/Users/phinn/Documents/kinet/KinetMinutes/build/DerivedData/Build/Intermediates.noindex/LocalLLMKit.build/Debug/LocalLLMKit.build/Objects-normal/arm64/Participant~partial.swiftmodule"
+  },
+  "/Users/phinn/Documents/kinet/LocalLLMKit/Sources/LocalLLMKit/ProviderError.swift" : {
+    "const-values" : "/Users/phinn/Documents/kinet/KinetMinutes/build/DerivedData/Build/Intermediates.noindex/LocalLLMKit.build/Debug/LocalLLMKit.build/Objects-normal/arm64/ProviderError.swiftconstvalues",
+    "dependencies" : "/Users/phinn/Documents/kinet/KinetMinutes/build/DerivedData/Build/Intermediates.noindex/LocalLLMKit.build/Debug/LocalLLMKit.build/Objects-normal/arm64/ProviderError.d",
+    "diagnostics" : "/Users/phinn/Documents/kinet/KinetMinutes/build/DerivedData/Build/Intermediates.noindex/LocalLLMKit.build/Debug/LocalLLMKit.build/Objects-normal/arm64/ProviderError.dia",
+    "index-unit-output-path" : "/LocalLLMKit.build/Debug/LocalLLMKit.build/Objects-normal/arm64/ProviderError.o",
+    "llvm-bc" : "/Users/phinn/Documents/kinet/KinetMinutes/build/DerivedData/Build/Intermediates.noindex/LocalLLMKit.build/Debug/LocalLLMKit.build/Objects-normal/arm64/ProviderError.bc",
+    "object" : "/Users/phinn/Documents/kinet/KinetMinutes/build/DerivedData/Build/Intermediates.noindex/LocalLLMKit.build/Debug/LocalLLMKit.build/Objects-normal/arm64/ProviderError.o",
+    "swift-dependencies" : "/Users/phinn/Documents/kinet/KinetMinutes/build/DerivedData/Build/Intermediates.noindex/LocalLLMKit.build/Debug/LocalLLMKit.build/Objects-normal/arm64/ProviderError.swiftdeps",
+    "swiftmodule" : "/Users/phinn/Documents/kinet/KinetMinutes/build/DerivedData/Build/Intermediates.noindex/LocalLLMKit.build/Debug/LocalLLMKit.build/Objects-normal/arm64/ProviderError~partial.swiftmodule"
+  },
+  "/Users/phinn/Documents/kinet/LocalLLMKit/Sources/LocalLLMKit/ProviderType.swift" : {
+    "const-values" : "/Users/phinn/Documents/kinet/KinetMinutes/build/DerivedData/Build/Intermediates.noindex/LocalLLMKit.build/Debug/LocalLLMKit.build/Objects-normal/arm64/ProviderType.swiftconstvalues",
+    "dependencies" : "/Users/phinn/Documents/kinet/KinetMinutes/build/DerivedData/Build/Intermediates.noindex/LocalLLMKit.build/Debug/LocalLLMKit.build/Objects-normal/arm64/ProviderType.d",
+    "diagnostics" : "/Users/phinn/Documents/kinet/KinetMinutes/build/DerivedData/Build/Intermediates.noindex/LocalLLMKit.build/Debug/LocalLLMKit.build/Objects-normal/arm64/ProviderType.dia",
+    "index-unit-output-path" : "/LocalLLMKit.build/Debug/LocalLLMKit.build/Objects-normal/arm64/ProviderType.o",
+    "llvm-bc" : "/Users/phinn/Documents/kinet/KinetMinutes/build/DerivedData/Build/Intermediates.noindex/LocalLLMKit.build/Debug/LocalLLMKit.build/Objects-normal/arm64/ProviderType.bc",
+    "object" : "/Users/phinn/Documents/kinet/KinetMinutes/build/DerivedData/Build/Intermediates.noindex/LocalLLMKit.build/Debug/LocalLLMKit.build/Objects-normal/arm64/ProviderType.o",
+    "swift-dependencies" : "/Users/phinn/Documents/kinet/KinetMinutes/build/DerivedData/Build/Intermediates.noindex/LocalLLMKit.build/Debug/LocalLLMKit.build/Objects-normal/arm64/ProviderType.swiftdeps",
+    "swiftmodule" : "/Users/phinn/Documents/kinet/KinetMinutes/build/DerivedData/Build/Intermediates.noindex/LocalLLMKit.build/Debug/LocalLLMKit.build/Objects-normal/arm64/ProviderType~partial.swiftmodule"
+  },
+  "/Users/phinn/Documents/kinet/LocalLLMKit/Sources/LocalLLMKit/RemoteLLMProvider.swift" : {
+    "const-values" : "/Users/phinn/Documents/kinet/KinetMinutes/build/DerivedData/Build/Intermediates.noindex/LocalLLMKit.build/Debug/LocalLLMKit.build/Objects-normal/arm64/RemoteLLMProvider.swiftconstvalues",
+    "dependencies" : "/Users/phinn/Documents/kinet/KinetMinutes/build/DerivedData/Build/Intermediates.noindex/LocalLLMKit.build/Debug/LocalLLMKit.build/Objects-normal/arm64/RemoteLLMProvider.d",
+    "diagnostics" : "/Users/phinn/Documents/kinet/KinetMinutes/build/DerivedData/Build/Intermediates.noindex/LocalLLMKit.build/Debug/LocalLLMKit.build/Objects-normal/arm64/RemoteLLMProvider.dia",
+    "index-unit-output-path" : "/LocalLLMKit.build/Debug/LocalLLMKit.build/Objects-normal/arm64/RemoteLLMProvider.o",
+    "llvm-bc" : "/Users/phinn/Documents/kinet/KinetMinutes/build/DerivedData/Build/Intermediates.noindex/LocalLLMKit.build/Debug/LocalLLMKit.build/Objects-normal/arm64/RemoteLLMProvider.bc",
+    "object" : "/Users/phinn/Documents/kinet/KinetMinutes/build/DerivedData/Build/Intermediates.noindex/LocalLLMKit.build/Debug/LocalLLMKit.build/Objects-normal/arm64/RemoteLLMProvider.o",
+    "swift-dependencies" : "/Users/phinn/Documents/kinet/KinetMinutes/build/DerivedData/Build/Intermediates.noindex/LocalLLMKit.build/Debug/LocalLLMKit.build/Objects-normal/arm64/RemoteLLMProvider.swiftdeps",
+    "swiftmodule" : "/Users/phinn/Documents/kinet/KinetMinutes/build/DerivedData/Build/Intermediates.noindex/LocalLLMKit.build/Debug/LocalLLMKit.build/Objects-normal/arm64/RemoteLLMProvider~partial.swiftmodule"
+  },
+  "/Users/phinn/Documents/kinet/LocalLLMKit/Sources/LocalLLMKit/SSEParser.swift" : {
+    "const-values" : "/Users/phinn/Documents/kinet/KinetMinutes/build/DerivedData/Build/Intermediates.noindex/LocalLLMKit.build/Debug/LocalLLMKit.build/Objects-normal/arm64/SSEParser.swiftconstvalues",
+    "dependencies" : "/Users/phinn/Documents/kinet/KinetMinutes/build/DerivedData/Build/Intermediates.noindex/LocalLLMKit.build/Debug/LocalLLMKit.build/Objects-normal/arm64/SSEParser.d",
+    "diagnostics" : "/Users/phinn/Documents/kinet/KinetMinutes/build/DerivedData/Build/Intermediates.noindex/LocalLLMKit.build/Debug/LocalLLMKit.build/Objects-normal/arm64/SSEParser.dia",
+    "index-unit-output-path" : "/LocalLLMKit.build/Debug/LocalLLMKit.build/Objects-normal/arm64/SSEParser.o",
+    "llvm-bc" : "/Users/phinn/Documents/kinet/KinetMinutes/build/DerivedData/Build/Intermediates.noindex/LocalLLMKit.build/Debug/LocalLLMKit.build/Objects-normal/arm64/SSEParser.bc",
+    "object" : "/Users/phinn/Documents/kinet/KinetMinutes/build/DerivedData/Build/Intermediates.noindex/LocalLLMKit.build/Debug/LocalLLMKit.build/Objects-normal/arm64/SSEParser.o",
+    "swift-dependencies" : "/Users/phinn/Documents/kinet/KinetMinutes/build/DerivedData/Build/Intermediates.noindex/LocalLLMKit.build/Debug/LocalLLMKit.build/Objects-normal/arm64/SSEParser.swiftdeps",
+    "swiftmodule" : "/Users/phinn/Documents/kinet/KinetMinutes/build/DerivedData/Build/Intermediates.noindex/LocalLLMKit.build/Debug/LocalLLMKit.build/Objects-normal/arm64/SSEParser~partial.swiftmodule"
+  },
+  "/Users/phinn/Documents/kinet/LocalLLMKit/Sources/LocalLLMKit/SharedModelStore.swift" : {
+    "const-values" : "/Users/phinn/Documents/kinet/KinetMinutes/build/DerivedData/Build/Intermediates.noindex/LocalLLMKit.build/Debug/LocalLLMKit.build/Objects-normal/arm64/SharedModelStore.swiftconstvalues",
+    "dependencies" : "/Users/phinn/Documents/kinet/KinetMinutes/build/DerivedData/Build/Intermediates.noindex/LocalLLMKit.build/Debug/LocalLLMKit.build/Objects-normal/arm64/SharedModelStore.d",
+    "diagnostics" : "/Users/phinn/Documents/kinet/KinetMinutes/build/DerivedData/Build/Intermediates.noindex/LocalLLMKit.build/Debug/LocalLLMKit.build/Objects-normal/arm64/SharedModelStore.dia",
+    "index-unit-output-path" : "/LocalLLMKit.build/Debug/LocalLLMKit.build/Objects-normal/arm64/SharedModelStore.o",
+    "llvm-bc" : "/Users/phinn/Documents/kinet/KinetMinutes/build/DerivedData/Build/Intermediates.noindex/LocalLLMKit.build/Debug/LocalLLMKit.build/Objects-normal/arm64/SharedModelStore.bc",
+    "object" : "/Users/phinn/Documents/kinet/KinetMinutes/build/DerivedData/Build/Intermediates.noindex/LocalLLMKit.build/Debug/LocalLLMKit.build/Objects-normal/arm64/SharedModelStore.o",
+    "swift-dependencies" : "/Users/phinn/Documents/kinet/KinetMinutes/build/DerivedData/Build/Intermediates.noindex/LocalLLMKit.build/Debug/LocalLLMKit.build/Objects-normal/arm64/SharedModelStore.swiftdeps",
+    "swiftmodule" : "/Users/phinn/Documents/kinet/KinetMinutes/build/DerivedData/Build/Intermediates.noindex/LocalLLMKit.build/Debug/LocalLLMKit.build/Objects-normal/arm64/SharedModelStore~partial.swiftmodule"
+  },
+  "/Users/phinn/Documents/kinet/LocalLLMKit/Sources/LocalLLMKit/ToolDefinition.swift" : {
+    "const-values" : "/Users/phinn/Documents/kinet/KinetMinutes/build/DerivedData/Build/Intermediates.noindex/LocalLLMKit.build/Debug/LocalLLMKit.build/Objects-normal/arm64/ToolDefinition.swiftconstvalues",
+    "dependencies" : "/Users/phinn/Documents/kinet/KinetMinutes/build/DerivedData/Build/Intermediates.noindex/LocalLLMKit.build/Debug/LocalLLMKit.build/Objects-normal/arm64/ToolDefinition.d",
+    "diagnostics" : "/Users/phinn/Documents/kinet/KinetMinutes/build/DerivedData/Build/Intermediates.noindex/LocalLLMKit.build/Debug/LocalLLMKit.build/Objects-normal/arm64/ToolDefinition.dia",
+    "index-unit-output-path" : "/LocalLLMKit.build/Debug/LocalLLMKit.build/Objects-normal/arm64/ToolDefinition.o",
+    "llvm-bc" : "/Users/phinn/Documents/kinet/KinetMinutes/build/DerivedData/Build/Intermediates.noindex/LocalLLMKit.build/Debug/LocalLLMKit.build/Objects-normal/arm64/ToolDefinition.bc",
+    "object" : "/Users/phinn/Documents/kinet/KinetMinutes/build/DerivedData/Build/Intermediates.noindex/LocalLLMKit.build/Debug/LocalLLMKit.build/Objects-normal/arm64/ToolDefinition.o",
+    "swift-dependencies" : "/Users/phinn/Documents/kinet/KinetMinutes/build/DerivedData/Build/Intermediates.noindex/LocalLLMKit.build/Debug/LocalLLMKit.build/Objects-normal/arm64/ToolDefinition.swiftdeps",
+    "swiftmodule" : "/Users/phinn/Documents/kinet/KinetMinutes/build/DerivedData/Build/Intermediates.noindex/LocalLLMKit.build/Debug/LocalLLMKit.build/Objects-normal/arm64/ToolDefinition~partial.swiftmodule"
+  }
+}

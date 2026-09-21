@@ -1,0 +1,81 @@
+{
+  "" : {
+    "const-values" : "/Users/phinn/Documents/kinet/KinetMinutes/build/DerivedData/Build/Intermediates.noindex/ArchiveIntermediates/KinetMinutes/IntermediateBuildFilesPath/Jinja.build/Release/Jinja.build/Objects-normal/x86_64/Jinja-primary.swiftconstvalues",
+    "dependencies" : "/Users/phinn/Documents/kinet/KinetMinutes/build/DerivedData/Build/Intermediates.noindex/ArchiveIntermediates/KinetMinutes/IntermediateBuildFilesPath/Jinja.build/Release/Jinja.build/Objects-normal/x86_64/Jinja-primary.d",
+    "diagnostics" : "/Users/phinn/Documents/kinet/KinetMinutes/build/DerivedData/Build/Intermediates.noindex/ArchiveIntermediates/KinetMinutes/IntermediateBuildFilesPath/Jinja.build/Release/Jinja.build/Objects-normal/x86_64/Jinja-primary.dia",
+    "emit-module-dependencies" : "/Users/phinn/Documents/kinet/KinetMinutes/build/DerivedData/Build/Intermediates.noindex/ArchiveIntermediates/KinetMinutes/IntermediateBuildFilesPath/Jinja.build/Release/Jinja.build/Objects-normal/x86_64/Jinja-primary-emit-module.d",
+    "emit-module-diagnostics" : "/Users/phinn/Documents/kinet/KinetMinutes/build/DerivedData/Build/Intermediates.noindex/ArchiveIntermediates/KinetMinutes/IntermediateBuildFilesPath/Jinja.build/Release/Jinja.build/Objects-normal/x86_64/Jinja-primary-emit-module.dia",
+    "pch" : "/Users/phinn/Documents/kinet/KinetMinutes/build/DerivedData/Build/Intermediates.noindex/ArchiveIntermediates/KinetMinutes/IntermediateBuildFilesPath/Jinja.build/Release/Jinja.build/Objects-normal/x86_64/Jinja-primary-Bridging-header.pch",
+    "swift-dependencies" : "/Users/phinn/Documents/kinet/KinetMinutes/build/DerivedData/Build/Intermediates.noindex/ArchiveIntermediates/KinetMinutes/IntermediateBuildFilesPath/Jinja.build/Release/Jinja.build/Objects-normal/x86_64/Jinja-primary.swiftdeps"
+  },
+  "/Users/phinn/Documents/kinet/KinetMinutes/build/DerivedData/SourcePackages/checkouts/swift-jinja/Sources/Jinja/AST.swift" : {
+    "index-unit-output-path" : "/Jinja.build/Release/Jinja.build/Objects-normal/x86_64/AST.o",
+    "llvm-bc" : "/Users/phinn/Documents/kinet/KinetMinutes/build/DerivedData/Build/Intermediates.noindex/ArchiveIntermediates/KinetMinutes/IntermediateBuildFilesPath/Jinja.build/Release/Jinja.build/Objects-normal/x86_64/AST.bc",
+    "object" : "/Users/phinn/Documents/kinet/KinetMinutes/build/DerivedData/Build/Intermediates.noindex/ArchiveIntermediates/KinetMinutes/IntermediateBuildFilesPath/Jinja.build/Release/Jinja.build/Objects-normal/x86_64/AST.o"
+  },
+  "/Users/phinn/Documents/kinet/KinetMinutes/build/DerivedData/SourcePackages/checkouts/swift-jinja/Sources/Jinja/Error.swift" : {
+    "index-unit-output-path" : "/Jinja.build/Release/Jinja.build/Objects-normal/x86_64/Error.o",
+    "llvm-bc" : "/Users/phinn/Documents/kinet/KinetMinutes/build/DerivedData/Build/Intermediates.noindex/ArchiveIntermediates/KinetMinutes/IntermediateBuildFilesPath/Jinja.build/Release/Jinja.build/Objects-normal/x86_64/Error.bc",
+    "object" : "/Users/phinn/Documents/kinet/KinetMinutes/build/DerivedData/Build/Intermediates.noindex/ArchiveIntermediates/KinetMinutes/IntermediateBuildFilesPath/Jinja.build/Release/Jinja.build/Objects-normal/x86_64/Error.o"
+  },
+  "/Users/phinn/Documents/kinet/KinetMinutes/build/DerivedData/SourcePackages/checkouts/swift-jinja/Sources/Jinja/Filters.swift" : {
+    "index-unit-output-path" : "/Jinja.build/Release/Jinja.build/Objects-normal/x86_64/Filters.o",
+    "llvm-bc" : "/Users/phinn/Documents/kinet/KinetMinutes/build/DerivedData/Build/Intermediates.noindex/ArchiveIntermediates/KinetMinutes/IntermediateBuildFilesPath/Jinja.build/Release/Jinja.build/Objects-normal/x86_64/Filters.bc",
+    "object" : "/Users/phinn/Documents/kinet/KinetMinutes/build/DerivedData/Build/Intermediates.noindex/ArchiveIntermediates/KinetMinutes/IntermediateBuildFilesPath/Jinja.build/Release/Jinja.build/Objects-normal/x86_64/Filters.o"
+  },
+  "/Users/phinn/Documents/kinet/KinetMinutes/build/DerivedData/SourcePackages/checkouts/swift-jinja/Sources/Jinja/Globals.swift" : {
+    "index-unit-output-path" : "/Jinja.build/Release/Jinja.build/Objects-normal/x86_64/Globals.o",
+    "llvm-bc" : "/Users/phinn/Documents/kinet/KinetMinutes/build/DerivedData/Build/Intermediates.noindex/ArchiveIntermediates/KinetMinutes/IntermediateBuildFilesPath/Jinja.build/Release/Jinja.build/Objects-normal/x86_64/Globals.bc",
+    "object" : "/Users/phinn/Documents/kinet/KinetMinutes/build/DerivedData/Build/Intermediates.noindex/ArchiveIntermediates/KinetMinutes/IntermediateBuildFilesPath/Jinja.build/Release/Jinja.build/Objects-normal/x86_64/Globals.o"
+  },
+  "/Users/phinn/Documents/kinet/KinetMinutes/build/DerivedData/SourcePackages/checkouts/swift-jinja/Sources/Jinja/Interpreter.swift" : {
+    "index-unit-output-path" : "/Jinja.build/Release/Jinja.build/Objects-normal/x86_64/Interpreter.o",
+    "llvm-bc" : "/Users/phinn/Documents/kinet/KinetMinutes/build/DerivedData/Build/Intermediates.noindex/ArchiveIntermediates/KinetMinutes/IntermediateBuildFilesPath/Jinja.build/Release/Jinja.build/Objects-normal/x86_64/Interpreter.bc",
+    "object" : "/Users/phinn/Documents/kinet/KinetMinutes/build/DerivedData/Build/Intermediates.noindex/ArchiveIntermediates/KinetMinutes/IntermediateBuildFilesPath/Jinja.build/Release/Jinja.build/Objects-normal/x86_64/Interpreter.o"
+  },
+  "/Users/phinn/Documents/kinet/KinetMinutes/build/DerivedData/SourcePackages/checkouts/swift-jinja/Sources/Jinja/Lexer.swift" : {
+    "index-unit-output-path" : "/Jinja.build/Release/Jinja.build/Objects-normal/x86_64/Lexer.o",
+    "llvm-bc" : "/Users/phinn/Documents/kinet/KinetMinutes/build/DerivedData/Build/Intermediates.noindex/ArchiveIntermediates/KinetMinutes/IntermediateBuildFilesPath/Jinja.build/Release/Jinja.build/Objects-normal/x86_64/Lexer.bc",
+    "object" : "/Users/phinn/Documents/kinet/KinetMinutes/build/DerivedData/Build/Intermediates.noindex/ArchiveIntermediates/KinetMinutes/IntermediateBuildFilesPath/Jinja.build/Release/Jinja.build/Objects-normal/x86_64/Lexer.o"
+  },
+  "/Users/phinn/Documents/kinet/KinetMinutes/build/DerivedData/SourcePackages/checkouts/swift-jinja/Sources/Jinja/Macro.swift" : {
+    "index-unit-output-path" : "/Jinja.build/Release/Jinja.build/Objects-normal/x86_64/Macro.o",
+    "llvm-bc" : "/Users/phinn/Documents/kinet/KinetMinutes/build/DerivedData/Build/Intermediates.noindex/ArchiveIntermediates/KinetMinutes/IntermediateBuildFilesPath/Jinja.build/Release/Jinja.build/Objects-normal/x86_64/Macro.bc",
+    "object" : "/Users/phinn/Documents/kinet/KinetMinutes/build/DerivedData/Build/Intermediates.noindex/ArchiveIntermediates/KinetMinutes/IntermediateBuildFilesPath/Jinja.build/Release/Jinja.build/Objects-normal/x86_64/Macro.o"
+  },
+  "/Users/phinn/Documents/kinet/KinetMinutes/build/DerivedData/SourcePackages/checkouts/swift-jinja/Sources/Jinja/Parser.swift" : {
+    "index-unit-output-path" : "/Jinja.build/Release/Jinja.build/Objects-normal/x86_64/Parser.o",
+    "llvm-bc" : "/Users/phinn/Documents/kinet/KinetMinutes/build/DerivedData/Build/Intermediates.noindex/ArchiveIntermediates/KinetMinutes/IntermediateBuildFilesPath/Jinja.build/Release/Jinja.build/Objects-normal/x86_64/Parser.bc",
+    "object" : "/Users/phinn/Documents/kinet/KinetMinutes/build/DerivedData/Build/Intermediates.noindex/ArchiveIntermediates/KinetMinutes/IntermediateBuildFilesPath/Jinja.build/Release/Jinja.build/Objects-normal/x86_64/Parser.o"
+  },
+  "/Users/phinn/Documents/kinet/KinetMinutes/build/DerivedData/SourcePackages/checkouts/swift-jinja/Sources/Jinja/PropertyMembers.swift" : {
+    "index-unit-output-path" : "/Jinja.build/Release/Jinja.build/Objects-normal/x86_64/PropertyMembers.o",
+    "llvm-bc" : "/Users/phinn/Documents/kinet/KinetMinutes/build/DerivedData/Build/Intermediates.noindex/ArchiveIntermediates/KinetMinutes/IntermediateBuildFilesPath/Jinja.build/Release/Jinja.build/Objects-normal/x86_64/PropertyMembers.bc",
+    "object" : "/Users/phinn/Documents/kinet/KinetMinutes/build/DerivedData/Build/Intermediates.noindex/ArchiveIntermediates/KinetMinutes/IntermediateBuildFilesPath/Jinja.build/Release/Jinja.build/Objects-normal/x86_64/PropertyMembers.o"
+  },
+  "/Users/phinn/Documents/kinet/KinetMinutes/build/DerivedData/SourcePackages/checkouts/swift-jinja/Sources/Jinja/Template.swift" : {
+    "index-unit-output-path" : "/Jinja.build/Release/Jinja.build/Objects-normal/x86_64/Template.o",
+    "llvm-bc" : "/Users/phinn/Documents/kinet/KinetMinutes/build/DerivedData/Build/Intermediates.noindex/ArchiveIntermediates/KinetMinutes/IntermediateBuildFilesPath/Jinja.build/Release/Jinja.build/Objects-normal/x86_64/Template.bc",
+    "object" : "/Users/phinn/Documents/kinet/KinetMinutes/build/DerivedData/Build/Intermediates.noindex/ArchiveIntermediates/KinetMinutes/IntermediateBuildFilesPath/Jinja.build/Release/Jinja.build/Objects-normal/x86_64/Template.o"
+  },
+  "/Users/phinn/Documents/kinet/KinetMinutes/build/DerivedData/SourcePackages/checkouts/swift-jinja/Sources/Jinja/Tests.swift" : {
+    "index-unit-output-path" : "/Jinja.build/Release/Jinja.build/Objects-normal/x86_64/Tests.o",
+    "llvm-bc" : "/Users/phinn/Documents/kinet/KinetMinutes/build/DerivedData/Build/Intermediates.noindex/ArchiveIntermediates/KinetMinutes/IntermediateBuildFilesPath/Jinja.build/Release/Jinja.build/Objects-normal/x86_64/Tests.bc",
+    "object" : "/Users/phinn/Documents/kinet/KinetMinutes/build/DerivedData/Build/Intermediates.noindex/ArchiveIntermediates/KinetMinutes/IntermediateBuildFilesPath/Jinja.build/Release/Jinja.build/Objects-normal/x86_64/Tests.o"
+  },
+  "/Users/phinn/Documents/kinet/KinetMinutes/build/DerivedData/SourcePackages/checkouts/swift-jinja/Sources/Jinja/Token.swift" : {
+    "index-unit-output-path" : "/Jinja.build/Release/Jinja.build/Objects-normal/x86_64/Token.o",
+    "llvm-bc" : "/Users/phinn/Documents/kinet/KinetMinutes/build/DerivedData/Build/Intermediates.noindex/ArchiveIntermediates/KinetMinutes/IntermediateBuildFilesPath/Jinja.build/Release/Jinja.build/Objects-normal/x86_64/Token.bc",
+    "object" : "/Users/phinn/Documents/kinet/KinetMinutes/build/DerivedData/Build/Intermediates.noindex/ArchiveIntermediates/KinetMinutes/IntermediateBuildFilesPath/Jinja.build/Release/Jinja.build/Objects-normal/x86_64/Token.o"
+  },
+  "/Users/phinn/Documents/kinet/KinetMinutes/build/DerivedData/SourcePackages/checkouts/swift-jinja/Sources/Jinja/Utilities.swift" : {
+    "index-unit-output-path" : "/Jinja.build/Release/Jinja.build/Objects-normal/x86_64/Utilities.o",
+    "llvm-bc" : "/Users/phinn/Documents/kinet/KinetMinutes/build/DerivedData/Build/Intermediates.noindex/ArchiveIntermediates/KinetMinutes/IntermediateBuildFilesPath/Jinja.build/Release/Jinja.build/Objects-normal/x86_64/Utilities.bc",
+    "object" : "/Users/phinn/Documents/kinet/KinetMinutes/build/DerivedData/Build/Intermediates.noindex/ArchiveIntermediates/KinetMinutes/IntermediateBuildFilesPath/Jinja.build/Release/Jinja.build/Objects-normal/x86_64/Utilities.o"
+  },
+  "/Users/phinn/Documents/kinet/KinetMinutes/build/DerivedData/SourcePackages/checkouts/swift-jinja/Sources/Jinja/Value.swift" : {
+    "index-unit-output-path" : "/Jinja.build/Release/Jinja.build/Objects-normal/x86_64/Value.o",
+    "llvm-bc" : "/Users/phinn/Documents/kinet/KinetMinutes/build/DerivedData/Build/Intermediates.noindex/ArchiveIntermediates/KinetMinutes/IntermediateBuildFilesPath/Jinja.build/Release/Jinja.build/Objects-normal/x86_64/Value.bc",
+    "object" : "/Users/phinn/Documents/kinet/KinetMinutes/build/DerivedData/Build/Intermediates.noindex/ArchiveIntermediates/KinetMinutes/IntermediateBuildFilesPath/Jinja.build/Release/Jinja.build/Objects-normal/x86_64/Value.o"
+  }
+}

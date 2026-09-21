@@ -1,0 +1,206 @@
+{
+  "" : {
+    "const-values" : "/Users/phinn/Documents/kinet/KinetMinutes/build/DerivedData/Build/Intermediates.noindex/swift-collections.build/Release/ContainersPreview.build/Objects-normal/arm64/ContainersPreview-primary.swiftconstvalues",
+    "dependencies" : "/Users/phinn/Documents/kinet/KinetMinutes/build/DerivedData/Build/Intermediates.noindex/swift-collections.build/Release/ContainersPreview.build/Objects-normal/arm64/ContainersPreview-primary.d",
+    "diagnostics" : "/Users/phinn/Documents/kinet/KinetMinutes/build/DerivedData/Build/Intermediates.noindex/swift-collections.build/Release/ContainersPreview.build/Objects-normal/arm64/ContainersPreview-primary.dia",
+    "emit-module-dependencies" : "/Users/phinn/Documents/kinet/KinetMinutes/build/DerivedData/Build/Intermediates.noindex/swift-collections.build/Release/ContainersPreview.build/Objects-normal/arm64/ContainersPreview-primary-emit-module.d",
+    "emit-module-diagnostics" : "/Users/phinn/Documents/kinet/KinetMinutes/build/DerivedData/Build/Intermediates.noindex/swift-collections.build/Release/ContainersPreview.build/Objects-normal/arm64/ContainersPreview-primary-emit-module.dia",
+    "pch" : "/Users/phinn/Documents/kinet/KinetMinutes/build/DerivedData/Build/Intermediates.noindex/swift-collections.build/Release/ContainersPreview.build/Objects-normal/arm64/ContainersPreview-primary-Bridging-header.pch",
+    "swift-dependencies" : "/Users/phinn/Documents/kinet/KinetMinutes/build/DerivedData/Build/Intermediates.noindex/swift-collections.build/Release/ContainersPreview.build/Objects-normal/arm64/ContainersPreview-primary.swiftdeps"
+  },
+  "/Users/phinn/Documents/kinet/KinetMinutes/build/DerivedData/SourcePackages/checkouts/swift-collections/Sources/ContainersPreview/Extensions/OutputSpan+Extras.swift" : {
+    "index-unit-output-path" : "/swift-collections.build/Release/ContainersPreview.build/Objects-normal/arm64/OutputSpan+Extras.o",
+    "llvm-bc" : "/Users/phinn/Documents/kinet/KinetMinutes/build/DerivedData/Build/Intermediates.noindex/swift-collections.build/Release/ContainersPreview.build/Objects-normal/arm64/OutputSpan+Extras.bc",
+    "object" : "/Users/phinn/Documents/kinet/KinetMinutes/build/DerivedData/Build/Intermediates.noindex/swift-collections.build/Release/ContainersPreview.build/Objects-normal/arm64/OutputSpan+Extras.o"
+  },
+  "/Users/phinn/Documents/kinet/KinetMinutes/build/DerivedData/SourcePackages/checkouts/swift-collections/Sources/ContainersPreview/Extensions/TemporaryAllocation.swift" : {
+    "index-unit-output-path" : "/swift-collections.build/Release/ContainersPreview.build/Objects-normal/arm64/TemporaryAllocation.o",
+    "llvm-bc" : "/Users/phinn/Documents/kinet/KinetMinutes/build/DerivedData/Build/Intermediates.noindex/swift-collections.build/Release/ContainersPreview.build/Objects-normal/arm64/TemporaryAllocation.bc",
+    "object" : "/Users/phinn/Documents/kinet/KinetMinutes/build/DerivedData/Build/Intermediates.noindex/swift-collections.build/Release/ContainersPreview.build/Objects-normal/arm64/TemporaryAllocation.o"
+  },
+  "/Users/phinn/Documents/kinet/KinetMinutes/build/DerivedData/SourcePackages/checkouts/swift-collections/Sources/ContainersPreview/Protocols/BorrowingIteratorProtocol+Copy.swift" : {
+    "index-unit-output-path" : "/swift-collections.build/Release/ContainersPreview.build/Objects-normal/arm64/BorrowingIteratorProtocol+Copy.o",
+    "llvm-bc" : "/Users/phinn/Documents/kinet/KinetMinutes/build/DerivedData/Build/Intermediates.noindex/swift-collections.build/Release/ContainersPreview.build/Objects-normal/arm64/BorrowingIteratorProtocol+Copy.bc",
+    "object" : "/Users/phinn/Documents/kinet/KinetMinutes/build/DerivedData/Build/Intermediates.noindex/swift-collections.build/Release/ContainersPreview.build/Objects-normal/arm64/BorrowingIteratorProtocol+Copy.o"
+  },
+  "/Users/phinn/Documents/kinet/KinetMinutes/build/DerivedData/SourcePackages/checkouts/swift-collections/Sources/ContainersPreview/Protocols/BorrowingIteratorProtocol+ElementsEqual.swift" : {
+    "index-unit-output-path" : "/swift-collections.build/Release/ContainersPreview.build/Objects-normal/arm64/BorrowingIteratorProtocol+ElementsEqual.o",
+    "llvm-bc" : "/Users/phinn/Documents/kinet/KinetMinutes/build/DerivedData/Build/Intermediates.noindex/swift-collections.build/Release/ContainersPreview.build/Objects-normal/arm64/BorrowingIteratorProtocol+ElementsEqual.bc",
+    "object" : "/Users/phinn/Documents/kinet/KinetMinutes/build/DerivedData/Build/Intermediates.noindex/swift-collections.build/Release/ContainersPreview.build/Objects-normal/arm64/BorrowingIteratorProtocol+ElementsEqual.o"
+  },
+  "/Users/phinn/Documents/kinet/KinetMinutes/build/DerivedData/SourcePackages/checkouts/swift-collections/Sources/ContainersPreview/Protocols/BorrowingIteratorProtocol+Filter.swift" : {
+    "index-unit-output-path" : "/swift-collections.build/Release/ContainersPreview.build/Objects-normal/arm64/BorrowingIteratorProtocol+Filter.o",
+    "llvm-bc" : "/Users/phinn/Documents/kinet/KinetMinutes/build/DerivedData/Build/Intermediates.noindex/swift-collections.build/Release/ContainersPreview.build/Objects-normal/arm64/BorrowingIteratorProtocol+Filter.bc",
+    "object" : "/Users/phinn/Documents/kinet/KinetMinutes/build/DerivedData/Build/Intermediates.noindex/swift-collections.build/Release/ContainersPreview.build/Objects-normal/arm64/BorrowingIteratorProtocol+Filter.o"
+  },
+  "/Users/phinn/Documents/kinet/KinetMinutes/build/DerivedData/SourcePackages/checkouts/swift-collections/Sources/ContainersPreview/Protocols/BorrowingIteratorProtocol+Map.swift" : {
+    "index-unit-output-path" : "/swift-collections.build/Release/ContainersPreview.build/Objects-normal/arm64/BorrowingIteratorProtocol+Map.o",
+    "llvm-bc" : "/Users/phinn/Documents/kinet/KinetMinutes/build/DerivedData/Build/Intermediates.noindex/swift-collections.build/Release/ContainersPreview.build/Objects-normal/arm64/BorrowingIteratorProtocol+Map.bc",
+    "object" : "/Users/phinn/Documents/kinet/KinetMinutes/build/DerivedData/Build/Intermediates.noindex/swift-collections.build/Release/ContainersPreview.build/Objects-normal/arm64/BorrowingIteratorProtocol+Map.o"
+  },
+  "/Users/phinn/Documents/kinet/KinetMinutes/build/DerivedData/SourcePackages/checkouts/swift-collections/Sources/ContainersPreview/Protocols/BorrowingIteratorProtocol+Reduce.swift" : {
+    "index-unit-output-path" : "/swift-collections.build/Release/ContainersPreview.build/Objects-normal/arm64/BorrowingIteratorProtocol+Reduce.o",
+    "llvm-bc" : "/Users/phinn/Documents/kinet/KinetMinutes/build/DerivedData/Build/Intermediates.noindex/swift-collections.build/Release/ContainersPreview.build/Objects-normal/arm64/BorrowingIteratorProtocol+Reduce.bc",
+    "object" : "/Users/phinn/Documents/kinet/KinetMinutes/build/DerivedData/Build/Intermediates.noindex/swift-collections.build/Release/ContainersPreview.build/Objects-normal/arm64/BorrowingIteratorProtocol+Reduce.o"
+  },
+  "/Users/phinn/Documents/kinet/KinetMinutes/build/DerivedData/SourcePackages/checkouts/swift-collections/Sources/ContainersPreview/Protocols/BorrowingIteratorProtocol+SpanwiseZip.swift" : {
+    "index-unit-output-path" : "/swift-collections.build/Release/ContainersPreview.build/Objects-normal/arm64/BorrowingIteratorProtocol+SpanwiseZip.o",
+    "llvm-bc" : "/Users/phinn/Documents/kinet/KinetMinutes/build/DerivedData/Build/Intermediates.noindex/swift-collections.build/Release/ContainersPreview.build/Objects-normal/arm64/BorrowingIteratorProtocol+SpanwiseZip.bc",
+    "object" : "/Users/phinn/Documents/kinet/KinetMinutes/build/DerivedData/Build/Intermediates.noindex/swift-collections.build/Release/ContainersPreview.build/Objects-normal/arm64/BorrowingIteratorProtocol+SpanwiseZip.o"
+  },
+  "/Users/phinn/Documents/kinet/KinetMinutes/build/DerivedData/SourcePackages/checkouts/swift-collections/Sources/ContainersPreview/Protocols/BorrowingIteratorProtocol.swift" : {
+    "index-unit-output-path" : "/swift-collections.build/Release/ContainersPreview.build/Objects-normal/arm64/BorrowingIteratorProtocol.o",
+    "llvm-bc" : "/Users/phinn/Documents/kinet/KinetMinutes/build/DerivedData/Build/Intermediates.noindex/swift-collections.build/Release/ContainersPreview.build/Objects-normal/arm64/BorrowingIteratorProtocol.bc",
+    "object" : "/Users/phinn/Documents/kinet/KinetMinutes/build/DerivedData/Build/Intermediates.noindex/swift-collections.build/Release/ContainersPreview.build/Objects-normal/arm64/BorrowingIteratorProtocol.o"
+  },
+  "/Users/phinn/Documents/kinet/KinetMinutes/build/DerivedData/SourcePackages/checkouts/swift-collections/Sources/ContainersPreview/Protocols/BorrowingSequence+Algorithms.swift" : {
+    "index-unit-output-path" : "/swift-collections.build/Release/ContainersPreview.build/Objects-normal/arm64/BorrowingSequence+Algorithms.o",
+    "llvm-bc" : "/Users/phinn/Documents/kinet/KinetMinutes/build/DerivedData/Build/Intermediates.noindex/swift-collections.build/Release/ContainersPreview.build/Objects-normal/arm64/BorrowingSequence+Algorithms.bc",
+    "object" : "/Users/phinn/Documents/kinet/KinetMinutes/build/DerivedData/Build/Intermediates.noindex/swift-collections.build/Release/ContainersPreview.build/Objects-normal/arm64/BorrowingSequence+Algorithms.o"
+  },
+  "/Users/phinn/Documents/kinet/KinetMinutes/build/DerivedData/SourcePackages/checkouts/swift-collections/Sources/ContainersPreview/Protocols/BorrowingSequence+Standard Conformances.swift" : {
+    "index-unit-output-path" : "/swift-collections.build/Release/ContainersPreview.build/Objects-normal/arm64/BorrowingSequence+Standard Conformances.o",
+    "llvm-bc" : "/Users/phinn/Documents/kinet/KinetMinutes/build/DerivedData/Build/Intermediates.noindex/swift-collections.build/Release/ContainersPreview.build/Objects-normal/arm64/BorrowingSequence+Standard Conformances.bc",
+    "object" : "/Users/phinn/Documents/kinet/KinetMinutes/build/DerivedData/Build/Intermediates.noindex/swift-collections.build/Release/ContainersPreview.build/Objects-normal/arm64/BorrowingSequence+Standard Conformances.o"
+  },
+  "/Users/phinn/Documents/kinet/KinetMinutes/build/DerivedData/SourcePackages/checkouts/swift-collections/Sources/ContainersPreview/Protocols/BorrowingSequence+Utilities.swift" : {
+    "index-unit-output-path" : "/swift-collections.build/Release/ContainersPreview.build/Objects-normal/arm64/BorrowingSequence+Utilities.o",
+    "llvm-bc" : "/Users/phinn/Documents/kinet/KinetMinutes/build/DerivedData/Build/Intermediates.noindex/swift-collections.build/Release/ContainersPreview.build/Objects-normal/arm64/BorrowingSequence+Utilities.bc",
+    "object" : "/Users/phinn/Documents/kinet/KinetMinutes/build/DerivedData/Build/Intermediates.noindex/swift-collections.build/Release/ContainersPreview.build/Objects-normal/arm64/BorrowingSequence+Utilities.o"
+  },
+  "/Users/phinn/Documents/kinet/KinetMinutes/build/DerivedData/SourcePackages/checkouts/swift-collections/Sources/ContainersPreview/Protocols/BorrowingSequence.swift" : {
+    "index-unit-output-path" : "/swift-collections.build/Release/ContainersPreview.build/Objects-normal/arm64/BorrowingSequence.o",
+    "llvm-bc" : "/Users/phinn/Documents/kinet/KinetMinutes/build/DerivedData/Build/Intermediates.noindex/swift-collections.build/Release/ContainersPreview.build/Objects-normal/arm64/BorrowingSequence.bc",
+    "object" : "/Users/phinn/Documents/kinet/KinetMinutes/build/DerivedData/Build/Intermediates.noindex/swift-collections.build/Release/ContainersPreview.build/Objects-normal/arm64/BorrowingSequence.o"
+  },
+  "/Users/phinn/Documents/kinet/KinetMinutes/build/DerivedData/SourcePackages/checkouts/swift-collections/Sources/ContainersPreview/Protocols/Container/BidirectionalContainer.swift" : {
+    "index-unit-output-path" : "/swift-collections.build/Release/ContainersPreview.build/Objects-normal/arm64/BidirectionalContainer.o",
+    "llvm-bc" : "/Users/phinn/Documents/kinet/KinetMinutes/build/DerivedData/Build/Intermediates.noindex/swift-collections.build/Release/ContainersPreview.build/Objects-normal/arm64/BidirectionalContainer.bc",
+    "object" : "/Users/phinn/Documents/kinet/KinetMinutes/build/DerivedData/Build/Intermediates.noindex/swift-collections.build/Release/ContainersPreview.build/Objects-normal/arm64/BidirectionalContainer.o"
+  },
+  "/Users/phinn/Documents/kinet/KinetMinutes/build/DerivedData/SourcePackages/checkouts/swift-collections/Sources/ContainersPreview/Protocols/Container/Container+Filter.swift" : {
+    "index-unit-output-path" : "/swift-collections.build/Release/ContainersPreview.build/Objects-normal/arm64/Container+Filter.o",
+    "llvm-bc" : "/Users/phinn/Documents/kinet/KinetMinutes/build/DerivedData/Build/Intermediates.noindex/swift-collections.build/Release/ContainersPreview.build/Objects-normal/arm64/Container+Filter.bc",
+    "object" : "/Users/phinn/Documents/kinet/KinetMinutes/build/DerivedData/Build/Intermediates.noindex/swift-collections.build/Release/ContainersPreview.build/Objects-normal/arm64/Container+Filter.o"
+  },
+  "/Users/phinn/Documents/kinet/KinetMinutes/build/DerivedData/SourcePackages/checkouts/swift-collections/Sources/ContainersPreview/Protocols/Container/Container+SpanwiseZip.swift" : {
+    "index-unit-output-path" : "/swift-collections.build/Release/ContainersPreview.build/Objects-normal/arm64/Container+SpanwiseZip.o",
+    "llvm-bc" : "/Users/phinn/Documents/kinet/KinetMinutes/build/DerivedData/Build/Intermediates.noindex/swift-collections.build/Release/ContainersPreview.build/Objects-normal/arm64/Container+SpanwiseZip.bc",
+    "object" : "/Users/phinn/Documents/kinet/KinetMinutes/build/DerivedData/Build/Intermediates.noindex/swift-collections.build/Release/ContainersPreview.build/Objects-normal/arm64/Container+SpanwiseZip.o"
+  },
+  "/Users/phinn/Documents/kinet/KinetMinutes/build/DerivedData/SourcePackages/checkouts/swift-collections/Sources/ContainersPreview/Protocols/Container/Container.swift" : {
+    "index-unit-output-path" : "/swift-collections.build/Release/ContainersPreview.build/Objects-normal/arm64/Container.o",
+    "llvm-bc" : "/Users/phinn/Documents/kinet/KinetMinutes/build/DerivedData/Build/Intermediates.noindex/swift-collections.build/Release/ContainersPreview.build/Objects-normal/arm64/Container.bc",
+    "object" : "/Users/phinn/Documents/kinet/KinetMinutes/build/DerivedData/Build/Intermediates.noindex/swift-collections.build/Release/ContainersPreview.build/Objects-normal/arm64/Container.o"
+  },
+  "/Users/phinn/Documents/kinet/KinetMinutes/build/DerivedData/SourcePackages/checkouts/swift-collections/Sources/ContainersPreview/Protocols/Container/ContainerIterator.swift" : {
+    "index-unit-output-path" : "/swift-collections.build/Release/ContainersPreview.build/Objects-normal/arm64/ContainerIterator.o",
+    "llvm-bc" : "/Users/phinn/Documents/kinet/KinetMinutes/build/DerivedData/Build/Intermediates.noindex/swift-collections.build/Release/ContainersPreview.build/Objects-normal/arm64/ContainerIterator.bc",
+    "object" : "/Users/phinn/Documents/kinet/KinetMinutes/build/DerivedData/Build/Intermediates.noindex/swift-collections.build/Release/ContainersPreview.build/Objects-normal/arm64/ContainerIterator.o"
+  },
+  "/Users/phinn/Documents/kinet/KinetMinutes/build/DerivedData/SourcePackages/checkouts/swift-collections/Sources/ContainersPreview/Protocols/Container/DynamicContainer.swift" : {
+    "index-unit-output-path" : "/swift-collections.build/Release/ContainersPreview.build/Objects-normal/arm64/DynamicContainer.o",
+    "llvm-bc" : "/Users/phinn/Documents/kinet/KinetMinutes/build/DerivedData/Build/Intermediates.noindex/swift-collections.build/Release/ContainersPreview.build/Objects-normal/arm64/DynamicContainer.bc",
+    "object" : "/Users/phinn/Documents/kinet/KinetMinutes/build/DerivedData/Build/Intermediates.noindex/swift-collections.build/Release/ContainersPreview.build/Objects-normal/arm64/DynamicContainer.o"
+  },
+  "/Users/phinn/Documents/kinet/KinetMinutes/build/DerivedData/SourcePackages/checkouts/swift-collections/Sources/ContainersPreview/Protocols/Container/MutableContainer.swift" : {
+    "index-unit-output-path" : "/swift-collections.build/Release/ContainersPreview.build/Objects-normal/arm64/MutableContainer.o",
+    "llvm-bc" : "/Users/phinn/Documents/kinet/KinetMinutes/build/DerivedData/Build/Intermediates.noindex/swift-collections.build/Release/ContainersPreview.build/Objects-normal/arm64/MutableContainer.bc",
+    "object" : "/Users/phinn/Documents/kinet/KinetMinutes/build/DerivedData/Build/Intermediates.noindex/swift-collections.build/Release/ContainersPreview.build/Objects-normal/arm64/MutableContainer.o"
+  },
+  "/Users/phinn/Documents/kinet/KinetMinutes/build/DerivedData/SourcePackages/checkouts/swift-collections/Sources/ContainersPreview/Protocols/Container/PermutableContainer.swift" : {
+    "index-unit-output-path" : "/swift-collections.build/Release/ContainersPreview.build/Objects-normal/arm64/PermutableContainer.o",
+    "llvm-bc" : "/Users/phinn/Documents/kinet/KinetMinutes/build/DerivedData/Build/Intermediates.noindex/swift-collections.build/Release/ContainersPreview.build/Objects-normal/arm64/PermutableContainer.bc",
+    "object" : "/Users/phinn/Documents/kinet/KinetMinutes/build/DerivedData/Build/Intermediates.noindex/swift-collections.build/Release/ContainersPreview.build/Objects-normal/arm64/PermutableContainer.o"
+  },
+  "/Users/phinn/Documents/kinet/KinetMinutes/build/DerivedData/SourcePackages/checkouts/swift-collections/Sources/ContainersPreview/Protocols/Container/RandomAccessContainer.swift" : {
+    "index-unit-output-path" : "/swift-collections.build/Release/ContainersPreview.build/Objects-normal/arm64/RandomAccessContainer.o",
+    "llvm-bc" : "/Users/phinn/Documents/kinet/KinetMinutes/build/DerivedData/Build/Intermediates.noindex/swift-collections.build/Release/ContainersPreview.build/Objects-normal/arm64/RandomAccessContainer.bc",
+    "object" : "/Users/phinn/Documents/kinet/KinetMinutes/build/DerivedData/Build/Intermediates.noindex/swift-collections.build/Release/ContainersPreview.build/Objects-normal/arm64/RandomAccessContainer.o"
+  },
+  "/Users/phinn/Documents/kinet/KinetMinutes/build/DerivedData/SourcePackages/checkouts/swift-collections/Sources/ContainersPreview/Protocols/Container/RangeExpression2.swift" : {
+    "index-unit-output-path" : "/swift-collections.build/Release/ContainersPreview.build/Objects-normal/arm64/RangeExpression2.o",
+    "llvm-bc" : "/Users/phinn/Documents/kinet/KinetMinutes/build/DerivedData/Build/Intermediates.noindex/swift-collections.build/Release/ContainersPreview.build/Objects-normal/arm64/RangeExpression2.bc",
+    "object" : "/Users/phinn/Documents/kinet/KinetMinutes/build/DerivedData/Build/Intermediates.noindex/swift-collections.build/Release/ContainersPreview.build/Objects-normal/arm64/RangeExpression2.o"
+  },
+  "/Users/phinn/Documents/kinet/KinetMinutes/build/DerivedData/SourcePackages/checkouts/swift-collections/Sources/ContainersPreview/Protocols/Container/RangeReplaceableContainer.swift" : {
+    "index-unit-output-path" : "/swift-collections.build/Release/ContainersPreview.build/Objects-normal/arm64/RangeReplaceableContainer.o",
+    "llvm-bc" : "/Users/phinn/Documents/kinet/KinetMinutes/build/DerivedData/Build/Intermediates.noindex/swift-collections.build/Release/ContainersPreview.build/Objects-normal/arm64/RangeReplaceableContainer.bc",
+    "object" : "/Users/phinn/Documents/kinet/KinetMinutes/build/DerivedData/Build/Intermediates.noindex/swift-collections.build/Release/ContainersPreview.build/Objects-normal/arm64/RangeReplaceableContainer.o"
+  },
+  "/Users/phinn/Documents/kinet/KinetMinutes/build/DerivedData/SourcePackages/checkouts/swift-collections/Sources/ContainersPreview/Protocols/Container/Strideable+Limits.swift" : {
+    "index-unit-output-path" : "/swift-collections.build/Release/ContainersPreview.build/Objects-normal/arm64/Strideable+Limits.o",
+    "llvm-bc" : "/Users/phinn/Documents/kinet/KinetMinutes/build/DerivedData/Build/Intermediates.noindex/swift-collections.build/Release/ContainersPreview.build/Objects-normal/arm64/Strideable+Limits.bc",
+    "object" : "/Users/phinn/Documents/kinet/KinetMinutes/build/DerivedData/Build/Intermediates.noindex/swift-collections.build/Release/ContainersPreview.build/Objects-normal/arm64/Strideable+Limits.o"
+  },
+  "/Users/phinn/Documents/kinet/KinetMinutes/build/DerivedData/SourcePackages/checkouts/swift-collections/Sources/ContainersPreview/Protocols/Drain+Map.swift" : {
+    "index-unit-output-path" : "/swift-collections.build/Release/ContainersPreview.build/Objects-normal/arm64/Drain+Map.o",
+    "llvm-bc" : "/Users/phinn/Documents/kinet/KinetMinutes/build/DerivedData/Build/Intermediates.noindex/swift-collections.build/Release/ContainersPreview.build/Objects-normal/arm64/Drain+Map.bc",
+    "object" : "/Users/phinn/Documents/kinet/KinetMinutes/build/DerivedData/Build/Intermediates.noindex/swift-collections.build/Release/ContainersPreview.build/Objects-normal/arm64/Drain+Map.o"
+  },
+  "/Users/phinn/Documents/kinet/KinetMinutes/build/DerivedData/SourcePackages/checkouts/swift-collections/Sources/ContainersPreview/Protocols/Drain+Reduce.swift" : {
+    "index-unit-output-path" : "/swift-collections.build/Release/ContainersPreview.build/Objects-normal/arm64/Drain+Reduce.o",
+    "llvm-bc" : "/Users/phinn/Documents/kinet/KinetMinutes/build/DerivedData/Build/Intermediates.noindex/swift-collections.build/Release/ContainersPreview.build/Objects-normal/arm64/Drain+Reduce.bc",
+    "object" : "/Users/phinn/Documents/kinet/KinetMinutes/build/DerivedData/Build/Intermediates.noindex/swift-collections.build/Release/ContainersPreview.build/Objects-normal/arm64/Drain+Reduce.o"
+  },
+  "/Users/phinn/Documents/kinet/KinetMinutes/build/DerivedData/SourcePackages/checkouts/swift-collections/Sources/ContainersPreview/Protocols/Drain.swift" : {
+    "index-unit-output-path" : "/swift-collections.build/Release/ContainersPreview.build/Objects-normal/arm64/Drain.o",
+    "llvm-bc" : "/Users/phinn/Documents/kinet/KinetMinutes/build/DerivedData/Build/Intermediates.noindex/swift-collections.build/Release/ContainersPreview.build/Objects-normal/arm64/Drain.bc",
+    "object" : "/Users/phinn/Documents/kinet/KinetMinutes/build/DerivedData/Build/Intermediates.noindex/swift-collections.build/Release/ContainersPreview.build/Objects-normal/arm64/Drain.o"
+  },
+  "/Users/phinn/Documents/kinet/KinetMinutes/build/DerivedData/SourcePackages/checkouts/swift-collections/Sources/ContainersPreview/Protocols/Producer+Collect.swift" : {
+    "index-unit-output-path" : "/swift-collections.build/Release/ContainersPreview.build/Objects-normal/arm64/Producer+Collect.o",
+    "llvm-bc" : "/Users/phinn/Documents/kinet/KinetMinutes/build/DerivedData/Build/Intermediates.noindex/swift-collections.build/Release/ContainersPreview.build/Objects-normal/arm64/Producer+Collect.bc",
+    "object" : "/Users/phinn/Documents/kinet/KinetMinutes/build/DerivedData/Build/Intermediates.noindex/swift-collections.build/Release/ContainersPreview.build/Objects-normal/arm64/Producer+Collect.o"
+  },
+  "/Users/phinn/Documents/kinet/KinetMinutes/build/DerivedData/SourcePackages/checkouts/swift-collections/Sources/ContainersPreview/Protocols/Producer+Filter.swift" : {
+    "index-unit-output-path" : "/swift-collections.build/Release/ContainersPreview.build/Objects-normal/arm64/Producer+Filter.o",
+    "llvm-bc" : "/Users/phinn/Documents/kinet/KinetMinutes/build/DerivedData/Build/Intermediates.noindex/swift-collections.build/Release/ContainersPreview.build/Objects-normal/arm64/Producer+Filter.bc",
+    "object" : "/Users/phinn/Documents/kinet/KinetMinutes/build/DerivedData/Build/Intermediates.noindex/swift-collections.build/Release/ContainersPreview.build/Objects-normal/arm64/Producer+Filter.o"
+  },
+  "/Users/phinn/Documents/kinet/KinetMinutes/build/DerivedData/SourcePackages/checkouts/swift-collections/Sources/ContainersPreview/Protocols/Producer+Map.swift" : {
+    "index-unit-output-path" : "/swift-collections.build/Release/ContainersPreview.build/Objects-normal/arm64/Producer+Map.o",
+    "llvm-bc" : "/Users/phinn/Documents/kinet/KinetMinutes/build/DerivedData/Build/Intermediates.noindex/swift-collections.build/Release/ContainersPreview.build/Objects-normal/arm64/Producer+Map.bc",
+    "object" : "/Users/phinn/Documents/kinet/KinetMinutes/build/DerivedData/Build/Intermediates.noindex/swift-collections.build/Release/ContainersPreview.build/Objects-normal/arm64/Producer+Map.o"
+  },
+  "/Users/phinn/Documents/kinet/KinetMinutes/build/DerivedData/SourcePackages/checkouts/swift-collections/Sources/ContainersPreview/Protocols/Producer+Reduce.swift" : {
+    "index-unit-output-path" : "/swift-collections.build/Release/ContainersPreview.build/Objects-normal/arm64/Producer+Reduce.o",
+    "llvm-bc" : "/Users/phinn/Documents/kinet/KinetMinutes/build/DerivedData/Build/Intermediates.noindex/swift-collections.build/Release/ContainersPreview.build/Objects-normal/arm64/Producer+Reduce.bc",
+    "object" : "/Users/phinn/Documents/kinet/KinetMinutes/build/DerivedData/Build/Intermediates.noindex/swift-collections.build/Release/ContainersPreview.build/Objects-normal/arm64/Producer+Reduce.o"
+  },
+  "/Users/phinn/Documents/kinet/KinetMinutes/build/DerivedData/SourcePackages/checkouts/swift-collections/Sources/ContainersPreview/Protocols/Producer.swift" : {
+    "index-unit-output-path" : "/swift-collections.build/Release/ContainersPreview.build/Objects-normal/arm64/Producer.o",
+    "llvm-bc" : "/Users/phinn/Documents/kinet/KinetMinutes/build/DerivedData/Build/Intermediates.noindex/swift-collections.build/Release/ContainersPreview.build/Objects-normal/arm64/Producer.bc",
+    "object" : "/Users/phinn/Documents/kinet/KinetMinutes/build/DerivedData/Build/Intermediates.noindex/swift-collections.build/Release/ContainersPreview.build/Objects-normal/arm64/Producer.o"
+  },
+  "/Users/phinn/Documents/kinet/KinetMinutes/build/DerivedData/SourcePackages/checkouts/swift-collections/Sources/ContainersPreview/Types/InputSpan.swift" : {
+    "index-unit-output-path" : "/swift-collections.build/Release/ContainersPreview.build/Objects-normal/arm64/InputSpan.o",
+    "llvm-bc" : "/Users/phinn/Documents/kinet/KinetMinutes/build/DerivedData/Build/Intermediates.noindex/swift-collections.build/Release/ContainersPreview.build/Objects-normal/arm64/InputSpan.bc",
+    "object" : "/Users/phinn/Documents/kinet/KinetMinutes/build/DerivedData/Build/Intermediates.noindex/swift-collections.build/Release/ContainersPreview.build/Objects-normal/arm64/InputSpan.o"
+  },
+  "/Users/phinn/Documents/kinet/KinetMinutes/build/DerivedData/SourcePackages/checkouts/swift-collections/Sources/ContainersPreview/Types/MutableRef.swift" : {
+    "index-unit-output-path" : "/swift-collections.build/Release/ContainersPreview.build/Objects-normal/arm64/MutableRef.o",
+    "llvm-bc" : "/Users/phinn/Documents/kinet/KinetMinutes/build/DerivedData/Build/Intermediates.noindex/swift-collections.build/Release/ContainersPreview.build/Objects-normal/arm64/MutableRef.bc",
+    "object" : "/Users/phinn/Documents/kinet/KinetMinutes/build/DerivedData/Build/Intermediates.noindex/swift-collections.build/Release/ContainersPreview.build/Objects-normal/arm64/MutableRef.o"
+  },
+  "/Users/phinn/Documents/kinet/KinetMinutes/build/DerivedData/SourcePackages/checkouts/swift-collections/Sources/ContainersPreview/Types/Ref.swift" : {
+    "index-unit-output-path" : "/swift-collections.build/Release/ContainersPreview.build/Objects-normal/arm64/Ref.o",
+    "llvm-bc" : "/Users/phinn/Documents/kinet/KinetMinutes/build/DerivedData/Build/Intermediates.noindex/swift-collections.build/Release/ContainersPreview.build/Objects-normal/arm64/Ref.bc",
+    "object" : "/Users/phinn/Documents/kinet/KinetMinutes/build/DerivedData/Build/Intermediates.noindex/swift-collections.build/Release/ContainersPreview.build/Objects-normal/arm64/Ref.o"
+  },
+  "/Users/phinn/Documents/kinet/KinetMinutes/build/DerivedData/SourcePackages/checkouts/swift-collections/Sources/ContainersPreview/Types/Shared.swift" : {
+    "index-unit-output-path" : "/swift-collections.build/Release/ContainersPreview.build/Objects-normal/arm64/Shared.o",
+    "llvm-bc" : "/Users/phinn/Documents/kinet/KinetMinutes/build/DerivedData/Build/Intermediates.noindex/swift-collections.build/Release/ContainersPreview.build/Objects-normal/arm64/Shared.bc",
+    "object" : "/Users/phinn/Documents/kinet/KinetMinutes/build/DerivedData/Build/Intermediates.noindex/swift-collections.build/Release/ContainersPreview.build/Objects-normal/arm64/Shared.o"
+  },
+  "/Users/phinn/Documents/kinet/KinetMinutes/build/DerivedData/SourcePackages/checkouts/swift-collections/Sources/ContainersPreview/Types/SpanIterator.swift" : {
+    "index-unit-output-path" : "/swift-collections.build/Release/ContainersPreview.build/Objects-normal/arm64/SpanIterator.o",
+    "llvm-bc" : "/Users/phinn/Documents/kinet/KinetMinutes/build/DerivedData/Build/Intermediates.noindex/swift-collections.build/Release/ContainersPreview.build/Objects-normal/arm64/SpanIterator.bc",
+    "object" : "/Users/phinn/Documents/kinet/KinetMinutes/build/DerivedData/Build/Intermediates.noindex/swift-collections.build/Release/ContainersPreview.build/Objects-normal/arm64/SpanIterator.o"
+  },
+  "/Users/phinn/Documents/kinet/KinetMinutes/build/DerivedData/SourcePackages/checkouts/swift-collections/Sources/ContainersPreview/Types/UniqueBox.swift" : {
+    "index-unit-output-path" : "/swift-collections.build/Release/ContainersPreview.build/Objects-normal/arm64/UniqueBox.o",
+    "llvm-bc" : "/Users/phinn/Documents/kinet/KinetMinutes/build/DerivedData/Build/Intermediates.noindex/swift-collections.build/Release/ContainersPreview.build/Objects-normal/arm64/UniqueBox.bc",
+    "object" : "/Users/phinn/Documents/kinet/KinetMinutes/build/DerivedData/Build/Intermediates.noindex/swift-collections.build/Release/ContainersPreview.build/Objects-normal/arm64/UniqueBox.o"
+  }
+}

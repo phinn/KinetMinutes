@@ -1,0 +1,12 @@
+{
+  "/Users/phinn/Documents/kinet/KinetMinutes/build/DerivedData/SourcePackages/checkouts/EventSource/Sources/EventSource/AsyncEventsSequence.swift" : {
+    "abi-baseline-json" : "/Users/phinn/Documents/kinet/KinetMinutes/build/DerivedData/Build/Intermediates.noindex/EventSource.build/Release/EventSource.build/Objects-normal/x86_64/EventSource.abi.json",
+    "const-values" : "/Users/phinn/Documents/kinet/KinetMinutes/build/DerivedData/Build/Intermediates.noindex/EventSource.build/Release/EventSource.build/Objects-normal/x86_64/EventSource-primary.swiftconstvalues",
+    "dependencies" : "/Users/phinn/Documents/kinet/KinetMinutes/build/DerivedData/Build/Intermediates.noindex/EventSource.build/Release/EventSource.build/Objects-normal/x86_64/EventSource-primary.d",
+    "diagnostics" : "/Users/phinn/Documents/kinet/KinetMinutes/build/DerivedData/Build/Intermediates.noindex/EventSource.build/Release/EventSource.build/Objects-normal/x86_64/EventSource-primary.dia",
+    "objc-header" : "/Users/phinn/Documents/kinet/KinetMinutes/build/DerivedData/Build/Intermediates.noindex/EventSource.build/Release/EventSource.build/Objects-normal/x86_64/EventSource-Swift.h",
+    "swiftdoc" : "/Users/phinn/Documents/kinet/KinetMinutes/build/DerivedData/Build/Intermediates.noindex/EventSource.build/Release/EventSource.build/Objects-normal/x86_64/EventSource.swiftdoc",
+    "swiftmodule" : "/Users/phinn/Documents/kinet/KinetMinutes/build/DerivedData/Build/Intermediates.noindex/EventSource.build/Release/EventSource.build/Objects-normal/x86_64/EventSource.swiftmodule",
+    "swiftsourceinfo" : "/Users/phinn/Documents/kinet/KinetMinutes/build/DerivedData/Build/Intermediates.noindex/EventSource.build/Release/EventSource.build/Objects-normal/x86_64/EventSource.swiftsourceinfo"
+  }
+}

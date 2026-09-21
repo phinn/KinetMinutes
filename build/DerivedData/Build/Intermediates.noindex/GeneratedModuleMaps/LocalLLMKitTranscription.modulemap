@@ -1,0 +1,4 @@
+module LocalLLMKitTranscription {
+header "LocalLLMKitTranscription-Swift.h"
+export *
+}

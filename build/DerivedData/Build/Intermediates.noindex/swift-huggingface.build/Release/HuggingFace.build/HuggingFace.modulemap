@@ -1,0 +1,4 @@
+module HuggingFace {
+header "HuggingFace-Swift.h"
+export *
+}

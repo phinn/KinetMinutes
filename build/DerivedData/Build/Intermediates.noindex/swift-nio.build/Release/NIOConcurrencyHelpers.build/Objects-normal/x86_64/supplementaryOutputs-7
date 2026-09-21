@@ -1,0 +1,12 @@
+{
+  "/Users/phinn/Documents/kinet/KinetMinutes/build/DerivedData/SourcePackages/checkouts/swift-nio/Sources/NIOConcurrencyHelpers/NIOAtomic.swift" : {
+    "abi-baseline-json" : "/Users/phinn/Documents/kinet/KinetMinutes/build/DerivedData/Build/Intermediates.noindex/swift-nio.build/Release/NIOConcurrencyHelpers.build/Objects-normal/x86_64/NIOConcurrencyHelpers.abi.json",
+    "const-values" : "/Users/phinn/Documents/kinet/KinetMinutes/build/DerivedData/Build/Intermediates.noindex/swift-nio.build/Release/NIOConcurrencyHelpers.build/Objects-normal/x86_64/NIOConcurrencyHelpers-primary.swiftconstvalues",
+    "dependencies" : "/Users/phinn/Documents/kinet/KinetMinutes/build/DerivedData/Build/Intermediates.noindex/swift-nio.build/Release/NIOConcurrencyHelpers.build/Objects-normal/x86_64/NIOConcurrencyHelpers-primary.d",
+    "diagnostics" : "/Users/phinn/Documents/kinet/KinetMinutes/build/DerivedData/Build/Intermediates.noindex/swift-nio.build/Release/NIOConcurrencyHelpers.build/Objects-normal/x86_64/NIOConcurrencyHelpers-primary.dia",
+    "objc-header" : "/Users/phinn/Documents/kinet/KinetMinutes/build/DerivedData/Build/Intermediates.noindex/swift-nio.build/Release/NIOConcurrencyHelpers.build/Objects-normal/x86_64/NIOConcurrencyHelpers-Swift.h",
+    "swiftdoc" : "/Users/phinn/Documents/kinet/KinetMinutes/build/DerivedData/Build/Intermediates.noindex/swift-nio.build/Release/NIOConcurrencyHelpers.build/Objects-normal/x86_64/NIOConcurrencyHelpers.swiftdoc",
+    "swiftmodule" : "/Users/phinn/Documents/kinet/KinetMinutes/build/DerivedData/Build/Intermediates.noindex/swift-nio.build/Release/NIOConcurrencyHelpers.build/Objects-normal/x86_64/NIOConcurrencyHelpers.swiftmodule",
+    "swiftsourceinfo" : "/Users/phinn/Documents/kinet/KinetMinutes/build/DerivedData/Build/Intermediates.noindex/swift-nio.build/Release/NIOConcurrencyHelpers.build/Objects-normal/x86_64/NIOConcurrencyHelpers.swiftsourceinfo"
+  }
+}

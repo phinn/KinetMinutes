@@ -1,0 +1,4 @@
+module CNIOFreeBSD {
+umbrella header "/Users/phinn/Documents/kinet/KinetMinutes/build/DerivedData/SourcePackages/checkouts/swift-nio/Sources/CNIOFreeBSD/include/CNIOFreeBSD.h"
+export *
+}

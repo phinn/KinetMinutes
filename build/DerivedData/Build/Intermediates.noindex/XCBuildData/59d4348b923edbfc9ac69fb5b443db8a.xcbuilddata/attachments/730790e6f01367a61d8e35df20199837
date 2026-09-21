@@ -1,0 +1,69 @@
+{
+  "" : {
+    "diagnostics" : "/Users/phinn/Documents/kinet/KinetMinutes/build/DerivedData/Build/Intermediates.noindex/LocalLLMKit.build/Debug/LocalLLMKitTranscription.build/Objects-normal/arm64/LocalLLMKitTranscription-primary.dia",
+    "emit-module-dependencies" : "/Users/phinn/Documents/kinet/KinetMinutes/build/DerivedData/Build/Intermediates.noindex/LocalLLMKit.build/Debug/LocalLLMKitTranscription.build/Objects-normal/arm64/LocalLLMKitTranscription-primary-emit-module.d",
+    "emit-module-diagnostics" : "/Users/phinn/Documents/kinet/KinetMinutes/build/DerivedData/Build/Intermediates.noindex/LocalLLMKit.build/Debug/LocalLLMKitTranscription.build/Objects-normal/arm64/LocalLLMKitTranscription-primary-emit-module.dia",
+    "pch" : "/Users/phinn/Documents/kinet/KinetMinutes/build/DerivedData/Build/Intermediates.noindex/LocalLLMKit.build/Debug/LocalLLMKitTranscription.build/Objects-normal/arm64/LocalLLMKitTranscription-primary-Bridging-header.pch",
+    "swift-dependencies" : "/Users/phinn/Documents/kinet/KinetMinutes/build/DerivedData/Build/Intermediates.noindex/LocalLLMKit.build/Debug/LocalLLMKitTranscription.build/Objects-normal/arm64/LocalLLMKitTranscription-primary.swiftdeps"
+  },
+  "/Users/phinn/Documents/kinet/LocalLLMKit/Sources/LocalLLMKitTranscription/AudioDecoder.swift" : {
+    "const-values" : "/Users/phinn/Documents/kinet/KinetMinutes/build/DerivedData/Build/Intermediates.noindex/LocalLLMKit.build/Debug/LocalLLMKitTranscription.build/Objects-normal/arm64/AudioDecoder.swiftconstvalues",
+    "dependencies" : "/Users/phinn/Documents/kinet/KinetMinutes/build/DerivedData/Build/Intermediates.noindex/LocalLLMKit.build/Debug/LocalLLMKitTranscription.build/Objects-normal/arm64/AudioDecoder.d",
+    "diagnostics" : "/Users/phinn/Documents/kinet/KinetMinutes/build/DerivedData/Build/Intermediates.noindex/LocalLLMKit.build/Debug/LocalLLMKitTranscription.build/Objects-normal/arm64/AudioDecoder.dia",
+    "index-unit-output-path" : "/LocalLLMKit.build/Debug/LocalLLMKitTranscription.build/Objects-normal/arm64/AudioDecoder.o",
+    "llvm-bc" : "/Users/phinn/Documents/kinet/KinetMinutes/build/DerivedData/Build/Intermediates.noindex/LocalLLMKit.build/Debug/LocalLLMKitTranscription.build/Objects-normal/arm64/AudioDecoder.bc",
+    "object" : "/Users/phinn/Documents/kinet/KinetMinutes/build/DerivedData/Build/Intermediates.noindex/LocalLLMKit.build/Debug/LocalLLMKitTranscription.build/Objects-normal/arm64/AudioDecoder.o",
+    "swift-dependencies" : "/Users/phinn/Documents/kinet/KinetMinutes/build/DerivedData/Build/Intermediates.noindex/LocalLLMKit.build/Debug/LocalLLMKitTranscription.build/Objects-normal/arm64/AudioDecoder.swiftdeps",
+    "swiftmodule" : "/Users/phinn/Documents/kinet/KinetMinutes/build/DerivedData/Build/Intermediates.noindex/LocalLLMKit.build/Debug/LocalLLMKitTranscription.build/Objects-normal/arm64/AudioDecoder~partial.swiftmodule"
+  },
+  "/Users/phinn/Documents/kinet/LocalLLMKit/Sources/LocalLLMKitTranscription/TranscriptionEngine.swift" : {
+    "const-values" : "/Users/phinn/Documents/kinet/KinetMinutes/build/DerivedData/Build/Intermediates.noindex/LocalLLMKit.build/Debug/LocalLLMKitTranscription.build/Objects-normal/arm64/TranscriptionEngine.swiftconstvalues",
+    "dependencies" : "/Users/phinn/Documents/kinet/KinetMinutes/build/DerivedData/Build/Intermediates.noindex/LocalLLMKit.build/Debug/LocalLLMKitTranscription.build/Objects-normal/arm64/TranscriptionEngine.d",
+    "diagnostics" : "/Users/phinn/Documents/kinet/KinetMinutes/build/DerivedData/Build/Intermediates.noindex/LocalLLMKit.build/Debug/LocalLLMKitTranscription.build/Objects-normal/arm64/TranscriptionEngine.dia",
+    "index-unit-output-path" : "/LocalLLMKit.build/Debug/LocalLLMKitTranscription.build/Objects-normal/arm64/TranscriptionEngine.o",
+    "llvm-bc" : "/Users/phinn/Documents/kinet/KinetMinutes/build/DerivedData/Build/Intermediates.noindex/LocalLLMKit.build/Debug/LocalLLMKitTranscription.build/Objects-normal/arm64/TranscriptionEngine.bc",
+    "object" : "/Users/phinn/Documents/kinet/KinetMinutes/build/DerivedData/Build/Intermediates.noindex/LocalLLMKit.build/Debug/LocalLLMKitTranscription.build/Objects-normal/arm64/TranscriptionEngine.o",
+    "swift-dependencies" : "/Users/phinn/Documents/kinet/KinetMinutes/build/DerivedData/Build/Intermediates.noindex/LocalLLMKit.build/Debug/LocalLLMKitTranscription.build/Objects-normal/arm64/TranscriptionEngine.swiftdeps",
+    "swiftmodule" : "/Users/phinn/Documents/kinet/KinetMinutes/build/DerivedData/Build/Intermediates.noindex/LocalLLMKit.build/Debug/LocalLLMKitTranscription.build/Objects-normal/arm64/TranscriptionEngine~partial.swiftmodule"
+  },
+  "/Users/phinn/Documents/kinet/LocalLLMKit/Sources/LocalLLMKitTranscription/TranscriptionTypes.swift" : {
+    "const-values" : "/Users/phinn/Documents/kinet/KinetMinutes/build/DerivedData/Build/Intermediates.noindex/LocalLLMKit.build/Debug/LocalLLMKitTranscription.build/Objects-normal/arm64/TranscriptionTypes.swiftconstvalues",
+    "dependencies" : "/Users/phinn/Documents/kinet/KinetMinutes/build/DerivedData/Build/Intermediates.noindex/LocalLLMKit.build/Debug/LocalLLMKitTranscription.build/Objects-normal/arm64/TranscriptionTypes.d",
+    "diagnostics" : "/Users/phinn/Documents/kinet/KinetMinutes/build/DerivedData/Build/Intermediates.noindex/LocalLLMKit.build/Debug/LocalLLMKitTranscription.build/Objects-normal/arm64/TranscriptionTypes.dia",
+    "index-unit-output-path" : "/LocalLLMKit.build/Debug/LocalLLMKitTranscription.build/Objects-normal/arm64/TranscriptionTypes.o",
+    "llvm-bc" : "/Users/phinn/Documents/kinet/KinetMinutes/build/DerivedData/Build/Intermediates.noindex/LocalLLMKit.build/Debug/LocalLLMKitTranscription.build/Objects-normal/arm64/TranscriptionTypes.bc",
+    "object" : "/Users/phinn/Documents/kinet/KinetMinutes/build/DerivedData/Build/Intermediates.noindex/LocalLLMKit.build/Debug/LocalLLMKitTranscription.build/Objects-normal/arm64/TranscriptionTypes.o",
+    "swift-dependencies" : "/Users/phinn/Documents/kinet/KinetMinutes/build/DerivedData/Build/Intermediates.noindex/LocalLLMKit.build/Debug/LocalLLMKitTranscription.build/Objects-normal/arm64/TranscriptionTypes.swiftdeps",
+    "swiftmodule" : "/Users/phinn/Documents/kinet/KinetMinutes/build/DerivedData/Build/Intermediates.noindex/LocalLLMKit.build/Debug/LocalLLMKitTranscription.build/Objects-normal/arm64/TranscriptionTypes~partial.swiftmodule"
+  },
+  "/Users/phinn/Documents/kinet/LocalLLMKit/Sources/LocalLLMKitTranscription/WhisperKitTranscriptionProvider.swift" : {
+    "const-values" : "/Users/phinn/Documents/kinet/KinetMinutes/build/DerivedData/Build/Intermediates.noindex/LocalLLMKit.build/Debug/LocalLLMKitTranscription.build/Objects-normal/arm64/WhisperKitTranscriptionProvider.swiftconstvalues",
+    "dependencies" : "/Users/phinn/Documents/kinet/KinetMinutes/build/DerivedData/Build/Intermediates.noindex/LocalLLMKit.build/Debug/LocalLLMKitTranscription.build/Objects-normal/arm64/WhisperKitTranscriptionProvider.d",
+    "diagnostics" : "/Users/phinn/Documents/kinet/KinetMinutes/build/DerivedData/Build/Intermediates.noindex/LocalLLMKit.build/Debug/LocalLLMKitTranscription.build/Objects-normal/arm64/WhisperKitTranscriptionProvider.dia",
+    "index-unit-output-path" : "/LocalLLMKit.build/Debug/LocalLLMKitTranscription.build/Objects-normal/arm64/WhisperKitTranscriptionProvider.o",
+    "llvm-bc" : "/Users/phinn/Documents/kinet/KinetMinutes/build/DerivedData/Build/Intermediates.noindex/LocalLLMKit.build/Debug/LocalLLMKitTranscription.build/Objects-normal/arm64/WhisperKitTranscriptionProvider.bc",
+    "object" : "/Users/phinn/Documents/kinet/KinetMinutes/build/DerivedData/Build/Intermediates.noindex/LocalLLMKit.build/Debug/LocalLLMKitTranscription.build/Objects-normal/arm64/WhisperKitTranscriptionProvider.o",
+    "swift-dependencies" : "/Users/phinn/Documents/kinet/KinetMinutes/build/DerivedData/Build/Intermediates.noindex/LocalLLMKit.build/Debug/LocalLLMKitTranscription.build/Objects-normal/arm64/WhisperKitTranscriptionProvider.swiftdeps",
+    "swiftmodule" : "/Users/phinn/Documents/kinet/KinetMinutes/build/DerivedData/Build/Intermediates.noindex/LocalLLMKit.build/Debug/LocalLLMKitTranscription.build/Objects-normal/arm64/WhisperKitTranscriptionProvider~partial.swiftmodule"
+  },
+  "/Users/phinn/Documents/kinet/LocalLLMKit/Sources/LocalLLMKitTranscription/WhisperLanguageMapping.swift" : {
+    "const-values" : "/Users/phinn/Documents/kinet/KinetMinutes/build/DerivedData/Build/Intermediates.noindex/LocalLLMKit.build/Debug/LocalLLMKitTranscription.build/Objects-normal/arm64/WhisperLanguageMapping.swiftconstvalues",
+    "dependencies" : "/Users/phinn/Documents/kinet/KinetMinutes/build/DerivedData/Build/Intermediates.noindex/LocalLLMKit.build/Debug/LocalLLMKitTranscription.build/Objects-normal/arm64/WhisperLanguageMapping.d",
+    "diagnostics" : "/Users/phinn/Documents/kinet/KinetMinutes/build/DerivedData/Build/Intermediates.noindex/LocalLLMKit.build/Debug/LocalLLMKitTranscription.build/Objects-normal/arm64/WhisperLanguageMapping.dia",
+    "index-unit-output-path" : "/LocalLLMKit.build/Debug/LocalLLMKitTranscription.build/Objects-normal/arm64/WhisperLanguageMapping.o",
+    "llvm-bc" : "/Users/phinn/Documents/kinet/KinetMinutes/build/DerivedData/Build/Intermediates.noindex/LocalLLMKit.build/Debug/LocalLLMKitTranscription.build/Objects-normal/arm64/WhisperLanguageMapping.bc",
+    "object" : "/Users/phinn/Documents/kinet/KinetMinutes/build/DerivedData/Build/Intermediates.noindex/LocalLLMKit.build/Debug/LocalLLMKitTranscription.build/Objects-normal/arm64/WhisperLanguageMapping.o",
+    "swift-dependencies" : "/Users/phinn/Documents/kinet/KinetMinutes/build/DerivedData/Build/Intermediates.noindex/LocalLLMKit.build/Debug/LocalLLMKitTranscription.build/Objects-normal/arm64/WhisperLanguageMapping.swiftdeps",
+    "swiftmodule" : "/Users/phinn/Documents/kinet/KinetMinutes/build/DerivedData/Build/Intermediates.noindex/LocalLLMKit.build/Debug/LocalLLMKitTranscription.build/Objects-normal/arm64/WhisperLanguageMapping~partial.swiftmodule"
+  },
+  "/Users/phinn/Documents/kinet/LocalLLMKit/Sources/LocalLLMKitTranscription/WhisperModelDownloader.swift" : {
+    "const-values" : "/Users/phinn/Documents/kinet/KinetMinutes/build/DerivedData/Build/Intermediates.noindex/LocalLLMKit.build/Debug/LocalLLMKitTranscription.build/Objects-normal/arm64/WhisperModelDownloader.swiftconstvalues",
+    "dependencies" : "/Users/phinn/Documents/kinet/KinetMinutes/build/DerivedData/Build/Intermediates.noindex/LocalLLMKit.build/Debug/LocalLLMKitTranscription.build/Objects-normal/arm64/WhisperModelDownloader.d",
+    "diagnostics" : "/Users/phinn/Documents/kinet/KinetMinutes/build/DerivedData/Build/Intermediates.noindex/LocalLLMKit.build/Debug/LocalLLMKitTranscription.build/Objects-normal/arm64/WhisperModelDownloader.dia",
+    "index-unit-output-path" : "/LocalLLMKit.build/Debug/LocalLLMKitTranscription.build/Objects-normal/arm64/WhisperModelDownloader.o",
+    "llvm-bc" : "/Users/phinn/Documents/kinet/KinetMinutes/build/DerivedData/Build/Intermediates.noindex/LocalLLMKit.build/Debug/LocalLLMKitTranscription.build/Objects-normal/arm64/WhisperModelDownloader.bc",
+    "object" : "/Users/phinn/Documents/kinet/KinetMinutes/build/DerivedData/Build/Intermediates.noindex/LocalLLMKit.build/Debug/LocalLLMKitTranscription.build/Objects-normal/arm64/WhisperModelDownloader.o",
+    "swift-dependencies" : "/Users/phinn/Documents/kinet/KinetMinutes/build/DerivedData/Build/Intermediates.noindex/LocalLLMKit.build/Debug/LocalLLMKitTranscription.build/Objects-normal/arm64/WhisperModelDownloader.swiftdeps",
+    "swiftmodule" : "/Users/phinn/Documents/kinet/KinetMinutes/build/DerivedData/Build/Intermediates.noindex/LocalLLMKit.build/Debug/LocalLLMKitTranscription.build/Objects-normal/arm64/WhisperModelDownloader~partial.swiftmodule"
+  }
+}

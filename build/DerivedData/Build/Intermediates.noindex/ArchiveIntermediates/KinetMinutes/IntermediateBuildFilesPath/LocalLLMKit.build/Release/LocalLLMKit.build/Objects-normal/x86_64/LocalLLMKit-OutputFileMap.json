@@ -1,0 +1,121 @@
+{
+  "" : {
+    "const-values" : "/Users/phinn/Documents/kinet/KinetMinutes/build/DerivedData/Build/Intermediates.noindex/ArchiveIntermediates/KinetMinutes/IntermediateBuildFilesPath/LocalLLMKit.build/Release/LocalLLMKit.build/Objects-normal/x86_64/LocalLLMKit-primary.swiftconstvalues",
+    "dependencies" : "/Users/phinn/Documents/kinet/KinetMinutes/build/DerivedData/Build/Intermediates.noindex/ArchiveIntermediates/KinetMinutes/IntermediateBuildFilesPath/LocalLLMKit.build/Release/LocalLLMKit.build/Objects-normal/x86_64/LocalLLMKit-primary.d",
+    "diagnostics" : "/Users/phinn/Documents/kinet/KinetMinutes/build/DerivedData/Build/Intermediates.noindex/ArchiveIntermediates/KinetMinutes/IntermediateBuildFilesPath/LocalLLMKit.build/Release/LocalLLMKit.build/Objects-normal/x86_64/LocalLLMKit-primary.dia",
+    "emit-module-dependencies" : "/Users/phinn/Documents/kinet/KinetMinutes/build/DerivedData/Build/Intermediates.noindex/ArchiveIntermediates/KinetMinutes/IntermediateBuildFilesPath/LocalLLMKit.build/Release/LocalLLMKit.build/Objects-normal/x86_64/LocalLLMKit-primary-emit-module.d",
+    "emit-module-diagnostics" : "/Users/phinn/Documents/kinet/KinetMinutes/build/DerivedData/Build/Intermediates.noindex/ArchiveIntermediates/KinetMinutes/IntermediateBuildFilesPath/LocalLLMKit.build/Release/LocalLLMKit.build/Objects-normal/x86_64/LocalLLMKit-primary-emit-module.dia",
+    "pch" : "/Users/phinn/Documents/kinet/KinetMinutes/build/DerivedData/Build/Intermediates.noindex/ArchiveIntermediates/KinetMinutes/IntermediateBuildFilesPath/LocalLLMKit.build/Release/LocalLLMKit.build/Objects-normal/x86_64/LocalLLMKit-primary-Bridging-header.pch",
+    "swift-dependencies" : "/Users/phinn/Documents/kinet/KinetMinutes/build/DerivedData/Build/Intermediates.noindex/ArchiveIntermediates/KinetMinutes/IntermediateBuildFilesPath/LocalLLMKit.build/Release/LocalLLMKit.build/Objects-normal/x86_64/LocalLLMKit-primary.swiftdeps"
+  },
+  "/Users/phinn/Documents/kinet/LocalLLMKit/Sources/LocalLLMKit/AnthropicProvider.swift" : {
+    "index-unit-output-path" : "/LocalLLMKit.build/Release/LocalLLMKit.build/Objects-normal/x86_64/AnthropicProvider.o",
+    "llvm-bc" : "/Users/phinn/Documents/kinet/KinetMinutes/build/DerivedData/Build/Intermediates.noindex/ArchiveIntermediates/KinetMinutes/IntermediateBuildFilesPath/LocalLLMKit.build/Release/LocalLLMKit.build/Objects-normal/x86_64/AnthropicProvider.bc",
+    "object" : "/Users/phinn/Documents/kinet/KinetMinutes/build/DerivedData/Build/Intermediates.noindex/ArchiveIntermediates/KinetMinutes/IntermediateBuildFilesPath/LocalLLMKit.build/Release/LocalLLMKit.build/Objects-normal/x86_64/AnthropicProvider.o"
+  },
+  "/Users/phinn/Documents/kinet/LocalLLMKit/Sources/LocalLLMKit/AppleFoundationModelsProvider.swift" : {
+    "index-unit-output-path" : "/LocalLLMKit.build/Release/LocalLLMKit.build/Objects-normal/x86_64/AppleFoundationModelsProvider.o",
+    "llvm-bc" : "/Users/phinn/Documents/kinet/KinetMinutes/build/DerivedData/Build/Intermediates.noindex/ArchiveIntermediates/KinetMinutes/IntermediateBuildFilesPath/LocalLLMKit.build/Release/LocalLLMKit.build/Objects-normal/x86_64/AppleFoundationModelsProvider.bc",
+    "object" : "/Users/phinn/Documents/kinet/KinetMinutes/build/DerivedData/Build/Intermediates.noindex/ArchiveIntermediates/KinetMinutes/IntermediateBuildFilesPath/LocalLLMKit.build/Release/LocalLLMKit.build/Objects-normal/x86_64/AppleFoundationModelsProvider.o"
+  },
+  "/Users/phinn/Documents/kinet/LocalLLMKit/Sources/LocalLLMKit/CoreMLProvider.swift" : {
+    "index-unit-output-path" : "/LocalLLMKit.build/Release/LocalLLMKit.build/Objects-normal/x86_64/CoreMLProvider.o",
+    "llvm-bc" : "/Users/phinn/Documents/kinet/KinetMinutes/build/DerivedData/Build/Intermediates.noindex/ArchiveIntermediates/KinetMinutes/IntermediateBuildFilesPath/LocalLLMKit.build/Release/LocalLLMKit.build/Objects-normal/x86_64/CoreMLProvider.bc",
+    "object" : "/Users/phinn/Documents/kinet/KinetMinutes/build/DerivedData/Build/Intermediates.noindex/ArchiveIntermediates/KinetMinutes/IntermediateBuildFilesPath/LocalLLMKit.build/Release/LocalLLMKit.build/Objects-normal/x86_64/CoreMLProvider.o"
+  },
+  "/Users/phinn/Documents/kinet/LocalLLMKit/Sources/LocalLLMKit/DashScopeProvider.swift" : {
+    "index-unit-output-path" : "/LocalLLMKit.build/Release/LocalLLMKit.build/Objects-normal/x86_64/DashScopeProvider.o",
+    "llvm-bc" : "/Users/phinn/Documents/kinet/KinetMinutes/build/DerivedData/Build/Intermediates.noindex/ArchiveIntermediates/KinetMinutes/IntermediateBuildFilesPath/LocalLLMKit.build/Release/LocalLLMKit.build/Objects-normal/x86_64/DashScopeProvider.bc",
+    "object" : "/Users/phinn/Documents/kinet/KinetMinutes/build/DerivedData/Build/Intermediates.noindex/ArchiveIntermediates/KinetMinutes/IntermediateBuildFilesPath/LocalLLMKit.build/Release/LocalLLMKit.build/Objects-normal/x86_64/DashScopeProvider.o"
+  },
+  "/Users/phinn/Documents/kinet/LocalLLMKit/Sources/LocalLLMKit/DoubaoProvider.swift" : {
+    "index-unit-output-path" : "/LocalLLMKit.build/Release/LocalLLMKit.build/Objects-normal/x86_64/DoubaoProvider.o",
+    "llvm-bc" : "/Users/phinn/Documents/kinet/KinetMinutes/build/DerivedData/Build/Intermediates.noindex/ArchiveIntermediates/KinetMinutes/IntermediateBuildFilesPath/LocalLLMKit.build/Release/LocalLLMKit.build/Objects-normal/x86_64/DoubaoProvider.bc",
+    "object" : "/Users/phinn/Documents/kinet/KinetMinutes/build/DerivedData/Build/Intermediates.noindex/ArchiveIntermediates/KinetMinutes/IntermediateBuildFilesPath/LocalLLMKit.build/Release/LocalLLMKit.build/Objects-normal/x86_64/DoubaoProvider.o"
+  },
+  "/Users/phinn/Documents/kinet/LocalLLMKit/Sources/LocalLLMKit/EmbeddingService.swift" : {
+    "index-unit-output-path" : "/LocalLLMKit.build/Release/LocalLLMKit.build/Objects-normal/x86_64/EmbeddingService.o",
+    "llvm-bc" : "/Users/phinn/Documents/kinet/KinetMinutes/build/DerivedData/Build/Intermediates.noindex/ArchiveIntermediates/KinetMinutes/IntermediateBuildFilesPath/LocalLLMKit.build/Release/LocalLLMKit.build/Objects-normal/x86_64/EmbeddingService.bc",
+    "object" : "/Users/phinn/Documents/kinet/KinetMinutes/build/DerivedData/Build/Intermediates.noindex/ArchiveIntermediates/KinetMinutes/IntermediateBuildFilesPath/LocalLLMKit.build/Release/LocalLLMKit.build/Objects-normal/x86_64/EmbeddingService.o"
+  },
+  "/Users/phinn/Documents/kinet/LocalLLMKit/Sources/LocalLLMKit/GeminiProvider.swift" : {
+    "index-unit-output-path" : "/LocalLLMKit.build/Release/LocalLLMKit.build/Objects-normal/x86_64/GeminiProvider.o",
+    "llvm-bc" : "/Users/phinn/Documents/kinet/KinetMinutes/build/DerivedData/Build/Intermediates.noindex/ArchiveIntermediates/KinetMinutes/IntermediateBuildFilesPath/LocalLLMKit.build/Release/LocalLLMKit.build/Objects-normal/x86_64/GeminiProvider.bc",
+    "object" : "/Users/phinn/Documents/kinet/KinetMinutes/build/DerivedData/Build/Intermediates.noindex/ArchiveIntermediates/KinetMinutes/IntermediateBuildFilesPath/LocalLLMKit.build/Release/LocalLLMKit.build/Objects-normal/x86_64/GeminiProvider.o"
+  },
+  "/Users/phinn/Documents/kinet/LocalLLMKit/Sources/LocalLLMKit/LLMConfig.swift" : {
+    "index-unit-output-path" : "/LocalLLMKit.build/Release/LocalLLMKit.build/Objects-normal/x86_64/LLMConfig.o",
+    "llvm-bc" : "/Users/phinn/Documents/kinet/KinetMinutes/build/DerivedData/Build/Intermediates.noindex/ArchiveIntermediates/KinetMinutes/IntermediateBuildFilesPath/LocalLLMKit.build/Release/LocalLLMKit.build/Objects-normal/x86_64/LLMConfig.bc",
+    "object" : "/Users/phinn/Documents/kinet/KinetMinutes/build/DerivedData/Build/Intermediates.noindex/ArchiveIntermediates/KinetMinutes/IntermediateBuildFilesPath/LocalLLMKit.build/Release/LocalLLMKit.build/Objects-normal/x86_64/LLMConfig.o"
+  },
+  "/Users/phinn/Documents/kinet/LocalLLMKit/Sources/LocalLLMKit/LLMProvider.swift" : {
+    "index-unit-output-path" : "/LocalLLMKit.build/Release/LocalLLMKit.build/Objects-normal/x86_64/LLMProvider.o",
+    "llvm-bc" : "/Users/phinn/Documents/kinet/KinetMinutes/build/DerivedData/Build/Intermediates.noindex/ArchiveIntermediates/KinetMinutes/IntermediateBuildFilesPath/LocalLLMKit.build/Release/LocalLLMKit.build/Objects-normal/x86_64/LLMProvider.bc",
+    "object" : "/Users/phinn/Documents/kinet/KinetMinutes/build/DerivedData/Build/Intermediates.noindex/ArchiveIntermediates/KinetMinutes/IntermediateBuildFilesPath/LocalLLMKit.build/Release/LocalLLMKit.build/Objects-normal/x86_64/LLMProvider.o"
+  },
+  "/Users/phinn/Documents/kinet/LocalLLMKit/Sources/LocalLLMKit/LLMService.swift" : {
+    "index-unit-output-path" : "/LocalLLMKit.build/Release/LocalLLMKit.build/Objects-normal/x86_64/LLMService.o",
+    "llvm-bc" : "/Users/phinn/Documents/kinet/KinetMinutes/build/DerivedData/Build/Intermediates.noindex/ArchiveIntermediates/KinetMinutes/IntermediateBuildFilesPath/LocalLLMKit.build/Release/LocalLLMKit.build/Objects-normal/x86_64/LLMService.bc",
+    "object" : "/Users/phinn/Documents/kinet/KinetMinutes/build/DerivedData/Build/Intermediates.noindex/ArchiveIntermediates/KinetMinutes/IntermediateBuildFilesPath/LocalLLMKit.build/Release/LocalLLMKit.build/Objects-normal/x86_64/LLMService.o"
+  },
+  "/Users/phinn/Documents/kinet/LocalLLMKit/Sources/LocalLLMKit/LlamaCppProvider.swift" : {
+    "index-unit-output-path" : "/LocalLLMKit.build/Release/LocalLLMKit.build/Objects-normal/x86_64/LlamaCppProvider.o",
+    "llvm-bc" : "/Users/phinn/Documents/kinet/KinetMinutes/build/DerivedData/Build/Intermediates.noindex/ArchiveIntermediates/KinetMinutes/IntermediateBuildFilesPath/LocalLLMKit.build/Release/LocalLLMKit.build/Objects-normal/x86_64/LlamaCppProvider.bc",
+    "object" : "/Users/phinn/Documents/kinet/KinetMinutes/build/DerivedData/Build/Intermediates.noindex/ArchiveIntermediates/KinetMinutes/IntermediateBuildFilesPath/LocalLLMKit.build/Release/LocalLLMKit.build/Objects-normal/x86_64/LlamaCppProvider.o"
+  },
+  "/Users/phinn/Documents/kinet/LocalLLMKit/Sources/LocalLLMKit/LlamaCppProviderV2.swift" : {
+    "index-unit-output-path" : "/LocalLLMKit.build/Release/LocalLLMKit.build/Objects-normal/x86_64/LlamaCppProviderV2.o",
+    "llvm-bc" : "/Users/phinn/Documents/kinet/KinetMinutes/build/DerivedData/Build/Intermediates.noindex/ArchiveIntermediates/KinetMinutes/IntermediateBuildFilesPath/LocalLLMKit.build/Release/LocalLLMKit.build/Objects-normal/x86_64/LlamaCppProviderV2.bc",
+    "object" : "/Users/phinn/Documents/kinet/KinetMinutes/build/DerivedData/Build/Intermediates.noindex/ArchiveIntermediates/KinetMinutes/IntermediateBuildFilesPath/LocalLLMKit.build/Release/LocalLLMKit.build/Objects-normal/x86_64/LlamaCppProviderV2.o"
+  },
+  "/Users/phinn/Documents/kinet/LocalLLMKit/Sources/LocalLLMKit/MoonshotProvider.swift" : {
+    "index-unit-output-path" : "/LocalLLMKit.build/Release/LocalLLMKit.build/Objects-normal/x86_64/MoonshotProvider.o",
+    "llvm-bc" : "/Users/phinn/Documents/kinet/KinetMinutes/build/DerivedData/Build/Intermediates.noindex/ArchiveIntermediates/KinetMinutes/IntermediateBuildFilesPath/LocalLLMKit.build/Release/LocalLLMKit.build/Objects-normal/x86_64/MoonshotProvider.bc",
+    "object" : "/Users/phinn/Documents/kinet/KinetMinutes/build/DerivedData/Build/Intermediates.noindex/ArchiveIntermediates/KinetMinutes/IntermediateBuildFilesPath/LocalLLMKit.build/Release/LocalLLMKit.build/Objects-normal/x86_64/MoonshotProvider.o"
+  },
+  "/Users/phinn/Documents/kinet/LocalLLMKit/Sources/LocalLLMKit/OllamaProvider.swift" : {
+    "index-unit-output-path" : "/LocalLLMKit.build/Release/LocalLLMKit.build/Objects-normal/x86_64/OllamaProvider.o",
+    "llvm-bc" : "/Users/phinn/Documents/kinet/KinetMinutes/build/DerivedData/Build/Intermediates.noindex/ArchiveIntermediates/KinetMinutes/IntermediateBuildFilesPath/LocalLLMKit.build/Release/LocalLLMKit.build/Objects-normal/x86_64/OllamaProvider.bc",
+    "object" : "/Users/phinn/Documents/kinet/KinetMinutes/build/DerivedData/Build/Intermediates.noindex/ArchiveIntermediates/KinetMinutes/IntermediateBuildFilesPath/LocalLLMKit.build/Release/LocalLLMKit.build/Objects-normal/x86_64/OllamaProvider.o"
+  },
+  "/Users/phinn/Documents/kinet/LocalLLMKit/Sources/LocalLLMKit/OpenAIProvider.swift" : {
+    "index-unit-output-path" : "/LocalLLMKit.build/Release/LocalLLMKit.build/Objects-normal/x86_64/OpenAIProvider.o",
+    "llvm-bc" : "/Users/phinn/Documents/kinet/KinetMinutes/build/DerivedData/Build/Intermediates.noindex/ArchiveIntermediates/KinetMinutes/IntermediateBuildFilesPath/LocalLLMKit.build/Release/LocalLLMKit.build/Objects-normal/x86_64/OpenAIProvider.bc",
+    "object" : "/Users/phinn/Documents/kinet/KinetMinutes/build/DerivedData/Build/Intermediates.noindex/ArchiveIntermediates/KinetMinutes/IntermediateBuildFilesPath/LocalLLMKit.build/Release/LocalLLMKit.build/Objects-normal/x86_64/OpenAIProvider.o"
+  },
+  "/Users/phinn/Documents/kinet/LocalLLMKit/Sources/LocalLLMKit/Participant.swift" : {
+    "index-unit-output-path" : "/LocalLLMKit.build/Release/LocalLLMKit.build/Objects-normal/x86_64/Participant.o",
+    "llvm-bc" : "/Users/phinn/Documents/kinet/KinetMinutes/build/DerivedData/Build/Intermediates.noindex/ArchiveIntermediates/KinetMinutes/IntermediateBuildFilesPath/LocalLLMKit.build/Release/LocalLLMKit.build/Objects-normal/x86_64/Participant.bc",
+    "object" : "/Users/phinn/Documents/kinet/KinetMinutes/build/DerivedData/Build/Intermediates.noindex/ArchiveIntermediates/KinetMinutes/IntermediateBuildFilesPath/LocalLLMKit.build/Release/LocalLLMKit.build/Objects-normal/x86_64/Participant.o"
+  },
+  "/Users/phinn/Documents/kinet/LocalLLMKit/Sources/LocalLLMKit/ProviderError.swift" : {
+    "index-unit-output-path" : "/LocalLLMKit.build/Release/LocalLLMKit.build/Objects-normal/x86_64/ProviderError.o",
+    "llvm-bc" : "/Users/phinn/Documents/kinet/KinetMinutes/build/DerivedData/Build/Intermediates.noindex/ArchiveIntermediates/KinetMinutes/IntermediateBuildFilesPath/LocalLLMKit.build/Release/LocalLLMKit.build/Objects-normal/x86_64/ProviderError.bc",
+    "object" : "/Users/phinn/Documents/kinet/KinetMinutes/build/DerivedData/Build/Intermediates.noindex/ArchiveIntermediates/KinetMinutes/IntermediateBuildFilesPath/LocalLLMKit.build/Release/LocalLLMKit.build/Objects-normal/x86_64/ProviderError.o"
+  },
+  "/Users/phinn/Documents/kinet/LocalLLMKit/Sources/LocalLLMKit/ProviderType.swift" : {
+    "index-unit-output-path" : "/LocalLLMKit.build/Release/LocalLLMKit.build/Objects-normal/x86_64/ProviderType.o",
+    "llvm-bc" : "/Users/phinn/Documents/kinet/KinetMinutes/build/DerivedData/Build/Intermediates.noindex/ArchiveIntermediates/KinetMinutes/IntermediateBuildFilesPath/LocalLLMKit.build/Release/LocalLLMKit.build/Objects-normal/x86_64/ProviderType.bc",
+    "object" : "/Users/phinn/Documents/kinet/KinetMinutes/build/DerivedData/Build/Intermediates.noindex/ArchiveIntermediates/KinetMinutes/IntermediateBuildFilesPath/LocalLLMKit.build/Release/LocalLLMKit.build/Objects-normal/x86_64/ProviderType.o"
+  },
+  "/Users/phinn/Documents/kinet/LocalLLMKit/Sources/LocalLLMKit/RemoteLLMProvider.swift" : {
+    "index-unit-output-path" : "/LocalLLMKit.build/Release/LocalLLMKit.build/Objects-normal/x86_64/RemoteLLMProvider.o",
+    "llvm-bc" : "/Users/phinn/Documents/kinet/KinetMinutes/build/DerivedData/Build/Intermediates.noindex/ArchiveIntermediates/KinetMinutes/IntermediateBuildFilesPath/LocalLLMKit.build/Release/LocalLLMKit.build/Objects-normal/x86_64/RemoteLLMProvider.bc",
+    "object" : "/Users/phinn/Documents/kinet/KinetMinutes/build/DerivedData/Build/Intermediates.noindex/ArchiveIntermediates/KinetMinutes/IntermediateBuildFilesPath/LocalLLMKit.build/Release/LocalLLMKit.build/Objects-normal/x86_64/RemoteLLMProvider.o"
+  },
+  "/Users/phinn/Documents/kinet/LocalLLMKit/Sources/LocalLLMKit/SSEParser.swift" : {
+    "index-unit-output-path" : "/LocalLLMKit.build/Release/LocalLLMKit.build/Objects-normal/x86_64/SSEParser.o",
+    "llvm-bc" : "/Users/phinn/Documents/kinet/KinetMinutes/build/DerivedData/Build/Intermediates.noindex/ArchiveIntermediates/KinetMinutes/IntermediateBuildFilesPath/LocalLLMKit.build/Release/LocalLLMKit.build/Objects-normal/x86_64/SSEParser.bc",
+    "object" : "/Users/phinn/Documents/kinet/KinetMinutes/build/DerivedData/Build/Intermediates.noindex/ArchiveIntermediates/KinetMinutes/IntermediateBuildFilesPath/LocalLLMKit.build/Release/LocalLLMKit.build/Objects-normal/x86_64/SSEParser.o"
+  },
+  "/Users/phinn/Documents/kinet/LocalLLMKit/Sources/LocalLLMKit/SharedModelStore.swift" : {
+    "index-unit-output-path" : "/LocalLLMKit.build/Release/LocalLLMKit.build/Objects-normal/x86_64/SharedModelStore.o",
+    "llvm-bc" : "/Users/phinn/Documents/kinet/KinetMinutes/build/DerivedData/Build/Intermediates.noindex/ArchiveIntermediates/KinetMinutes/IntermediateBuildFilesPath/LocalLLMKit.build/Release/LocalLLMKit.build/Objects-normal/x86_64/SharedModelStore.bc",
+    "object" : "/Users/phinn/Documents/kinet/KinetMinutes/build/DerivedData/Build/Intermediates.noindex/ArchiveIntermediates/KinetMinutes/IntermediateBuildFilesPath/LocalLLMKit.build/Release/LocalLLMKit.build/Objects-normal/x86_64/SharedModelStore.o"
+  },
+  "/Users/phinn/Documents/kinet/LocalLLMKit/Sources/LocalLLMKit/ToolDefinition.swift" : {
+    "index-unit-output-path" : "/LocalLLMKit.build/Release/LocalLLMKit.build/Objects-normal/x86_64/ToolDefinition.o",
+    "llvm-bc" : "/Users/phinn/Documents/kinet/KinetMinutes/build/DerivedData/Build/Intermediates.noindex/ArchiveIntermediates/KinetMinutes/IntermediateBuildFilesPath/LocalLLMKit.build/Release/LocalLLMKit.build/Objects-normal/x86_64/ToolDefinition.bc",
+    "object" : "/Users/phinn/Documents/kinet/KinetMinutes/build/DerivedData/Build/Intermediates.noindex/ArchiveIntermediates/KinetMinutes/IntermediateBuildFilesPath/LocalLLMKit.build/Release/LocalLLMKit.build/Objects-normal/x86_64/ToolDefinition.o"
+  }
+}

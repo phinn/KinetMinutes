@@ -19,6 +19,12 @@ struct Meeting {
     var actionsJSON: String?       // [{"owner":..,"task":..,"due":..}]
     var status: String             // recording | processing | ready | failed
     var segmentsJSON: String?      // [{"start":..,"end":..,"text":..}]
+    var tagsJSON: String?          // ["tag1","tag2"] (F07)
+
+    var tags: [String] {
+        guard let d = tagsJSON?.data(using: .utf8) else { return [] }
+        return (try? JSONDecoder().decode([String].self, from: d)) ?? []
+    }
 
     var decisions: [String] {
         guard let d = decisionsJSON?.data(using: .utf8) else { return [] }
@@ -79,13 +85,27 @@ final class MeetingStore {
               decisions_json TEXT,
               actions_json TEXT,
               status TEXT NOT NULL DEFAULT 'recording',
-              segments_json TEXT
+              segments_json TEXT,
+              tags_json TEXT NOT NULL DEFAULT '[]'
             )
             """)
-            exec("CREATE TABLE IF NOT EXISTS meetings_fts USING fts5(title, transcript, summary, content='meetings', content_rowid='id')")
+            // migrations: existing installs get the tags column (F07).
+            // exec() swallows the "duplicate column" error on fresh DBs — harmless.
+            var colStmt: OpaquePointer?
+            sqlite3_prepare_v2(db, "PRAGMA table_info(meetings)", -1, &colStmt, nil)
+            var hasTags = false
+            while sqlite3_step(colStmt) == SQLITE_ROW {
+                if sqlite3_column_text(colStmt, 1).map({ String(cString: $0) }) == "tags_json" { hasTags = true }
+            }
+            sqlite3_finalize(colStmt)
+            if !hasTags { exec("ALTER TABLE meetings ADD COLUMN tags_json TEXT NOT NULL DEFAULT '[]'") }
+            exec("CREATE VIRTUAL TABLE IF NOT EXISTS meetings_fts USING fts5(title, transcript, summary, content='meetings', content_rowid='id')")
             exec("CREATE TRIGGER IF NOT EXISTS meetings_ai AFTER INSERT ON meetings BEGIN INSERT INTO meetings_fts(rowid, title, transcript, summary) VALUES (new.id, new.title, new.transcript, new.summary); END")
             exec("CREATE TRIGGER IF NOT EXISTS meetings_ad AFTER DELETE ON meetings BEGIN INSERT INTO meetings_fts(meetings_fts, rowid, title, transcript, summary) VALUES ('delete', old.id, old.title, old.transcript, old.summary); END")
             exec("CREATE TRIGGER IF NOT EXISTS meetings_au AFTER UPDATE ON meetings BEGIN INSERT INTO meetings_fts(meetings_fts, rowid, title, transcript, summary) VALUES ('delete', old.id, old.title, old.transcript, old.summary); INSERT INTO meetings_fts(rowid, title, transcript, summary) VALUES (new.id, new.title, new.transcript, new.summary); END")
+            // FTS was silently broken before (CREATE TABLE vs CREATE VIRTUAL TABLE);
+            // rebuild so existing rows become searchable. Idempotent.
+            exec("INSERT INTO meetings_fts(meetings_fts) VALUES('rebuild')")
         }
     }
 
@@ -194,7 +214,7 @@ final class MeetingStore {
 
     // MARK: - helpers
 
-    private let cols = "id,title,source_app,started_at,ended_at,duration,audio_path,transcript,summary,decisions_json,actions_json,status,segments_json"
+    private let cols = "id,title,source_app,started_at,ended_at,duration,audio_path,transcript,summary,decisions_json,actions_json,status,segments_json,tags_json"
 
     private func fetch(_ sql: String) -> [Meeting] {
         var stmt: OpaquePointer?
@@ -215,6 +235,7 @@ final class MeetingStore {
             m.actionsJSON = text(stmt, 10)
             m.status = text(stmt, 11) ?? "ready"
             m.segmentsJSON = text(stmt, 12)
+            m.tagsJSON = text(stmt, 13)
             out.append(m)
         }
         sqlite3_finalize(stmt)

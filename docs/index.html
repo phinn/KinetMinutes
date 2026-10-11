@@ -3,36 +3,82 @@
 <head>
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
-<title>KinetMinutes — Local AI Meeting Notes</title>
+
+<title>KinetMinutes — Local AI Meeting Notes for Mac · Zero Upload</title>
+<meta name="description" content="KinetMinutes detects your meetings, records them and writes structured notes — summary, decisions, action items — 100% on your Mac. On-device Whisper + local AI, works offline. Free to start.">
+<link rel="canonical" href="https://phinn.github.io/KinetMinutes/">
+<meta property="og:type" content="website">
+<meta property="og:site_name" content="KinetMinutes">
+<meta property="og:title" content="KinetMinutes — Local AI Meeting Notes for Mac · Zero Upload">
+<meta property="og:description" content="Meeting notes written while you talk. On-device Whisper + local AI. Your voice never leaves your Mac.">
+<meta property="og:url" content="https://phinn.github.io/KinetMinutes/">
+<meta property="og:image" content="https://phinn.github.io/KinetMinutes/assets/og.png">
+<meta name="twitter:card" content="summary_large_image">
+<meta name="twitter:title" content="KinetMinutes — Local AI Meeting Notes for Mac · Zero Upload">
+<meta name="twitter:description" content="Meeting notes written while you talk. On-device Whisper + local AI. Your voice never leaves your Mac.">
+<meta name="twitter:image" content="https://phinn.github.io/KinetMinutes/assets/og.png">
+<link rel="icon" href="data:image/svg+xml,<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 100 100'><text y='.9em' font-size='90'>🎙️</text></svg>">
+<script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@type": "SoftwareApplication",
+  "name": "KinetMinutes",
+  "operatingSystem": "macOS 14+",
+  "applicationCategory": "BusinessApplication",
+  "description": "Local AI meeting notes for Mac. Detects meetings, records and writes structured notes — summary, decisions, action items — 100% on-device.",
+  "offers": { "@type": "Offer", "price": "0", "priceCurrency": "USD" },
+  "url": "https://phinn.github.io/KinetMinutes/"
+}
+</script>
+
 <style>
-  :root { color-scheme: light dark; }
   * { margin: 0; padding: 0; box-sizing: border-box; }
+  :root {
+    --bg: #f7f4ee; --ink: #23201a; --muted: #6e675c; --card: #fffdf9;
+    --line: #e6e0d4; --accent: #0a66e8; --accent-dark: #0853bd; --accent-ink: #fff;
+  }
   body { font-family: -apple-system, "PingFang SC", "Hiragino Sans", "Microsoft YaHei", sans-serif;
-         background: radial-gradient(1200px 600px at 70% -10%, #1a2b52 0%, #0d0f1a 55%);
-         color: #e8eaf2; min-height: 100vh; }
-  .wrap { max-width: 900px; margin: 0 auto; padding: 90px 24px 60px; }
-  .badge { display: inline-block; background: rgba(44,99,246,.15); color: #7fa8ff; border: 1px solid rgba(44,99,246,.4);
-           border-radius: 20px; padding: 5px 16px; font-size: 13px; margin-bottom: 26px; }
-  h1 { font-size: 46px; line-height: 1.2; margin-bottom: 18px; }
-  h1 em { font-style: normal; background: linear-gradient(90deg, #6ec6ff, #b48cff); -webkit-background-clip: text;
-          background-clip: text; color: transparent; }
-  .tag { font-size: 19px; color: #aab3c7; margin-bottom: 40px; }
-  .grid { display: grid; grid-template-columns: repeat(auto-fit, minmax(240px, 1fr)); gap: 16px; margin: 40px 0; }
-  .card { background: rgba(21,24,39,.85); border: 1px solid #262b3f; border-radius: 16px; padding: 24px; }
-  .card h3 { font-size: 16px; margin-bottom: 8px; color: #fff; }
-  .card p { font-size: 14px; color: #9aa3b8; line-height: 1.7; }
-  .cta { display: inline-block; background: #2c63f6; color: #fff; border-radius: 12px; padding: 14px 34px;
-         font-size: 16px; text-decoration: none; margin: 20px 0 8px; }
-  .cta:hover { background: #1e51e0; }
-  .store { color: #8a93ab; font-size: 13px; margin-bottom: 40px; }
-  .links a { color: #7fa8ff; text-decoration: none; margin-right: 22px; font-size: 14px; }
-  footer { margin-top: 80px; color: #6b7386; font-size: 13px; }
+         background: var(--bg); color: var(--ink); min-height: 100vh; }
+  .wrap { max-width: 980px; margin: 0 auto; padding: 76px 24px 56px; }
+  .langbar { position: fixed; top: 16px; right: 20px; display: flex; gap: 6px; z-index: 10; }
+  .langbar button { background: #fffdf9; color: #6e675c; border: 1px solid var(--line); border-radius: 18px;
+                    padding: 6px 14px; cursor: pointer; font-size: 13px; }
+  .langbar button.on { background: var(--accent); color: #fff; border-color: var(--accent); }
+  .badge { display: inline-block; background: #eaf0fd; color: #2b56b8; border: 1px solid #c9d7f6;
+           border-radius: 20px; padding: 5px 16px; font-size: 13px; margin-bottom: 24px; }
+  h1 { font-size: 48px; line-height: 1.18; margin-bottom: 16px; letter-spacing: -0.5px; }
+  h1 em { font-style: normal; color: var(--accent); }
+  .tag { font-size: 19px; color: var(--muted); margin-bottom: 28px; max-width: 640px; line-height: 1.6; }
+  .cta-row { display: flex; align-items: center; gap: 16px; flex-wrap: wrap; margin-bottom: 10px; }
+  .cta { display: inline-block; background: var(--accent); color: var(--accent-ink); border-radius: 12px; padding: 15px 34px;
+         font-size: 16px; font-weight: 600; text-decoration: none; }
+  .cta:hover { background: var(--accent-dark); }
+  .hint { color: var(--muted); font-size: 13px; }
+  .store { color: var(--muted); font-size: 14px; margin-bottom: 8px; }
+  .store b { color: var(--ink); }
+  .shot { display: block; width: 100%; max-width: 860px; border-radius: 14px; border: 1px solid var(--line);
+          box-shadow: 0 18px 50px rgba(35,32,26,.14); margin: 30px 0 46px; }
+  .grid { display: grid; grid-template-columns: repeat(auto-fit, minmax(230px, 1fr)); gap: 14px; margin: 0 0 44px; }
+  .card { background: var(--card); border: 1px solid var(--line); border-radius: 16px; padding: 22px; }
+  .card h3 { font-size: 16px; margin-bottom: 8px; }
+  .card p { font-size: 14px; color: var(--muted); line-height: 1.7; }
+  .how { margin: 0 0 46px; }
+  .how h2, .faq h2 { font-size: 26px; margin-bottom: 20px; letter-spacing: -0.3px; }
+  .steps { display: grid; grid-template-columns: repeat(auto-fit, minmax(230px, 1fr)); gap: 14px; }
+  .step { background: var(--card); border: 1px solid var(--line); border-radius: 16px; padding: 22px; }
+  .step .n { display: inline-block; width: 26px; height: 26px; border-radius: 50%; background: var(--accent);
+             color: #fff; text-align: center; line-height: 26px; font-size: 14px; font-weight: 700; margin-bottom: 10px; }
+  .step h3 { font-size: 15px; margin-bottom: 6px; }
+  .step p { font-size: 14px; color: var(--muted); line-height: 1.65; }
+  .faq { margin-bottom: 46px; }
+  .faq details { background: var(--card); border: 1px solid var(--line); border-radius: 14px; padding: 16px 20px; margin-bottom: 10px; }
+  .faq summary { font-size: 15px; font-weight: 600; cursor: pointer; }
+  .faq p { font-size: 14px; color: var(--muted); line-height: 1.7; margin-top: 10px; }
+  .links { margin: 10px 0 0; }
+  .links a { color: var(--accent); text-decoration: none; margin-right: 22px; font-size: 14px; }
+  footer { border-top: 1px solid var(--line); margin-top: 60px; padding-top: 22px; color: #9a938a; font-size: 13px; }
   section[data-lang] { display: none; }
   section[data-lang].show { display: block; }
-  .langbar { position: fixed; top: 18px; right: 22px; display: flex; gap: 8px; z-index: 10; }
-  .langbar button { background: rgba(28,32,51,.9); color: #aab2c8; border: 1px solid #2c3149; border-radius: 18px;
-                    padding: 6px 14px; cursor: pointer; font-size: 13px; }
-  .langbar button.on { background: #2c63f6; color: #fff; border-color: #2c63f6; }
 </style>
 </head>
 <body>
@@ -44,67 +90,152 @@
 </div>
 <div class="wrap">
 
+<!-- ============ EN ============ -->
 <section data-lang="en" class="show">
-  <div class="badge">macOS · Menu bar · Local AI</div>
+  <div class="badge">macOS 14+ · Apple Silicon · Menu bar</div>
   <h1>Meeting notes,<br>written <em>while you talk</em>.</h1>
   <div class="tag">KinetMinutes detects your meetings, records, and writes structured notes — summary, decisions, action items — fully offline. Your voice never leaves your Mac.</div>
+  <div class="cta-row">
+    <a class="cta" href="https://apps.apple.com/us/app/kinetminutes/id6813593104" rel="noopener">Download for Mac — Free</a>
+    <span class="hint">Requires macOS 14+, Apple Silicon</span>
+  </div>
+  <div class="store"><b>Free to start</b> · Pro is a <b>one-time purchase</b>, no subscription</div>
+  <img class="shot" src="assets/app-en.png" alt="KinetMinutes meeting library on macOS — searchable notes with summaries, decisions and action items" width="1280" height="800">
   <div class="grid">
     <div class="card"><h3>🔒 Zero upload</h3><p>On-device Whisper transcription + local AI summarization. Works with the network off. Built for HR interviews, client negotiations, strategy meetings.</p></div>
     <div class="card"><h3>📝 Notes, not transcripts</h3><p>Summary, agreed decisions, action items with owners, and a timestamped timeline. Click any line to the exact moment.</p></div>
     <div class="card"><h3>🇨🇳 Chinese-first</h3><p>Deep optimization for Mandarin + English code-switching. Works with Zoom, Tencent Meeting, Teams, Feishu, DingTalk.</p></div>
-    <div class="card"><h3>🔍 Searchable library</h3><p>Full-text search across all notes and transcripts. Export Markdown / TXT / SRT — Notion & Obsidian friendly.</p></div>
+    <div class="card"><h3>🔍 Searchable library</h3><p>Full-text search across all notes and transcripts. Export Markdown / TXT / SRT — Notion &amp; Obsidian friendly.</p></div>
   </div>
-  <a class="cta" href="https://apps.apple.com/">Download on the Mac App Store</a>
-  <div class="store">Free to start · Pro one-time purchase, no subscription</div>
-  <div class="links"><a href="privacy.html">Privacy Policy</a></div>
+  <div class="how">
+    <h2>How it works</h2>
+    <div class="steps">
+      <div class="step"><span class="n">1</span><h3>Just take the call</h3><p>KinetMinutes sits in your menu bar and detects meetings in Zoom, Teams, Tencent Meeting, Feishu, DingTalk, Discord or Webex — recording starts automatically.</p></div>
+      <div class="step"><span class="n">2</span><h3>Talk normally</h3><p>Audio is transcribed on-device with Whisper. Nothing is uploaded, nothing is recorded in the cloud — it works with your network off.</p></div>
+      <div class="step"><span class="n">3</span><h3>Leave with notes</h3><p>When the meeting ends, local AI writes the minutes: summary, decisions, action items with owners, and a clickable timeline.</p></div>
+    </div>
+  </div>
+  <div class="faq">
+    <h2>FAQ</h2>
+    <details><summary>Does my audio ever leave my Mac?</summary><p>No. Transcription (Whisper) and AI summarization both run locally. KinetMinutes works with the network fully off. Your audio, transcripts and notes stay in your library — delete everything anytime.</p></details>
+    <details><summary>Which meeting apps does it detect?</summary><p>Zoom, Tencent Meeting, Microsoft Teams, Feishu (Lark), DingTalk, Discord and Webex. Recording can also be started manually for any call.</p></details>
+    <details><summary>How is the free plan different from Pro?</summary><p>Free: base transcription model, 5 AI notes per month, TXT/SRT export. Pro is a one-time purchase (no subscription): larger models, unlimited AI notes, Markdown/PDF export.</p></details>
+    <details><summary>Does it support Chinese meetings?</summary><p>Yes — Chinese-first. Whisper models are tuned for Mandarin and mixed Chinese-English speech, a gap most global tools leave open.</p></details>
+    <details><summary>What hardware / macOS do I need?</summary><p>Any Apple Silicon Mac running macOS 14 or later. The base model downloads once, then everything runs offline.</p></details>
+  </div>
+  <a class="cta" href="https://apps.apple.com/us/app/kinetminutes/id6813593104" rel="noopener">Download for Mac — Free</a>
+  <div class="links"><a href="https://apps.apple.com/us/app/kinetminutes/id6813593104" rel="noopener">App Store</a><a href="privacy.html">Privacy Policy</a></div>
 </section>
 
+<!-- ============ 简体 ============ -->
 <section data-lang="zh-Hans">
-  <div class="badge">macOS · 菜单栏 · 本地 AI</div>
+  <div class="badge">macOS 14+ · Apple Silicon · 菜单栏</div>
   <h1>你只管开会,<br><em>纪要它来写</em>。</h1>
   <div class="tag">KinetMinutes 检测到会议自动开录,散会即得结构化纪要:摘要、决议、待办(含负责人)。全部本地运行,声音不出你的 Mac。</div>
+  <div class="cta-row">
+    <a class="cta" href="https://apps.apple.com/cn/app/kinetminutes/id6813593104" rel="noopener">免费下载 for Mac</a>
+    <span class="hint">需要 macOS 14+ · Apple Silicon</span>
+  </div>
+  <div class="store"><b>免费开始</b> · Pro <b>一次性买断</b>,无订阅</div>
+  <img class="shot" src="assets/app-zh.png" alt="KinetMinutes 会议库界面:纪要、决议、待办与可点击时间线,支持全文搜索" width="1280" height="800">
   <div class="grid">
     <div class="card"><h3>🔒 零上传</h3><p>端侧 Whisper 转写 + 本地 AI 总结,断网可用。HR 面谈、客户谈判、战略会的放心之选。</p></div>
     <div class="card"><h3>📝 纪要,不是逐字稿</h3><p>摘要、决议、带负责人的待办、带时间戳的时间线。点击任意条目直达原声。</p></div>
     <div class="card"><h3>🇨🇳 中文优先</h3><p>针对普通话 + 中英混说深度优化。支持 Zoom、腾讯会议、Teams、飞书、钉钉。</p></div>
     <div class="card"><h3>🔍 会议库全文搜索</h3><p>纪要+逐字稿全文搜索,导出 Markdown / TXT / SRT,兼容 Notion 与 Obsidian。</p></div>
   </div>
-  <a class="cta" href="https://apps.apple.com/">在 Mac App Store 下载</a>
-  <div class="store">免费开始 · Pro 一次性买断,无订阅</div>
-  <div class="links"><a href="privacy.html">隐私政策</a></div>
+  <div class="how">
+    <h2>三步上手</h2>
+    <div class="steps">
+      <div class="step"><span class="n">1</span><h3>照常开会</h3><p>KinetMinutes 常驻菜单栏,自动检测 Zoom、腾讯会议、Teams、飞书、钉钉、Discord、Webex 会议并开始录音,无需任何手动操作。</p></div>
+      <div class="step"><span class="n">2</span><h3>正常说话</h3><p>语音由端侧 Whisper 转写,不上传、不进云端,断网也能正常工作。录音、逐字稿、纪要都留在本机,随时可整库删除。</p></div>
+      <div class="step"><span class="n">3</span><h3>散会即得纪要</h3><p>会议结束时本地 AI 自动生成纪要:摘要、决议、带负责人的待办、可点击回跳原声的时间线。</p></div>
+    </div>
+  </div>
+  <div class="faq">
+    <h2>常见问题</h2>
+    <details><summary>录音会上传吗?</summary><p>不会。转写(Whisper)和 AI 总结全部在本机运行,断网状态可完整使用。录音、逐字稿、纪要都在你自己的会议库里,随时可整库删除。</p></details>
+    <details><summary>支持哪些会议软件?</summary><p>Zoom、腾讯会议、Microsoft Teams、飞书、钉钉、Discord、Webex 自动检测;任意通话也可手动开录。</p></details>
+    <details><summary>免费版和 Pro 的区别?</summary><p>免费版:基础转写模型、每月 5 次 AI 纪要、TXT/SRT 导出。Pro 为一次性买断(无订阅):更大模型、AI 纪要不限次、Markdown/PDF 导出。</p></details>
+    <details><summary>中文会议效果如何?</summary><p>中文优先是本产品的核心能力:针对普通话与中英混说深度优化,这是大多数国际工具的短板。</p></details>
+    <details><summary>需要什么配置?</summary><p>Apple Silicon 芯片的 Mac,macOS 14 及以上。基础模型首次下载后,之后全部离线运行。</p></details>
+  </div>
+  <a class="cta" href="https://apps.apple.com/cn/app/kinetminutes/id6813593104" rel="noopener">免费下载 for Mac</a>
+  <div class="links"><a href="https://apps.apple.com/cn/app/kinetminutes/id6813593104" rel="noopener">App Store</a><a href="privacy.html">隐私政策</a></div>
 </section>
 
+<!-- ============ 繁體 ============ -->
 <section data-lang="zh-Hant">
-  <div class="badge">macOS · 選單列 · 本地 AI</div>
+  <div class="badge">macOS 14+ · Apple Silicon · 選單列</div>
   <h1>你只管開會,<br><em>紀要它來寫</em>。</h1>
   <div class="tag">KinetMinutes 偵測到會議自動開錄,散會即得結構化紀要:摘要、決議、待辦(含負責人)。全部本機執行,聲音不出你的 Mac。</div>
-  <div class="grid">
-    <div class="card"><h3>🔒 零上傳</h3><p>端側 Whisper 轉寫 + 本地 AI 總結,斷網可用。</p></div>
-    <div class="card"><h3>📝 紀要,不是逐字稿</h3><p>摘要、決議、帶負責人的待辦、帶時間戳的時間軸。</p></div>
-    <div class="card"><h3>🈶 中文優先</h3><p>針對普通話 + 中英混說深度優化。支援 Zoom、騰訊會議、Teams、飛書、釘釘。</p></div>
-    <div class="card"><h3>🔍 會議庫全文搜尋</h3><p>紀要+逐字稿全文搜尋,匯出 Markdown / TXT / SRT。</p></div>
+  <div class="cta-row">
+    <a class="cta" href="https://apps.apple.com/tw/app/kinetminutes/id6813593104" rel="noopener">免費下載 for Mac</a>
+    <span class="hint">需要 macOS 14+ · Apple Silicon</span>
   </div>
-  <a class="cta" href="https://apps.apple.com/">在 Mac App Store 下載</a>
-  <div class="store">免費開始 · Pro 一次性買斷,無訂閱</div>
-  <div class="links"><a href="privacy.html">隱私政策</a></div>
+  <div class="store"><b>免費開始</b> · Pro <b>一次性買斷</b>,無訂閱</div>
+  <img class="shot" src="assets/app-zh.png" alt="KinetMinutes 會議庫介面:紀要、決議、待辦與可點擊時間線" width="1280" height="800">
+  <div class="grid">
+    <div class="card"><h3>🔒 零上傳</h3><p>端側 Whisper 轉寫 + 本機 AI 摘要,斷網可用。HR 面談、客戶談判、戰略會議的放心之選。</p></div>
+    <div class="card"><h3>📝 紀要,不是逐字稿</h3><p>摘要、決議、帶負責人的待辦、帶時間戳的時間線。點擊任意條目直達原聲。</p></div>
+    <div class="card"><h3>🇨🇳 中文優先</h3><p>針對普通話 + 中英混說深度優化。支援 Zoom、騰訊會議、Teams、飛書、釘釘。</p></div>
+    <div class="card"><h3>🔍 會議庫全文搜尋</h3><p>紀要+逐字稿全文搜尋,匯出 Markdown / TXT / SRT,相容 Notion 與 Obsidian。</p></div>
+  </div>
+  <div class="how">
+    <h2>三步上手</h2>
+    <div class="steps">
+      <div class="step"><span class="n">1</span><h3>照常開會</h3><p>KinetMinutes 常駐選單列,自動偵測 Zoom、Teams、騰訊會議、飛書、釘釘等會議並開始錄音。</p></div>
+      <div class="step"><span class="n">2</span><h3>正常說話</h3><p>語音由端側 Whisper 轉寫,不上傳、不進雲端,斷網也能正常運作。</p></div>
+      <div class="step"><span class="n">3</span><h3>散會即得紀要</h3><p>會議結束時本機 AI 自動產生紀要:摘要、決議、待辦與可點擊的時間線。</p></div>
+    </div>
+  </div>
+  <div class="faq">
+    <h2>常見問題</h2>
+    <details><summary>錄音會上傳嗎?</summary><p>不會。轉寫與 AI 摘要全部在本機執行,斷網可完整使用,資料可隨時整庫刪除。</p></details>
+    <details><summary>支援哪些會議軟體?</summary><p>Zoom、騰訊會議、Microsoft Teams、飛書、釘釘、Discord、Webex 自動偵測;任意通話也可手動開錄。</p></details>
+    <details><summary>免費版和 Pro 的區別?</summary><p>免費版:基礎模型、每月 5 次 AI 紀要、TXT/SRT 匯出。Pro 為一次性買斷(無訂閱):更大模型、AI 紀要不限次、Markdown/PDF 匯出。</p></details>
+    <details><summary>需要什麼配置?</summary><p>Apple Silicon 晶片的 Mac,macOS 14 以上。基礎模型首次下載後全部離線運作。</p></details>
+  </div>
+  <a class="cta" href="https://apps.apple.com/tw/app/kinetminutes/id6813593104" rel="noopener">免費下載 for Mac</a>
+  <div class="links"><a href="https://apps.apple.com/tw/app/kinetminutes/id6813593104" rel="noopener">App Store</a><a href="privacy.html">隱私政策</a></div>
 </section>
 
+<!-- ============ 日本語 ============ -->
 <section data-lang="ja">
-  <div class="badge">macOS · メニューバー · ローカル AI</div>
+  <div class="badge">macOS 14+ · Apple Silicon · メニューバー</div>
   <h1>会議に集中する。<br><em>議事録は AI が書く</em>。</h1>
   <div class="tag">KinetMinutes は会議を検知して自動録音、終了と同時に構造化議事録(要約・決定事項・アクション)を生成。完全オフライン、音声はこの Mac から出ません。</div>
+  <div class="cta-row">
+    <a class="cta" href="https://apps.apple.com/jp/app/kinetminutes/id6813593104" rel="noopener">Mac 用を無料ダウンロード</a>
+    <span class="hint">macOS 14+ · Apple Silicon 必須</span>
+  </div>
+  <div class="store"><b>無料で開始</b> · Pro は<b>買い切り</b>(サブスクなし)</div>
+  <img class="shot" src="assets/app-zh.png" alt="KinetMinutes の会議ライブラリ画面:議事録・決定事項・アクションとタイムライン" width="1280" height="800">
   <div class="grid">
     <div class="card"><h3>🔒 ゼロ送信</h3><p>オンデバイス Whisper + ローカル AI。オフラインで完全動作。面談・商談に。</p></div>
     <div class="card"><h3>📝 議事録,not 文字起こし</h3><p>要約・決定事項・担当者付きアクション・タイムスタンプ付きタイムライン。</p></div>
     <div class="card"><h3>🌐 会議アプリ対応</h3><p>Zoom、Tencent Meeting、Teams、Lark、DingTalk。</p></div>
     <div class="card"><h3>🔍 全文検索</h3><p>議事録と文字起こしを全文検索。Markdown / TXT / SRT 書き出し。</p></div>
   </div>
-  <a class="cta" href="https://apps.apple.com/">Mac App Store でダウンロード</a>
-  <div class="store">無料で開始 · Pro は買い切り</div>
-  <div class="links"><a href="privacy.html">プライバシーポリシー</a></div>
+  <div class="how">
+    <h2>使い方</h2>
+    <div class="steps">
+      <div class="step"><span class="n">1</span><h3>普通に会議するだけ</h3><p>メニューバーに常駐し、Zoom / Teams / Tencent Meeting などの会議を自動検知して録音開始。</p></div>
+      <div class="step"><span class="n">2</span><h3>普通に話す</h3><p>音声はオフラインで文字起こし。アップロードなし、クラウドなし。</p></div>
+      <div class="step"><span class="n">3</span><h3>終了と同時に議事録</h3><p>会議終了時にローカル AI が要約・決定事項・アクション・タイムラインを自動生成。</p></div>
+    </div>
+  </div>
+  <div class="faq">
+    <h2>よくある質問</h2>
+    <details><summary>音声は外部に送信されますか?</summary><p>いいえ。文字起こしも AI 要約もすべてローカルで実行されます。オフラインでも完全動作し、データはいつでも一括削除できます。</p></details>
+    <details><summary>どの会議アプリに対応?</summary><p>Zoom、Tencent Meeting、Microsoft Teams、Lark、DingTalk、Discord、Webex を自動検知。手動での録音開始も可能です。</p></details>
+    <details><summary>無料版と Pro の違いは?</summary><p>無料版:基本モデル、月 5 回の AI 議事録、TXT/SRT 書き出し。Pro は買い切り(サブスクなし):大モデル、AI 議事録無制限、Markdown/PDF 書き出し。</p></details>
+  </div>
+  <a class="cta" href="https://apps.apple.com/jp/app/kinetminutes/id6813593104" rel="noopener">Mac 用を無料ダウンロード</a>
+  <div class="links"><a href="https://apps.apple.com/jp/app/kinetminutes/id6813593104" rel="noopener">App Store</a><a href="privacy.html">プライバシーポリシー</a></div>
 </section>
 
-<footer>© 2026 Kinet · phinn@kinet.app</footer>
+<footer>© 2026 Kinet · <a href="mailto:phinn@kinet.app" style="color:inherit">phinn@kinet.app</a></footer>
 </div>
 <script>
   document.querySelectorAll('.langbar button').forEach(b => b.onclick = () => {

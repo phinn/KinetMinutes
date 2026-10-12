@@ -1,4 +1,0 @@
-module LocalLLMKit {
-header "LocalLLMKit-Swift.h"
-export *
-}

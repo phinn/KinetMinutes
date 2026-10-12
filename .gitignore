@@ -1,3 +1,10 @@
 .kinet-snapshots/
 *.xcodeproj
 .DS_Store
+.kinet-snapshots/
+*.xcodeproj
+.DS_Store
+build/DerivedData/
+build/*.xcarchive/
+build/dist*/
+*.pkg

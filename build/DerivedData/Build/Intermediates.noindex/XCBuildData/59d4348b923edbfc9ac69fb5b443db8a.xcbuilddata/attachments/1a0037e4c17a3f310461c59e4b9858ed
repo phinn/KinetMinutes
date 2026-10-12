@@ -1,4 +1,0 @@
-module EventSource {
-header "EventSource-Swift.h"
-export *
-}

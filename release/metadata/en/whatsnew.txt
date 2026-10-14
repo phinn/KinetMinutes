@@ -1,1 +1,1 @@
-Initial release.
+Fixed: search field occasionally not responding; improved library demo data and localization details.

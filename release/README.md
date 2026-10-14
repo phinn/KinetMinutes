@@ -1,4 +1,4 @@
-# Release — KinetMinutes 1.0.0 (build 1)
+# Release — KinetMinutes 1.0.1 (build 4)
 
 > 全部上架材料。目标:Mac App Store,Productivity 分类,4+ 分级,免费+IAP。
 > Bundle ID `com.kinet.minutes.app` · Team M92UKS6NA2 · macOS 14+ · Apple Silicon
@@ -41,10 +41,10 @@ xcodebuild -exportArchive -archivePath /tmp/km_archive.xcarchive \
   -exportOptionsPlist release/dist/ExportOptions-appstore.plist \
   -exportPath /tmp/km_export -allowProvisioningUpdates
 
-# 3. 上传
+# 3. 上传(新 altool 用 --api-key,旧 --api-key-id 已废弃会报 29 错)
 xcrun altool --store-type onboarded \
   --upload-package /tmp/km_export/KinetMinutes.pkg \
-  --api-key-id WGY2HCFK9K --api-issuer d4da77ce-6781-4aef-acdd-c7480df892d5
+  --api-key WGY2HCFK9K --api-issuer d4da77ce-6781-4aef-acdd-c7480df892d5
 ```
 
 ## 注意

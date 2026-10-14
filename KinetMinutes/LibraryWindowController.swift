@@ -12,6 +12,9 @@ final class LibraryWindowController: NSWindowController, NSWindowDelegate {
     private var listTableView: NSTableView!
     private var detail: DetailView!
     private var searchField: NSSearchField!
+    var searchFieldForTest: NSSearchField? { searchField }
+
+    private var autoSearchObs: NSObjectProtocol?
     private var privacyPane: PrivacyPane!
 
     convenience init() {
@@ -59,6 +62,16 @@ final class LibraryWindowController: NSWindowController, NSWindowDelegate {
         searchField.translatesAutoresizingMaskIntoConstraints = false
         searchField.target = self
         searchField.action = #selector(reload)
+        searchField.sendsSearchStringImmediately = true
+        searchField.isContinuous = true
+        searchField.delegate = self
+        autoSearchObs = NotificationCenter.default.addObserver(forName: Notification.Name("KMAutoSearch"), object: nil, queue: .main) { [weak self] note in
+            NSLog("[KMLib] KMAutoSearch block fired, self=%@ obj=%@", self == nil ? "nil" : "alive", note.object as? String ?? "nonstring")
+            guard let q = note.object as? String, let sf = self?.searchField else { return }
+            sf.stringValue = q
+            self?.reload()
+            NSLog("[KMLib] auto search applied: %@", q)
+        }
 
         listTableView = NSTableView()
         let col = NSTableColumn(identifier: .init("m"))
@@ -68,6 +81,8 @@ final class LibraryWindowController: NSWindowController, NSWindowDelegate {
         listTableView.headerView = nil
         listTableView.rowHeight = 56
         listTableView.style = .inset
+        listTableView.dataSource = self
+        listTableView.delegate = self
         listTableView.target = self
         listTableView.action = #selector(rowClicked)
         let scroll = NSScrollView()
@@ -111,9 +126,15 @@ final class LibraryWindowController: NSWindowController, NSWindowDelegate {
     }
 
     @objc func reload() {
-        meetings = MeetingStore.shared.allMeetings(search: searchField?.stringValue)
+        let q = searchField?.stringValue
+        NSLog("[KMLib] reload q=%@", q ?? "nil")
+        meetings = MeetingStore.shared.allMeetings(search: q)
         listTableView.reloadData()
-        if listTableView.selectedRow == -1, !meetings.isEmpty { detail.show(meeting: meetings[0]) }
+        listTableView.sizeLastColumnToFit()
+        if listTableView.selectedRow == -1, !meetings.isEmpty {
+            listTableView.selectRowIndexes(.init(integer: 0), byExtendingSelection: false)
+            detail.show(meeting: meetings[0])
+        }
         if meetings.isEmpty { detail.show(meeting: nil) }
     }
 
@@ -130,6 +151,14 @@ final class LibraryWindowController: NSWindowController, NSWindowDelegate {
     func window(_ window: NSWindow, willPositionSheet sheet: NSWindow, using rect: NSRect) -> NSRect { rect }
 
     func windowDidResize(_ notification: Notification) {}
+}
+
+extension LibraryWindowController: NSSearchFieldDelegate {
+    func controlTextDidChange(_ obj: Notification) {
+        NSLog("[KMLib] controlTextDidChange: %@", searchField?.stringValue ?? "nil")
+        NSObject.cancelPreviousPerformRequests(withTarget: self, selector: #selector(reload), object: nil)
+        perform(#selector(reload), with: nil, afterDelay: 0.15)
+    }
 }
 
 extension LibraryWindowController: NSTableViewDataSource, NSTableViewDelegate {
@@ -186,10 +215,12 @@ extension DetailView: NSTextViewDelegate {
 
 final class DetailView: NSView {
     private var meeting: Meeting?
+    private let headerTitle = NSTextField(labelWithString: "")
+    private let headerMeta = NSTextField(labelWithString: "")
     private let tabs = NSSegmentedControl(labels: [
         L10n.string("Summary"), L10n.string("Decisions"), L10n.string("Action Items"),
         L10n.string("Timeline"), L10n.string("Transcript")
-    ], trackingMode: .momentary, target: nil, action: nil)
+    ], trackingMode: .selectOne, target: nil, action: nil)
     private let text = TimelineTextView()
     private let exportBtn = NSButton(title: L10n.string("Export"), target: nil, action: nil)
     private let deleteBtn = NSButton(title: L10n.string("Delete"), target: nil, action: nil)
@@ -226,9 +257,24 @@ final class DetailView: NSView {
         addSubview(exportBtn)
         addSubview(deleteBtn)
         addSubview(renameBtn)
+        headerTitle.font = .systemFont(ofSize: 20, weight: .bold)
+        headerTitle.textColor = .labelColor
+        headerTitle.lineBreakMode = .byTruncatingTail
+        headerMeta.font = .systemFont(ofSize: 12)
+        headerMeta.textColor = .secondaryLabelColor
+        headerTitle.translatesAutoresizingMaskIntoConstraints = false
+        headerMeta.translatesAutoresizingMaskIntoConstraints = false
+        addSubview(headerTitle)
+        addSubview(headerMeta)
         scroll.identifier = NSUserInterfaceItemIdentifier("scroll")
         NSLayoutConstraint.activate([
-            tabs.topAnchor.constraint(equalTo: topAnchor, constant: 12),
+            headerTitle.topAnchor.constraint(equalTo: topAnchor, constant: 14),
+            headerTitle.leadingAnchor.constraint(equalTo: leadingAnchor, constant: 16),
+            headerTitle.trailingAnchor.constraint(lessThanOrEqualTo: renameBtn.leadingAnchor, constant: -12),
+            headerMeta.topAnchor.constraint(equalTo: headerTitle.bottomAnchor, constant: 2),
+            headerMeta.leadingAnchor.constraint(equalTo: leadingAnchor, constant: 16),
+            headerMeta.trailingAnchor.constraint(lessThanOrEqualTo: renameBtn.leadingAnchor, constant: -12),
+            tabs.topAnchor.constraint(equalTo: headerMeta.bottomAnchor, constant: 10),
             tabs.leadingAnchor.constraint(equalTo: leadingAnchor, constant: 16),
             exportBtn.centerYAnchor.constraint(equalTo: tabs.centerYAnchor),
             exportBtn.trailingAnchor.constraint(equalTo: trailingAnchor, constant: -16),
@@ -249,6 +295,21 @@ final class DetailView: NSView {
 
     func show(meeting: Meeting?) {
         self.meeting = meeting
+        headerTitle.stringValue = meeting?.title ?? ""
+        if let m = meeting {
+            let df = DateFormatter(); df.dateStyle = .medium; df.timeStyle = .short
+            var meta = df.string(from: m.startedAt)
+            if m.durationSeconds > 0 {
+                let mins = Int(m.durationSeconds / 60)
+                meta += " · " + (mins >= 1 ? "\(mins) 分钟" : "\(Int(m.durationSeconds)) 秒")
+            }
+            if !m.sourceApp.isEmpty { meta += " · " + m.sourceApp }
+            headerMeta.stringValue = meta
+        } else {
+            headerMeta.stringValue = ""
+        }
+        headerTitle.isHidden = meeting == nil
+        headerMeta.isHidden = meeting == nil
         tabs.isHidden = meeting == nil
         exportBtn.isHidden = meeting == nil
         deleteBtn.isHidden = meeting == nil
@@ -281,10 +342,10 @@ final class DetailView: NSView {
             text.string = L10n.string("No meetings yet")
             return
         }
+        if tabs.selectedSegment < 0 { tabs.selectedSegment = 0 }
         switch tabs.selectedSegment {
         case 0:
-            text.string = m.status == "processing" ? L10n.string("Generating…") :
-                (m.summary ?? (m.status == "failed" ? L10n.string("Notes generation failed") : L10n.string("Model not downloaded yet")))
+            text.string = m.summary ?? (m.status == "processing" ? L10n.string("Generating…") : (m.status == "failed" ? L10n.string("Notes generation failed") : L10n.string("Model not downloaded yet")))
         case 1:
             text.string = m.decisions.map { "• " + $0 }.joined(separator: "\n")
         case 2:

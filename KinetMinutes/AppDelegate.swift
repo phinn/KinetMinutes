@@ -11,6 +11,7 @@ final class AppDelegate: NSObject, NSApplicationDelegate {
 
     let statusItem = NSStatusBar.system.statusItem(withLength: NSStatusItem.variableLength)
     var libraryWindow: NSWindow?
+    var libraryWC: LibraryWindowController?
     let store = MeetingStore.shared
     let recorder = MeetingRecorder.shared
     let pipeline = MinutesPipeline.shared
@@ -39,6 +40,14 @@ final class AppDelegate: NSObject, NSApplicationDelegate {
         }
         detector?.start()
 
+        // Debug: auto-fill search box to verify filter pipeline headlessly (KM_AUTO_SEARCH="Maya")
+        if let q = ProcessInfo.processInfo.environment["KM_AUTO_SEARCH"], !q.isEmpty {
+            NSLog("[KMApp] auto search branch entered: %@", q)
+            DispatchQueue.main.asyncAfter(deadline: .now() + 4.0) {
+                NSLog("[KMApp] posting KMAutoSearch")
+                NotificationCenter.default.post(name: Notification.Name("KMAutoSearch"), object: q)
+            }
+        }
         // Debug screenshot helper: auto-open the library window on launch
         if ProcessInfo.processInfo.environment["KM_AUTO_OPEN"] == "1" {
             DispatchQueue.main.asyncAfter(deadline: .now() + 0.5) { [weak self] in
@@ -180,8 +189,10 @@ final class AppDelegate: NSObject, NSApplicationDelegate {
     }
 
     @objc func openLibrary() {
-        if libraryWindow == nil {
-            libraryWindow = LibraryWindowController().window
+        if libraryWC == nil {
+            let wc = LibraryWindowController()
+            libraryWC = wc
+            libraryWindow = wc.window
         }
         libraryWindow?.makeKeyAndOrderFront(nil)
         NSApp.activate(ignoringOtherApps: true)

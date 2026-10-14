@@ -1,0 +1,6 @@
+{
+  "en": {"loc": "142db54e-52a4-4c71-bab4-b69eb37fbac9", "set": "10249a90-0e28-453a-9d02-4aee1b43c855", "old": ["d9397df7-6c27-4c05-bb86-e7bceb60cd65"]},
+  "ja": {"loc": "6a93244a-adde-4173-9ac3-15f978885fba", "set": "fee6a842-0ac2-4b76-af8a-5a028d9e44cd", "old": ["29ac71f7-98cc-4462-a330-32acc44c8d61"]},
+  "zh-Hans": {"loc": "e3007b58-8d49-47fb-ab80-53a133dfb035", "set": "ba5b7adc-b043-4e57-8561-ac02ec63b4b8", "old": ["a5b0d357-382f-468a-8841-6a5459a369e1"]},
+  "zh-Hant": {"loc": "625245ba-72f6-4801-80d7-3319c112f19d", "set": "41e16723-f07b-46e9-a4e7-cde4966ae5e9", "old": ["b859e73e-db2d-4805-a0ad-87c7866825ee"]}
+}

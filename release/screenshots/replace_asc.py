@@ -1,8 +1,8 @@
 #!/usr/bin/env python3
-"""替换四语 App Store 截图为 1.0.1 新 UI。
-流程: DELETE 旧 appScreenshots → POST 创建(拿 uploadOperations)→ 二进制 PATCH 上传 → PATCH checksum 提交。
+"""替换四语 App Store 截图(6张完整版)。
+每个 locale: DELETE 旧全部 → 按 01..06 顺序 POST+UPLOAD+COMMIT。
 复用 asc_api.make_token()。"""
-import sys, os, json, hashlib, urllib.request, urllib.error
+import sys, os, json, hashlib, glob, time, urllib.request, urllib.error
 sys.path.insert(0, os.path.abspath(os.path.join(os.path.dirname(__file__), "..", "..", "tools", "asc-watch")))
 from asc_api import make_token
 
@@ -20,7 +20,6 @@ def call(path, method="GET", body=None, headers=None, raw=None):
         for k, v in (headers or {}).items():
             req.add_header(k, v)
         req.data = raw
-    import time
     for attempt in range(4):
         try:
             with urllib.request.urlopen(req) as r:
@@ -32,6 +31,7 @@ def call(path, method="GET", body=None, headers=None, raw=None):
             if attempt == 3:
                 return -1, repr(e)
             time.sleep(2 * (attempt + 1))
+
 def md5_b64(path):
     import base64
     digest = hashlib.md5(open(path, "rb").read()).digest()
@@ -42,27 +42,31 @@ LOCALES = json.load(open(os.path.join(HERE, "locales.json")))
 
 for loc, info in LOCALES.items():
     set_id = info["set"]
-    png = os.path.join(HERE, loc, "01-library.png")
-    size = os.path.getsize(png)
-    # 清空该 set 现有全部截图(含历轮孤儿)
+    # 清空
     code, out = call(f"/v1/appScreenshotSets/{set_id}/appScreenshots")
     if code == 200:
         for s in out.get("data", []):
             c, _ = call(f"/v1/appScreenshots/{s['id']}", "DELETE")
-            print(loc, "DEL", s["id"], c)
-    code, out = call("/v1/appScreenshots", "POST", body={
-        "data": {"type": "appScreenshots",
-                 "attributes": {"fileName": "01-library.png", "fileSize": size},
-                 "relationships": {"appScreenshotSet": {"data": {"type": "appScreenshotSets", "id": set_id}}}}})
-    if code != 201:
-        print(loc, "POST FAIL", code, str(out)[:300]); continue
-    new_id = out["data"]["id"]
-    op = out["data"]["attributes"]["uploadOperations"][0]
-    code, out = call(op["url"], op["method"], raw=open(png, "rb").read(),
-                     headers={h["name"]: h["value"] for h in op["requestHeaders"]})
-    print(loc, "UPLOAD", code, out if code != 200 else "")
-    code, out = call(f"/v1/appScreenshots/{new_id}", "PATCH", body={
-        "data": {"type": "appScreenshots", "id": new_id,
-                 "attributes": {"uploaded": True, "sourceFileChecksum": md5_b64(png)}}})
-    print(loc, "COMMIT", new_id, code)
+            print(loc, "DEL", s["id"][:8], c)
+    # 上传 01..06
+    pngs = sorted(glob.glob(os.path.join(HERE, loc, "0*.png")))
+    pngs = [p for p in pngs if not p.endswith("raw-library.png")]
+    for i, png in enumerate(pngs):
+        fname = os.path.basename(png)
+        size = os.path.getsize(png)
+        code, out = call("/v1/appScreenshots", "POST", body={
+            "data": {"type": "appScreenshots",
+                     "attributes": {"fileName": fname, "fileSize": size},
+                     "relationships": {"appScreenshotSet": {"data": {"type": "appScreenshotSets", "id": set_id}}}}})
+        if code != 201:
+            print(loc, fname, "POST FAIL", code, str(out)[:300]); continue
+        sid = out["data"]["id"]
+        op = out["data"]["attributes"]["uploadOperations"][0]
+        code, out = call(op["url"], op["method"], raw=open(png, "rb").read(),
+                         headers={h["name"]: h["value"] for h in op["requestHeaders"]})
+        print(loc, fname, "UPLOAD", code)
+        code, out = call(f"/v1/appScreenshots/{sid}", "PATCH", body={
+            "data": {"type": "appScreenshots", "id": sid,
+                     "attributes": {"uploaded": True, "sourceFileChecksum": md5_b64(png)}}})
+        print(loc, fname, "COMMIT", code)
 print("done")

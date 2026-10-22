@@ -29,7 +29,7 @@ enum Exporters {
         let segs = m.segments
         if !segs.isEmpty {
             out += "## \(L10n.string("Timeline"))\n\n"
-            out += segs.map { g in "\(timeString(g.start))  \(g.text)" }.joined(separator: "\n\n") + "\n\n"
+            out += segs.map { g in "\(timeString(g.start))  \(Self.speakerTag(g.speaker))\(g.text)" }.joined(separator: "\n\n") + "\n\n"
         } else if let t = m.transcript, !t.isEmpty {
             out += "## \(L10n.string("Transcript"))\n\n\(t)\n"
         }
@@ -44,8 +44,28 @@ enum Exporters {
         if let s = m.summary { out += s + "\n\n" }
         for d in m.decisions { out += "[D] \(d)\n" }
         for a in m.actions { out += "[TODO] \(a.task) — \(a.owner) \(a.due)\n" }
-        out += "\n" + (m.transcript ?? "")
+        out += "\n"
+        let segs = m.segments
+        if !segs.isEmpty {
+            out += segs.map { g in "[\(Self.hmsString(g.start))] \(Self.speakerTag(g.speaker))\(g.text)" }.joined(separator: "\n")
+        } else {
+            out += (m.transcript ?? "")
+        }
         return out
+    }
+
+    // 1.1: "[Me] " / "[Them] " speaker prefix (localized); nil → no tag.
+    static func speakerTag(_ speaker: String?) -> String {
+        switch speaker {
+        case "me": return L10n.string("Me") + " "
+        case "them": return L10n.string("Them") + " "
+        default: return ""
+        }
+    }
+
+    static func timeString(_ t: Double) -> String {
+        let s = Int(t)
+        return String(format: "%02d:%02d:%02d", s / 3600, s / 60 % 60, s % 60)
     }
 
     static func srt(for m: Meeting) -> String {
@@ -56,7 +76,9 @@ enum Exporters {
         }
         var out = ""
         for (i, g) in m.segments.enumerated() {
-            out += "\(i + 1)\n\(stamp(g.start)) --> \(stamp(g.end))\n\(g.text)\n\n"
+            let tag = Self.speakerTag(g.speaker).trimmingCharacters(in: .whitespaces)
+            let text = tag.isEmpty ? g.text : "<v \(tag)>\(g.text)</v>"
+            out += "\(i + 1)\n\(stamp(g.start)) --> \(stamp(g.end))\n\(text)\n\n"
         }
         if out.isEmpty, let t = m.transcript { return "1\n00:00:00,000 --> 00:00:05,000\n\(t)\n" }
         return out
@@ -114,7 +136,7 @@ enum Exporters {
         op.run()
     }
 
-    private static func timeString(_ t: Double) -> String {
+    private static func hmsString(_ t: Double) -> String {
         let s = Int(t)
         return String(format: "%02d:%02d", s / 60, s % 60)
     }

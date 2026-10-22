@@ -1,6 +1,16 @@
 // MinutesPipeline.swift — the local pipeline: audio → WhisperKit transcript →
 // local LLM structured notes (summary/decisions/actions). Zero network except
 // one-time model download (WhisperKit from HF mirror-able endpoint; LLM local).
+//
+// 1.1 dual-track attribution (F03+): recordings carry TWO CAF files —
+//   meeting-<id>.caf      mic track      → labeled [Me]
+//   meeting-<id>.sys.caf  system track   → labeled [Them] (far end)
+// Both tracks are transcribed separately and merged by time with echo
+// suppression (mic picks up loudspeaker audio, so my own words can appear in
+// the far-end track too). Attribution is structural — it comes from which
+// physical track a segment was spoken into, not from voiceprint guessing —
+// so it cannot silently degrade server-side. Single-track meetings (no sys
+// file) keep the exact 1.0 unlabeled behavior.
 
 import Foundation
 import AppKit
@@ -19,21 +29,51 @@ final class MinutesPipeline {
         var actions: [Meeting.ActionItem]
     }
 
-    /// Free plan: 5 notes per calendar month.
+    /// One transcript segment with its physical-track attribution.
+    struct LabeledSeg {
+        var start: Double
+        var end: Double
+        var text: String
+        var speaker: String?   // "me" | "them" | nil
+    }
+
+    /// Free plan: 5 notes per calendar month. Transcription is FREE and
+    /// UNLIMITED (1.2) — the wall only gates LLM notes.
     static let freeMonthlyLimit = 5
 
     static func notesUsedThisMonth() -> Int {
         let store = MeetingStore.shared
         let cal = Calendar.current
         return store.allMeetings().filter { m in
-            m.status == "ready" && cal.isDate(m.startedAt, equalTo: Date(), toGranularity: .month)
+            // Demo seeds must never consume real quota (1.2 fix: a fresh user
+            // started the month at 6/5 used and hit the wall on first use).
+            m.sourceApp != "Demo" && m.status == "ready" && !m.transcribeOnly && cal.isDate(m.startedAt, equalTo: Date(), toGranularity: .month)
         }.count
     }
 
+    /// Pro flag lives in UserDefaults ("proUnlocked"), kept fresh by
+    /// Licensing (StoreKit 2 currentEntitlements at launch + Transaction.updates
+    /// listener; refunds flip it on next refresh). Sync read is intentional —
+    /// the free wall runs inside a background pipeline step.
     static func isPro() -> Bool {
-        // MAS: StoreKit 2 check; Paddle website builds: license file. 1.0 ships free features
-        // with the monthly wall; Pro unlock lands with 1.1. Until then treat as free.
         UserDefaults.standard.bool(forKey: "proUnlocked")
+    }
+
+    /// 1.2: generate (or regenerate) notes from an ALREADY-STORED transcript.
+    /// Used by the library's "Generate Notes" button on transcribe-only
+    /// meetings — no ASR rerun, straight to the LLM with the free wall.
+    func generateNotes(meetingID: Int64) async {
+        guard !isProcessing, let t = MeetingStore.shared.meeting(id: meetingID)?.transcript,
+              !t.isEmpty else { return }
+        isProcessing = true
+        onStateChange?()
+        defer { isProcessing = false; onStateChange?() }
+        MeetingStore.shared.update(meetingID, status: "processing")
+        do {
+            try await finish(meetingID: meetingID, transcribeOnly: false, transcript: t)
+        } catch {
+            MeetingStore.shared.update(meetingID, status: "failed", summary: error.localizedDescription)
+        }
     }
 
     func process(meetingID: Int64) async {
@@ -43,21 +83,23 @@ final class MinutesPipeline {
         defer { isProcessing = false; onStateChange?() }
 
         guard var m = MeetingStore.shared.meeting(id: meetingID) else { return }
-
-        // F03 双轨:prefer the system track (far end = meeting audio); fall back to mic.
         let store = MeetingStore.shared
         let sysTrack = store.audioDir.appendingPathComponent("meeting-\(meetingID).sys.caf").path
         let micTrack = m.audioPath
             ?? store.audioDir.appendingPathComponent("meeting-\(meetingID).caf").path
-        let audioPath = FileManager.default.fileExists(atPath: sysTrack) ? sysTrack : micTrack
-        m.audioPath = audioPath
-        guard FileManager.default.fileExists(atPath: audioPath) else { return }
+        let hasSys = FileManager.default.fileExists(atPath: sysTrack)
+        let hasMic = FileManager.default.fileExists(atPath: micTrack)
+        // Primary audio for click-to-play: system track carries the conversation
+        // even when the mic stayed muted; fall back to mic.
+        m.audioPath = hasSys ? sysTrack : micTrack
+        guard hasSys || hasMic else { return }
 
-        // 0. free wall
-        if !Self.isPro(), Self.notesUsedThisMonth() >= Self.freeMonthlyLimit {
-            MeetingStore.shared.update(meetingID, status: "failed",
-                                       summary: L10n.string("Free plan limit"))
-            return
+        // 0. transcription-only mode: no LLM, no free wall — transcript is free
+        // and unlimited (1.2 funnel: transcribe for free, pay for notes).
+        let transcribeOnly = m.transcribeOnly
+        if !transcribeOnly {
+            m.status = "processing"
+            MeetingStore.shared.update(meetingID, status: "processing")
         }
 
         // 1. transcribe (WhisperKit, fully offline)
@@ -66,30 +108,142 @@ final class MinutesPipeline {
             endpoint: { UserDefaults.standard.string(forKey: "hfEndpoint") }
         )
         do {
-            let result = try await provider.transcribe(audioURL: URL(fileURLWithPath: audioPath), language: nil)
-            let segments: [Meeting.Segment] = result.segments.map {
-                Meeting.Segment(start: $0.startTime, end: $0.endTime, text: $0.text)
+            // Single-track fast path — identical to 1.0 behavior, no labels.
+            guard hasSys else {
+                let result = try await provider.transcribe(audioURL: URL(fileURLWithPath: micTrack), language: nil)
+                let segments = result.segments.map {
+                    Meeting.Segment(start: $0.startTime, end: $0.endTime, text: $0.text, speaker: nil)
+                }
+                MeetingStore.shared.update(meetingID, transcript: result.plainText, segments: segments)
+                try await finish(meetingID: meetingID, transcribeOnly: transcribeOnly, transcript: result.plainText)
+                return
             }
-            MeetingStore.shared.update(meetingID, transcript: result.plainText, segments: segments)
 
-            // 2. local LLM notes
-            let notes = try await summarize(transcript: result.plainText)
-            MeetingStore.shared.update(meetingID,
-                                       status: "ready",
-                                       summary: notes.summary,
-                                       decisions: notes.decisions,
-                                       actions: notes.actions)
-            await MainActor.run {
-                (NSApp.delegate as? AppDelegate)?.notify(
-                    title: L10n.string("Notes ready"),
-                    body: String(format: L10n.string("Notes for %@ are ready."), m.title))
+            // Dual-track: transcribe each physical track separately (sequential —
+            // one WhisperKit engine instance; concurrent calls would double the
+            // CoreML weight residency on 8 GB machines for no real speedup).
+            let micRes = try await provider.transcribe(audioURL: URL(fileURLWithPath: micTrack), language: nil)
+            let sysRes = try await provider.transcribe(audioURL: URL(fileURLWithPath: sysTrack), language: nil)
+
+            var me = micRes.segments.map {
+                LabeledSeg(start: $0.startTime, end: $0.endTime, text: $0.text, speaker: "me")
             }
+            var them = sysRes.segments.map {
+                LabeledSeg(start: $0.startTime, end: $0.endTime, text: $0.text, speaker: "them")
+            }
+
+            // Degenerate guard: system tap captured silence (in-person room,
+            // tap failure mid-recording) → attributing everything to "them"
+            // would be wrong. Fall back to unlabeled single-track output.
+            let meChars = me.reduce(0) { $0 + $1.text.count }
+            let themChars = them.reduce(0) { $0 + $1.text.count }
+            if themChars < max(20, meChars / 20) {
+                me = me.map { LabeledSeg(start: $0.start, end: $0.end, text: $0.text, speaker: nil) }
+                them = []
+            }
+
+            let merged = Self.mergeTracks(me: me, them: them)
+            let transcript = Self.plainTranscript(from: merged)
+            let segments = merged.map {
+                Meeting.Segment(start: $0.start, end: $0.end, text: $0.text, speaker: $0.speaker)
+            }
+            MeetingStore.shared.update(meetingID, transcript: transcript, segments: segments)
+
+            // 2. local LLM notes (prompt consumes the [Me]/[Them] labels)
+            try await finish(meetingID: meetingID, transcribeOnly: transcribeOnly, transcript: transcript)
         } catch {
             MeetingStore.shared.update(meetingID, status: "failed", summary: error.localizedDescription)
             await MainActor.run {
                 (NSApp.delegate as? AppDelegate)?.notify(title: L10n.string("Notes generation failed"), body: error.localizedDescription)
             }
         }
+    }
+
+    /// Shared tail (1.2): in transcribe-only mode the transcript is the
+    /// deliverable — status ready, no LLM, no quota. In full mode the free wall
+    /// lives HERE, after the transcript is safely stored, so quota exhaustion
+    /// can never throw away a finished transcript (1.1 flaw: wall was step 0).
+    private func finish(meetingID: Int64, transcribeOnly: Bool, transcript: String) async throws {
+        guard !transcribeOnly else {
+            MeetingStore.shared.update(meetingID, status: "ready")
+            await MainActor.run {
+                (NSApp.delegate as? AppDelegate)?.notify(
+                    title: L10n.string("Transcript ready"),
+                    body: L10n.string("Transcript saved. Generate AI notes anytime from the meeting."))
+            }
+            return
+        }
+        if !Self.isPro(), Self.notesUsedThisMonth() >= Self.freeMonthlyLimit {
+            MeetingStore.shared.update(meetingID, status: "failed",
+                                       summary: L10n.string("Free plan limit"))
+            await MainActor.run {
+                (NSApp.delegate as? AppDelegate)?.notify(
+                    title: L10n.string("Free plan limit"),
+                    body: L10n.string("You've used all %d free notes this month. Upgrade to Pro for unlimited notes.", Self.freeMonthlyLimit))
+            }
+            return
+        }
+        let notes = try await summarize(transcript: transcript)
+        MeetingStore.shared.update(meetingID,
+                                   status: "ready",
+                                   summary: notes.summary,
+                                   decisions: notes.decisions,
+                                   actions: notes.actions)
+        await MainActor.run {
+            (NSApp.delegate as? AppDelegate)?.notify(
+                title: L10n.string("Notes ready"),
+                body: String(format: L10n.string("Notes for %@ are ready."),
+                             MeetingStore.shared.meeting(id: meetingID)?.title ?? ""))
+        }
+    }
+
+    // MARK: - dual-track merge (echo suppression)
+
+    /// Merge mic + system segments chronologically. The mic picks up room audio
+    /// (loudspeaker), so my own voice often reappears in the far-end track.
+    /// Rule: whichever track's segment starts first wins the slot; a segment
+    /// from the OTHER track that lies almost entirely inside the winner's time
+    /// window (±0.3 s) is treated as acoustic echo and dropped. Segments from
+    /// the other side that merely overlap but extend beyond are kept — that's
+    /// genuine crosstalk, and hiding real speech is worse than showing overlap.
+    static func mergeTracks(me: [LabeledSeg], them: [LabeledSeg]) -> [LabeledSeg] {
+        var out: [LabeledSeg] = []
+        var i = 0, j = 0
+        let eps = 0.3
+        while i < me.count || j < them.count {
+            let takeMe: Bool
+            if i >= me.count { takeMe = false }
+            else if j >= them.count { takeMe = true }
+            else { takeMe = me[i].start <= them[j].start }
+            var cur = takeMe ? me[i] : them[j]
+            if takeMe { i += 1 } else { j += 1 }
+            // Drop near-duplicates of the winner from the other track.
+            while true {
+                if takeMe, j < them.count,
+                   them[j].start < cur.end + eps, them[j].end <= cur.end + eps {
+                    j += 1
+                } else if !takeMe, i < me.count,
+                          me[i].start < cur.end + eps, me[i].end <= cur.end + eps {
+                    i += 1
+                } else { break }
+            }
+            out.append(cur)
+        }
+        return out
+    }
+
+    /// Plain-text transcript with track labels, used for FTS + the LLM prompt:
+    /// `[MM:SS] [Me] text` / `[MM:SS] [Them] text` / `[MM:SS] text` (unlabeled).
+    static func plainTranscript(from segs: [LabeledSeg]) -> String {
+        segs.map { s -> String in
+            let t = Int(s.start)
+            let stamp = String(format: "[%02d:%02d]", t / 60, t % 60)
+            switch s.speaker {
+            case "me": return "\(stamp) [Me] \(s.text)"
+            case "them": return "\(stamp) [Them] \(s.text)"
+            default: return "\(stamp) \(s.text)"
+            }
+        }.joined(separator: "\n")
     }
 
     // MARK: - local LLM structured notes
@@ -107,8 +261,9 @@ final class MinutesPipeline {
         You are a meeting-notes writer. Given a raw transcript, output STRICT JSON only, no markdown fences:
         {"summary": "3-6 sentence summary in the transcript's language", "decisions": ["decision 1", ...], "actions": [{"owner": "name or 待定", "task": "...", "due": "date or empty"}...]}
         Rules: same language as the transcript; decisions = things agreed; actions = tasks with owner. If none, empty arrays.
+        Transcript lines may carry track labels: "[Me]" = this user, "[Them]" = the other participant(s). Use labels to attribute speakers: quote the right side in the summary, and when an action's owner is not named out loud, set owner from the label of the line that took the commitment ("Me"/"我" for [Me], "Them"/"对方" for [Them]).
         """
-        var config = LLMConfig(name: "local", endpoint: "http://127.0.0.1:11434/v1",
+        var config = LLMConfig(name: "local", endpoint: "http://127.0.0.1:11434",
                                apiKey: "", modelName: UserDefaults.standard.string(forKey: "localLLMModel") ?? "qwen3:4b")
         config.apiKeyProvider = { _ in "" }
         let provider = LLMService.provider(for: config)

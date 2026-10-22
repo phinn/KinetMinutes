@@ -12,6 +12,11 @@ enum L10n {
         return tables[lang]?[key] ?? tables["en"]?[key] ?? key
     }
 
+    /// Key lookup + printf-style formatting (e.g. "%d" counts).
+    static func string(_ key: String, _ args: CVarArg...) -> String {
+        String(format: string(key), arguments: args)
+    }
+
     static func preferredLanguage() -> String {
         // Debug override first (screenshots), then user's AppleLanguages.
         if let env = ProcessInfo.processInfo.environment["KM_LANG"], tables[env] != nil { return env }

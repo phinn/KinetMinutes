@@ -144,6 +144,15 @@ final class LibraryWindowController: NSWindowController, NSWindowDelegate {
         detail.show(meeting: meetings[row])
     }
 
+    /// 1.2: keyboard/programmatic selection must refresh the detail pane too —
+    /// rowClicked() only covers real mouse clicks (AX/arrow-key selection was a
+    /// dead path before: highlight moved, detail pane stayed stale).
+    func tableViewSelectionDidChange(_ notification: Notification) {
+        let row = listTableView.selectedRow
+        guard row >= 0, row < meetings.count else { return }
+        detail.show(meeting: meetings[row])
+    }
+
     func windowWillClose(_ notification: Notification) {
         // no-op
     }
@@ -181,6 +190,7 @@ extension LibraryWindowController: NSTableViewDataSource, NSTableViewDelegate {
         if !m.tags.isEmpty { sub += " · " + m.tags.map { "#\($0)" }.joined(separator: " ") }   // F07 tags
         if m.status == "processing" { sub += " · " + L10n.string("Generating…") }
         if m.status == "failed" { sub += " · " + L10n.string("Failed") }
+        if m.transcribeOnly && m.summary == nil { sub += " · " + L10n.string("Transcript only") }   // 1.2: until notes generated
         let subL = NSTextField(labelWithString: sub)
         subL.font = .systemFont(ofSize: 11)
         subL.textColor = .secondaryLabelColor
@@ -225,6 +235,11 @@ final class DetailView: NSView {
     private let exportBtn = NSButton(title: L10n.string("Export"), target: nil, action: nil)
     private let deleteBtn = NSButton(title: L10n.string("Delete"), target: nil, action: nil)
     private let renameBtn = NSButton(title: L10n.string("Rename"), target: nil, action: nil)
+    /// 1.2: shown on transcribe-only meetings — generates AI notes from the
+    /// stored transcript (free wall applies; Pro upsell lives in the wall toast).
+    private let genNotesBtn = NSButton(title: L10n.string("Generate Notes…"), target: nil, action: nil)
+    /// 1.2: small badge marking transcript-only meetings in the detail header.
+    private let toBadge = NSTextField(labelWithString: L10n.string("Transcript only"))
     private var player: AVAudioPlayer?   // F06: timeline click → play from timestamp
 
     override init(frame: NSRect) {
@@ -232,6 +247,21 @@ final class DetailView: NSView {
         tabs.segmentStyle = .texturedRounded
         tabs.target = self; tabs.action = #selector(tabChanged)
         tabs.translatesAutoresizingMaskIntoConstraints = false
+
+        // 1.2: transcript-only affordances
+        genNotesBtn.bezelStyle = .rounded
+        genNotesBtn.controlSize = .small
+        genNotesBtn.target = self
+        genNotesBtn.action = #selector(generateNotesTapped)
+        genNotesBtn.translatesAutoresizingMaskIntoConstraints = false
+        genNotesBtn.isHidden = true
+        toBadge.font = .systemFont(ofSize: 10, weight: .semibold)
+        toBadge.textColor = .secondaryLabelColor
+        toBadge.wantsLayer = true
+        toBadge.layer?.cornerRadius = 4
+        toBadge.layer?.masksToBounds = true
+        toBadge.translatesAutoresizingMaskIntoConstraints = false
+        toBadge.isHidden = true
 
         text.isEditable = false
         text.delegate = self
@@ -257,6 +287,8 @@ final class DetailView: NSView {
         addSubview(exportBtn)
         addSubview(deleteBtn)
         addSubview(renameBtn)
+        addSubview(genNotesBtn)
+        addSubview(toBadge)
         headerTitle.font = .systemFont(ofSize: 20, weight: .bold)
         headerTitle.textColor = .labelColor
         headerTitle.lineBreakMode = .byTruncatingTail
@@ -282,6 +314,10 @@ final class DetailView: NSView {
             deleteBtn.trailingAnchor.constraint(equalTo: exportBtn.leadingAnchor, constant: -8),
             renameBtn.centerYAnchor.constraint(equalTo: tabs.centerYAnchor),
             renameBtn.trailingAnchor.constraint(equalTo: deleteBtn.leadingAnchor, constant: -8),
+            genNotesBtn.centerYAnchor.constraint(equalTo: tabs.centerYAnchor),
+            genNotesBtn.trailingAnchor.constraint(equalTo: renameBtn.leadingAnchor, constant: -8),
+            toBadge.centerYAnchor.constraint(equalTo: headerTitle.centerYAnchor),
+            toBadge.leadingAnchor.constraint(equalTo: headerTitle.trailingAnchor, constant: 8),
             scroll.topAnchor.constraint(equalTo: tabs.bottomAnchor, constant: 8),
             scroll.leadingAnchor.constraint(equalTo: leadingAnchor, constant: 16),
             scroll.trailingAnchor.constraint(equalTo: trailingAnchor, constant: -16),
@@ -314,6 +350,19 @@ final class DetailView: NSView {
         exportBtn.isHidden = meeting == nil
         deleteBtn.isHidden = meeting == nil
         renameBtn.isHidden = meeting == nil
+        // 1.2: transcribe-only affordances — badge until notes exist; button
+        // offers "Generate Notes" while the TO meeting has no summary yet
+        // (covers: never generated / notes generation failed).
+        let isTO = meeting?.transcribeOnly ?? false
+        // A failed pipeline writes the error text into `summary` — that must
+        // NOT count as "has notes" or the Generate button would hide forever.
+        let hasNotes = !(meeting?.summary ?? "").isEmpty && meeting?.status != "failed"
+        let hasTranscript = !(meeting?.transcript ?? "").isEmpty
+        let busy = meeting?.status == "processing"
+        toBadge.isHidden = !isTO || hasNotes
+        genNotesBtn.isHidden = !isTO || hasNotes
+        genNotesBtn.isEnabled = !busy && hasTranscript
+        genNotesBtn.title = busy ? L10n.string("Generating notes…") : L10n.string("Generate Notes…")
         if meeting == nil { player?.stop(); player = nil }
         tabChanged()
     }
@@ -359,6 +408,8 @@ final class DetailView: NSView {
     }
 
     /// F06: build timeline with clickable [MM:SS] links that seek the audio player.
+    /// 1.1: segments from the dual-track pipeline carry a speaker badge
+    /// ([Me]/[Them], localized) between the timestamp and the text.
     static func timelineAttr(from segments: [Meeting.Segment]) -> NSAttributedString {
         let out = NSMutableAttributedString()
         for (i, g) in segments.enumerated() {
@@ -369,11 +420,19 @@ final class DetailView: NSView {
                 .foregroundColor: NSColor.controlAccentColor,
                 .font: NSFont.monospacedDigitSystemFont(ofSize: 12, weight: .semibold)
             ])
+            out.append(link)
+            if let sp = g.speaker {
+                let badge: [NSAttributedString.Key: Any] = [
+                    .font: NSFont.boldSystemFont(ofSize: 11),
+                    .foregroundColor: sp == "me" ? NSColor.systemBlue : NSColor.systemOrange
+                ]
+                out.append(NSAttributedString(string: Exporters.speakerTag(sp), attributes: badge))
+            }
             let body = NSAttributedString(string: g.text + (i == segments.count - 1 ? "" : "\n\n"), attributes: [
                 .font: NSFont.systemFont(ofSize: 13),
                 .foregroundColor: NSColor.labelColor
             ])
-            out.append(link); out.append(body)
+            out.append(body)
         }
         return out
     }
@@ -395,6 +454,19 @@ final class DetailView: NSView {
         }
         player?.currentTime = seconds
         player?.play()
+    }
+
+    /// 1.2: turn a transcribe-only meeting into full notes from its stored
+    /// transcript — no ASR rerun. Free wall + quota enforcement run inside.
+    @objc private func generateNotesTapped() {
+        guard let m = meeting else { return }
+        show(meeting: m)   // repaint busy state immediately
+        Task {
+            await MinutesPipeline.shared.generateNotes(meetingID: m.id)
+            await MainActor.run {
+                if let fresh = MeetingStore.shared.meeting(id: m.id) { self.show(meeting: fresh) }
+            }
+        }
     }
 
     @objc private func exportSheet() {

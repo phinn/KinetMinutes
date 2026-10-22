@@ -26,6 +26,13 @@ struct Meeting {
         return (try? JSONDecoder().decode([String].self, from: d)) ?? []
     }
 
+    // MARK: - Processing mode (1.2)
+    // "transcribe-only" tag = transcript only, no LLM notes; absence = full mode.
+    // Persisted as a tag so orphan-recovery reprocessing (ready_to_process at
+    // launch) picks the right pipeline with zero schema migration.
+    static let transcribeOnlyTag = "transcribe-only"
+    var transcribeOnly: Bool { tags.contains(Meeting.transcribeOnlyTag) }
+
     var decisions: [String] {
         guard let d = decisionsJSON?.data(using: .utf8) else { return [] }
         return (try? JSONDecoder().decode([String].self, from: d)) ?? []
@@ -43,6 +50,9 @@ struct Meeting {
         var start: Double
         var end: Double
         var text: String
+        /// "me" | "them" | nil (single-track meetings carry no speaker label).
+        /// 1.1: dual-track pipeline tags each segment by its source track.
+        var speaker: String?
     }
     var segments: [Segment] {
         guard let d = segmentsJSON?.data(using: .utf8) else { return [] }
@@ -126,17 +136,35 @@ final class MeetingStore {
 
     // MARK: - CRUD
 
-    func createMeeting(sourceApp: String) -> Meeting {
+    func createMeeting(sourceApp: String, transcribeOnly: Bool = false) -> Meeting {
         queue.sync {
             var m = Meeting(title: defaultTitle(), sourceApp: sourceApp, startedAt: Date(), durationSeconds: 0, status: "recording")
             var stmt: OpaquePointer?
-            sqlite3_prepare_v2(db, "INSERT INTO meetings (title, source_app, started_at, status) VALUES (?,?,?,?)", -1, &stmt, nil)
+            sqlite3_prepare_v2(db, "INSERT INTO meetings (title, source_app, started_at, status, tags_json) VALUES (?,?,?,?,?)", -1, &stmt, nil)
             bind(stmt, 1, m.title); bind(stmt, 2, m.sourceApp)
             sqlite3_bind_double(stmt, 3, m.startedAt.timeIntervalSince1970)
             bind(stmt, 4, m.status)
+            let tags = transcribeOnly ? [Meeting.transcribeOnlyTag] : []
+            let tagJSON = String(data: (try? JSONEncoder().encode(tags)) ?? Data("[]".utf8), encoding: .utf8) ?? "[]"
+            bind(stmt, 5, tagJSON)
             sqlite3_step(stmt); sqlite3_finalize(stmt)
             m.id = sqlite3_last_insert_rowid(db)
             return m
+        }
+    }
+
+    /// 1.2: add/remove the transcribe-only tag, preserving any other tags.
+    func setTranscribeOnly(_ id: Int64, _ on: Bool) {
+        guard var m = meeting(id: id) else { return }
+        var tags = m.tags.filter { $0 != Meeting.transcribeOnlyTag }
+        if on { tags.append(Meeting.transcribeOnlyTag) }
+        let json = String(data: (try? JSONEncoder().encode(tags)) ?? Data("[]".utf8), encoding: .utf8) ?? "[]"
+        queue.sync {
+            var stmt: OpaquePointer?
+            sqlite3_prepare_v2(db, "UPDATE meetings SET tags_json=? WHERE id=\(id)", -1, &stmt, nil)
+            bind(stmt, 1, json)
+            sqlite3_step(stmt); sqlite3_finalize(stmt)
+            notifyChanged()
         }
     }
 
@@ -157,6 +185,19 @@ final class MeetingStore {
             return fetch("SELECT \(cols) FROM meetings ORDER BY started_at DESC")
         }
     }
+
+    /// 1.2: notify observers OUTSIDE the serial queue. Observers (library
+    /// reload, detail refresh) touch the store again — posting inside
+    /// queue.sync deadlocks when an observer does waitUntilFinished on an
+    /// operation that re-enters this same queue (sampled live in 1.2 smoke).
+    private func notifyChanged() {
+        DispatchQueue.global().async { [weak self] in
+            NotificationCenter.default.post(name: Self.meetingsChangedNotification, object: nil)
+        }
+    }
+
+    /// bridged so the async closure doesn't need `self`
+    nonisolated static let meetingsChangedNotification = Notification.Name("meetingsChanged")
 
     func update(_ id: Int64, title: String? = nil, status: String? = nil, endedAt: Date? = nil,
                 duration: Double? = nil, audioPath: String? = nil, transcript: String? = nil,
@@ -191,7 +232,7 @@ final class MeetingStore {
             if actions != nil { bind(stmt, i, actJSON); i += 1 }
             if segments != nil { bind(stmt, i, segJSON); i += 1 }
             sqlite3_step(stmt); sqlite3_finalize(stmt)
-            NotificationCenter.default.post(name: .meetingsChanged, object: nil)
+            notifyChanged()
         }
     }
 
@@ -202,7 +243,7 @@ final class MeetingStore {
             }
             exec("DELETE FROM meetings WHERE id=\(id)")
         }
-        NotificationCenter.default.post(name: .meetingsChanged, object: nil)
+        notifyChanged()
     }
 
     func deleteAll() {
@@ -304,7 +345,7 @@ final class MeetingStore {
             }
         }
         UserDefaults.standard.set(true, forKey: flag)
-        NotificationCenter.default.post(name: .meetingsChanged, object: nil)
+        notifyChanged()
     }
 
     // MARK: - Demo seed locale packs(截图/审核用富内容,按 UI 语言生成)

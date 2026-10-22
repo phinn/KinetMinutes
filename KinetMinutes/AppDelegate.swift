@@ -22,6 +22,13 @@ final class AppDelegate: NSObject, NSApplicationDelegate {
     func applicationDidFinishLaunching(_ notification: Notification) {
         NSApp.setActivationPolicy(.accessory)   // menu-bar app
         UNUserNotificationCenter.current().requestAuthorization(options: [.alert, .sound]) { _, _ in }
+        // F08 (1.1): refresh Pro entitlement first so the menu shows the right
+        // state and the price string is ready before first menu open.
+        Task { @MainActor in
+            await Licensing.shared.refresh()
+            await Licensing.shared.loadPrice()
+            buildStatusMenu()
+        }
         store.migrateIfNeeded()
         store.seedDemoMeetingIfNeeded()   // review notes 承诺的 pre-seeded demo meeting(90 秒复测路径依赖它)
         MeetingRecorder.recoverOrphanedMeetings()   // F03: crash recovery — finalize meetings left mid-flight
@@ -30,8 +37,8 @@ final class AppDelegate: NSObject, NSApplicationDelegate {
             store.update(m.id, status: "processing")
             Task.detached { await MinutesPipeline.shared.process(meetingID: m.id) }
         }
-        recorder.onLevelChange = { [weak self] level in self?.updateIcon(recording: self?.recorder.isRecording ?? false, level: level) }
-        pipeline.onStateChange = { [weak self] in self?.refreshStatusMenu() }
+        recorder.onLevelChange = { [weak self] level in self?.scheduleStatusRefresh() }
+        pipeline.onStateChange = { [weak self] in self?.scheduleStatusRefresh() }
         buildStatusMenu()
         updateIcon(recording: false, level: 0)
 
@@ -75,21 +82,29 @@ final class AppDelegate: NSObject, NSApplicationDelegate {
         }
     }
 
-    func autoStartMeeting(sourceApp: String) {
-        guard !recorder.isRecording else { return }
-        startMeeting(sourceApp: sourceApp)
+    /// 1.2: transcribe-only recording — free, unlimited, no LLM notes.
+    @objc func toggleTranscribeOnly() {
+        if recorder.isRecording {
+            finishMeeting()
+        } else {
+            startMeeting(sourceApp: "Manual", transcribeOnly: true)
+        }
     }
 
-    private func startMeeting(sourceApp: String) {
-        do {
-            let meeting = store.createMeeting(sourceApp: sourceApp)
-            try recorder.start(meetingID: meeting.id)
-            notify(title: L10n.string("Recording started"),
-                   body: String(format: L10n.string("Recording from %@. Notes will be ready when the meeting ends."), sourceApp))
-            refreshStatusMenu()
-        } catch {
-            notify(title: L10n.string("Cannot start recording"), body: error.localizedDescription)
-        }
+    func autoStartMeeting(sourceApp: String) {
+        guard !recorder.isRecording else { return }
+        // auto-record follows the last used mode; default to full notes.
+        startMeeting(sourceApp: sourceApp, transcribeOnly: UserDefaults.standard.bool(forKey: "autoTranscribeOnly"))
+    }
+
+    private func startMeeting(sourceApp: String, transcribeOnly: Bool = false) {
+        let meeting = store.createMeeting(sourceApp: sourceApp, transcribeOnly: transcribeOnly)
+        recorder.start(meetingID: meeting.id)
+        notify(title: L10n.string("Recording started"),
+               body: transcribeOnly
+                ? String(format: L10n.string("Recording from %@. Transcript will be ready when the recording ends."), sourceApp)
+                : String(format: L10n.string("Recording from %@. Notes will be ready when the meeting ends."), sourceApp))
+        refreshStatusMenu()
     }
 
     func finishMeeting() {
@@ -123,13 +138,42 @@ final class AppDelegate: NSObject, NSApplicationDelegate {
         menu.addItem(statusMenuItem!)
         menu.addItem(.separator())
 
-        let toggle = NSMenuItem(title: L10n.string("Start Recording"), action: #selector(toggleRecording), keyEquivalent: "r")
+        // 1.2: recording state flips the primary item into Stop (was a
+        // forever-"Start Recording" dead-end before). TO entry hidden while
+        // recording — both toggles finish the same way.
+        let recording = recorder.isRecording
+        let toggle = NSMenuItem(
+            title: L10n.string(recording ? "Stop & Generate Notes" : "Start Recording"),
+            action: #selector(toggleRecording), keyEquivalent: "r")
         toggle.target = self
         menu.addItem(toggle)
+
+        if !recording {
+            // 1.2: free & unlimited transcript-only recording
+            let to = NSMenuItem(title: L10n.string("Start Transcribe-Only"), action: #selector(toggleTranscribeOnly), keyEquivalent: "t")
+            to.target = self
+            menu.addItem(to)
+        }
 
         let library = NSMenuItem(title: L10n.string("Meeting Library…"), action: #selector(openLibrary), keyEquivalent: "l")
         library.target = self
         menu.addItem(library)
+
+        // F08 (1.1): lifetime unlock menu items (hidden once Pro is active).
+        if Licensing.shared.isPro {
+            let pro = NSMenuItem(title: L10n.string("Pro Active ✓"), action: nil, keyEquivalent: "")
+            pro.state = .on
+            menu.addItem(pro)
+        } else {
+            var upTitle = L10n.string("Upgrade to Pro…")
+            if let price = Licensing.shared.priceString, !price.isEmpty { upTitle += "  (\(price))" }
+            let up = NSMenuItem(title: upTitle, action: #selector(upgradePro), keyEquivalent: "")
+            up.target = self
+            menu.addItem(up)
+            let rs = NSMenuItem(title: L10n.string("Restore Purchase"), action: #selector(restorePro), keyEquivalent: "")
+            rs.target = self
+            menu.addItem(rs)
+        }
 
         let privacy = NSMenuItem(title: L10n.string("Privacy…"), action: #selector(openPrivacy), keyEquivalent: "p")
         privacy.target = self
@@ -153,7 +197,23 @@ final class AppDelegate: NSObject, NSApplicationDelegate {
         statusItem.menu = menu
     }
 
+    /// MUST be reached on the main thread only (touches statusItem.button —
+    /// NSStatusItem lazily creates its status-bar window on first .button
+    /// access, and doing that off-main corrupts Autolayout → abort at launch
+    /// when orphan recovery fires the pipeline from Task.detached).
+    /// Callers on arbitrary queues go through `scheduleStatusRefresh()`.
+    /// Which structural shape the status menu is in — rebuild only on change
+    /// so the 0.3 s level heartbeat retitles instead of re-arming the menu
+    /// (reassigning statusItem.menu while the menu is open glitches AppKit).
+    private enum MenuShape: Equatable { case idle, recording, processing }
+    private var menuShape: MenuShape = .idle
+
     func refreshStatusMenu() {
+        let shape: MenuShape = recorder.isRecording ? .recording : (pipeline.isProcessing ? .processing : .idle)
+        if shape != menuShape {
+            menuShape = shape
+            buildStatusMenu()
+        }
         if recorder.isRecording, let mid = recorder.currentMeetingID, let m = store.meeting(id: mid) {
             statusMenuItem?.title = String(format: L10n.string("Recording — %@ (%@)"), m.title, recorder.elapsedString)
         } else if pipeline.isProcessing {
@@ -162,6 +222,14 @@ final class AppDelegate: NSObject, NSApplicationDelegate {
             statusMenuItem?.title = L10n.string("Standby — no meeting")
         }
         updateIcon(recording: recorder.isRecording, level: recorder.lastLevel)
+    }
+
+    /// Thread-safe hop: pipeline/level callbacks may fire from background
+    /// queues; coalesce onto the main thread (idempotent, cheap when already
+    /// on main because the hop is synchronous).
+    func scheduleStatusRefresh() {
+        if Thread.isMainThread { refreshStatusMenu(); return }
+        DispatchQueue.main.async { [weak self] in self?.refreshStatusMenu() }
     }
 
     @objc func toggleAutoRecord() {
@@ -203,6 +271,30 @@ final class AppDelegate: NSObject, NSApplicationDelegate {
         NotificationCenter.default.post(name: .showPrivacyPane, object: nil)
         libraryWindow?.makeKeyAndOrderFront(nil)
         NSApp.activate(ignoringOtherApps: true)
+    }
+
+    // F08 (1.1): lifetime unlock via StoreKit 2 non-consumable.
+    @objc func upgradePro() {
+        Task { @MainActor in
+            await Licensing.shared.purchase()
+            refreshStatusMenu()
+            if case .failed(let msg) = Licensing.shared.purchaseState {
+                let a = NSAlert()
+                a.messageText = L10n.string("Purchase Failed")
+                a.informativeText = msg
+                a.runModal()
+            }
+        }
+    }
+
+    @objc func restorePro() {
+        Task { @MainActor in
+            await Licensing.shared.restore()
+            refreshStatusMenu()
+            let a = NSAlert()
+            a.messageText = Licensing.shared.isPro ? L10n.string("Pro Active ✓") : L10n.string("No purchases found")
+            a.runModal()
+        }
     }
 
     func notify(title: String, body: String) {

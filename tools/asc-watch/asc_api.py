@@ -5,7 +5,8 @@ import base64, json, subprocess, sys, time, urllib.request, urllib.error, os
 KEY = os.path.expanduser("~/.appstoreconnect/private_keys/AuthKey_WGY2HCFK9K.p8")
 KID = "WGY2HCFK9K"
 ISSUER = "d4da77ce-6781-4aef-acdd-c7480df892d5"
-PEM = "scripts/.asc-key.pem"
+# 相对脚本自身定位, 不依赖调用方 CWD (被 nohup/别的目录 import 也能跑)
+PEM = os.path.join(os.path.dirname(os.path.abspath(__file__)), ".asc-key.pem")
 
 def b64url(b: bytes) -> str:
     return base64.urlsafe_b64encode(b).rstrip(b"=").decode()

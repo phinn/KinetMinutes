@@ -187,10 +187,12 @@ extension LibraryWindowController: NSTableViewDataSource, NSTableViewDelegate {
         title.font = .systemFont(ofSize: 13, weight: .semibold)
         let f = DateFormatter(); f.dateFormat = "MMM d HH:mm"
         var sub = f.string(from: m.startedAt) + " · \(m.sourceApp) · \(Int(m.durationSeconds / 60)) " + L10n.string("Minutes")
-        if !m.tags.isEmpty { sub += " · " + m.tags.map { "#\($0)" }.joined(separator: " ") }   // F07 tags
+        if !m.tags.isEmpty { sub += " · " + m.tags.filter { $0 != "transcribe-only" }.map { "#\($0)" }.joined(separator: " ") }   // F07 tags (TO tag shown via badge/label below)
         if m.status == "processing" { sub += " · " + L10n.string("Generating…") }
         if m.status == "failed" { sub += " · " + L10n.string("Failed") }
-        if m.transcribeOnly && m.summary == nil { sub += " · " + L10n.string("Transcript only") }   // 1.2: until notes generated
+        if m.transcribeOnly && !(m.summary ?? "").isEmpty && m.status != "failed" {
+            sub += " · " + L10n.string("Transcript only")   // 1.2: until notes exist
+        }
         let subL = NSTextField(labelWithString: sub)
         subL.font = .systemFont(ofSize: 11)
         subL.textColor = .secondaryLabelColor
@@ -459,7 +461,8 @@ final class DetailView: NSView {
     /// 1.2: turn a transcribe-only meeting into full notes from its stored
     /// transcript — no ASR rerun. Free wall + quota enforcement run inside.
     @objc private func generateNotesTapped() {
-        guard let m = meeting else { return }
+        guard let m = meeting, m.transcribeOnly, m.status != "processing",
+              (m.summary ?? "").isEmpty || m.status == "failed" else { return }  // 1.2: no re-entry
         show(meeting: m)   // repaint busy state immediately
         Task {
             await MinutesPipeline.shared.generateNotes(meetingID: m.id)

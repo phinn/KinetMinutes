@@ -189,6 +189,10 @@ final class MinutesPipeline {
                                    summary: notes.summary,
                                    decisions: notes.decisions,
                                    actions: notes.actions)
+        // 1.2: a TO meeting that now has real notes is a full-mode meeting —
+        // drop the tag or it dodges the quota forever (counts-as-ready but
+        // excluded from notesUsedThisMonth).
+        MeetingStore.shared.setTranscribeOnly(meetingID, false)
         await MainActor.run {
             (NSApp.delegate as? AppDelegate)?.notify(
                 title: L10n.string("Notes ready"),
@@ -263,8 +267,18 @@ final class MinutesPipeline {
         Rules: same language as the transcript; decisions = things agreed; actions = tasks with owner. If none, empty arrays.
         Transcript lines may carry track labels: "[Me]" = this user, "[Them]" = the other participant(s). Use labels to attribute speakers: quote the right side in the summary, and when an action's owner is not named out loud, set owner from the label of the line that took the commitment ("Me"/"我" for [Me], "Them"/"对方" for [Them]).
         """
+        var modelName = UserDefaults.standard.string(forKey: "localLLMModel") ?? "qwen3:4b"
+        // 1.2 self-heal: resolve the configured model against what this Ollama
+        // actually has. The hardcoded default (qwen3:4b) 404s on machines that
+        // pulled a different model, and the settings pane was never visited.
+        if let resolved = await Self.resolveOllamaModel(configured: modelName, endpoint: "http://127.0.0.1:11434") {
+            if resolved != modelName {
+                modelName = resolved
+                UserDefaults.standard.set(resolved, forKey: "localLLMModel")
+            }
+        }
         var config = LLMConfig(name: "local", endpoint: "http://127.0.0.1:11434",
-                               apiKey: "", modelName: UserDefaults.standard.string(forKey: "localLLMModel") ?? "qwen3:4b")
+                               apiKey: "", modelName: modelName)
         config.apiKeyProvider = { _ in "" }
         let provider = LLMService.provider(for: config)
         let messages = [Participant(role: "system", content: sys),
@@ -275,6 +289,24 @@ final class MinutesPipeline {
             if case .text(let s) = chunk { text += s }
         }
         return Self.parseNotes(text)
+    }
+
+    /// Ask Ollama which models exist locally. Returns a usable model name:
+    /// the configured one if present, else the first qwen*, else the first
+    /// installed model. Nil when Ollama is unreachable or has no models.
+    static func resolveOllamaModel(configured: String, endpoint: String) async -> String? {
+        guard let url = URL(string: "\(endpoint)/api/tags") else { return nil }
+        guard let (data, resp) = try? await URLSession.shared.data(from: url),
+              (resp as? HTTPURLResponse)?.statusCode == 200,
+              let arr = (try? JSONSerialization.jsonObject(with: data)) as? [String: Any],
+              let models = arr["models"] as? [[String: Any]] else { return nil }
+        let names = models.compactMap { $0["name"] as? String }
+        guard !names.isEmpty else { return nil }
+        if names.contains(configured) { return configured }
+        // exact name may carry a tag suffix mismatch (qwen2.5 vs qwen2.5:3b)
+        if names.contains(where: { $0.hasPrefix(configured) }) { return names.first { $0.hasPrefix(configured) } }
+        if let q = names.first(where: { $0.hasPrefix("qwen") }) { return q }
+        return names.first
     }
 
     static func parseNotes(_ raw: String) -> LLMNotes {

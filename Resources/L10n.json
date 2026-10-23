@@ -80,7 +80,15 @@
   "Transcript ready": "Transcript ready",
   "Transcript saved. Generate AI notes anytime from the meeting.": "Transcript saved. Generate AI notes anytime from the meeting.",
   "Transcript only": "Transcript only",
-  "Generate Notes…": "Generate Notes…"
+  "Generate Notes…": "Generate Notes…",
+  "Settings…": "Settings…",
+  "Recording mode": "Recording mode",
+  "Full meeting notes": "Full meeting notes",
+  "Mode hint": "New recordings start in this mode. Transcript-only is free and unlimited; AI notes use your monthly quota.",
+  "Model hint": "Used for on-device transcription. Larger is more accurate; changes apply to the next recording.",
+  "Download failed": "Download failed",
+  "AI notes this month": "AI notes this month",
+  "Quota hint": "A meeting counts once after its AI notes are generated. Upgrade to Pro for unlimited."
  },
  "zh-Hans": {
   "Standby — no meeting": "待命——未在开会",
@@ -163,7 +171,15 @@
   "Transcript ready": "逐字稿已生成",
   "Transcript saved. Generate AI notes anytime from the meeting.": "逐字稿已保存。可随时在会议详情中生成 AI 纪要。",
   "Transcript only": "仅转写",
-  "Generate Notes…": "生成纪要…"
+  "Generate Notes…": "生成纪要…",
+  "Settings…": "设置…",
+  "Recording mode": "录音模式",
+  "Full meeting notes": "完整会议纪要",
+  "Mode hint": "新录音将以此模式开始。纯转写免费不限量;AI 纪要消耗每月额度。",
+  "Model hint": "用于本机转写。模型越大越准,切换对下一次录音生效。",
+  "Download failed": "下载失败",
+  "AI notes this month": "本月 AI 纪要",
+  "Quota hint": "每场生成了 AI 纪要的会议计 1 次。升级 Pro 不限量。"
  },
  "zh-Hant": {
   "Standby — no meeting": "待命——未在開會",
@@ -246,7 +262,15 @@
   "Transcript ready": "逐字稿已產生",
   "Transcript saved. Generate AI notes anytime from the meeting.": "逐字稿已儲存。可隨時在會議詳情中產生 AI 紀要。",
   "Transcript only": "僅轉寫",
-  "Generate Notes…": "產生紀要…"
+  "Generate Notes…": "產生紀要…",
+  "Settings…": "設定…",
+  "Recording mode": "錄音模式",
+  "Full meeting notes": "完整會議紀要",
+  "Mode hint": "新錄音將以此模式開始。純轉寫免費不限量;AI 紀要消耗每月額度。",
+  "Model hint": "用於本機轉寫。模型越大越準,切換對下一次錄音生效。",
+  "Download failed": "下載失敗",
+  "AI notes this month": "本月 AI 紀要",
+  "Quota hint": "每場生成了 AI 紀要的會議計 1 次。升級 Pro 不限量。"
  },
  "ja": {
   "Standby — no meeting": "待機中 — 会議なし",
@@ -329,6 +353,14 @@
   "Transcript ready": "文字起こし完了",
   "Transcript saved. Generate AI notes anytime from the meeting.": "文字起こしを保存しました。会議詳細からいつでも AI 議事録を作成できます。",
   "Transcript only": "文字起こしのみ",
-  "Generate Notes…": "議事録を作成…"
+  "Generate Notes…": "議事録を作成…",
+  "Settings…": "設定…",
+  "Recording mode": "録音モード",
+  "Full meeting notes": "フル議事録",
+  "Mode hint": "新規録音はこのモードで開始します。文字起こしのみは無料・無制限、AI議事録は月間枠を消費します。",
+  "Model hint": "端末内での文字起こしに使用します。大きいほど高精度。変更は次の録音から適用されます。",
+  "Download failed": "ダウンロードに失敗しました",
+  "AI notes this month": "今月のAI議事録",
+  "Quota hint": "AI議事録を生成した会議が1件として数えられます。Proで無制限。"
  }
 }

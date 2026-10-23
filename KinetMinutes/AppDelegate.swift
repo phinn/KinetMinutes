@@ -12,6 +12,7 @@ final class AppDelegate: NSObject, NSApplicationDelegate {
     let statusItem = NSStatusBar.system.statusItem(withLength: NSStatusItem.variableLength)
     var libraryWindow: NSWindow?
     var libraryWC: LibraryWindowController?
+    var statsWC: StatsWindowController?
     var settingsWC: SettingsWindowController?
     let store = MeetingStore.shared
     let recorder = MeetingRecorder.shared
@@ -166,6 +167,11 @@ final class AppDelegate: NSObject, NSApplicationDelegate {
         library.target = self
         menu.addItem(library)
 
+        // 1.3 P2: meeting statistics
+        let stats = NSMenuItem(title: L10n.string("Meeting Statistics…"), action: #selector(openStats), keyEquivalent: "")
+        stats.target = self
+        menu.addItem(stats)
+
         // F08 (1.1): lifetime unlock menu items (hidden once Pro is active).
         if Licensing.shared.isPro {
             let pro = NSMenuItem(title: L10n.string("Pro Active ✓"), action: nil, keyEquivalent: "")
@@ -276,6 +282,12 @@ final class AppDelegate: NSObject, NSApplicationDelegate {
         }
         libraryWindow?.makeKeyAndOrderFront(nil)
         NSApp.activate(ignoringOtherApps: true)
+    }
+
+    /// 1.3 P2: meeting statistics (aggregate only).
+    @objc func openStats() {
+        if statsWC == nil { statsWC = StatsWindowController() }
+        statsWC?.showPane()
     }
 
     @objc func openSettings() {

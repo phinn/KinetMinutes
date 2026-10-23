@@ -12,6 +12,7 @@ final class AppDelegate: NSObject, NSApplicationDelegate {
     let statusItem = NSStatusBar.system.statusItem(withLength: NSStatusItem.variableLength)
     var libraryWindow: NSWindow?
     var libraryWC: LibraryWindowController?
+    var settingsWC: SettingsWindowController?
     let store = MeetingStore.shared
     let recorder = MeetingRecorder.shared
     let pipeline = MinutesPipeline.shared
@@ -53,6 +54,12 @@ final class AppDelegate: NSObject, NSApplicationDelegate {
             DispatchQueue.main.asyncAfter(deadline: .now() + 4.0) {
                 NSLog("[KMApp] posting KMAutoSearch")
                 NotificationCenter.default.post(name: Notification.Name("KMAutoSearch"), object: q)
+            }
+        }
+        // Debug: auto-open the settings window (KM_AUTO_SETTINGS=1)
+        if ProcessInfo.processInfo.environment["KM_AUTO_SETTINGS"] == "1" {
+            DispatchQueue.main.asyncAfter(deadline: .now() + 0.5) { [weak self] in
+                self?.openSettings()
             }
         }
         // Debug screenshot helper: auto-open the library window on launch
@@ -179,6 +186,11 @@ final class AppDelegate: NSObject, NSApplicationDelegate {
         privacy.target = self
         menu.addItem(privacy)
 
+        // 1.3: settings window (default mode / model management / quota)
+        let settings = NSMenuItem(title: L10n.string("Settings…"), action: #selector(openSettings), keyEquivalent: ",")
+        settings.target = self
+        menu.addItem(settings)
+
         menu.addItem(.separator())
         let auto = NSMenuItem(title: L10n.string("Auto-record when a meeting app opens"), action: #selector(toggleAutoRecord), keyEquivalent: "")
         auto.target = self
@@ -271,6 +283,12 @@ final class AppDelegate: NSObject, NSApplicationDelegate {
         NotificationCenter.default.post(name: .showPrivacyPane, object: nil)
         libraryWindow?.makeKeyAndOrderFront(nil)
         NSApp.activate(ignoringOtherApps: true)
+    }
+
+    /// 1.3: settings window — default mode, ASR model, quota.
+    @objc func openSettings() {
+        if settingsWC == nil { settingsWC = SettingsWindowController() }
+        settingsWC?.show()
     }
 
     // F08 (1.1): lifetime unlock via StoreKit 2 non-consumable.

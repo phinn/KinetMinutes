@@ -136,9 +136,11 @@ final class MeetingStore {
 
     // MARK: - CRUD
 
-    func createMeeting(sourceApp: String, transcribeOnly: Bool = false) -> Meeting {
+    /// 1.3 P2: calendar prefill — CalendarBridge supplies the title, falling
+    /// back to the default "New meeting" label when no event matches.
+    func createMeeting(sourceApp: String, transcribeOnly: Bool = false, titleOverride: String? = nil) -> Meeting {
         queue.sync {
-            var m = Meeting(title: defaultTitle(), sourceApp: sourceApp, startedAt: Date(), durationSeconds: 0, status: "recording")
+            var m = Meeting(title: titleOverride ?? defaultTitle(), sourceApp: sourceApp, startedAt: Date(), durationSeconds: 0, status: "recording")
             var stmt: OpaquePointer?
             sqlite3_prepare_v2(db, "INSERT INTO meetings (title, source_app, started_at, status, tags_json) VALUES (?,?,?,?,?)", -1, &stmt, nil)
             bind(stmt, 1, m.title); bind(stmt, 2, m.sourceApp)
@@ -327,7 +329,6 @@ final class MeetingStore {
         let flag = "seededDemoMeeting_v3"
         guard !UserDefaults.standard.bool(forKey: flag) else { return }
         queue.sync {
-            let lang = L10n.string("__lang__") // fallback: derive from bundle
             let isZH = L10n.string("Search meetings…") != "Search meetings…"
             let ja = L10n.string("Search meetings…").contains("会議") || L10n.string("Search meetings…").contains("検索")
             // ---- locale pack ----
@@ -341,7 +342,6 @@ final class MeetingStore {
             } else {
                 (t1, s1, d1, a1, tr1, sg1) = Self.seed1en(); (t2, s2, d2, a2, tr2, sg2) = Self.seed2en(); (t3, s3, d3, a3, tr3, sg3) = Self.seed3en()
             }
-            let _ = lang
             func encActions(_ xs: [(String, String, String)]) -> String {
                 let objs = xs.map { "{\"owner\":\"\($0.0)\",\"task\":\"\($0.1)\",\"due\":\"\($0.2)\"}" }
                 return "[" + objs.joined(separator: ",") + "]"

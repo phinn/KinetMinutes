@@ -48,6 +48,9 @@ final class SettingsPane: NSView {
     private let cleanupBtn = NSButton(title: L10n.string("Clear audio…"), target: nil, action: nil)
     private let retentionLabel = hintLabel("Audio auto-cleanup")
     private let retentionPop = NSPopUpButton(frame: .zero, pullsDown: false)
+    // 1.3 P2: manual UI language
+    private let langLabel = hintLabel("Interface language")
+    private let langPop = NSPopUpButton(frame: .zero, pullsDown: false)
 
     /// [seconds or 0=off] shown as: 关 / 7 天 / 30 天 / 90 天
     static let retentionChoices: [(Int, String)] = [
@@ -80,6 +83,7 @@ final class SettingsPane: NSView {
         modeSegment.target = self
         modeSegment.action = #selector(modeChanged)
         modeSegment.selectedSegment = UserDefaults.standard.bool(forKey: "autoTranscribeOnly") ? 1 : 0
+
 
         // 1.3 layout: picker fills the row; download controls live on their
         // own line so status text never truncates.
@@ -118,6 +122,20 @@ final class SettingsPane: NSView {
         retentionPop.action = #selector(retentionChanged)
         retentionPop.controlSize = .small
 
+        // 1.3 P2: interface language picker (en/ja/zh-Hans/zh-Hant/system)
+        for (code, key) in [("", "System language"), ("en", "English"), ("ja", "日本語"),
+                            ("zh-Hans", "简体中文"), ("zh-Hant", "繁體中文")] {
+            let item = NSMenuItem(title: code.isEmpty ? L10n.string(key) : key,
+                                  action: nil, keyEquivalent: "")
+            item.representedObject = code
+            langPop.menu?.addItem(item)
+        }
+        let savedLang = UserDefaults.standard.string(forKey: "AppLanguage") ?? ""
+        langPop.selectItem(at: max(0, langPop.indexOfItem(withRepresentedObject: savedLang)))
+        langPop.target = self
+        langPop.action = #selector(langChanged)
+        langPop.controlSize = .small
+
         let quotaRow = NSStackView(views: [quotaValue, upgradeBtn])
         quotaRow.orientation = .horizontal
         quotaRow.alignment = .firstBaseline
@@ -134,6 +152,14 @@ final class SettingsPane: NSView {
         retentionRow.alignment = .centerY
         retentionRow.spacing = 10
 
+        // 1.3 P2: language row
+        let langRow = NSStackView(views: [langLabel, langPop])
+        langRow.orientation = .horizontal
+        langRow.alignment = .centerY
+        langRow.spacing = 10
+        let divider6 = NSBox()
+        divider6.boxType = .separator
+
         // 1.3 layout: grouped sections with separators — label / control row /
         // hint, blank-line breathing room between groups.
         let divider1 = NSBox()
@@ -146,7 +172,6 @@ final class SettingsPane: NSView {
         divider4.boxType = .separator
 
         let stack = NSStackView(views: [
-            modeLabel, modeSegment, modeHint,
             divider1,
             modelLabel, modelPop, downloadRow, modelHint,
             divider2,
@@ -155,23 +180,26 @@ final class SettingsPane: NSView {
             mirrorLabel, mirrorField, mirrorHint,
             divider4,
             storageLabel, storageRow, retentionRow,
+            divider6,
+            langRow,
         ])
         stack.orientation = .vertical
         stack.alignment = .leading
         stack.spacing = 6
-        stack.setCustomSpacing(14, after: modeSegment)
         stack.setCustomSpacing(14, after: modelPop)
         stack.setCustomSpacing(14, after: downloadRow)
         stack.setCustomSpacing(14, after: quotaRow)
         stack.setCustomSpacing(14, after: mirrorField)
         stack.setCustomSpacing(14, after: storageRow)
-        for d in [divider1, divider2, divider3, divider4] {
+        stack.setCustomSpacing(14, after: retentionRow)
+        for d in [divider1, divider2, divider3, divider4, divider6] {
             stack.setCustomSpacing(16, after: d)
         }
         divider1.widthAnchor.constraint(equalTo: stack.widthAnchor).isActive = true
         divider2.widthAnchor.constraint(equalTo: stack.widthAnchor).isActive = true
         divider3.widthAnchor.constraint(equalTo: stack.widthAnchor).isActive = true
         divider4.widthAnchor.constraint(equalTo: stack.widthAnchor).isActive = true
+        divider6.widthAnchor.constraint(equalTo: stack.widthAnchor).isActive = true
         mirrorField.widthAnchor.constraint(equalToConstant: 420).isActive = true
         stack.translatesAutoresizingMaskIntoConstraints = false
         addSubview(stack)
@@ -213,6 +241,23 @@ final class SettingsPane: NSView {
     @objc private func retentionChanged() {
         let days = retentionPop.selectedItem?.representedObject as? Int ?? 0
         UserDefaults.standard.set(days, forKey: "audioRetentionDays")
+    }
+
+    /// 1.3 P2: manual UI language. Takes effect after relaunch (static titles).
+    @objc private func langChanged() {
+        let code = langPop.selectedItem?.representedObject as? String ?? ""
+        L10n.appLanguageOverride = code
+        let a = NSAlert()
+        a.messageText = L10n.string("Restart to apply language")
+        a.informativeText = L10n.string("The interface language changes after you quit and reopen KinetMinutes.")
+        a.addButton(withTitle: L10n.string("Restart Now"))
+        a.addButton(withTitle: L10n.string("Later"))
+        if a.runModal() == .alertFirstButtonReturn {
+            let url = Bundle.main.bundleURL
+            NSApp.terminate {
+                _ = NSWorkspace.shared.openApplication(at: url, configuration: .init())
+            }
+        }
     }
 
     /// 1.3: quota row conversion exit (hidden when Pro).

@@ -17,9 +17,27 @@ enum L10n {
         String(format: string(key), arguments: args)
     }
 
+    /// 1.3: manual UI language override. Nil/"" = follow the system.
+    /// Changing it needs a relaunch — static `tables` and every static button
+    /// title captured at init keep the old language until then.
+    static var appLanguageOverride: String? {
+        get {
+            let v = UserDefaults.standard.string(forKey: "AppLanguage") ?? ""
+            return tables[v] != nil && !v.isEmpty ? v : nil
+        }
+        set {
+            if let v = newValue, tables[v] != nil, !v.isEmpty {
+                UserDefaults.standard.set(v, forKey: "AppLanguage")
+            } else {
+                UserDefaults.standard.set("", forKey: "AppLanguage")
+            }
+        }
+    }
+
     static func preferredLanguage() -> String {
-        // Debug override first (screenshots), then user's AppleLanguages.
+        // Debug override first (screenshots), then manual choice, then system.
         if let env = ProcessInfo.processInfo.environment["KM_LANG"], tables[env] != nil { return env }
+        if let user = appLanguageOverride { return user }
         for code in Locale.preferredLanguages {
             if code.hasPrefix("zh-Hant") || code.hasPrefix("zh-HK") || code.hasPrefix("zh-TW") { return "zh-Hant" }
             if code.hasPrefix("zh") { return "zh-Hans" }

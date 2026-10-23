@@ -34,9 +34,28 @@ final class SettingsPane: NSView {
     private let quotaValue = NSTextField(wrappingLabelWithString: "")
     private let quotaHint = hintLabel("Quota hint")
     private let modelHint = hintLabel("Model hint")
+    /// 1.3: conversion exit on the quota row (hidden for Pro).
+    private let upgradeBtn = NSButton(title: L10n.string("Upgrade to Pro…"), target: nil, action: nil)
+
+    // MARK: - Mirror row (1.3: mainland-China HF endpoint)
+    private let mirrorLabel = sectionLabel("Model download endpoint")
+    private let mirrorField = NSTextField(string: "")
+    private let mirrorHint = hintLabel("Endpoint hint")
+
+    // MARK: - Storage row (1.3: audio disk usage management)
+    private let storageLabel = sectionLabel("Recording storage")
+    private let storageValue = NSTextField(wrappingLabelWithString: "")
+    private let cleanupBtn = NSButton(title: L10n.string("Clear audio…"), target: nil, action: nil)
+    private let retentionLabel = hintLabel("Audio auto-cleanup")
+    private let retentionPop = NSPopUpButton(frame: .zero, pullsDown: false)
+
+    /// [seconds or 0=off] shown as: 关 / 7 天 / 30 天 / 90 天
+    static let retentionChoices: [(Int, String)] = [
+        (0, "Off"), (7, "After 7 days"), (30, "After 30 days"), (90, "After 90 days"),
+    ]
 
     override init(frame: NSRect) {
-        super.init(frame: NSRect(x: 0, y: 0, width: 480, height: 430))
+        super.init(frame: NSRect(x: 0, y: 0, width: 480, height: 640))
 
         downloadBtn.target = self
         downloadBtn.action = #selector(downloadTapped)
@@ -45,7 +64,7 @@ final class SettingsPane: NSView {
         modelProgress.minValue = 0
         modelProgress.maxValue = 1
         modelProgress.translatesAutoresizingMaskIntoConstraints = false
-        modelProgress.widthAnchor.constraint(equalToConstant: 200).isActive = true
+        modelProgress.widthAnchor.constraint(equalToConstant: 120).isActive = true
         modelProgress.isHidden = true
 
         let current = UserDefaults.standard.string(forKey: "whisperModel") ?? "large-v3-turbo"
@@ -62,22 +81,98 @@ final class SettingsPane: NSView {
         modeSegment.action = #selector(modeChanged)
         modeSegment.selectedSegment = UserDefaults.standard.bool(forKey: "autoTranscribeOnly") ? 1 : 0
 
-        let modelRow = NSStackView(views: [modelPop, downloadBtn, modelStatus, modelProgress])
-        modelRow.orientation = .horizontal
-        modelRow.alignment = .centerY
-        modelRow.spacing = 10
+        // 1.3 layout: picker fills the row; download controls live on their
+        // own line so status text never truncates.
+        let downloadRow = NSStackView(views: [downloadBtn, modelProgress, modelStatus])
+        downloadRow.orientation = .horizontal
+        downloadRow.alignment = .centerY
+        downloadRow.spacing = 10
+
+        // 1.3: quota conversion exit + mirror endpoint + storage management.
+        upgradeBtn.target = self
+        upgradeBtn.action = #selector(upgradeTapped)
+        upgradeBtn.bezelStyle = .rounded
+        upgradeBtn.controlSize = .small
+
+        mirrorField.placeholderString = "https://hf-mirror.com"
+        mirrorField.target = self
+        mirrorField.action = #selector(mirrorEdited)
+        mirrorField.translatesAutoresizingMaskIntoConstraints = false
+        mirrorField.widthAnchor.constraint(equalToConstant: 300).isActive = true
+
+        cleanupBtn.target = self
+        cleanupBtn.action = #selector(cleanupTapped)
+        cleanupBtn.bezelStyle = .rounded
+        cleanupBtn.controlSize = .small
+
+        // 1.3: auto-cleanup picker — stored as days (0 = off)
+        for (days, key) in Self.retentionChoices {
+            let item = NSMenuItem(title: L10n.string(key), action: nil, keyEquivalent: "")
+            item.representedObject = days
+            retentionPop.menu?.addItem(item)
+        }
+        let savedDays = UserDefaults.standard.integer(forKey: "audioRetentionDays")
+        let idx = Self.retentionChoices.firstIndex { $0.0 == savedDays } ?? 0
+        retentionPop.selectItem(at: idx)
+        retentionPop.target = self
+        retentionPop.action = #selector(retentionChanged)
+        retentionPop.controlSize = .small
+
+        let quotaRow = NSStackView(views: [quotaValue, upgradeBtn])
+        quotaRow.orientation = .horizontal
+        quotaRow.alignment = .firstBaseline
+        quotaRow.spacing = 10
+
+        let storageRow = NSStackView(views: [storageValue, cleanupBtn])
+        storageRow.orientation = .horizontal
+        storageRow.alignment = .firstBaseline
+        storageRow.spacing = 10
+
+        // 1.3: auto-cleanup row (picker), sits under the storage row
+        let retentionRow = NSStackView(views: [retentionLabel, retentionPop])
+        retentionRow.orientation = .horizontal
+        retentionRow.alignment = .centerY
+        retentionRow.spacing = 10
+
+        // 1.3 layout: grouped sections with separators — label / control row /
+        // hint, blank-line breathing room between groups.
+        let divider1 = NSBox()
+        divider1.boxType = .separator
+        let divider2 = NSBox()
+        divider2.boxType = .separator
+        let divider3 = NSBox()
+        divider3.boxType = .separator
+        let divider4 = NSBox()
+        divider4.boxType = .separator
 
         let stack = NSStackView(views: [
             modeLabel, modeSegment, modeHint,
-            modelLabel, modelRow, modelHint,
-            quotaLabel, quotaValue, quotaHint,
+            divider1,
+            modelLabel, modelPop, downloadRow, modelHint,
+            divider2,
+            quotaLabel, quotaRow, quotaHint,
+            divider3,
+            mirrorLabel, mirrorField, mirrorHint,
+            divider4,
+            storageLabel, storageRow, retentionRow,
         ])
         stack.orientation = .vertical
         stack.alignment = .leading
-        stack.spacing = 8
-        stack.setCustomSpacing(20, after: modeHint)
-        stack.setCustomSpacing(20, after: modelHint)
-        stack.setCustomSpacing(20, after: quotaValue)
+        stack.spacing = 6
+        stack.setCustomSpacing(14, after: modeSegment)
+        stack.setCustomSpacing(14, after: modelPop)
+        stack.setCustomSpacing(14, after: downloadRow)
+        stack.setCustomSpacing(14, after: quotaRow)
+        stack.setCustomSpacing(14, after: mirrorField)
+        stack.setCustomSpacing(14, after: storageRow)
+        for d in [divider1, divider2, divider3, divider4] {
+            stack.setCustomSpacing(16, after: d)
+        }
+        divider1.widthAnchor.constraint(equalTo: stack.widthAnchor).isActive = true
+        divider2.widthAnchor.constraint(equalTo: stack.widthAnchor).isActive = true
+        divider3.widthAnchor.constraint(equalTo: stack.widthAnchor).isActive = true
+        divider4.widthAnchor.constraint(equalTo: stack.widthAnchor).isActive = true
+        mirrorField.widthAnchor.constraint(equalToConstant: 420).isActive = true
         stack.translatesAutoresizingMaskIntoConstraints = false
         addSubview(stack)
         NSLayoutConstraint.activate([
@@ -86,8 +181,10 @@ final class SettingsPane: NSView {
             stack.trailingAnchor.constraint(lessThanOrEqualTo: trailingAnchor, constant: -24),
         ])
 
+        mirrorField.stringValue = UserDefaults.standard.string(forKey: "hfEndpoint") ?? ""
         refreshModelStatus()
         refreshQuota()
+        refreshStorage()
     }
     required init?(coder: NSCoder) { fatalError() }
 
@@ -102,6 +199,49 @@ final class SettingsPane: NSView {
         guard let v = modelPop.selectedItem?.representedObject as? String else { return }
         UserDefaults.standard.set(v, forKey: "whisperModel")
         refreshModelStatus()
+    }
+
+    /// 1.3: mirror endpoint, trimmed; empty string = direct huggingface.co.
+    /// Read lazily by the pipeline/downloader, so the next download or
+    /// transcription picks it up — no restart.
+    @objc private func mirrorEdited() {
+        let trimmed = mirrorField.stringValue.trimmingCharacters(in: .whitespacesAndNewlines)
+        UserDefaults.standard.set(trimmed.isEmpty ? nil : trimmed, forKey: "hfEndpoint")
+    }
+
+    /// 1.3: auto-cleanup choice; sweep runs on next app launch.
+    @objc private func retentionChanged() {
+        let days = retentionPop.selectedItem?.representedObject as? Int ?? 0
+        UserDefaults.standard.set(days, forKey: "audioRetentionDays")
+    }
+
+    /// 1.3: quota row conversion exit (hidden when Pro).
+    @objc private func upgradeTapped() {
+        (NSApp.delegate as? AppDelegate)?.upgradePro()
+        refreshQuota()   // purchase sheet may succeed instantly (previous purchase)
+    }
+
+    /// 1.3: delete meeting audio (both tracks) but KEEP notes/transcripts.
+    /// Timestamp links in old meetings degrade to plain text — stated in the
+    /// confirm dialog.
+    @objc private func cleanupTapped() {
+        let bytes = MeetingStore.shared.totalAudioBytes()
+        let mb = ByteCountFormatter.string(fromByteCount: bytes, countStyle: .file)
+        let alert = NSAlert()
+        alert.messageText = L10n.string("Clear audio…")
+        alert.informativeText = L10n.string("%@ of recording audio will be deleted. Notes and transcripts are kept.", mb)
+        alert.addButton(withTitle: L10n.string("Delete"))
+        alert.addButton(withTitle: L10n.string("Cancel"))
+        alert.alertStyle = .warning
+        if alert.runModal() == .alertFirstButtonReturn {
+            let freed = MeetingStore.shared.deleteAllAudio()
+            refreshStorage()
+            let shown = ByteCountFormatter.string(fromByteCount: max(0, freed), countStyle: .file)
+            let done = NSAlert()
+            done.messageText = String(format: L10n.string("Cleared audio for %d meetings (%@ freed)"), Int(freed), shown)
+            done.alertStyle = .informational
+            done.runModal()
+        }
     }
 
     @objc private func downloadTapped() {
@@ -156,6 +296,14 @@ final class SettingsPane: NSView {
             let used = MinutesPipeline.notesUsedThisMonth()
             quotaValue.stringValue = L10n.string("%d of %d used", used, MinutesPipeline.freeMonthlyLimit)
         }
+        upgradeBtn.isHidden = MinutesPipeline.isPro()
+    }
+
+    /// 1.3: total size of every meeting's audio (mic + system tracks).
+    private func refreshStorage() {
+        let bytes = MeetingStore.shared.totalAudioBytes()
+        storageValue.stringValue = ByteCountFormatter.string(fromByteCount: bytes, countStyle: .file)
+        cleanupBtn.isEnabled = bytes > 0
     }
 
     private static func folderSize(_ url: URL) -> Int64 {
@@ -185,7 +333,7 @@ final class SettingsPane: NSView {
 
 final class SettingsWindowController: NSWindowController {
     convenience init() {
-        let w = NSWindow(contentRect: NSRect(x: 0, y: 0, width: 480, height: 430),
+        let w = NSWindow(contentRect: NSRect(x: 0, y: 0, width: 480, height: 640),
                          styleMask: [.titled, .closable],
                          backing: .buffered, defer: false)
         w.title = L10n.string("Settings…")

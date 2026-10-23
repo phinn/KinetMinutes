@@ -246,6 +246,41 @@ final class MeetingStore {
         notifyChanged()
     }
 
+    // MARK: - Audio storage management (1.3)
+
+    /// Total bytes of all meeting audio files that still exist on disk.
+    /// 1.3 storage management: total bytes of ALL audio under audioDir —
+    /// both tracks (meeting-N.caf + meeting-N.sys.caf) and orphaned files
+    /// alike, i.e. what the folder actually costs on disk.
+    func totalAudioBytes() -> Int64 {
+        queue.sync {
+            guard let files = try? FileManager.default.contentsOfDirectory(at: audioDir, includingPropertiesForKeys: [.fileSizeKey]) else { return 0 }
+            return files.reduce(Int64(0)) { acc, url in
+                acc + Int64((try? url.resourceValues(forKeys: [.fileSizeKey]).fileSize) ?? 0)
+            }
+        }
+    }
+
+    /// Delete every audio file under audioDir (both tracks + orphans) but
+    /// KEEP meeting rows, transcripts and notes — storage keeps growing
+    /// otherwise (dual tracks ≈ 0.6 GB/h). Clearing audio_path degrades
+    /// timeline links to plain text, which the confirm dialog states.
+    /// Returns bytes freed.
+    @discardableResult
+    func deleteAllAudio() -> Int64 {
+        var freed: Int64 = 0
+        queue.sync {
+            guard let files = try? FileManager.default.contentsOfDirectory(at: audioDir, includingPropertiesForKeys: [.fileSizeKey]) else { return }
+            for url in files {
+                freed += Int64((try? url.resourceValues(forKeys: [.fileSizeKey]).fileSize) ?? 0)
+                try? FileManager.default.removeItem(at: url)
+            }
+            exec("UPDATE meetings SET audio_path=NULL WHERE audio_path IS NOT NULL")
+        }
+        notifyChanged()
+        return freed
+    }
+
     func deleteAll() {
         let all = allMeetings()
         for m in all { delete(id: m.id) }

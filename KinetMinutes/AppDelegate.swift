@@ -3,6 +3,7 @@
 // → summarize (local LLM) → store (SQLite). Audio never leaves the Mac.
 
 import Cocoa
+import Carbon.HIToolbox
 import UserNotifications
 import ServiceManagement
 
@@ -77,6 +78,7 @@ final class AppDelegate: NSObject, NSApplicationDelegate {
     }
 
     func applicationWillTerminate(_ notification: Notification) {
+        teardownGlobalHotkeys()   // 1.3 P2
         recorder.stopSaving()
     }
 
@@ -143,6 +145,7 @@ final class AppDelegate: NSObject, NSApplicationDelegate {
     func buildStatusMenu() {
         let menu = NSMenu()
         statusMenuItem = NSMenuItem(title: L10n.string("Standby — no meeting"), action: nil, keyEquivalent: "")
+        installGlobalHotkeys()   // 1.3 P2: ⌥⌘R record anywhere
         menu.addItem(statusMenuItem!)
         menu.addItem(.separator())
 
@@ -154,6 +157,7 @@ final class AppDelegate: NSObject, NSApplicationDelegate {
             title: L10n.string(recording ? "Stop & Generate Notes" : "Start Recording"),
             action: #selector(toggleRecording), keyEquivalent: "r")
         toggle.target = self
+        toggle.keyEquivalentModifierMask = [.option, .command]   // 1.3 P2: system-wide ⌥⌘R
         menu.addItem(toggle)
 
         if !recording {
@@ -282,6 +286,40 @@ final class AppDelegate: NSObject, NSApplicationDelegate {
         }
         libraryWindow?.makeKeyAndOrderFront(nil)
         NSApp.activate(ignoringOtherApps: true)
+    }
+
+    // 1.3 P2: system-wide ⌥⌘R toggle via Carbon RegisterEventHotKey.
+    // NSEvent global monitors need Accessibility permission (and silently
+    // no-op without it) — Carbon hotkeys are permission-free and sandbox-safe.
+    // Refire guard: RecordHotKeyProc fires on key-down repeat too.
+    private var hotKeyRef: EventHotKeyRef?
+    private var lastHotKeyFire = TimeInterval(0)
+
+    func installGlobalHotkeys() {
+        var hotKeyID = EventHotKeyID(signature: OSType(0x4B4D4854) /* 'KMHT' */, id: 1)
+        let mods = UInt32(cmdKey | optionKey)
+        let handler: EventHandlerUPP = { _, event, _ -> OSStatus in
+            guard let event = event else { return noErr }
+            var id = EventHotKeyID()
+            GetEventParameter(event, EventParamName(kEventParamDirectObject), EventParamType(typeEventHotKeyID), nil, MemoryLayout<EventHotKeyID>.size, nil, &id)
+            guard id.id == 1 else { return noErr }
+            let now = CFAbsoluteTimeGetCurrent()
+            let lastFire = (NSApp.delegate as? AppDelegate)?.lastHotKeyFire ?? 0
+            guard now - lastFire > 0.5 else { return noErr }  // key-repeat guard
+            (NSApp.delegate as? AppDelegate)?.lastHotKeyFire = now
+            DispatchQueue.main.async {
+                (NSApp.delegate as? AppDelegate)?.toggleRecording()
+            }
+            return noErr
+        }
+        var eventType = EventTypeSpec(eventClass: OSType(kEventClassKeyboard), eventKind: UInt32(kEventHotKeyPressed))
+        InstallEventHandler(GetApplicationEventTarget(), handler, 1, &eventType, nil, nil)
+        RegisterEventHotKey(UInt32(kVK_ANSI_R), mods, hotKeyID, GetApplicationEventTarget(), 0, &hotKeyRef)
+    }
+
+    func teardownGlobalHotkeys() {
+        if let hk = hotKeyRef { UnregisterEventHotKey(hk) }
+        hotKeyRef = nil
     }
 
     /// 1.3 P2: meeting statistics (aggregate only).

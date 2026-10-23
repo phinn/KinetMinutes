@@ -105,7 +105,7 @@ final class AppDelegate: NSObject, NSApplicationDelegate {
     }
 
     private func startMeeting(sourceApp: String, transcribeOnly: Bool = false) {
-        let meeting = store.createMeeting(sourceApp: sourceApp, transcribeOnly: transcribeOnly)
+        let meeting = store.createMeeting(sourceApp: sourceApp, transcribeOnly: transcribeOnly, titleOverride: CalendarBridge.currentEventTitle())
         recorder.start(meetingID: meeting.id)
         notify(title: L10n.string("Recording started"),
                body: transcribeOnly
@@ -278,17 +278,16 @@ final class AppDelegate: NSObject, NSApplicationDelegate {
         NSApp.activate(ignoringOtherApps: true)
     }
 
+    @objc func openSettings() {
+        if settingsWC == nil { settingsWC = SettingsWindowController() }
+        settingsWC?.show()
+    }
+
     @objc func openPrivacy() {
         if libraryWindow == nil { openLibrary() }
         NotificationCenter.default.post(name: .showPrivacyPane, object: nil)
         libraryWindow?.makeKeyAndOrderFront(nil)
         NSApp.activate(ignoringOtherApps: true)
-    }
-
-    /// 1.3: settings window — default mode, ASR model, quota.
-    @objc func openSettings() {
-        if settingsWC == nil { settingsWC = SettingsWindowController() }
-        settingsWC?.show()
     }
 
     // F08 (1.1): lifetime unlock via StoreKit 2 non-consumable.

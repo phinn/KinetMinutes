@@ -49,6 +49,10 @@
 	<string>KinetMinutes records meetings with your microphone to create local, private meeting notes. Audio never leaves your Mac.</string>
 	<key>NSSpeechRecognitionUsageDescription</key>
 	<string>KinetMinutes transcribes meeting audio fully offline on your Mac. Nothing is sent to any server.</string>
+	<key>NSCalendarsUsageDescription</key>
+	<string>KinetMinutes uses your calendar only to prefill the meeting title from the current event.</string>
+	<key>NSCalendarsFullAccessUsageDescription</key>
+	<string>KinetMinutes uses your calendar only to prefill the meeting title from the current event.</string>
 </dict>
 </plist>
 

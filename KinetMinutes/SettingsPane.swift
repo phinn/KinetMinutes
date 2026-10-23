@@ -19,6 +19,7 @@ final class SettingsPane: NSView {
     private let modeLabel = sectionLabel("Recording mode")
     private let modeSegment = NSSegmentedControl(labels: [L10n.string("Full meeting notes"), L10n.string("Transcript only")],
                                                  trackingMode: .selectOne, target: nil, action: nil)
+    private let calPrefillCheck = NSButton(checkboxWithTitle: L10n.string("Prefill title from calendar"), target: nil, action: nil)
     private let modeHint = hintLabel("Mode hint")
 
     // MARK: - Model row
@@ -84,6 +85,9 @@ final class SettingsPane: NSView {
         modeSegment.action = #selector(modeChanged)
         modeSegment.selectedSegment = UserDefaults.standard.bool(forKey: "autoTranscribeOnly") ? 1 : 0
 
+        calPrefillCheck.state = (UserDefaults.standard.object(forKey: "prefillTitleFromCalendar") as? Bool ?? true) ? .on : .off
+        calPrefillCheck.target = self
+        calPrefillCheck.action = #selector(calPrefillChanged)
 
         // 1.3 layout: picker fills the row; download controls live on their
         // own line so status text never truncates.
@@ -172,6 +176,7 @@ final class SettingsPane: NSView {
         divider4.boxType = .separator
 
         let stack = NSStackView(views: [
+            modeLabel, modeSegment, calPrefillCheck, modeHint,
             divider1,
             modelLabel, modelPop, downloadRow, modelHint,
             divider2,
@@ -186,6 +191,7 @@ final class SettingsPane: NSView {
         stack.orientation = .vertical
         stack.alignment = .leading
         stack.spacing = 6
+        stack.setCustomSpacing(14, after: calPrefillCheck)
         stack.setCustomSpacing(14, after: modelPop)
         stack.setCustomSpacing(14, after: downloadRow)
         stack.setCustomSpacing(14, after: quotaRow)
@@ -241,6 +247,11 @@ final class SettingsPane: NSView {
     @objc private func retentionChanged() {
         let days = retentionPop.selectedItem?.representedObject as? Int ?? 0
         UserDefaults.standard.set(days, forKey: "audioRetentionDays")
+    }
+
+    /// 1.3 P2: calendar prefill toggle (read by CalendarBridge before each start)
+    @objc private func calPrefillChanged() {
+        UserDefaults.standard.set(calPrefillCheck.state == .on, forKey: "prefillTitleFromCalendar")
     }
 
     /// 1.3 P2: manual UI language. Takes effect after relaunch (static titles).

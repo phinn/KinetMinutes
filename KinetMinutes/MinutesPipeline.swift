@@ -13,6 +13,7 @@
 // file) keep the exact 1.0 unlabeled behavior.
 
 import Foundation
+import AVFoundation
 import AppKit
 import LocalLLMKit
 import LocalLLMKitTranscription
@@ -20,8 +21,54 @@ import LocalLLMKitTranscription
 final class MinutesPipeline {
     static let shared = MinutesPipeline()
 
+    /// 1.3: long meetings are transcribed in fixed slices instead of one huge
+    /// Float buffer. AudioDecoder loads the WHOLE file into memory before
+    /// WhisperKit sees it — a 3 h meeting is ~690 MB of Float32 at 16 kHz
+    /// mono, which OOMs on 8 GB machines. 10 min of 16 kHz mono is ~38 MB —
+    /// safe. Slices re-join with shifted timestamps, so transcripts/segments
+    /// and dual-track merging are byte-identical to the 1.x path for short
+    /// meetings (<= chunkSeconds takes the original single-load path).
+    static let chunkSeconds: TimeInterval = 600
+
     private(set) var isProcessing = false
     var onStateChange: (() -> Void)?
+
+    /// 1.3: memory-safe transcription entry. Short audio keeps the original
+    /// single-load path; long audio is decoded slice-by-slice (10 min) so the
+    /// Float buffer never exceeds ~40 MB regardless of meeting length.
+    private func transcribe(_ provider: WhisperKitTranscriptionProvider,
+                            path: String) async throws -> TranscriptionResult {
+        let url = URL(fileURLWithPath: path)
+        let file = try? AVAudioFile(forReading: url)
+        let duration: TimeInterval = file.map { Double($0.length) / $0.processingFormat.sampleRate } ?? 0
+        guard duration > Self.chunkSeconds else {
+            return try await provider.transcribe(audioURL: url, language: nil)
+        }
+        let chunkDur = Self.chunkSeconds
+        var all: [TranscriptionSegment] = []
+        var chunk = 0
+        while Double(chunk) * chunkDur < duration {
+            let offset = Double(chunk) * chunkDur
+            let result = try await provider.transcribeChunk(of: url, startingAt: offset, duration: chunkDur, language: nil)
+            // Shift this slice's timestamps back to meeting time. Slices can
+            // return empty (silence) — nothing to merge for them.
+            all.append(contentsOf: result.segments.map {
+                TranscriptionSegment(text: $0.text,
+                                     startTime: $0.startTime + offset,
+                                     endTime: $0.endTime + offset,
+                                     confidence: $0.confidence)
+            })
+            chunk += 1
+        }
+        let plain = all
+            .map { $0.text.trimmingCharacters(in: .whitespacesAndNewlines) }
+            .filter { !$0.isEmpty }
+            .joined(separator: " ")
+        return TranscriptionResult(text: plain, segments: all, language: nil,
+                                   backendName: provider.name,
+                                   modelName: provider.modelName,
+                                   durationSeconds: duration)
+    }
 
     struct Notes {
         var summary: String
@@ -110,7 +157,7 @@ final class MinutesPipeline {
         do {
             // Single-track fast path — identical to 1.0 behavior, no labels.
             guard hasSys else {
-                let result = try await provider.transcribe(audioURL: URL(fileURLWithPath: micTrack), language: nil)
+                let result = try await transcribe(provider, path: micTrack)
                 let segments = result.segments.map {
                     Meeting.Segment(start: $0.startTime, end: $0.endTime, text: $0.text, speaker: nil)
                 }
@@ -122,8 +169,8 @@ final class MinutesPipeline {
             // Dual-track: transcribe each physical track separately (sequential —
             // one WhisperKit engine instance; concurrent calls would double the
             // CoreML weight residency on 8 GB machines for no real speedup).
-            let micRes = try await provider.transcribe(audioURL: URL(fileURLWithPath: micTrack), language: nil)
-            let sysRes = try await provider.transcribe(audioURL: URL(fileURLWithPath: sysTrack), language: nil)
+            let micRes = try await transcribe(provider, path: micTrack)
+            let sysRes = try await transcribe(provider, path: sysTrack)
 
             var me = micRes.segments.map {
                 LabeledSeg(start: $0.startTime, end: $0.endTime, text: $0.text, speaker: "me")

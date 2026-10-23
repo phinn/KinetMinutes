@@ -13,8 +13,6 @@ final class AppDelegate: NSObject, NSApplicationDelegate {
     let statusItem = NSStatusBar.system.statusItem(withLength: NSStatusItem.variableLength)
     var libraryWindow: NSWindow?
     var libraryWC: LibraryWindowController?
-    var statsWC: StatsWindowController?
-    var settingsWC: SettingsWindowController?
     let store = MeetingStore.shared
     let recorder = MeetingRecorder.shared
     let pipeline = MinutesPipeline.shared
@@ -58,7 +56,7 @@ final class AppDelegate: NSObject, NSApplicationDelegate {
                 NotificationCenter.default.post(name: Notification.Name("KMAutoSearch"), object: q)
             }
         }
-        // Debug: auto-open the settings window (KM_AUTO_SETTINGS=1)
+        // Debug: auto-open the settings pane (KM_AUTO_SETTINGS=1)
         if ProcessInfo.processInfo.environment["KM_AUTO_SETTINGS"] == "1" {
             DispatchQueue.main.asyncAfter(deadline: .now() + 0.5) { [weak self] in
                 self?.openSettings()
@@ -79,6 +77,8 @@ final class AppDelegate: NSObject, NSApplicationDelegate {
 
     func applicationWillTerminate(_ notification: Notification) {
         teardownGlobalHotkeys()   // 1.3 P2
+        if let m = localKeyDownMonitor { NSEvent.removeMonitor(m) }
+        localKeyDownMonitor = nil
         recorder.stopSaving()
     }
 
@@ -146,6 +146,7 @@ final class AppDelegate: NSObject, NSApplicationDelegate {
         let menu = NSMenu()
         statusMenuItem = NSMenuItem(title: L10n.string("Standby — no meeting"), action: nil, keyEquivalent: "")
         installGlobalHotkeys()   // 1.3 P2: ⌥⌘R record anywhere
+        installLocalShortcuts()  // 1.3: in-app ⌘, (LSUIElement app has no main menu bar)
         menu.addItem(statusMenuItem!)
         menu.addItem(.separator())
 
@@ -295,6 +296,23 @@ final class AppDelegate: NSObject, NSApplicationDelegate {
     private var hotKeyRef: EventHotKeyRef?
     private var lastHotKeyFire = TimeInterval(0)
 
+    // 1.3: LSUIElement apps have no main menu bar, so a statusItem menu's
+    // keyEquivalent never fires. Local NSEvent monitoring needs no permission
+    // (unlike addGlobalMonitorForEvents) and only sees our own key-downs.
+    private var localKeyDownMonitor: Any?
+
+    func installLocalShortcuts() {
+        localKeyDownMonitor = NSEvent.addLocalMonitorForEvents(matching: .keyDown) { [weak self] ev in
+            guard let self else { return ev }
+            if ev.modifierFlags.contains(.command), !ev.modifierFlags.contains(.option),
+               !ev.modifierFlags.contains(.shift), ev.charactersIgnoringModifiers == "," {
+                self.openSettings()
+                return nil   // consumed
+            }
+            return ev
+        }
+    }
+
     func installGlobalHotkeys() {
         var hotKeyID = EventHotKeyID(signature: OSType(0x4B4D4854) /* 'KMHT' */, id: 1)
         let mods = UInt32(cmdKey | optionKey)
@@ -322,20 +340,21 @@ final class AppDelegate: NSObject, NSApplicationDelegate {
         hotKeyRef = nil
     }
 
-    /// 1.3 P2: meeting statistics (aggregate only).
+    /// 1.3: settings & stats live inside the library window (right-side panes,
+    /// same pattern as Privacy) — ⌘, just opens the library and swaps the pane.
     @objc func openStats() {
-        if statsWC == nil { statsWC = StatsWindowController() }
-        statsWC?.showPane()
+        openLibrary()
+        libraryWC?.showPane(.stats)
     }
 
     @objc func openSettings() {
-        if settingsWC == nil { settingsWC = SettingsWindowController() }
-        settingsWC?.show()
+        openLibrary()
+        libraryWC?.showPane(.settings)
     }
 
     @objc func openPrivacy() {
-        if libraryWindow == nil { openLibrary() }
-        NotificationCenter.default.post(name: .showPrivacyPane, object: nil)
+        openLibrary()
+        libraryWC?.showPane(.privacy)
         libraryWindow?.makeKeyAndOrderFront(nil)
         NSApp.activate(ignoringOtherApps: true)
     }

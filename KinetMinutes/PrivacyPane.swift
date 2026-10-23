@@ -3,8 +3,19 @@
 import AppKit
 
 final class PrivacyPane: NSView {
+    /// Embedded pane: the library window swaps the detail view back on Back.
+    var onBack: (() -> Void)?
+
     override init(frame: NSRect) {
         super.init(frame: frame)
+
+        let backBtn = NSButton(title: L10n.string("Back"), target: nil, action: nil)
+        backBtn.bezelStyle = .rounded
+        backBtn.image = NSImage(systemSymbolName: "chevron.left", accessibilityDescription: L10n.string("Back"))
+        backBtn.imagePosition = .imageLeading
+        backBtn.controlSize = .small
+        backBtn.target = self
+        backBtn.action = #selector(backTapped)
 
         let head = NSTextField(wrappingLabelWithString: L10n.string("Zero upload. By design."))
         head.font = .systemFont(ofSize: 17, weight: .bold)
@@ -22,11 +33,12 @@ final class PrivacyPane: NSView {
         del.bezelStyle = .rounded
         del.controlSize = .large
 
-        let stack = NSStackView(views: [head, body, loc, locBody, del])
+        let stack = NSStackView(views: [backBtn, head, body, loc, locBody, del])
         stack.orientation = .vertical
         stack.alignment = .leading
         stack.spacing = 12
         stack.translatesAutoresizingMaskIntoConstraints = false
+        stack.setCustomSpacing(18, after: backBtn)
         stack.setCustomSpacing(24, after: body)
         addSubview(stack)
         NSLayoutConstraint.activate([
@@ -36,6 +48,8 @@ final class PrivacyPane: NSView {
         ])
     }
     required init?(coder: NSCoder) { fatalError() }
+
+    @objc private func backTapped() { onBack?() }
 
     @objc private func deleteAll() {
         let alert = NSAlert()

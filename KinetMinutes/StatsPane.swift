@@ -5,6 +5,7 @@ final class StatsPane: NSView {
     private let cards = NSStackView()
     private let emptyLabel = NSTextField(wrappingLabelWithString: L10n.string("no stats yet"))
     private let updated = NSTextField(labelWithString: "")
+    var onBack: (() -> Void)?
 
     struct Row {
         let title: String; let value: String; let sub: String
@@ -13,6 +14,19 @@ final class StatsPane: NSView {
     override init(frame: NSRect) {
         super.init(frame: NSRect(x: 0, y: 0, width: 560, height: 300))
         wantsLayer = true
+
+        let backBtn = NSButton(title: L10n.string("Back"), target: nil, action: nil)
+        backBtn.bezelStyle = .rounded
+        backBtn.image = NSImage(systemSymbolName: "chevron.left", accessibilityDescription: L10n.string("Back"))
+        backBtn.imagePosition = .imageLeading
+        backBtn.controlSize = .small
+        backBtn.target = self
+        backBtn.action = #selector(backTapped)
+        backBtn.translatesAutoresizingMaskIntoConstraints = false
+
+        let title = NSTextField(labelWithString: L10n.string("Meeting Statistics…").replacingOccurrences(of: "…", with: ""))
+        title.font = .systemFont(ofSize: 17, weight: .bold)
+        title.translatesAutoresizingMaskIntoConstraints = false
 
         cards.orientation = .vertical
         cards.alignment = .leading
@@ -29,10 +43,16 @@ final class StatsPane: NSView {
         updated.translatesAutoresizingMaskIntoConstraints = false
 
         addSubview(cards)
+        addSubview(backBtn)
+        addSubview(title)
         addSubview(emptyLabel)
         addSubview(updated)
         NSLayoutConstraint.activate([
-            cards.topAnchor.constraint(equalTo: topAnchor, constant: 24),
+            backBtn.topAnchor.constraint(equalTo: topAnchor, constant: 20),
+            backBtn.leadingAnchor.constraint(equalTo: leadingAnchor, constant: 28),
+            title.centerYAnchor.constraint(equalTo: backBtn.centerYAnchor),
+            title.leadingAnchor.constraint(equalTo: backBtn.trailingAnchor, constant: 10),
+            cards.topAnchor.constraint(equalTo: backBtn.bottomAnchor, constant: 24),
             cards.leadingAnchor.constraint(equalTo: leadingAnchor, constant: 28),
             cards.trailingAnchor.constraint(equalTo: trailingAnchor, constant: -28),
             emptyLabel.centerXAnchor.constraint(equalTo: centerXAnchor),
@@ -49,6 +69,9 @@ final class StatsPane: NSView {
     }
     required init?(coder: NSCoder) { fatalError() }
     deinit { NotificationCenter.default.removeObserver(self) }
+
+    /// Embedded pane: hand control back to the library detail view.
+    @objc private func backTapped() { onBack?() }
 
     func refresh() {
         let ms = MeetingStore.shared.allMeetings()

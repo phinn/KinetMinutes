@@ -58,6 +58,10 @@ final class SettingsPane: NSView {
         (0, "Off"), (7, "After 7 days"), (30, "After 30 days"), (90, "After 90 days"),
     ]
 
+    /// 1.3: embedded in the library window like PrivacyPane — a Back row swaps
+    /// the detail view back in (see LibraryWindowController.showSettings()).
+    var onBack: (() -> Void)?
+
     override init(frame: NSRect) {
         super.init(frame: NSRect(x: 0, y: 0, width: 480, height: 640))
 
@@ -164,6 +168,21 @@ final class SettingsPane: NSView {
         let divider6 = NSBox()
         divider6.boxType = .separator
 
+        // Embedded-pane header: Back + title (library swaps the detail pane back).
+        let backBtn = NSButton(title: L10n.string("Back"), target: nil, action: nil)
+        backBtn.bezelStyle = .rounded
+        backBtn.image = NSImage(systemSymbolName: "chevron.left", accessibilityDescription: L10n.string("Back"))
+        backBtn.imagePosition = .imageLeading
+        backBtn.controlSize = .small
+        backBtn.target = self
+        backBtn.action = #selector(backTapped)
+
+        let title = NSTextField(labelWithString: L10n.string("Settings…").replacingOccurrences(of: "…", with: ""))
+        title.font = .systemFont(ofSize: 17, weight: .bold)
+        let header = NSStackView(views: [backBtn, title])
+        header.orientation = .horizontal
+        header.spacing = 10
+
         // 1.3 layout: grouped sections with separators — label / control row /
         // hint, blank-line breathing room between groups.
         let divider1 = NSBox()
@@ -176,6 +195,7 @@ final class SettingsPane: NSView {
         divider4.boxType = .separator
 
         let stack = NSStackView(views: [
+            header,
             modeLabel, modeSegment, calPrefillCheck, modeHint,
             divider1,
             modelLabel, modelPop, downloadRow, modelHint,
@@ -191,6 +211,7 @@ final class SettingsPane: NSView {
         stack.orientation = .vertical
         stack.alignment = .leading
         stack.spacing = 6
+        stack.setCustomSpacing(18, after: header)
         stack.setCustomSpacing(14, after: calPrefillCheck)
         stack.setCustomSpacing(14, after: modelPop)
         stack.setCustomSpacing(14, after: downloadRow)
@@ -223,6 +244,9 @@ final class SettingsPane: NSView {
     required init?(coder: NSCoder) { fatalError() }
 
     // MARK: - Actions
+
+    /// Embedded pane: hand control back to the library detail view.
+    @objc private func backTapped() { onBack?() }
 
     @objc private func modeChanged() {
         // "Full meeting notes" = no tag; auto-record honors this at start time.
@@ -385,24 +409,4 @@ final class SettingsPane: NSView {
     }
 }
 
-// MARK: - Window controller (AppDelegate opens/closes)
 
-final class SettingsWindowController: NSWindowController {
-    convenience init() {
-        let w = NSWindow(contentRect: NSRect(x: 0, y: 0, width: 480, height: 640),
-                         styleMask: [.titled, .closable],
-                         backing: .buffered, defer: false)
-        w.title = L10n.string("Settings…")
-        w.contentView = SettingsPane()
-        w.center()
-        w.isReleasedWhenClosed = false
-        self.init(window: w)
-    }
-
-    func show() {
-        // Recreate the pane so model/quota state is fresh on every open.
-        window?.contentView = SettingsPane()
-        window?.makeKeyAndOrderFront(nil)
-        NSApp.activate(ignoringOtherApps: true)
-    }
-}

@@ -16,6 +16,8 @@ final class LibraryWindowController: NSWindowController, NSWindowDelegate {
 
     private var autoSearchObs: NSObjectProtocol?
     private var privacyPane: PrivacyPane!
+    private var settingsPane: SettingsPane!
+    private var statsPane: StatsPane!
 
     convenience init() {
         let win = NSWindow(contentRect: NSRect(x: 0, y: 0, width: 1280, height: 800),
@@ -26,23 +28,87 @@ final class LibraryWindowController: NSWindowController, NSWindowDelegate {
         self.init(window: win)
         win.delegate = self
         buildUI()
+        installToolbar()
         win.center()
         reload()
         NotificationCenter.default.addObserver(forName: .meetingsChanged, object: nil, queue: .main) { [weak self] _ in
             self?.reload()
         }
         NotificationCenter.default.addObserver(forName: .showPrivacyPane, object: nil, queue: .main) { [weak self] _ in
-            guard let self else { return }
-            self.detail.removeFromSuperview()
-            self.privacyPane.isHidden = false
+            self?.showPane(.privacy)
         }
-        NotificationCenter.default.addObserver(forName: .meetingsChanged, object: nil, queue: .main) { [weak self] _ in
-            self?.reload()
-            guard let self, self.privacyPane.superview != nil else { return }
-            self.privacyPane.removeFromSuperview()
-            self.privacyPane.isHidden = true
-            self.split.addArrangedSubview(self.detail)
+    }
+
+    // MARK: - Right-side panes (detail / privacy / settings / stats)
+    // All overlays occupy the same split slot as the detail view and swap
+    // through showPane(_:), so exactly one is visible at a time.
+
+    enum SidePane { case detail, privacy, settings, stats }
+    private var currentPane: SidePane = .detail
+
+    private func ensurePanes() {
+        if privacyPane == nil { privacyPane = PrivacyPane() }
+    }
+
+    /// Swap the right side to `pane`. Settings/stats are recreated on every
+    /// open so quota/model/storage state is current; privacy persists.
+    func showPane(_ pane: SidePane) {
+        ensurePanes()
+        guard pane != currentPane || pane == .settings || pane == .stats else { return }
+
+        // Tear down whoever currently holds the slot.
+        if pane != .detail || currentPane != .detail {
+            switch currentPane {
+            case .detail:    if detail.superview != nil { detail.removeFromSuperview() }
+            case .privacy:   privacyPane.removeFromSuperview()
+            case .settings:  settingsPane?.removeFromSuperview()
+            case .stats:     statsPane?.removeFromSuperview()
+            }
         }
+
+        switch pane {
+        case .detail:
+            if detail.superview == nil { split.addArrangedSubview(detail) }
+        case .privacy:
+            privacyPane.onBack = { [weak self] in self?.showPane(.detail) }
+            split.addArrangedSubview(privacyPane)
+        case .settings:
+            let sp = SettingsPane()
+            sp.onBack = { [weak self] in self?.showPane(.detail) }
+            settingsPane = sp
+            split.addArrangedSubview(sp)
+        case .stats:
+            let st = StatsPane()
+            st.onBack = { [weak self] in self?.showPane(.detail) }
+            statsPane = st
+            split.addArrangedSubview(st)
+        }
+        currentPane = pane
+    }
+
+    /// Legacy path used by older call sites.
+    func showDetail() { showPane(.detail) }
+
+    // MARK: - Toolbar (settings / stats entry points)
+    // Library hosts the settings & stats panes inline, so the window needs
+    // visible buttons: ⚙ opens the settings pane, 📊 the stats pane.
+    private static let toolbarID = "KMLibraryToolbar"
+
+    private func installToolbar() {
+        let tb = NSToolbar(identifier: Self.toolbarID)
+        tb.delegate = self
+        tb.displayMode = .iconOnly
+        tb.allowsUserCustomization = false
+        tb.autosavesConfiguration = false
+        window?.toolbar = tb
+    }
+
+    @objc private func toolbarSettings(_ sender: Any?) {
+        showPane(currentPane == .settings ? .detail : .settings)
+    }
+
+    @objc private func toolbarStats(_ sender: Any?) {
+        showPane(currentPane == .stats ? .detail : .stats)
     }
 
     private var meetings: [Meeting] = []
@@ -102,18 +168,15 @@ final class LibraryWindowController: NSWindowController, NSWindowDelegate {
             scroll.bottomAnchor.constraint(equalTo: left.bottomAnchor)
         ])
 
-        // Right: detail + privacy pane (privacy hidden by default)
+        // Right: detail view; privacy/settings/stats swap into the same slot
+        // on demand (showPane) instead of stacking hidden panes.
         detail = DetailView()
-        privacyPane = PrivacyPane()
-        privacyPane.isHidden = true
 
         split.addArrangedSubview(left)
         split.addArrangedSubview(detail)
-        split.addArrangedSubview(privacyPane)
         left.setContentHuggingPriority(.defaultLow, for: .horizontal)
         detail.setContentHuggingPriority(.defaultLow, for: .horizontal)
         detail.setContentCompressionResistancePriority(.defaultLow, for: .horizontal)
-        privacyPane.setContentCompressionResistancePriority(.defaultLow, for: .horizontal)
 
         // Frame-based layout: split fills content, left pane pinned at 300.
         // (Constraint-based pinning made NSWindow shrink to fit the panes — known trap.)
@@ -529,3 +592,36 @@ final class DetailView: NSView {
 }
 
 
+
+// MARK: - Library toolbar: settings / stats quick access
+
+extension LibraryWindowController: NSToolbarDelegate {
+    func toolbarAllowedItemIdentifiers(_ toolbar: NSToolbar) -> [NSToolbarItem.Identifier] {
+        [.flexibleSpace, .init("settings"), .init("stats")]
+    }
+
+    func toolbarDefaultItemIdentifiers(_ toolbar: NSToolbar) -> [NSToolbarItem.Identifier] {
+        [.flexibleSpace, .init("settings"), .init("stats")]
+    }
+
+    func toolbar(_ toolbar: NSToolbar, itemForItemIdentifier itemIdentifier: NSToolbarItem.Identifier, willBeInsertedIntoToolbar: Bool) -> NSToolbarItem? {
+        let item = NSToolbarItem(itemIdentifier: itemIdentifier)
+        switch itemIdentifier.rawValue {
+        case "settings":
+            item.label = L10n.string("Settings")
+            item.toolTip = L10n.string("Settings")
+            item.image = NSImage(systemSymbolName: "gearshape", accessibilityDescription: item.label)
+            item.target = self
+            item.action = #selector(toolbarSettings(_:))
+        case "stats":
+            item.label = L10n.string("Meeting Statistics")
+            item.toolTip = L10n.string("Meeting Statistics")
+            item.image = NSImage(systemSymbolName: "chart.bar", accessibilityDescription: item.label)
+            item.target = self
+            item.action = #selector(toolbarStats(_:))
+        default:
+            return nil
+        }
+        return item
+    }
+}

@@ -1,1 +1,1 @@
-Fixed: search field occasionally not responding; improved library demo data and localization details.
+NEW: Settings moved into the library window (press ,). Meeting stats, calendar title pre-fill and the global shortcut Option+Cmd+R are here. Sharper screenshots, same zero-upload promise.

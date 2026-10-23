@@ -23,6 +23,7 @@ APPS = {
     "6813593104": "KinetMinutes",
     "6813776720": "KinetSentinel",
     "6779978181": "KinetMorning",
+    "6818392883": "Dimlet",      # 2026-10-02 WFR
 }
 TARGET = "6813593104"
 TERMINAL_OK = {"READY_FOR_SALE", "PENDING_DEVELOPER_RELEASE"}

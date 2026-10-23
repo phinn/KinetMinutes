@@ -361,10 +361,16 @@ final class DetailView: NSView {
         let hasNotes = !(meeting?.summary ?? "").isEmpty && meeting?.status != "failed"
         let hasTranscript = !(meeting?.transcript ?? "").isEmpty
         let busy = meeting?.status == "processing"
+        let failed = meeting?.status == "failed"
+        // 1.3: full-mode failures also surface the button (title = Retry);
+        // success state still hides it for full-mode meetings.
+        let showGen = busy || (isTO ? !hasNotes : failed)
         toBadge.isHidden = !isTO || hasNotes
-        genNotesBtn.isHidden = !isTO || hasNotes
+        genNotesBtn.isHidden = !showGen
         genNotesBtn.isEnabled = !busy && hasTranscript
-        genNotesBtn.title = busy ? L10n.string("Generating notes…") : L10n.string("Generate Notes…")
+        genNotesBtn.title = busy
+            ? L10n.string("Generating notes…")
+            : (failed ? L10n.string("Retry") : L10n.string("Generate Notes…"))
         if meeting == nil { player?.stop(); player = nil }
         tabChanged()
     }
@@ -461,11 +467,23 @@ final class DetailView: NSView {
     /// 1.2: turn a transcribe-only meeting into full notes from its stored
     /// transcript — no ASR rerun. Free wall + quota enforcement run inside.
     @objc private func generateNotesTapped() {
-        guard let m = meeting, m.transcribeOnly, m.status != "processing",
-              (m.summary ?? "").isEmpty || m.status == "failed" else { return }  // 1.2: no re-entry
+        // 1.3: full-mode retry included. TO path: never-generated or failed;
+        // full path: pipeline failure wrote error text into `summary` — rerun
+        // the whole pipeline (transcript exists, so Whisper is skipped fast).
+        guard let m = meeting, m.status != "processing" else { return }
+        let isRetry = m.status == "failed"
+        if m.transcribeOnly {
+            guard isRetry || (m.summary ?? "").isEmpty else { return }   // no re-entry when notes exist
+        } else {
+            guard isRetry, !(m.transcript ?? "").isEmpty else { return } // retry needs a transcript to summarize
+        }
         show(meeting: m)   // repaint busy state immediately
         Task {
-            await MinutesPipeline.shared.generateNotes(meetingID: m.id)
+            if isRetry && !m.transcribeOnly {
+                await MinutesPipeline.shared.process(meetingID: m.id)
+            } else {
+                await MinutesPipeline.shared.generateNotes(meetingID: m.id)
+            }
             await MainActor.run {
                 if let fresh = MeetingStore.shared.meeting(id: m.id) { self.show(meeting: fresh) }
             }

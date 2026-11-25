@@ -1,0 +1,4 @@
+"NSMicrophoneUsageDescription" = "KinetMinutes 用麦克风录制会议，并在本机生成私密纪要。音频不会离开你的 Mac。";
+"NSSpeechRecognitionUsageDescription" = "KinetMinutes 完全离线地在你的 Mac 上转写会议音频，不会把任何内容发送到服务器。";
+"NSCalendarsUsageDescription" = "仅用日历从当前日程补全会议标题。";
+"NSCalendarsFullAccessUsageDescription" = "仅用日历从当前日程补全会议标题。";

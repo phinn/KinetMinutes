@@ -132,7 +132,9 @@ final class SettingsPane: NSView {
 
         // 1.3 P2: interface language picker (en/ja/zh-Hans/zh-Hant/system)
         for (code, key) in [("", "System language"), ("en", "English"), ("ja", "日本語"),
-                            ("zh-Hans", "简体中文"), ("zh-Hant", "繁體中文")] {
+                            ("zh-Hans", "简体中文"), ("zh-Hant", "繁體中文"),
+                            ("ko", "한국어"), ("fr", "Français"), ("de", "Deutsch"),
+                            ("es", "Español")] {
             let item = NSMenuItem(title: code.isEmpty ? L10n.string(key) : key,
                                   action: nil, keyEquivalent: "")
             item.representedObject = code
@@ -165,76 +167,66 @@ final class SettingsPane: NSView {
         langRow.orientation = .horizontal
         langRow.alignment = .centerY
         langRow.spacing = 10
-        let divider6 = NSBox()
-        divider6.boxType = .separator
 
         // Embedded-pane header: Back + title (library swaps the detail pane back).
-        let backBtn = NSButton(title: L10n.string("Back"), target: nil, action: nil)
-        backBtn.bezelStyle = .rounded
-        backBtn.image = NSImage(systemSymbolName: "chevron.left", accessibilityDescription: L10n.string("Back"))
-        backBtn.imagePosition = .imageLeading
-        backBtn.controlSize = .small
+        let backBtn = KMIconButton(symbol: "chevron.left", tooltip: L10n.string("Back"))
         backBtn.target = self
         backBtn.action = #selector(backTapped)
 
         let title = NSTextField(labelWithString: L10n.string("Settings…").replacingOccurrences(of: "…", with: ""))
-        title.font = .systemFont(ofSize: 17, weight: .bold)
+        title.font = .systemFont(ofSize: 20, weight: .bold)
         let header = NSStackView(views: [backBtn, title])
         header.orientation = .horizontal
-        header.spacing = 10
+        header.alignment = .centerY
+        header.spacing = 4
 
-        // 1.3 layout: grouped sections with separators — label / control row /
-        // hint, blank-line breathing room between groups.
-        let divider1 = NSBox()
-        divider1.boxType = .separator
-        let divider2 = NSBox()
-        divider2.boxType = .separator
-        let divider3 = NSBox()
-        divider3.boxType = .separator
-        let divider4 = NSBox()
-        divider4.boxType = .separator
+        // 1.4: each section is a rounded card on a calm canvas.
+        let card1 = settingsCard([modeLabel, modeSegment, calPrefillCheck, modeHint])
+        let card2 = settingsCard([modelLabel, modelPop, downloadRow, modelHint])
+        let card3 = settingsCard([quotaLabel, quotaRow, quotaHint])
+        let card4 = settingsCard([mirrorLabel, mirrorField, mirrorHint])
+        let card5 = settingsCard([storageLabel, storageRow, retentionRow])
+        let card6 = settingsCard([langRow])
 
-        let stack = NSStackView(views: [
-            header,
-            modeLabel, modeSegment, calPrefillCheck, modeHint,
-            divider1,
-            modelLabel, modelPop, downloadRow, modelHint,
-            divider2,
-            quotaLabel, quotaRow, quotaHint,
-            divider3,
-            mirrorLabel, mirrorField, mirrorHint,
-            divider4,
-            storageLabel, storageRow, retentionRow,
-            divider6,
-            langRow,
-        ])
-        stack.orientation = .vertical
-        stack.alignment = .leading
-        stack.spacing = 6
-        stack.setCustomSpacing(18, after: header)
-        stack.setCustomSpacing(14, after: calPrefillCheck)
-        stack.setCustomSpacing(14, after: modelPop)
-        stack.setCustomSpacing(14, after: downloadRow)
-        stack.setCustomSpacing(14, after: quotaRow)
-        stack.setCustomSpacing(14, after: mirrorField)
-        stack.setCustomSpacing(14, after: storageRow)
-        stack.setCustomSpacing(14, after: retentionRow)
-        for d in [divider1, divider2, divider3, divider4, divider6] {
-            stack.setCustomSpacing(16, after: d)
-        }
-        divider1.widthAnchor.constraint(equalTo: stack.widthAnchor).isActive = true
-        divider2.widthAnchor.constraint(equalTo: stack.widthAnchor).isActive = true
-        divider3.widthAnchor.constraint(equalTo: stack.widthAnchor).isActive = true
-        divider4.widthAnchor.constraint(equalTo: stack.widthAnchor).isActive = true
-        divider6.widthAnchor.constraint(equalTo: stack.widthAnchor).isActive = true
-        mirrorField.widthAnchor.constraint(equalToConstant: 420).isActive = true
-        stack.translatesAutoresizingMaskIntoConstraints = false
-        addSubview(stack)
+        let column = NSStackView(views: [header, card1, card2, card3, card4, card5, card6])
+        column.orientation = .vertical
+        column.alignment = .leading
+        column.spacing = 12
+        column.setCustomSpacing(18, after: header)
+        column.translatesAutoresizingMaskIntoConstraints = false
+
+        let doc = KMFlipView()
+        doc.translatesAutoresizingMaskIntoConstraints = false
+        doc.addSubview(column)
+        let scroll = NSScrollView()
+        scroll.translatesAutoresizingMaskIntoConstraints = false
+        scroll.hasVerticalScroller = true
+        scroll.drawsBackground = false
+        scroll.autohidesScrollers = true
+        scroll.documentView = doc
+        addSubview(scroll)
+
         NSLayoutConstraint.activate([
-            stack.topAnchor.constraint(equalTo: topAnchor, constant: 24),
-            stack.leadingAnchor.constraint(equalTo: leadingAnchor, constant: 24),
-            stack.trailingAnchor.constraint(lessThanOrEqualTo: trailingAnchor, constant: -24),
+            scroll.leadingAnchor.constraint(equalTo: leadingAnchor),
+            scroll.trailingAnchor.constraint(equalTo: trailingAnchor),
+            scroll.topAnchor.constraint(equalTo: topAnchor),
+            scroll.bottomAnchor.constraint(equalTo: bottomAnchor),
+            doc.leadingAnchor.constraint(equalTo: scroll.contentView.leadingAnchor),
+            doc.trailingAnchor.constraint(equalTo: scroll.contentView.trailingAnchor),
+            doc.topAnchor.constraint(equalTo: scroll.contentView.topAnchor),
+            doc.widthAnchor.constraint(equalTo: scroll.contentView.widthAnchor),
+
+            column.topAnchor.constraint(equalTo: doc.topAnchor, constant: 22),
+            column.centerXAnchor.constraint(equalTo: doc.centerXAnchor),
+            column.widthAnchor.constraint(equalToConstant: 620),
+            column.leadingAnchor.constraint(greaterThanOrEqualTo: doc.leadingAnchor, constant: 24),
+            column.trailingAnchor.constraint(lessThanOrEqualTo: doc.trailingAnchor, constant: -24),
+            column.bottomAnchor.constraint(equalTo: doc.bottomAnchor, constant: -24),
         ])
+        mirrorField.widthAnchor.constraint(equalToConstant: 560).isActive = true
+        for v in [modeHint, modelHint, quotaHint, mirrorHint] {
+            v.preferredMaxLayoutWidth = 560
+        }
 
         mirrorField.stringValue = UserDefaults.standard.string(forKey: "hfEndpoint") ?? ""
         refreshModelStatus()
@@ -242,6 +234,29 @@ final class SettingsPane: NSView {
         refreshStorage()
     }
     required init?(coder: NSCoder) { fatalError() }
+
+    private func settingsCard(_ views: [NSView]) -> NSView {
+        let card = NSView()
+        card.wantsLayer = true
+        card.layer?.cornerRadius = 12
+        card.layer?.borderWidth = 1
+        card.layer?.borderColor = KMTheme.hairline.cgColor
+        card.layer?.backgroundColor = KMTheme.cardFill.cgColor
+        let inner = NSStackView(views: views)
+        inner.orientation = .vertical
+        inner.alignment = .leading
+        inner.spacing = 8
+        inner.translatesAutoresizingMaskIntoConstraints = false
+        card.addSubview(inner)
+        NSLayoutConstraint.activate([
+            inner.leadingAnchor.constraint(equalTo: card.leadingAnchor, constant: 18),
+            inner.trailingAnchor.constraint(equalTo: card.trailingAnchor, constant: -18),
+            inner.topAnchor.constraint(equalTo: card.topAnchor, constant: 16),
+            inner.bottomAnchor.constraint(equalTo: card.bottomAnchor, constant: -16),
+            card.widthAnchor.constraint(equalToConstant: 620),
+        ])
+        return card
+    }
 
     // MARK: - Actions
 

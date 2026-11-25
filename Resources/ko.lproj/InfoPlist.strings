@@ -1,0 +1,4 @@
+"NSMicrophoneUsageDescription" = "KinetMinutes는 마이크로 회의를 녹음해 기기 안에서만 회의록을 만듭니다. 오디오는 Mac 밖으로 나가지 않습니다.";
+"NSSpeechRecognitionUsageDescription" = "KinetMinutes는 회의 오디오를 Mac에서 완전히 오프라인으로 받아씁니다. 어떤 내용도 서버로 전송하지 않습니다.";
+"NSCalendarsUsageDescription" = "캘린더는 현재 일정에서 회의 제목을 채우는 용도로만 사용합니다.";
+"NSCalendarsFullAccessUsageDescription" = "캘린더는 현재 일정에서 회의 제목을 채우는 용도로만 사용합니다.";

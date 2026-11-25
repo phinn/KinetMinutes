@@ -1,0 +1,4 @@
+"NSMicrophoneUsageDescription" = "KinetMinutes nimmt Besprechungen über das Mikrofon auf und erstellt lokale, private Notizen. Audio verlässt deinen Mac nie.";
+"NSSpeechRecognitionUsageDescription" = "KinetMinutes transkribiert Besprechungsaudio vollständig offline auf deinem Mac. Nichts wird an einen Server gesendet.";
+"NSCalendarsUsageDescription" = "Der Kalender dient nur dazu, den Meeting-Titel aus dem aktuellen Termin zu übernehmen.";
+"NSCalendarsFullAccessUsageDescription" = "Der Kalender dient nur dazu, den Meeting-Titel aus dem aktuellen Termin zu übernehmen.";

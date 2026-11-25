@@ -14,18 +14,15 @@ final class StatsPane: NSView {
     override init(frame: NSRect) {
         super.init(frame: NSRect(x: 0, y: 0, width: 560, height: 300))
         wantsLayer = true
+        layer?.backgroundColor = KMTheme.canvas.cgColor
 
-        let backBtn = NSButton(title: L10n.string("Back"), target: nil, action: nil)
-        backBtn.bezelStyle = .rounded
-        backBtn.image = NSImage(systemSymbolName: "chevron.left", accessibilityDescription: L10n.string("Back"))
-        backBtn.imagePosition = .imageLeading
-        backBtn.controlSize = .small
+        let backBtn = KMIconButton(symbol: "chevron.left", tooltip: L10n.string("Back"))
         backBtn.target = self
         backBtn.action = #selector(backTapped)
         backBtn.translatesAutoresizingMaskIntoConstraints = false
 
         let title = NSTextField(labelWithString: L10n.string("Meeting Statistics…").replacingOccurrences(of: "…", with: ""))
-        title.font = .systemFont(ofSize: 17, weight: .bold)
+        title.font = .systemFont(ofSize: 20, weight: .bold)
         title.translatesAutoresizingMaskIntoConstraints = false
 
         cards.orientation = .vertical
@@ -51,10 +48,10 @@ final class StatsPane: NSView {
             backBtn.topAnchor.constraint(equalTo: topAnchor, constant: 20),
             backBtn.leadingAnchor.constraint(equalTo: leadingAnchor, constant: 28),
             title.centerYAnchor.constraint(equalTo: backBtn.centerYAnchor),
-            title.leadingAnchor.constraint(equalTo: backBtn.trailingAnchor, constant: 10),
-            cards.topAnchor.constraint(equalTo: backBtn.bottomAnchor, constant: 24),
-            cards.leadingAnchor.constraint(equalTo: leadingAnchor, constant: 28),
-            cards.trailingAnchor.constraint(equalTo: trailingAnchor, constant: -28),
+            title.leadingAnchor.constraint(equalTo: backBtn.trailingAnchor, constant: 4),
+            cards.topAnchor.constraint(equalTo: backBtn.bottomAnchor, constant: 22),
+            cards.leadingAnchor.constraint(equalTo: leadingAnchor, constant: 26),
+            cards.trailingAnchor.constraint(equalTo: trailingAnchor, constant: -26),
             emptyLabel.centerXAnchor.constraint(equalTo: centerXAnchor),
             emptyLabel.centerYAnchor.constraint(equalTo: centerYAnchor),
             emptyLabel.leadingAnchor.constraint(greaterThanOrEqualTo: leadingAnchor, constant: 28),
@@ -110,20 +107,23 @@ final class StatsPane: NSView {
                 .filter { $0.contains { $0.isLetter } }.count
             return cjk + latinWords
         }
+        let allWords = ms.reduce(0) { $0 + wordCount($1.transcript ?? "") }
         let monthWords = month.reduce(0) { $0 + wordCount($1.transcript ?? "") }
-        let fmt = DateComponentsFormatter()
-        fmt.allowedUnits = [.hour, .minute]
-        fmt.unitsStyle = .abbreviated
-
+        // "3 · This Month · 2 · This week" read like a broken sentence;
+        // label-then-number keeps it legible in every language.
+        let monthLabel = L10n.string("This Month")
+        let weekLabel = L10n.string("This week")
+        let noteCount = ms.filter { !($0.summary ?? "").isEmpty }.count
+        let monthNoteCount = month.filter { !($0.summary ?? "").isEmpty }.count
         let rows: [Row] = [
             Row(title: L10n.string("Meetings"), value: String(total),
-                sub: String(format: "%d · %@", month.count, L10n.string("This Month")) + " · " + String(week.count) + " · " + L10n.string("This week")),
-            Row(title: L10n.string("Total recorded"), value: fmt.string(from: totalDur) ?? "—",
-                sub: L10n.string("This Month") + ": " + (fmt.string(from: monthDur) ?? "—")),
-            Row(title: L10n.string("Total notes"), value: String(ms.filter { $0.summary != nil && !($0.summary ?? "").isEmpty }.count),
-                sub: String(month.filter { $0.summary != nil && !($0.summary ?? "").isEmpty }.count) + " · " + L10n.string("This Month")),
-            Row(title: L10n.string("Transcript words"), value: String(monthWords),
-                sub: String(format: "%@ · %@", L10n.string("This Month"), L10n.string("Meetings"))),
+                sub: "\(monthLabel) \(month.count)  ·  \(weekLabel) \(week.count)"),
+            Row(title: L10n.string("Total recorded"), value: Self.durationText(totalDur),
+                sub: "\(monthLabel): \(Self.durationText(monthDur))"),
+            Row(title: L10n.string("Total notes"), value: String(noteCount),
+                sub: "\(monthLabel): \(monthNoteCount)"),
+            Row(title: L10n.string("Transcript words"), value: String(allWords),
+                sub: "\(monthLabel): \(monthWords)"),
         ]
         cards.arrangedSubviews.forEach { $0.removeFromSuperview() }
         // 2x2 grid: two horizontal rows; fillEqually shares the row between the
@@ -133,52 +133,91 @@ final class StatsPane: NSView {
             let row = NSStackView()
             row.orientation = .horizontal
             row.distribution = .fillEqually
-            row.spacing = 14
+            row.spacing = 12
             row.translatesAutoresizingMaskIntoConstraints = false
-            for r in rows[pair..<min(pair + 2, rows.count)] { row.addArrangedSubview(Self.card(r)) }
+            for idx in pair..<min(pair + 2, rows.count) {
+                row.addArrangedSubview(Self.card(rows[idx], index: idx))
+            }
             cards.addArrangedSubview(row)
             row.widthAnchor.constraint(equalTo: cards.widthAnchor).isActive = true
         }
-        let f = DateFormatter(); f.dateStyle = .medium; f.timeStyle = .short
+        let f = DateFormatter(); f.locale = L10n.locale; f.dateStyle = .medium; f.timeStyle = .short
         updated.stringValue = L10n.string("Updated") + ": " + f.string(from: now)
     }
 
     /// Card = rounded layer + vertically stacked labels with an EXPLICIT height.
     /// NSBox.title was fighting the content view for space (labels overlapped);
     /// a plain layer + fixed-height stack is deterministic across macOS versions.
-    private static func card(_ r: Row) -> NSView {
+    /// Explicit units keep the number localized with the app language instead
+    /// of the system's DateComponentsFormatter locale.
+    private static func durationText(_ seconds: Double) -> String {
+        let total = Int(seconds.rounded())
+        let hours = total / 3600
+        let minutes = (total % 3600) / 60
+        if hours > 0 {
+            // Spacing lives in the "h" string so CJK renders 1時間40分, not 1時間 40分.
+            return "\(hours)" + L10n.string("h") + "\(minutes)" + L10n.string("m")
+        }
+        return "\(minutes)" + L10n.string("m")
+    }
+
+    private static func card(_ r: Row, index: Int) -> NSView {
+        let symbols = ["calendar", "clock", "doc.text", "textformat"]
+        let colors = [KMTheme.amber, KMTheme.blue, KMTheme.green, KMTheme.violet]
+        let accent = colors[index % colors.count]
+
         let box = NSView()
         box.wantsLayer = true
-        box.layer?.cornerRadius = 8
-        box.layer?.backgroundColor = NSColor.controlBackgroundColor.cgColor
+        box.layer?.cornerRadius = 12
+        box.layer?.backgroundColor = KMTheme.cardFill.cgColor
         box.layer?.borderWidth = 1
-        box.layer?.borderColor = NSColor.separatorColor.cgColor
+        box.layer?.borderColor = KMTheme.hairline.cgColor
+
+        let tile = NSView()
+        tile.wantsLayer = true
+        tile.layer?.cornerRadius = 9
+        tile.layer?.backgroundColor = accent.withAlphaComponent(0.15).cgColor
+        tile.translatesAutoresizingMaskIntoConstraints = false
+        let icon = NSImageView()
+        icon.image = KMTheme.symbol(symbols[index % symbols.count], size: 15, weight: .semibold)
+        icon.contentTintColor = accent
+        icon.translatesAutoresizingMaskIntoConstraints = false
+        tile.addSubview(icon)
 
         let title = NSTextField(labelWithString: r.title)
-        title.font = NSFont.systemFont(ofSize: 12, weight: .medium)
+        title.font = NSFont.systemFont(ofSize: 11, weight: .semibold)
         title.textColor = .secondaryLabelColor
 
         let value = NSTextField(labelWithString: r.value)
-        value.font = NSFont.monospacedDigitSystemFont(ofSize: 24, weight: .semibold)
+        value.font = NSFont.monospacedDigitSystemFont(ofSize: 26, weight: .semibold)
 
         let sub = NSTextField(labelWithString: r.sub)
-        sub.font = NSFont.systemFont(ofSize: 11)
+        sub.font = NSFont.systemFont(ofSize: 10.5)
         sub.textColor = .tertiaryLabelColor
         sub.lineBreakMode = .byTruncatingTail
 
-        let stack = NSStackView(views: [title, value, sub])
-        stack.orientation = .vertical
-        stack.alignment = .leading
-        stack.spacing = 3
-        stack.translatesAutoresizingMaskIntoConstraints = false
+        let textStack = NSStackView(views: [title, value, sub])
+        textStack.orientation = .vertical
+        textStack.alignment = .leading
+        textStack.spacing = 2
 
-        box.addSubview(stack)
+        let row = NSStackView(views: [tile, textStack])
+        row.orientation = .horizontal
+        row.alignment = .centerY
+        row.spacing = 12
+        row.translatesAutoresizingMaskIntoConstraints = false
+
+        box.addSubview(row)
         NSLayoutConstraint.activate([
-            stack.leadingAnchor.constraint(equalTo: box.leadingAnchor, constant: 16),
-            stack.trailingAnchor.constraint(equalTo: box.trailingAnchor, constant: -16),
-            stack.topAnchor.constraint(equalTo: box.topAnchor, constant: 12),
-            stack.bottomAnchor.constraint(lessThanOrEqualTo: box.bottomAnchor, constant: -12),
-            box.heightAnchor.constraint(equalToConstant: 92),
+            tile.widthAnchor.constraint(equalToConstant: 32),
+            tile.heightAnchor.constraint(equalToConstant: 32),
+            icon.centerXAnchor.constraint(equalTo: tile.centerXAnchor),
+            icon.centerYAnchor.constraint(equalTo: tile.centerYAnchor),
+            row.leadingAnchor.constraint(equalTo: box.leadingAnchor, constant: 16),
+            row.trailingAnchor.constraint(equalTo: box.trailingAnchor, constant: -14),
+            row.topAnchor.constraint(equalTo: box.topAnchor, constant: 16),
+            row.bottomAnchor.constraint(lessThanOrEqualTo: box.bottomAnchor, constant: -14),
+            box.heightAnchor.constraint(equalToConstant: 104),
         ])
         return box
     }

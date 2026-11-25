@@ -1,0 +1,4 @@
+"NSMicrophoneUsageDescription" = "KinetMinutes records meetings with your microphone to create local, private meeting notes. Audio never leaves your Mac.";
+"NSSpeechRecognitionUsageDescription" = "KinetMinutes transcribes meeting audio fully offline on your Mac. Nothing is sent to any server.";
+"NSCalendarsUsageDescription" = "KinetMinutes uses your calendar only to prefill the meeting title from the current event.";
+"NSCalendarsFullAccessUsageDescription" = "KinetMinutes uses your calendar only to prefill the meeting title from the current event.";

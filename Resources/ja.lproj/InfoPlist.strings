@@ -1,0 +1,4 @@
+"NSMicrophoneUsageDescription" = "KinetMinutes はマイクで会議を録音し、端末内だけで議事録を作成します。音声が Mac の外に出ることはありません。";
+"NSSpeechRecognitionUsageDescription" = "KinetMinutes は会議の音声を Mac 上で完全にオフラインで文字起こしします。サーバーへの送信はありません。";
+"NSCalendarsUsageDescription" = "カレンダーは、現在の予定から会議タイトルを補完するためだけに使用します。";
+"NSCalendarsFullAccessUsageDescription" = "カレンダーは、現在の予定から会議タイトルを補完するためだけに使用します。";

@@ -30,6 +30,10 @@
 		<string>ja</string>
 		<string>zh-Hans</string>
 		<string>zh-Hant</string>
+		<string>ko</string>
+		<string>fr</string>
+		<string>de</string>
+		<string>es</string>
 	</array>
 	<key>LSMinimumSystemVersion</key>
 	<string>$(MACOSX_DEPLOYMENT_TARGET)</string>

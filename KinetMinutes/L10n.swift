@@ -1,4 +1,5 @@
-// L10n.swift — lightweight four-language strings (en / ja / zh-Hans / zh-Hant)
+// L10n.swift — lightweight eight-language strings
+// (en / ja / zh-Hans / zh-Hant / ko / fr / de / es)
 // Keys fall back to en. Values live in this table so Review/screenshots can
 // drive UI language via -AppleLanguages without .lproj file juggling.
 
@@ -42,10 +43,18 @@ enum L10n {
             if code.hasPrefix("zh-Hant") || code.hasPrefix("zh-HK") || code.hasPrefix("zh-TW") { return "zh-Hant" }
             if code.hasPrefix("zh") { return "zh-Hans" }
             if code.hasPrefix("ja") { return "ja" }
+            if code.hasPrefix("ko") { return "ko" }
+            if code.hasPrefix("fr") { return "fr" }
+            if code.hasPrefix("de") { return "de" }
+            if code.hasPrefix("es") { return "es" }
             if code.hasPrefix("en") { return "en" }
         }
         return "en"
     }
+
+    /// Locale for date/number formatters. Using `Locale.current` here is what made
+    /// an English UI print "2026年10月15日" on a Chinese system.
+    static var locale: Locale { Locale(identifier: preferredLanguage()) }
 
     private static func load() -> [String: [String: String]] {
         guard let url = Bundle.main.url(forResource: "L10n", withExtension: "json"),

@@ -64,6 +64,7 @@ SHOT_CFG = {
 REC = {
     "en": "Recording", "zh-Hans": "录音中", "zh-Hant": "錄音中", "ja": "録音中",
     "ko": "녹음 중", "fr": "Enregistrement", "de": "Aufnahme", "es": "Grabando",
+    "ru": "Запись", "pt-BR": "Gravando", "pt-PT": "A gravar",
 }
 
 COPY = {
@@ -217,6 +218,63 @@ COPY = {
             "Audio, transcripciones y notas se quedan en este Mac. Sin conexión.",
             "Reuniones, horas y palabras contadas en local, nunca compartidas.",
             "Modelo Whisper, retención e idioma — todo en el dispositivo.",
+        ],
+    ),
+    "ru": dict(
+        lat=True,
+        head=[
+            ("Встреча закончилась.", "Заметки уже готовы."),
+            ("Задачи —", "прямо из разговора."),
+            ("Вернитесь", "к нужной минуте."),
+            ("Ноль загрузок.", "Так задумано."),
+            ("Куда уходят", "ваши часы."),
+            ("Ваши модели,", "ваши правила."),
+        ],
+        sub=[
+            "Резюме, решения и задачи — на вашем Mac, без интернета.",
+            "Ответственные, сроки и следующие шаги извлекаются автоматически.",
+            "Ключевые моменты с отметками времени. Один клик — и запись играет с этого места.",
+            "Аудио, расшифровки и заметки остаются на этом Mac. Полностью офлайн.",
+            "Встречи, часы и слова считаются локально и никуда не отправляются.",
+            "Модель Whisper, хранение и язык — всё на устройстве.",
+        ],
+    ),
+    "pt-BR": dict(
+        lat=True,
+        head=[
+            ("A reunião acaba.", "As notas já estão prontas."),
+            ("Tarefas,", "direto da conversa."),
+            ("Volte ao", "momento exato."),
+            ("Zero envio.", "Por design."),
+            ("Para onde vão", "suas horas."),
+            ("Seus modelos,", "suas regras."),
+        ],
+        sub=[
+            "Resumo, decisões e tarefas — escritos no seu Mac, sem internet.",
+            "Responsáveis, prazos e próximos passos, extraídos automaticamente.",
+            "Momentos-chave com marca de tempo. Um clique e a reprodução continua dali.",
+            "Áudio, transcrições e notas ficam neste Mac. Totalmente offline.",
+            "Reuniões, horas e palavras contadas localmente, nunca compartilhadas.",
+            "Modelo Whisper, retenção e idioma — tudo no dispositivo.",
+        ],
+    ),
+    "pt-PT": dict(
+        lat=True,
+        head=[
+            ("A reunião termina.", "As notas já estão prontas."),
+            ("Tarefas,", "direitas da conversa."),
+            ("Volte ao", "momento exato."),
+            ("Zero envios.", "De raiz."),
+            ("Para onde vão", "as suas horas."),
+            ("Os seus modelos,", "as suas regras."),
+        ],
+        sub=[
+            "Resumo, decisões e tarefas — escritos no seu Mac, sem internet.",
+            "Responsáveis, prazos e passos seguintes, extraídos automaticamente.",
+            "Momentos-chave com marca temporal. Um clique e a reprodução continua daí.",
+            "Áudio, transcrições e notas ficam neste Mac. Totalmente offline.",
+            "Reuniões, horas e palavras contadas localmente, nunca partilhadas.",
+            "Modelo Whisper, retenção e idioma — tudo no dispositivo.",
         ],
     ),
 }

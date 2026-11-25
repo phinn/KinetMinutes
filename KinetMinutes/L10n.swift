@@ -44,6 +44,9 @@ enum L10n {
             if code.hasPrefix("zh") { return "zh-Hans" }
             if code.hasPrefix("ja") { return "ja" }
             if code.hasPrefix("ko") { return "ko" }
+            if code.hasPrefix("ru") { return "ru" }
+            if code.hasPrefix("pt-BR") || code.hasPrefix("pt-br") { return "pt-BR" }
+            if code.hasPrefix("pt") { return "pt-PT" }
             if code.hasPrefix("fr") { return "fr" }
             if code.hasPrefix("de") { return "de" }
             if code.hasPrefix("es") { return "es" }

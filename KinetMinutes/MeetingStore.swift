@@ -355,6 +355,12 @@ final class MeetingStore {
                 (t1, s1, d1, a1, tr1, sg1) = Self.seed1de(); (t2, s2, d2, a2, tr2, sg2) = Self.seed2de(); (t3, s3, d3, a3, tr3, sg3) = Self.seed3de()
             case "es":
                 (t1, s1, d1, a1, tr1, sg1) = Self.seed1es(); (t2, s2, d2, a2, tr2, sg2) = Self.seed2es(); (t3, s3, d3, a3, tr3, sg3) = Self.seed3es()
+            case "ru":
+                (t1, s1, d1, a1, tr1, sg1) = Self.seed1ru(); (t2, s2, d2, a2, tr2, sg2) = Self.seed2ru(); (t3, s3, d3, a3, tr3, sg3) = Self.seed3ru()
+            case "pt-BR":
+                (t1, s1, d1, a1, tr1, sg1) = Self.seed1ptbr(); (t2, s2, d2, a2, tr2, sg2) = Self.seed2ptbr(); (t3, s3, d3, a3, tr3, sg3) = Self.seed3ptbr()
+            case "pt-PT":
+                (t1, s1, d1, a1, tr1, sg1) = Self.seed1ptpt(); (t2, s2, d2, a2, tr2, sg2) = Self.seed2ptpt(); (t3, s3, d3, a3, tr3, sg3) = Self.seed3ptpt()
             default:
                 (t1, s1, d1, a1, tr1, sg1) = Self.seed1en(); (t2, s2, d2, a2, tr2, sg2) = Self.seed2en(); (t3, s3, d3, a3, tr3, sg3) = Self.seed3en()
             }
@@ -783,6 +789,148 @@ final class MeetingStore {
          [12:10] Phinn: Por supuesto. Decisión: lideras la evaluación de Parakeet y la presentas en la próxima revisión.
          """,
          [(0,12,"Una revisión rápida de carrera y luego las prioridades de la semana."),(390,440,"Quiero profundizar en los modelos de voz. ¿Puedo encargarme de la evaluación de Parakeet?"),(730,790,"Decisión: lideras la evaluación de Parakeet y la presentas en la próxima revisión.")])
+    }
+
+    private static func seed1ru() -> (String, String, [String], [(String, String, String)], String, [(Int, Int, String)]) {
+        ("Еженедельная встреча по продукту",
+         "ОБЗОР\nКоманда разобрала прогресс спринта и решила выпускать v1.0 с расшифровкой одного спикера; разделение спикеров остаётся за фича-флагом. Релиз — в конце месяца, при условии проверки текста о конфиденциальности.\n\nКЛЮЧЕВЫЕ МОМЕНТЫ\n• Локальный конвейер расшифровки дал 92% точности на тестовом наборе\n• Эксперимент с разделением спикеров перенесён на следующий спринт\n• Проверку текста о конфиденциальности назначили до подачи\n• Хранение аудио: 30 дней по умолчанию, настраивается в параметрах\n• v1.0 экспортирует Markdown, TXT и SRT\n\nРИСКИ\n• Разделение спикеров снова сдвинется, если тесты с наложением речи не пройдут\n• Проверка текста — единственное, что осталось до подачи\n• 30 дней хранения могут не устроить корпоративных покупателей\n\nОТКРЫТЫЕ ВОПРОСЫ\n• Нужна ли пилоту Northwind сборка для Windows?\n• Кто отвечает за поддержку после выхода v1.0?\n\nСЛЕДУЮЩИЕ ШАГИ\n• Зафиксировать объём и собрать релиз-кандидат 28-го",
+         ["Выпустить v1.0 в режиме одного спикера; разделение спикеров — за флагом", "Оставить обработку только на устройстве по умолчанию", "Хранение аудио — 30 дней по умолчанию, пользователь может изменить", "В v1.0 только экспорт Markdown, TXT и SRT"],
+         [("Майя", "Провести эксперимент с разделением спикеров", "Следующий спринт"), ("Кен", "Подготовить скриншоты для App Store", "Пятница"),
+          ("Майя", "Проверить текст о конфиденциальности", "До подачи"), ("Финн", "Собрать релиз-кандидат", "28-го"),
+          ("Кен", "Написать примечания к v1.0", "Четверг"), ("Майя", "Поделиться отчётом о точности", "Завтра"),
+          ("Финн", "Подтвердить цену в App Store", "На следующей неделе")],
+         """
+         [00:00] Финн: Начнём с обзора спринта. Локальный конвейер расшифровки дал 92% точности на тестовом наборе.
+         [02:30] Майя: Отлично. В следующем спринте я беру эксперимент с разделением спикеров.
+         [04:15] Кен: Сколько аудио храним по умолчанию? В опросе тридцать дней казались разумными.
+         [05:10] Финн: Решение: выпускаем v1.0 в режиме одного спикера, разделение спикеров оставляем за флагом.
+         [07:40] Майя: Согласна. Сделаю срок хранения настраиваемым, а не жёстко тридцать дней.
+         [09:20] Кен: По экспорту Markdown, TXT и SRT на старте достаточно.
+         [10:05] Финн: Решение: v1.0 выходит с этими тремя форматами. И ничего больше.
+         [11:30] Кен: Скриншоты для App Store подготовлю к пятнице, Майя проверит текст о конфиденциальности.
+         [12:20] Финн: Релиз-кандидат 28-го. Задачи зафиксированы, встреча окончена.
+         """,
+         [(0,14,"Начнём с обзора спринта. Локальный конвейер расшифровки дал 92% точности на тестовом наборе."),(150,186,"В следующем спринте я беру эксперимент с разделением спикеров."),(255,282,"Сколько аудио храним по умолчанию? В опросе тридцать дней казались разумными."),(310,352,"Решение: выпускаем v1.0 в режиме одного спикера, разделение спикеров оставляем за флагом."),(460,505,"Согласна. Сделаю срок хранения настраиваемым, а не жёстко тридцать дней."),(560,590,"По экспорту Markdown, TXT и SRT на старте достаточно."),(605,630,"Решение: v1.0 выходит с этими тремя форматами. И ничего больше."),(690,725,"Скриншоты для App Store подготовлю к пятнице, Майя проверит текст о конфиденциальности."),(740,760,"Релиз-кандидат 28-го. Задачи зафиксированы, встреча окончена.")])
+    }
+    private static func seed2ru() -> (String, String, [String], [(String, String, String)], String, [(Int, Int, String)]) {
+        ("Старт проекта — Northwind",
+         "ОБЗОР\nСогласовали объём внедрения аналитической панели для офисов Northwind в APAC; первый этап охватывает три площадки с локальной обработкой данных.\n\nКЛЮЧЕВЫЕ МОМЕНТЫ\n• Первый этап: Сингапур, Токио, Сидней — с первой недели следующего месяца\n• Комплаенс требует, чтобы все данные оставались на месте\n• Еженедельная сверка по вторникам в 10:00",
+         ["Первый этап — офисы APAC, старт с первой недели следующего месяца", "Вся обработка должна оставаться локальной (требование комплаенса)"],
+         [("Сара", "Отправить SOW и чек-лист онбординга", "На этой неделе"), ("Финн", "Подготовить план внедрения", "Следующий вторник")],
+         """
+         [00:00] Сара: Спасибо, что пришли. Давайте определим объём панели для ваших офисов в APAC.
+         [04:12] Финн: Первый этап — Сингапур, Токио и Сидней. Можем начать с первой недели следующего месяца.
+         [09:40] Сара: Наш отдел комплаенса требует, чтобы вся обработка была локальной.
+         [15:05] Финн: Понял. Всё выполняется на месте, данные не покидают машины.
+         [22:30] Сара: Давайте сделаем еженедельную сверку по вторникам в десять.
+         """,
+         [(0,16,"Спасибо, что пришли. Давайте определим объём панели для ваших офисов в APAC."),(252,300,"Первый этап — Сингапур, Токио и Сидней. Можем начать с первой недели следующего месяца."),(580,640,"Наш отдел комплаенса требует, чтобы вся обработка была локальной."),(905,940,"Понял. Всё выполняется на месте, данные не покидают машины.")])
+    }
+    private static func seed3ru() -> (String, String, [String], [(String, String, String)], String, [(Int, Int, String)]) {
+        ("Один на один с Майей",
+         "ОБЗОР\nРазговор о развитии: Майя возглавит оценку голосовой модели Parakeet и представит результаты на следующей сверке спринта.\n\nКЛЮЧЕВЫЕ МОМЕНТЫ\n• Майя берёт оценку Parakeet\n• Результаты — на следующей сверке спринта\n• Трек роста: оценка моделей → дообучение на устройстве",
+         ["Майя ведёт оценку Parakeet и отчитывается на сверке спринта"],
+         [("Майя", "Провести оценку Parakeet и подготовить результаты", "Сверка спринта")],
+         """
+         [00:00] Финн: Коротко о развитии, потом приоритеты на неделю.
+         [06:30] Майя: Хочу глубже заняться голосовыми моделями. Могу взять оценку Parakeet?
+         [12:10] Финн: Конечно. Решение: ты ведёшь оценку Parakeet и представляешь её на следующей сверке.
+         """,
+         [(0,12,"Коротко о развитии, потом приоритеты на неделю."),(390,440,"Хочу глубже заняться голосовыми моделями. Могу взять оценку Parakeet?"),(730,790,"Решение: ты ведёшь оценку Parakeet и представляешь её на следующей сверке.")])
+    }
+    private static func seed1ptbr() -> (String, String, [String], [(String, String, String)], String, [(Int, Int, String)]) {
+        ("Alinhamento semanal de produto",
+         "RESUMO\nO time revisou o andamento da sprint e decidiu lançar a v1.0 com transcrição de um único falante; a separação de falantes fica atrás de um flag. O lançamento está previsto para o fim do mês, condicionado à revisão dos textos de privacidade.\n\nPONTOS-CHAVE\n• O pipeline de transcrição local chegou a 92% de precisão no conjunto de teste\n• O experimento de separação de falantes foi adiado para a próxima sprint\n• Revisão dos textos de privacidade antes do envio\n• Retenção de áudio: 30 dias por padrão, ajustável nos Ajustes\n• A v1.0 exporta Markdown, TXT e SRT\n\nRISCOS\n• A separação de falantes atrasa de novo se os testes com fala sobreposta falharem\n• A revisão dos textos é o único bloqueio antes do envio\n• 30 dias de retenção podem não atender às empresas\n\nQUESTÕES ABERTAS\n• O piloto da Northwind precisa de uma versão para Windows?\n• Quem dá suporte depois que a v1.0 sair?\n\nPRÓXIMOS PASSOS\n• Congelar o escopo e cortar a versão candidata no dia 28",
+         ["Lançar a v1.0 em modo de falante único; separação de falantes atrás de um flag", "Manter o processamento só no dispositivo como padrão", "A retenção de áudio é de 30 dias por padrão e o usuário pode mudar", "A v1.0 exporta apenas Markdown, TXT e SRT"],
+         [("Maya", "Rodar o experimento de separação de falantes", "Próxima sprint"), ("Ken", "Preparar as capturas da App Store", "Sexta-feira"),
+          ("Maya", "Revisar os textos de privacidade", "Antes do envio"), ("Phinn", "Cortar a versão candidata", "Dia 28"),
+          ("Ken", "Escrever as notas da v1.0", "Quinta-feira"), ("Maya", "Compartilhar o relatório de precisão", "Amanhã"),
+          ("Phinn", "Confirmar o preço na App Store", "Próxima semana")],
+         """
+         [00:00] Phinn: Vamos começar pela revisão da sprint. O pipeline de transcrição local chegou a 92% de precisão no conjunto de teste.
+         [02:30] Maya: Ótimo. Na próxima sprint eu assumo o experimento de separação de falantes.
+         [04:15] Ken: Qual é o padrão de retenção de áudio? Trinta dias parecia certo na pesquisa.
+         [05:10] Phinn: Decisão: lançamos a v1.0 em modo de falante único e deixamos a separação atrás de um flag.
+         [07:40] Maya: Combinado. Vou deixar a retenção ajustável em vez de fixar em trinta dias.
+         [09:20] Ken: Nos formatos, Markdown, TXT e SRT bastam para o lançamento.
+         [10:05] Phinn: Decisão: a v1.0 sai com esses três. Nada além.
+         [11:30] Ken: Preparo as capturas da App Store até sexta e a Maya revisa os textos de privacidade.
+         [12:20] Phinn: Versão candidata no dia 28. Tarefas registradas, reunião encerrada.
+         """,
+         [(0,14,"Vamos começar pela revisão da sprint. O pipeline de transcrição local chegou a 92% de precisão no conjunto de teste."),(150,186,"Na próxima sprint eu assumo o experimento de separação de falantes."),(255,282,"Qual é o padrão de retenção de áudio? Trinta dias parecia certo na pesquisa."),(310,352,"Decisão: lançamos a v1.0 em modo de falante único e deixamos a separação atrás de um flag."),(460,505,"Combinado. Vou deixar a retenção ajustável em vez de fixar em trinta dias."),(560,590,"Nos formatos, Markdown, TXT e SRT bastam para o lançamento."),(605,630,"Decisão: a v1.0 sai com esses três. Nada além."),(690,725,"Preparo as capturas da App Store até sexta e a Maya revisa os textos de privacidade."),(740,760,"Versão candidata no dia 28. Tarefas registradas, reunião encerrada.")])
+    }
+    private static func seed2ptbr() -> (String, String, [String], [(String, String, String)], String, [(Int, Int, String)]) {
+        ("Kickoff do cliente — Northwind",
+         "RESUMO\nDefinimos o escopo do painel de análise para os escritórios da Northwind na APAC; a fase um cobre três unidades com processamento local.\n\nPONTOS-CHAVE\n• Fase um: Singapura, Tóquio e Sydney — primeira semana do próximo mês\n• A conformidade exige que todos os dados fiquem locais\n• Checkpoint semanal às terças, 10:00",
+         ["Fase um = escritórios da APAC, começando na primeira semana do próximo mês", "Todo o processamento deve permanecer local (requisito de conformidade)"],
+         [("Sarah", "Enviar o SOW e o checklist de onboarding", "Esta semana"), ("Phinn", "Preparar o cronograma de implantação", "Próxima terça")],
+         """
+         [00:00] Sarah: Obrigada por vir. Vamos definir o escopo do painel para seus escritórios na APAC.
+         [04:12] Phinn: A fase um cobre Singapura, Tóquio e Sydney. Podemos começar na primeira semana do próximo mês.
+         [09:40] Sarah: Nosso time de conformidade exige que todo o processamento seja local.
+         [15:05] Phinn: Entendido. Tudo roda localmente e nada sai das máquinas.
+         [22:30] Sarah: Vamos fazer um checkpoint semanal, às terças às dez.
+         """,
+         [(0,16,"Obrigada por vir. Vamos definir o escopo do painel para seus escritórios na APAC."),(252,300,"A fase um cobre Singapura, Tóquio e Sydney. Podemos começar na primeira semana do próximo mês."),(580,640,"Nosso time de conformidade exige que todo o processamento seja local."),(905,940,"Entendido. Tudo roda localmente e nada sai das máquinas.")])
+    }
+    private static func seed3ptbr() -> (String, String, [String], [(String, String, String)], String, [(Int, Int, String)]) {
+        ("1:1 com a Maya",
+         "RESUMO\nConversa de carreira: a Maya vai liderar a avaliação do modelo de voz Parakeet e apresentar os resultados na próxima revisão de sprint.\n\nPONTOS-CHAVE\n• Maya assume a avaliação do Parakeet\n• Resultados na próxima revisão de sprint\n• Trilha de crescimento: avaliação de modelos → ajuste fino no dispositivo",
+         ["Maya lidera a avaliação do Parakeet e reporta na revisão de sprint"],
+         [("Maya", "Rodar a avaliação do Parakeet e preparar os resultados", "Revisão de sprint")],
+         """
+         [00:00] Phinn: Uma conversa rápida de carreira e depois as prioridades da semana.
+         [06:30] Maya: Quero me aprofundar em modelos de voz. Posso assumir a avaliação do Parakeet?
+         [12:10] Phinn: Claro. Decisão: você lidera a avaliação do Parakeet e apresenta na próxima revisão.
+         """,
+         [(0,12,"Uma conversa rápida de carreira e depois as prioridades da semana."),(390,440,"Quero me aprofundar em modelos de voz. Posso assumir a avaliação do Parakeet?"),(730,790,"Decisão: você lidera a avaliação do Parakeet e apresenta na próxima revisão.")])
+    }
+    private static func seed1ptpt() -> (String, String, [String], [(String, String, String)], String, [(Int, Int, String)]) {
+        ("Alinhamento semanal de produto",
+         "RESUMO\nA equipa reviu o andamento da sprint e decidiu lançar a v1.0 com transcrição de um único interlocutor; a separação de interlocutores fica atrás de um flag. O lançamento está previsto para o final do mês, dependente da revisão dos textos de privacidade.\n\nPONTOS-CHAVE\n• O pipeline de transcrição local atingiu 92% de precisão no conjunto de teste\n• A experiência de separação de interlocutores passou para a sprint seguinte\n• Revisão dos textos de privacidade antes da submissão\n• Retenção de áudio: 30 dias por defeito, ajustável nas Definições\n• A v1.0 exporta Markdown, TXT e SRT\n\nRISCOS\n• A separação de interlocutores atrasa outra vez se os testes com fala sobreposta falharem\n• A revisão dos textos é o único bloqueio antes da submissão\n• 30 dias de retenção podem não servir às empresas\n\nQUESTÕES ABERTAS\n• O piloto da Northwind precisa de uma versão para Windows?\n• Quem assegura o suporte depois de a v1.0 sair?\n\nPRÓXIMOS PASSOS\n• Fixar o âmbito e preparar a versão candidata no dia 28",
+         ["Lançar a v1.0 em modo de interlocutor único; separação atrás de um flag", "Manter o processamento apenas no dispositivo por defeito", "A retenção de áudio é de 30 dias por defeito e o utilizador pode alterar", "A v1.0 exporta apenas Markdown, TXT e SRT"],
+         [("Maya", "Executar a experiência de separação de interlocutores", "Sprint seguinte"), ("Ken", "Preparar as capturas da App Store", "Sexta-feira"),
+          ("Maya", "Rever os textos de privacidade", "Antes da submissão"), ("Phinn", "Preparar a versão candidata", "Dia 28"),
+          ("Ken", "Escrever as notas da v1.0", "Quinta-feira"), ("Maya", "Partilhar o relatório de precisão", "Amanhã"),
+          ("Phinn", "Confirmar o preço na App Store", "Semana seguinte")],
+         """
+         [00:00] Phinn: Vamos começar pela revisão da sprint. O pipeline de transcrição local atingiu 92% de precisão no conjunto de teste.
+         [02:30] Maya: Ótimo. Na sprint seguinte assumo a experiência de separação de interlocutores.
+         [04:15] Ken: Qual é o padrão de retenção de áudio? Trinta dias parecia adequado no inquérito.
+         [05:10] Phinn: Decisão: lançamos a v1.0 em modo de interlocutor único e deixamos a separação atrás de um flag.
+         [07:40] Maya: Concordo. Vou deixar a retenção ajustável em vez de fixar em trinta dias.
+         [09:20] Ken: Nos formatos, Markdown, TXT e SRT chegam para o lançamento.
+         [10:05] Phinn: Decisão: a v1.0 sai com esses três. Nada mais.
+         [11:30] Ken: Preparo as capturas da App Store até sexta e a Maya revê os textos de privacidade.
+         [12:20] Phinn: Versão candidata no dia 28. Tarefas registadas, reunião terminada.
+         """,
+         [(0,14,"Vamos começar pela revisão da sprint. O pipeline de transcrição local atingiu 92% de precisão no conjunto de teste."),(150,186,"Na sprint seguinte assumo a experiência de separação de interlocutores."),(255,282,"Qual é o padrão de retenção de áudio? Trinta dias parecia adequado no inquérito."),(310,352,"Decisão: lançamos a v1.0 em modo de interlocutor único e deixamos a separação atrás de um flag."),(460,505,"Concordo. Vou deixar a retenção ajustável em vez de fixar em trinta dias."),(560,590,"Nos formatos, Markdown, TXT e SRT chegam para o lançamento."),(605,630,"Decisão: a v1.0 sai com esses três. Nada mais."),(690,725,"Preparo as capturas da App Store até sexta e a Maya revê os textos de privacidade."),(740,760,"Versão candidata no dia 28. Tarefas registadas, reunião terminada.")])
+    }
+    private static func seed2ptpt() -> (String, String, [String], [(String, String, String)], String, [(Int, Int, String)]) {
+        ("Kickoff do cliente — Northwind",
+         "RESUMO\nDefinimos o âmbito do painel de análise para os escritórios da Northwind na APAC; a fase um cobre três unidades com processamento local.\n\nPONTOS-CHAVE\n• Fase um: Singapura, Tóquio e Sydney — primeira semana do mês seguinte\n• A conformidade exige que todos os dados fiquem locais\n• Ponto de situação semanal às terças, 10:00",
+         ["Fase um = escritórios da APAC, a começar na primeira semana do mês seguinte", "Todo o processamento tem de permanecer local (requisito de conformidade)"],
+         [("Sarah", "Enviar o SOW e a lista de integração", "Esta semana"), ("Phinn", "Preparar o calendário de implementação", "Próxima terça")],
+         """
+         [00:00] Sarah: Obrigada por ter vindo. Vamos definir o âmbito do painel para os seus escritórios na APAC.
+         [04:12] Phinn: A fase um cobre Singapura, Tóquio e Sydney. Podemos começar na primeira semana do mês seguinte.
+         [09:40] Sarah: A nossa equipa de conformidade exige que todo o processamento seja local.
+         [15:05] Phinn: Entendido. Tudo corre localmente e nada sai das máquinas.
+         [22:30] Sarah: Façamos um ponto de situação semanal, às terças às dez.
+         """,
+         [(0,16,"Obrigada por ter vindo. Vamos definir o âmbito do painel para os seus escritórios na APAC."),(252,300,"A fase um cobre Singapura, Tóquio e Sydney. Podemos começar na primeira semana do mês seguinte."),(580,640,"A nossa equipa de conformidade exige que todo o processamento seja local."),(905,940,"Entendido. Tudo corre localmente e nada sai das máquinas.")])
+    }
+    private static func seed3ptpt() -> (String, String, [String], [(String, String, String)], String, [(Int, Int, String)]) {
+        ("1:1 com a Maya",
+         "RESUMO\nConversa de carreira: a Maya vai liderar a avaliação do modelo de voz Parakeet e apresentar os resultados na próxima revisão de sprint.\n\nPONTOS-CHAVE\n• A Maya assume a avaliação do Parakeet\n• Resultados na próxima revisão de sprint\n• Percurso de crescimento: avaliação de modelos → ajuste fino no dispositivo",
+         ["A Maya lidera a avaliação do Parakeet e apresenta na revisão de sprint"],
+         [("Maya", "Executar a avaliação do Parakeet e preparar os resultados", "Revisão de sprint")],
+         """
+         [00:00] Phinn: Uma conversa rápida de carreira e depois as prioridades da semana.
+         [06:30] Maya: Quero aprofundar os modelos de voz. Posso assumir a avaliação do Parakeet?
+         [12:10] Phinn: Claro. Decisão: lidera a avaliação do Parakeet e apresenta na próxima revisão.
+         """,
+         [(0,12,"Uma conversa rápida de carreira e depois as prioridades da semana."),(390,440,"Quero aprofundar os modelos de voz. Posso assumir a avaliação do Parakeet?"),(730,790,"Decisão: lidera a avaliação do Parakeet e apresenta na próxima revisão.")])
     }
 
     private func defaultTitle() -> String {

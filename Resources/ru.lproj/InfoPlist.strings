@@ -1,0 +1,4 @@
+"NSMicrophoneUsageDescription" = "KinetMinutes записывает встречи через микрофон, чтобы создавать приватные заметки локально. Аудио никогда не покидает ваш Mac.";
+"NSSpeechRecognitionUsageDescription" = "KinetMinutes расшифровывает аудио встреч полностью офлайн на вашем Mac. Ничего не отправляется на серверы.";
+"NSCalendarsUsageDescription" = "KinetMinutes использует календарь только для подстановки названия текущей встречи.";
+"NSCalendarsFullAccessUsageDescription" = "KinetMinutes использует календарь только для подстановки названия текущей встречи.";

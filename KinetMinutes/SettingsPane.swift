@@ -134,7 +134,8 @@ final class SettingsPane: NSView {
         for (code, key) in [("", "System language"), ("en", "English"), ("ja", "日本語"),
                             ("zh-Hans", "简体中文"), ("zh-Hant", "繁體中文"),
                             ("ko", "한국어"), ("fr", "Français"), ("de", "Deutsch"),
-                            ("es", "Español")] {
+                            ("es", "Español"), ("ru", "Русский"),
+                            ("pt-BR", "Português (Brasil)"), ("pt-PT", "Português (Portugal)")] {
             let item = NSMenuItem(title: code.isEmpty ? L10n.string(key) : key,
                                   action: nil, keyEquivalent: "")
             item.representedObject = code

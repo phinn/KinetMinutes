@@ -1155,6 +1155,10 @@ final class DetailView: NSView {
         "RISIKEN", "OFFENE FRAGEN", "NÄCHSTE SCHRITTE",
         "RESUMEN", "PUNTOS CLAVE", "DECISIONES", "TAREAS",
         "RIESGOS", "PREGUNTAS ABIERTAS", "PRÓXIMOS PASOS",
+        "ОБЗОР", "КЛЮЧЕВЫЕ МОМЕНТЫ", "РЕШЕНИЯ", "ЗАДАЧИ",
+        "РИСКИ", "ОТКРЫТЫЕ ВОПРОСЫ", "СЛЕДУЮЩИЕ ШАГИ",
+        "RESUMO", "VISÃO GERAL", "PONTOS-CHAVE", "DECISÕES", "TAREFAS",
+        "RISCOS", "QUESTÕES ABERTAS", "PRÓXIMOS PASSOS",
     ]
 
     static func styledSummary(_ raw: String) -> NSAttributedString {

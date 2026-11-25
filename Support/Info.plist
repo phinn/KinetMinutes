@@ -2,8 +2,12 @@
 <!DOCTYPE plist PUBLIC "-//Apple//DTD PLIST 1.0//EN" "http://www.apple.com/DTDs/PropertyList-1.0.dtd">
 <plist version="1.0">
 <dict>
+	<key>CFBundleAllowMixedLocalizations</key>
+	<true/>
 	<key>CFBundleDevelopmentRegion</key>
 	<string>en</string>
+	<key>CFBundleDisplayName</key>
+	<string>KinetMinutes</string>
 	<key>CFBundleExecutable</key>
 	<string>$(EXECUTABLE_NAME)</string>
 	<key>CFBundleIconName</key>
@@ -12,18 +16,6 @@
 	<string>$(PRODUCT_BUNDLE_IDENTIFIER)</string>
 	<key>CFBundleInfoDictionaryVersion</key>
 	<string>6.0</string>
-	<key>CFBundleName</key>
-	<string>$(PRODUCT_NAME)</string>
-	<key>CFBundleDisplayName</key>
-	<string>KinetMinutes</string>
-	<key>CFBundlePackageType</key>
-	<string>APPL</string>
-	<key>CFBundleShortVersionString</key>
-	<string>$(MARKETING_VERSION)</string>
-	<key>CFBundleVersion</key>
-	<string>$(CURRENT_PROJECT_VERSION)</string>
-	<key>CFBundleAllowMixedLocalizations</key>
-	<true/>
 	<key>CFBundleLocalizations</key>
 	<array>
 		<string>en</string>
@@ -34,29 +26,39 @@
 		<string>fr</string>
 		<string>de</string>
 		<string>es</string>
+		<string>ru</string>
+		<string>pt-BR</string>
+		<string>pt-PT</string>
 	</array>
-	<key>LSMinimumSystemVersion</key>
-	<string>$(MACOSX_DEPLOYMENT_TARGET)</string>
+	<key>CFBundleName</key>
+	<string>$(PRODUCT_NAME)</string>
+	<key>CFBundlePackageType</key>
+	<string>APPL</string>
+	<key>CFBundleShortVersionString</key>
+	<string>$(MARKETING_VERSION)</string>
+	<key>CFBundleVersion</key>
+	<string>$(CURRENT_PROJECT_VERSION)</string>
+	<key>ITSAppUsesNonExemptEncryption</key>
+	<false/>
 	<key>LSApplicationCategoryType</key>
 	<string>public.app-category.productivity</string>
+	<key>LSMinimumSystemVersion</key>
+	<string>$(MACOSX_DEPLOYMENT_TARGET)</string>
 	<key>LSUIElement</key>
 	<true/>
+	<key>NSCalendarsFullAccessUsageDescription</key>
+	<string>KinetMinutes uses your calendar only to prefill the meeting title from the current event.</string>
+	<key>NSCalendarsUsageDescription</key>
+	<string>KinetMinutes uses your calendar only to prefill the meeting title from the current event.</string>
 	<key>NSHighResolutionCapable</key>
 	<true/>
 	<key>NSHumanReadableCopyright</key>
 	<string>Copyright © 2026 Kinet. All rights reserved.</string>
-	<key>NSPrincipalClass</key>
-	<string>NSApplication</string>
-	<key>ITSAppUsesNonExemptEncryption</key>
-	<false/>
 	<key>NSMicrophoneUsageDescription</key>
 	<string>KinetMinutes records meetings with your microphone to create local, private meeting notes. Audio never leaves your Mac.</string>
+	<key>NSPrincipalClass</key>
+	<string>NSApplication</string>
 	<key>NSSpeechRecognitionUsageDescription</key>
 	<string>KinetMinutes transcribes meeting audio fully offline on your Mac. Nothing is sent to any server.</string>
-	<key>NSCalendarsUsageDescription</key>
-	<string>KinetMinutes uses your calendar only to prefill the meeting title from the current event.</string>
-	<key>NSCalendarsFullAccessUsageDescription</key>
-	<string>KinetMinutes uses your calendar only to prefill the meeting title from the current event.</string>
 </dict>
 </plist>
-

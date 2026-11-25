@@ -35,6 +35,10 @@
     <button data-l="zh-Hans">简体中文</button>
     <button data-l="zh-Hant">繁體中文</button>
     <button data-l="ja">日本語</button>
+    <button data-l="ko">한국어</button>
+    <button data-l="fr">Français</button>
+    <button data-l="de">Deutsch</button>
+    <button data-l="es">Español</button>
   </div>
 
   <section data-lang="en" class="show">
@@ -119,13 +123,105 @@
     <h2>お問い合わせ</h2>
     <p>phinn@kinet.app</p>
   </section>
+
+  <section data-lang="ko">
+    <div class="card">
+      <h2>업로드 제로. 설계부터.</h2>
+      <p>KinetMinutes는 전적으로 이 Mac에서 동작합니다. 녹음, 받아쓰기(Whisper), AI 요약이 모두 로컬에서 이뤄지며 오디오와 회의록은 이 컴퓨터를 벗어나지 않습니다. 서버 호출도, 계정도, 분석도 없습니다.</p>
+    </div>
+    <h2>수집하는 데이터</h2>
+    <p>없습니다. KinetMinutes는 개인 데이터를 수집·전송·공유하지 않습니다.</p>
+    <h2>데이터가 저장되는 위치</h2>
+    <ul>
+      <li>녹음: <code>~/Library/Containers/com.kinet.minutes.app/…/KinetMinutes/Audio/</code></li>
+      <li>받아쓰기와 회의록: 같은 폴더의 로컬 SQLite 데이터베이스</li>
+      <li>개인정보 → 모든 데이터 삭제에서 언제든 한 번에 지우거나, 앱을 삭제하면 됩니다</li>
+    </ul>
+    <h2>모델 다운로드</h2>
+    <p>유일한 네트워크 통신은 사용자가 직접 시작하는 Whisper 오픈소스 모델의 일회성 다운로드입니다(huggingface.co 또는 사용자가 지정한 미러). 오디오는 절대 업로드되지 않습니다.</p>
+    <h2>제3자</h2>
+    <p>없습니다. SDK도, 추적기도, 광고도 없습니다.</p>
+    <h2>문의</h2>
+    <p>개인정보 관련 문의: phinn@kinet.app</p>
+  </section>
+
+  <section data-lang="fr">
+    <div class="card">
+      <h2>Zéro envoi. Par conception.</h2>
+      <p>KinetMinutes fonctionne entièrement sur votre Mac. L'enregistrement, la transcription (Whisper) et le résumé par IA se font en local. Votre audio et vos notes ne quittent jamais cet ordinateur : aucun appel serveur, aucun compte, aucune analyse.</p>
+    </div>
+    <h2>Données collectées</h2>
+    <p>Aucune. KinetMinutes ne collecte, ne transmet et ne partage aucune donnée personnelle.</p>
+    <h2>Où vivent vos données</h2>
+    <ul>
+      <li>Enregistrements : <code>~/Library/Containers/com.kinet.minutes.app/…/KinetMinutes/Audio/</code></li>
+      <li>Transcriptions et notes : une base SQLite locale, dans le même dossier</li>
+      <li>Tout est supprimable à tout moment via Confidentialité → Supprimer toutes les données, ou en désinstallant l'app</li>
+    </ul>
+    <h2>Téléchargement des modèles</h2>
+    <p>La seule activité réseau est le téléchargement unique, déclenché par vous, des modèles Whisper open source depuis huggingface.co (ou un miroir configuré). Votre audio n'est jamais envoyé.</p>
+    <h2>Tiers</h2>
+    <p>Aucun. Pas de SDK, pas de traceur, pas de publicité.</p>
+    <h2>Contact</h2>
+    <p>Questions sur la confidentialité : phinn@kinet.app</p>
+  </section>
+
+  <section data-lang="de">
+    <div class="card">
+      <h2>Kein Upload. Von Grund auf.</h2>
+      <p>KinetMinutes läuft vollständig auf deinem Mac. Aufnahme, Transkription (Whisper) und KI-Zusammenfassung passieren lokal. Audio und Notizen verlassen diesen Computer nie — keine Serveraufrufe, keine Konten, keine Analyse.</p>
+    </div>
+    <h2>Welche Daten wir erheben</h2>
+    <p>Keine. KinetMinutes erhebt, überträgt und teilt keine personenbezogenen Daten.</p>
+    <h2>Wo deine Daten liegen</h2>
+    <ul>
+      <li>Aufnahmen: <code>~/Library/Containers/com.kinet.minutes.app/…/KinetMinutes/Audio/</code></li>
+      <li>Transkripte und Notizen: eine lokale SQLite-Datenbank im selben Ordner</li>
+      <li>Alles lässt sich jederzeit über Datenschutz → Alle Daten löschen entfernen, oder durch Deinstallieren der App</li>
+    </ul>
+    <h2>Modell-Downloads</h2>
+    <p>Die einzige Netzwerkaktivität ist der einmalige, von dir ausgelöste Download der Open-Source-Modelle von Whisper (huggingface.co oder ein selbst konfigurierter Mirror). Dein Audio wird niemals hochgeladen.</p>
+    <h2>Dritte</h2>
+    <p>Keine. Kein SDK, kein Tracker, keine Werbung.</p>
+    <h2>Kontakt</h2>
+    <p>Fragen zum Datenschutz: phinn@kinet.app</p>
+  </section>
+
+  <section data-lang="es">
+    <div class="card">
+      <h2>Cero subidas. Por diseño.</h2>
+      <p>KinetMinutes se ejecuta por completo en tu Mac. La grabación, la transcripción (Whisper) y el resumen con IA ocurren en local. Tu audio y tus notas nunca salen de este ordenador: sin llamadas a servidores, sin cuentas y sin analítica.</p>
+    </div>
+    <h2>Datos que recogemos</h2>
+    <p>Ninguno. KinetMinutes no recoge, transmite ni comparte datos personales.</p>
+    <h2>Dónde viven tus datos</h2>
+    <ul>
+      <li>Grabaciones: <code>~/Library/Containers/com.kinet.minutes.app/…/KinetMinutes/Audio/</code></li>
+      <li>Transcripciones y notas: una base SQLite local en la misma carpeta</li>
+      <li>Puedes borrarlo todo en cualquier momento desde Privacidad → Eliminar todos los datos, o desinstalando la app</li>
+    </ul>
+    <h2>Descarga de modelos</h2>
+    <p>La única actividad de red es la descarga puntual, iniciada por ti, de los modelos Whisper de código abierto desde huggingface.co (o un espejo configurado). Tu audio nunca se sube.</p>
+    <h2>Terceros</h2>
+    <p>Ninguno. Sin SDK, sin rastreadores, sin publicidad.</p>
+    <h2>Contacto</h2>
+    <p>Dudas sobre privacidad: phinn@kinet.app</p>
+  </section>
 </div>
 <script>
-  document.querySelectorAll('.langbar button').forEach(b => b.onclick = () => {
-    document.querySelectorAll('.langbar button').forEach(x => x.classList.remove('on'));
-    b.classList.add('on');
-    document.querySelectorAll('section[data-lang]').forEach(s => s.classList.toggle('show', s.dataset.lang === b.dataset.l));
-  });
+  const btnByLang = l => document.querySelector(`.langbar button[data-l="${l}"]`);
+  function selectLang(l) {
+    if (!btnByLang(l)) l = 'en';
+    document.querySelectorAll('.langbar button').forEach(x => x.classList.toggle('on', x.dataset.l === l));
+    document.querySelectorAll('section[data-lang]').forEach(s => s.classList.toggle('show', s.dataset.lang === l));
+  }
+  document.querySelectorAll('.langbar button').forEach(b => b.onclick = () => selectLang(b.dataset.l));
+  // Pick the closest shipped language instead of always landing on English.
+  (function () {
+    const tag = (navigator.language || 'en').toLowerCase();
+    const zh = tag.startsWith('zh') ? (/hant|-(tw|hk|mo)/.test(tag) ? 'zh-Hant' : 'zh-Hans') : null;
+    selectLang(zh || tag.split('-')[0]);
+  })();
 </script>
 </body>
 </html>

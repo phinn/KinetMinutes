@@ -1,0 +1,204 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>KinetMinutes — Support</title>
+<style>
+  :root { --ink:#12161f; --muted:#5d6577; --line:#e6e2d8; --paper:#f7f4ee; --card:#fff; --amber:#b8791f; }
+  @media (prefers-color-scheme: dark) {
+    :root { --ink:#eceef3; --muted:#9aa2b4; --line:#2b3140; --paper:#12161f; --card:#1a1f2b; --amber:#e8a54a; }
+  }
+  * { box-sizing: border-box; }
+  body { margin:0; background:var(--paper); color:var(--ink);
+         font:15px/1.65 -apple-system,BlinkMacSystemFont,"Helvetica Neue","Hiragino Sans","PingFang SC","Apple SD Gothic Neo",sans-serif; }
+  .wrap { max-width:780px; margin:0 auto; padding:56px 24px 80px; }
+  .langbar { display:flex; flex-wrap:wrap; gap:6px; margin:0 0 32px; padding:4px;
+             background:var(--card); border:1px solid var(--line); border-radius:11px; }
+  .langbar button { flex:1 1 auto; padding:7px 10px; border:0; border-radius:8px; background:none;
+                    color:var(--muted); font:inherit; font-size:13px; cursor:pointer; }
+  .langbar button:hover { color:var(--ink); }
+  .langbar button.on { background:rgba(232,165,74,.16); color:var(--amber); font-weight:600; }
+  section[data-lang] { display:none; }
+  section[data-lang].show { display:block; }
+  h1 { margin:0 0 10px; font-size:30px; letter-spacing:-.02em; }
+  .lead { margin:0 0 28px; color:var(--muted); }
+  h2 { margin:32px 0 12px; font-size:17px; letter-spacing:-.01em; }
+  .card { padding:18px 20px; background:var(--card); border:1px solid var(--line); border-radius:14px; }
+  .card p { margin:0; }
+  a { color:var(--amber); }
+  details { padding:14px 18px; background:var(--card); border:1px solid var(--line); border-radius:12px; margin:0 0 8px; }
+  summary { cursor:pointer; font-weight:600; }
+  details p { margin:10px 0 0; color:var(--muted); }
+  code { padding:1px 5px; border-radius:5px; background:rgba(128,128,128,.14); font-size:.92em; }
+  .meta { margin-top:36px; color:var(--muted); font-size:13px; }
+</style>
+</head>
+<body>
+<div class="wrap">
+
+<div class="langbar">
+  <button data-l="en" class="on">English</button>
+  <button data-l="zh-Hans">简体中文</button>
+  <button data-l="zh-Hant">繁體中文</button>
+  <button data-l="ja">日本語</button>
+  <button data-l="ko">한국어</button>
+  <button data-l="fr">Français</button>
+  <button data-l="de">Deutsch</button>
+  <button data-l="es">Español</button>
+</div>
+
+<section data-lang="en">
+  <h1>KinetMinutes Support</h1>
+  <p class="lead">Most answers are below. If something is still wrong, write to us — a real person reads it.</p>
+  <div class="card"><p><b>Contact:</b> <a href="mailto:phinn@kinet.app">phinn@kinet.app</a><br>
+  Please include your macOS version and, if relevant, the meeting title. We usually reply within two business days.</p></div>
+  <h2>Frequently asked</h2>
+  <details><summary>How do I start a recording?</summary><p>KinetMinutes lives in the menu bar and starts automatically when it detects a call in Zoom, Teams, Tencent Meeting, Lark, DingTalk, Discord or Webex. You can also click the menu bar icon and choose Start recording.</p></details>
+  <details><summary>Which apps are detected?</summary><p>Zoom, Microsoft Teams, Tencent Meeting, Lark (Feishu), DingTalk, Discord and Webex. Any other call can be recorded manually from the menu bar.</p></details>
+  <details><summary>The model download fails or stalls</summary><p>Models come from Hugging Face on first use and are never uploaded again. Check your network, then retry from Settings → Model. A mirror can be configured if the default host is unreachable.</p></details>
+  <details><summary>I denied microphone or calendar access</summary><p>Open System Settings → Privacy &amp; Security → Microphone (or Calendars) and enable KinetMinutes. Calendar access is optional and only used to prefill the meeting title.</p></details>
+  <details><summary>How do I export notes?</summary><p>Select a meeting and use Export in the header. TXT and SRT are always available; Markdown and PDF require Pro.</p></details>
+  <details><summary>How do I restore my Pro purchase?</summary><p>Open Settings → Pro and choose Restore purchases. Pro is a one-time purchase tied to your Apple ID, so it returns on any Mac you sign in to.</p></details>
+  <h2>Links</h2>
+  <p><a href="privacy.html">Privacy policy</a> · <a href="index.html">Product page</a></p>
+  <p class="meta">Requires macOS 14 or later on Apple Silicon.</p>
+</section>
+
+<section data-lang="zh-Hans">
+  <h1>KinetMinutes 支持</h1>
+  <p class="lead">常见问题都在下面。如果仍然没解决，直接写信给我们，是真人回复。</p>
+  <div class="card"><p><b>联系方式：</b><a href="mailto:phinn@kinet.app">phinn@kinet.app</a><br>
+  请附上 macOS 版本；如与具体会议有关，再写上会议标题。通常两个工作日内回复。</p></div>
+  <h2>常见问题</h2>
+  <details><summary>怎么开始录音？</summary><p>KinetMinutes 常驻菜单栏，检测到 Zoom、Teams、腾讯会议、飞书、钉钉、Discord 或 Webex 的通话会自动开始。也可以点菜单栏图标，选择「开始录音」。</p></details>
+  <details><summary>支持哪些会议软件？</summary><p>Zoom、Microsoft Teams、腾讯会议、飞书、钉钉、Discord 和 Webex。其他通话可以在菜单栏手动录制。</p></details>
+  <details><summary>模型下载失败或卡住</summary><p>模型首次使用时从 Hugging Face 下载，之后不再上传任何内容。请先检查网络，然后在「设置 → 模型」重试；默认地址不可达时可以配置镜像。</p></details>
+  <details><summary>麦克风或日历权限被拒绝了</summary><p>打开「系统设置 → 隐私与安全性 → 麦克风（或日历）」，勾选 KinetMinutes。日历权限是可选的，只用于预填会议标题。</p></details>
+  <details><summary>怎么导出纪要？</summary><p>选中会议，点右上角的导出。TXT 与 SRT 始终可用；Markdown 与 PDF 需要 Pro。</p></details>
+  <details><summary>怎么恢复 Pro 购买？</summary><p>打开「设置 → Pro」，点「恢复购买」。Pro 是一次性买断，绑定你的 Apple ID，在任意登录同一账号的 Mac 上都能恢复。</p></details>
+  <h2>相关链接</h2>
+  <p><a href="privacy.html">隐私政策</a> · <a href="index.html">产品页</a></p>
+  <p class="meta">需要 macOS 14 或更高版本，Apple Silicon。</p>
+</section>
+
+<section data-lang="zh-Hant">
+  <h1>KinetMinutes 支援</h1>
+  <p class="lead">常見問題都在下面。如果還是沒解決，直接寫信給我們，是真人回覆。</p>
+  <div class="card"><p><b>聯絡方式：</b><a href="mailto:phinn@kinet.app">phinn@kinet.app</a><br>
+  請附上 macOS 版本；若與特定會議有關，再寫上會議標題。通常兩個工作天內回覆。</p></div>
+  <h2>常見問題</h2>
+  <details><summary>怎麼開始錄音？</summary><p>KinetMinutes 常駐選單列，偵測到 Zoom、Teams、騰訊會議、飛書、釘釘、Discord 或 Webex 的通話會自動開始。也可以點選單列圖示，選擇「開始錄音」。</p></details>
+  <details><summary>支援哪些會議軟體？</summary><p>Zoom、Microsoft Teams、騰訊會議、飛書、釘釘、Discord 與 Webex。其他通話可在選單列手動錄製。</p></details>
+  <details><summary>模型下載失敗或卡住</summary><p>模型首次使用時從 Hugging Face 下載，之後不再上傳任何內容。請先檢查網路，然後在「設定 → 模型」重試；預設位址無法連線時可設定鏡像。</p></details>
+  <details><summary>麥克風或行事曆權限被拒絕了</summary><p>打開「系統設定 → 隱私權與安全性 → 麥克風（或行事曆）」，勾選 KinetMinutes。行事曆權限為選用，只用於預填會議標題。</p></details>
+  <details><summary>怎麼匯出紀要？</summary><p>選取會議，點右上角的匯出。TXT 與 SRT 隨時可用；Markdown 與 PDF 需要 Pro。</p></details>
+  <details><summary>怎麼恢復 Pro 購買？</summary><p>打開「設定 → Pro」，點「恢復購買」。Pro 為一次性買斷，綁定你的 Apple ID，在任何登入同一帳號的 Mac 上都能恢復。</p></details>
+  <h2>相關連結</h2>
+  <p><a href="privacy.html">隱私權政策</a> · <a href="index.html">產品頁</a></p>
+  <p class="meta">需要 macOS 14 或以上版本，Apple Silicon。</p>
+</section>
+
+<section data-lang="ja">
+  <h1>KinetMinutes サポート</h1>
+  <p class="lead">よくある質問は以下にまとめています。解決しない場合はメールでご連絡ください。担当者が返信します。</p>
+  <div class="card"><p><b>お問い合わせ：</b><a href="mailto:phinn@kinet.app">phinn@kinet.app</a><br>
+  macOS のバージョンと、特定の会議に関する場合は会議名もお書き添えください。通常 2 営業日以内に返信します。</p></div>
+  <h2>よくある質問</h2>
+  <details><summary>録音はどう始めますか？</summary><p>KinetMinutes はメニューバーに常駐し、Zoom、Teams、Tencent Meeting、Lark、DingTalk、Discord、Webex の通話を検出すると自動で録音を開始します。メニューバーのアイコンから「録音を開始」を選ぶこともできます。</p></details>
+  <details><summary>対応している会議アプリは？</summary><p>Zoom、Microsoft Teams、Tencent Meeting、Lark（Feishu）、DingTalk、Discord、Webex です。それ以外の通話もメニューバーから手動で録音できます。</p></details>
+  <details><summary>モデルのダウンロードが失敗・停止する</summary><p>モデルは初回のみ Hugging Face から取得し、その後は何もアップロードしません。ネットワークを確認し、「設定 → モデル」から再試行してください。既定のホストに接続できない場合はミラーを設定できます。</p></details>
+  <details><summary>マイクやカレンダーの権限を拒否してしまった</summary><p>「システム設定 → プライバシーとセキュリティ → マイク（またはカレンダー）」で KinetMinutes を有効にしてください。カレンダー権限は任意で、会議名の下書きにのみ使います。</p></details>
+  <details><summary>議事録の書き出しは？</summary><p>会議を選び、右上の書き出しを使います。TXT と SRT は常に利用可能、Markdown と PDF は Pro が必要です。</p></details>
+  <details><summary>Pro の購入を復元するには？</summary><p>「設定 → Pro」で「購入を復元」を選びます。Pro は買い切りで Apple ID に紐づくため、同じアカウントでサインインした Mac なら復元できます。</p></details>
+  <h2>リンク</h2>
+  <p><a href="privacy.html">プライバシーポリシー</a> · <a href="index.html">製品ページ</a></p>
+  <p class="meta">macOS 14 以降（Apple Silicon）が必要です。</p>
+</section>
+
+<section data-lang="ko">
+  <h1>KinetMinutes 지원</h1>
+  <p class="lead">자주 묻는 질문은 아래에 있습니다. 그래도 해결되지 않으면 메일을 보내 주세요. 사람이 직접 답장합니다.</p>
+  <div class="card"><p><b>문의:</b> <a href="mailto:phinn@kinet.app">phinn@kinet.app</a><br>
+  macOS 버전과, 특정 회의에 관한 내용이면 회의 제목도 함께 적어 주세요. 보통 영업일 기준 2일 안에 답장합니다.</p></div>
+  <h2>자주 묻는 질문</h2>
+  <details><summary>녹음은 어떻게 시작하나요?</summary><p>KinetMinutes는 메뉴 막대에 상주하며 Zoom, Teams, Tencent Meeting, Lark, DingTalk, Discord, Webex 통화를 감지하면 자동으로 녹음을 시작합니다. 메뉴 막대 아이콘에서 '녹음 시작'을 선택해도 됩니다.</p></details>
+  <details><summary>어떤 회의 앱을 지원하나요?</summary><p>Zoom, Microsoft Teams, Tencent Meeting, Lark(Feishu), DingTalk, Discord, Webex입니다. 그 밖의 통화는 메뉴 막대에서 직접 녹음할 수 있습니다.</p></details>
+  <details><summary>모델 다운로드가 실패하거나 멈춥니다</summary><p>모델은 처음 한 번 Hugging Face에서 받고, 이후에는 아무것도 업로드하지 않습니다. 네트워크를 확인한 뒤 '설정 → 모델'에서 다시 시도하세요. 기본 호스트에 연결되지 않으면 미러를 설정할 수 있습니다.</p></details>
+  <details><summary>마이크나 캘린더 권한을 거부했습니다</summary><p>'시스템 설정 → 개인정보 보호 및 보안 → 마이크(또는 캘린더)'에서 KinetMinutes를 켜 주세요. 캘린더 권한은 선택 사항이며 회의 제목을 미리 채우는 데만 씁니다.</p></details>
+  <details><summary>회의록은 어떻게 내보내나요?</summary><p>회의를 선택하고 오른쪽 위의 내보내기를 누릅니다. TXT와 SRT는 항상 사용할 수 있고, Markdown과 PDF는 Pro가 필요합니다.</p></details>
+  <details><summary>Pro 구매를 복원하려면?</summary><p>'설정 → Pro'에서 '구매 복원'을 선택합니다. Pro는 Apple ID에 연결된 1회 구매이므로 같은 계정으로 로그인한 Mac에서 복원됩니다.</p></details>
+  <h2>링크</h2>
+  <p><a href="privacy.html">개인정보 처리방침</a> · <a href="index.html">제품 페이지</a></p>
+  <p class="meta">macOS 14 이상(Apple Silicon)이 필요합니다.</p>
+</section>
+
+<section data-lang="fr">
+  <h1>Assistance KinetMinutes</h1>
+  <p class="lead">La plupart des réponses sont ci-dessous. S'il reste un problème, écrivez-nous : une vraie personne lit les messages.</p>
+  <div class="card"><p><b>Contact :</b> <a href="mailto:phinn@kinet.app">phinn@kinet.app</a><br>
+  Indiquez votre version de macOS et, le cas échéant, le titre de la réunion. Nous répondons généralement sous deux jours ouvrés.</p></div>
+  <h2>Questions fréquentes</h2>
+  <details><summary>Comment lancer un enregistrement ?</summary><p>KinetMinutes vit dans la barre des menus et démarre seul lorsqu'il détecte un appel Zoom, Teams, Tencent Meeting, Lark, DingTalk, Discord ou Webex. Vous pouvez aussi cliquer sur l'icône et choisir « Démarrer l'enregistrement ».</p></details>
+  <details><summary>Quelles apps sont détectées ?</summary><p>Zoom, Microsoft Teams, Tencent Meeting, Lark (Feishu), DingTalk, Discord et Webex. Tout autre appel peut être enregistré à la main depuis la barre des menus.</p></details>
+  <details><summary>Le téléchargement du modèle échoue ou bloque</summary><p>Les modèles viennent de Hugging Face au premier usage, puis plus rien n'est envoyé. Vérifiez le réseau, puis réessayez depuis Réglages → Modèle. Un miroir peut être configuré si l'hôte par défaut est inaccessible.</p></details>
+  <details><summary>J'ai refusé l'accès au micro ou au calendrier</summary><p>Ouvrez Réglages Système → Confidentialité et sécurité → Micro (ou Calendriers) et activez KinetMinutes. L'accès au calendrier est facultatif et ne sert qu'à préremplir le titre.</p></details>
+  <details><summary>Comment exporter les notes ?</summary><p>Sélectionnez une réunion et utilisez Exporter en haut à droite. TXT et SRT sont toujours disponibles ; Markdown et PDF nécessitent Pro.</p></details>
+  <details><summary>Comment restaurer mon achat Pro ?</summary><p>Ouvrez Réglages → Pro et choisissez Restaurer les achats. Pro est un achat unique lié à votre identifiant Apple : il revient sur tout Mac connecté à ce compte.</p></details>
+  <h2>Liens</h2>
+  <p><a href="privacy.html">Confidentialité</a> · <a href="index.html">Page produit</a></p>
+  <p class="meta">Nécessite macOS 14 ou ultérieur sur Apple Silicon.</p>
+</section>
+
+<section data-lang="de">
+  <h1>KinetMinutes Support</h1>
+  <p class="lead">Die meisten Antworten stehen unten. Wenn etwas offen bleibt, schreib uns — es liest ein Mensch.</p>
+  <div class="card"><p><b>Kontakt:</b> <a href="mailto:phinn@kinet.app">phinn@kinet.app</a><br>
+  Bitte nenne deine macOS-Version und, falls es um ein bestimmtes Meeting geht, den Meetingtitel. Wir antworten meist innerhalb von zwei Werktagen.</p></div>
+  <h2>Häufige Fragen</h2>
+  <details><summary>Wie starte ich eine Aufnahme?</summary><p>KinetMinutes sitzt in der Menüleiste und startet automatisch, sobald ein Anruf in Zoom, Teams, Tencent Meeting, Lark, DingTalk, Discord oder Webex erkannt wird. Alternativ über das Menüleistensymbol „Aufnahme starten“.</p></details>
+  <details><summary>Welche Apps werden erkannt?</summary><p>Zoom, Microsoft Teams, Tencent Meeting, Lark (Feishu), DingTalk, Discord und Webex. Jeder andere Anruf lässt sich über die Menüleiste manuell aufnehmen.</p></details>
+  <details><summary>Der Modell-Download schlägt fehl oder hängt</summary><p>Modelle kommen beim ersten Einsatz von Hugging Face, danach wird nichts mehr hochgeladen. Prüfe das Netzwerk und versuche es unter Einstellungen → Modell erneut. Ist der Standardhost nicht erreichbar, lässt sich ein Mirror eintragen.</p></details>
+  <details><summary>Ich habe Mikrofon- oder Kalenderzugriff abgelehnt</summary><p>Öffne Systemeinstellungen → Datenschutz &amp; Sicherheit → Mikrofon (oder Kalender) und aktiviere KinetMinutes. Der Kalenderzugriff ist optional und füllt nur den Meetingtitel vor.</p></details>
+  <details><summary>Wie exportiere ich Notizen?</summary><p>Meeting auswählen und oben rechts Exportieren wählen. TXT und SRT gehen immer; Markdown und PDF brauchen Pro.</p></details>
+  <details><summary>Wie stelle ich meinen Pro-Kauf wieder her?</summary><p>Einstellungen → Pro → Käufe wiederherstellen. Pro ist ein Einmalkauf, der an deine Apple-ID gebunden ist, und kommt auf jedem Mac mit diesem Account zurück.</p></details>
+  <h2>Links</h2>
+  <p><a href="privacy.html">Datenschutz</a> · <a href="index.html">Produktseite</a></p>
+  <p class="meta">Erfordert macOS 14 oder neuer auf Apple Silicon.</p>
+</section>
+
+<section data-lang="es">
+  <h1>Soporte de KinetMinutes</h1>
+  <p class="lead">Casi todo está respondido abajo. Si algo sigue fallando, escríbenos: lo lee una persona.</p>
+  <div class="card"><p><b>Contacto:</b> <a href="mailto:phinn@kinet.app">phinn@kinet.app</a><br>
+  Incluye tu versión de macOS y, si va sobre una reunión concreta, su título. Solemos responder en dos días laborables.</p></div>
+  <h2>Preguntas frecuentes</h2>
+  <details><summary>¿Cómo empiezo una grabación?</summary><p>KinetMinutes vive en la barra de menús y se inicia solo al detectar una llamada en Zoom, Teams, Tencent Meeting, Lark, DingTalk, Discord o Webex. También puedes pulsar el icono y elegir «Iniciar grabación».</p></details>
+  <details><summary>¿Qué apps detecta?</summary><p>Zoom, Microsoft Teams, Tencent Meeting, Lark (Feishu), DingTalk, Discord y Webex. Cualquier otra llamada se puede grabar a mano desde la barra de menús.</p></details>
+  <details><summary>La descarga del modelo falla o se queda parada</summary><p>Los modelos vienen de Hugging Face la primera vez y después no se sube nada. Revisa la red y reintenta en Ajustes → Modelo. Si el host por defecto no responde, puedes configurar un espejo.</p></details>
+  <details><summary>He denegado el acceso al micrófono o al calendario</summary><p>Abre Ajustes del Sistema → Privacidad y seguridad → Micrófono (o Calendarios) y activa KinetMinutes. El calendario es opcional y solo rellena el título.</p></details>
+  <details><summary>¿Cómo exporto las notas?</summary><p>Selecciona una reunión y usa Exportar arriba a la derecha. TXT y SRT están siempre disponibles; Markdown y PDF requieren Pro.</p></details>
+  <details><summary>¿Cómo restauro mi compra de Pro?</summary><p>Ajustes → Pro → Restaurar compras. Pro es una compra única ligada a tu Apple ID, así que vuelve en cualquier Mac con esa cuenta.</p></details>
+  <h2>Enlaces</h2>
+  <p><a href="privacy.html">Privacidad</a> · <a href="index.html">Página del producto</a></p>
+  <p class="meta">Requiere macOS 14 o posterior en Apple Silicon.</p>
+</section>
+
+</div>
+<script>
+  const btnByLang = l => document.querySelector(`.langbar button[data-l="${l}"]`);
+  function selectLang(l) {
+    if (!btnByLang(l)) l = 'en';
+    document.querySelectorAll('.langbar button').forEach(x => x.classList.toggle('on', x.dataset.l === l));
+    document.querySelectorAll('section[data-lang]').forEach(s => s.classList.toggle('show', s.dataset.lang === l));
+    document.documentElement.lang = l;
+  }
+  document.querySelectorAll('.langbar button').forEach(b => b.onclick = () => selectLang(b.dataset.l));
+  (function () {
+    const tag = (navigator.language || 'en').toLowerCase();
+    const zh = tag.startsWith('zh') ? (/hant|-(tw|hk|mo)/.test(tag) ? 'zh-Hant' : 'zh-Hans') : null;
+    selectLang(zh || tag.split('-')[0]);
+  })();
+</script>
+</body>
+</html>

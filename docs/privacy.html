@@ -39,6 +39,9 @@
     <button data-l="fr">Français</button>
     <button data-l="de">Deutsch</button>
     <button data-l="es">Español</button>
+    <button data-l="ru">Русский</button>
+    <button data-l="pt-BR">Português (BR)</button>
+    <button data-l="pt-PT">Português (PT)</button>
   </div>
 
   <section data-lang="en" class="show">
@@ -207,6 +210,69 @@
     <h2>Contacto</h2>
     <p>Dudas sobre privacidad: phinn@kinet.app</p>
   </section>
+
+  <section data-lang="ru">
+    <div class="card">
+      <h2>Ноль загрузок. Так задумано.</h2>
+      <p>KinetMinutes работает целиком на вашем Mac. Запись, расшифровка (Whisper) и резюме на ИИ выполняются локально. Аудио и заметки никогда не покидают этот компьютер: без обращений к серверам, без аккаунтов и без аналитики.</p>
+    </div>
+    <h2>Какие данные мы собираем</h2>
+    <p>Никаких. KinetMinutes не собирает, не передаёт и не делится персональными данными.</p>
+    <h2>Где хранятся данные</h2>
+    <ul>
+      <li>Записи: <code>~/Library/Containers/com.kinet.minutes.app/…/KinetMinutes/Audio/</code></li>
+      <li>Расшифровки и заметки: локальная база SQLite в той же папке</li>
+      <li>Удалить всё можно в любой момент: «Конфиденциальность» → «Удалить все данные», либо удалив приложение</li>
+    </ul>
+    <h2>Загрузка моделей</h2>
+    <p>Единственная сетевая активность — разовая загрузка моделей Whisper с открытым кодом с huggingface.co (или настроенного зеркала), которую запускаете вы. Ваше аудио никогда не загружается.</p>
+    <h2>Третьи стороны</h2>
+    <p>Отсутствуют. Без SDK, без трекеров, без рекламы.</p>
+    <h2>Контакты</h2>
+    <p>Вопросы о конфиденциальности: phinn@kinet.app</p>
+  </section>
+
+  <section data-lang="pt-BR">
+    <div class="card">
+      <h2>Zero envio. Por design.</h2>
+      <p>O KinetMinutes roda inteiramente no seu Mac. A gravação, a transcrição (Whisper) e o resumo com IA acontecem localmente. Seu áudio e suas notas nunca saem deste computador: sem chamadas a servidores, sem contas e sem analytics.</p>
+    </div>
+    <h2>Quais dados coletamos</h2>
+    <p>Nenhum. O KinetMinutes não coleta, transmite nem compartilha dados pessoais.</p>
+    <h2>Onde ficam seus dados</h2>
+    <ul>
+      <li>Gravações: <code>~/Library/Containers/com.kinet.minutes.app/…/KinetMinutes/Audio/</code></li>
+      <li>Transcrições e notas: um banco SQLite local na mesma pasta</li>
+      <li>Você pode apagar tudo a qualquer momento em Privacidade → Apagar todos os dados, ou desinstalando o app</li>
+    </ul>
+    <h2>Download de modelos</h2>
+    <p>A única atividade de rede é o download pontual, iniciado por você, dos modelos Whisper de código aberto em huggingface.co (ou um espelho configurado). Seu áudio nunca é enviado.</p>
+    <h2>Terceiros</h2>
+    <p>Nenhum. Sem SDK, sem rastreadores, sem publicidade.</p>
+    <h2>Contato</h2>
+    <p>Dúvidas sobre privacidade: phinn@kinet.app</p>
+  </section>
+
+  <section data-lang="pt-PT">
+    <div class="card">
+      <h2>Zero envios. De raiz.</h2>
+      <p>O KinetMinutes funciona inteiramente no seu Mac. A gravação, a transcrição (Whisper) e o resumo com IA acontecem localmente. O seu áudio e as suas notas nunca saem deste computador: sem pedidos a servidores, sem contas e sem analítica.</p>
+    </div>
+    <h2>Que dados recolhemos</h2>
+    <p>Nenhuns. O KinetMinutes não recolhe, transmite nem partilha dados pessoais.</p>
+    <h2>Onde ficam os seus dados</h2>
+    <ul>
+      <li>Gravações: <code>~/Library/Containers/com.kinet.minutes.app/…/KinetMinutes/Audio/</code></li>
+      <li>Transcrições e notas: uma base de dados SQLite local na mesma pasta</li>
+      <li>Pode eliminar tudo a qualquer momento em Privacidade → Eliminar todos os dados, ou desinstalando a aplicação</li>
+    </ul>
+    <h2>Transferência de modelos</h2>
+    <p>A única atividade de rede é a transferência pontual, iniciada por si, dos modelos Whisper de código aberto a partir de huggingface.co (ou de um espelho configurado). O seu áudio nunca é enviado.</p>
+    <h2>Terceiros</h2>
+    <p>Nenhuns. Sem SDK, sem rastreadores, sem publicidade.</p>
+    <h2>Contacto</h2>
+    <p>Dúvidas sobre privacidade: phinn@kinet.app</p>
+  </section>
 </div>
 <script>
   const btnByLang = l => document.querySelector(`.langbar button[data-l="${l}"]`);
@@ -220,7 +286,8 @@
   (function () {
     const tag = (navigator.language || 'en').toLowerCase();
     const zh = tag.startsWith('zh') ? (/hant|-(tw|hk|mo)/.test(tag) ? 'zh-Hant' : 'zh-Hans') : null;
-    selectLang(zh || tag.split('-')[0]);
+    const pt = tag.startsWith('pt') ? (/-br/.test(tag) ? 'pt-BR' : 'pt-PT') : null;
+    selectLang(zh || pt || tag.split('-')[0]);
   })();
 </script>
 </body>

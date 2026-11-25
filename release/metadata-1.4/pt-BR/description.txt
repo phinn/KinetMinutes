@@ -1,0 +1,43 @@
+O KinetMinutes transforma suas reuniões em notas estruturadas — automaticamente, com privacidade e inteiramente no seu Mac.
+
+GRAVE · TRANSCREVA · GERE NOTAS
+Comece uma chamada no Zoom, Tencent Meeting, Teams, Feishu (Lark), DingTalk, Discord ou Webex e o KinetMinutes começa a gravar. Quando a reunião termina, a IA local escreve suas notas: um resumo claro, as decisões acordadas e as tarefas com responsáveis. Sem clicar em "salvar transcrição", sem enviar nada.
+
+PRIVACIDADE POR PADRÃO
+• 100% no dispositivo: transcrição Whisper e resumo com IA rodam localmente
+• Zero chamadas de rede com seu áudio e suas notas — funciona totalmente offline
+• Áudio, transcrições e notas ficam na sua biblioteca; apague tudo quando quiser
+• A escolha para entrevistas de RH, negociações com clientes, reuniões jurídicas e de estratégia
+
+NOTAS, NÃO TRANSCRIÇÃO CRUA
+• Resumo — a reunião em poucas frases
+• Decisões — o que de fato foi combinado
+• Tarefas — itens com responsáveis e prazos
+• Linha do tempo — momentos-chave com marca de tempo, um clique para voltar ao ponto exato
+• Transcrição completa quando você precisa de cada palavra
+
+IA COM FOCO NO CHINÊS
+Otimizada para alternância entre mandarim e inglês, a lacuna que as ferramentas globais deixam. Os modelos Whisper baixam uma vez e depois rodam offline.
+
+BIBLIOTECA DE REUNIÕES
+Busca em todas as reuniões, nas notas e nas transcrições. Renomeie, marque pelo app de origem, exporte.
+
+O QUE O APP INCLUI
+• Gravação e transcrição offline ilimitadas — sem limite mensal
+• Todos os quatro tamanhos de modelo Whisper, do base (150 MB) ao large-v3 (3 GB)
+• Biblioteca completa: busca, etiquetas, exportação em Markdown / TXT / SRT
+• 5 conjuntos de notas com IA por mês
+
+KINETMINUTES PRO — OPCIONAL, PAGAMENTO ÚNICO
+O Pro remove o limite mensal: notas com IA ilimitadas, o mesmo app, os mesmos arquivos locais. É uma compra dentro do app, não uma assinatura, e não há conta para criar. Tudo o que você já gravou continua funcionando, com ou sem o upgrade.
+
+NATIVO NA BARRA DE MENUS
+Vive na barra de menus. Abrir ao iniciar é opcional. Design nativo do macOS — sem Electron, sem motor de navegador.
+
+PARA QUEM É
+• Consultores, vendas e customer success que enviam notas para o time
+• Gestores com alinhamentos semanais e 1:1
+• RH e entrevistadores que não podem arriscar gravação na nuvem
+• Jornalistas e pesquisadores
+
+Suas reuniões são suas. O KinetMinutes mantém assim.

@@ -1,0 +1,1 @@
+A página na App Store explica agora as camadas com clareza: a aplicação inclui gravação ilimitada e transcrição offline, mais 5 conjuntos de notas com IA por mês; o Pro é um desbloqueio único e opcional para notas ilimitadas. Corrigimos também a data e a duração que apareciam em chinês para utilizadores de inglês e japonês.

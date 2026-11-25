@@ -1,0 +1,43 @@
+KinetMinutes transforme vos réunions en notes structurées — automatiquement, en privé, et entièrement sur votre Mac.
+
+DÉTECTER · ENREGISTRER · RÉDIGER
+Lancez un appel dans Zoom, Tencent Meeting, Teams, Lark (Feishu), DingTalk, Discord ou Webex : KinetMinutes démarre l'enregistrement tout seul. À la fin, une IA locale rédige vos notes : un résumé clair, les décisions prises et des actions avec responsables et échéances. Pas de bouton « Enregistrer la transcription », aucun envoi.
+
+CONÇU POUR LA CONFIDENTIALITÉ
+• 100 % sur l'appareil : la transcription Whisper et le résumé IA tournent en local
+• Aucun appel réseau pour votre audio et vos notes — fonctionne entièrement hors ligne
+• Audio, transcriptions et notes restent dans votre bibliothèque, supprimables à tout moment
+• Le bon choix pour les entretiens RH, les négociations clients, le juridique et la stratégie
+
+DES NOTES, PAS UNE TRANSCRIPTION BRUTE
+• Résumé — la réunion en quelques phrases
+• Décisions — ce qui a réellement été acté
+• Actions — des tâches avec responsables et échéances
+• Chronologie — les moments clés horodatés, un clic pour y revenir
+• La transcription complète quand vous avez besoin de chaque mot
+
+IA À L'AISE AVEC LE CHINOIS
+Optimisée pour l'alternance mandarin + anglais, le point faible des outils mondiaux. Les modèles Whisper se téléchargent une fois, puis tournent hors ligne.
+
+BIBLIOTHÈQUE DE RÉUNIONS
+Chaque réunion est recherchable dans les notes et la transcription. Renommer, classer par application source, exporter.
+
+CE QUE COMPREND L'APPLICATION
+• Enregistrement et transcription hors ligne illimités — sans plafond mensuel
+• Les quatre tailles de modèles Whisper, de base (150 Mo) à large-v3 (3 Go)
+• Toute la bibliothèque : recherche, étiquettes, export Markdown / TXT / SRT
+• 5 jeux de notes IA par mois calendaire
+
+KINETMINUTES PRO — OPTIONNEL, UN SEUL ACHAT
+Pro supprime la limite mensuelle de notes : notes IA illimitées, même application, mêmes fichiers locaux. C'est un achat intégré, pas un abonnement, et aucun compte à créer. Tout ce que vous avez déjà enregistré continue de fonctionner, avec ou sans l'achat.
+
+NATIF DANS LA BARRE DES MENUS
+Vit dans votre barre des menus. Lancement à l'ouverture de session en option. Design macOS natif — pas d'Electron, pas de moteur de navigateur.
+
+POUR QUI
+• Consultants, commerciaux et customer success qui envoient des notes à leur équipe
+• Managers qui animent des points hebdomadaires et des 1:1
+• RH et recruteurs qui ne peuvent pas risquer un enregistrement cloud
+• Journalistes et chercheurs
+
+Vos réunions vous appartiennent. KinetMinutes y veille.

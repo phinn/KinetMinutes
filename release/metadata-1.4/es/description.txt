@@ -1,0 +1,43 @@
+KinetMinutes convierte tus reuniones en notas estructuradas: automáticamente, en privado y por completo en tu Mac.
+
+DETECTA · GRABA · REDACTA
+Empieza una llamada en Zoom, Tencent Meeting, Teams, Lark (Feishu), DingTalk, Discord o Webex y KinetMinutes empieza a grabar. Al terminar, una IA local redacta tus notas: un resumen claro, las decisiones acordadas y tareas con responsables y fechas. Sin botón de «Guardar transcripción» y sin subir nada.
+
+DISEÑADO PARA LA PRIVACIDAD
+• 100 % en el dispositivo: la transcripción Whisper y el resumen con IA se ejecutan en local
+• Cero llamadas de red para tu audio y tus notas: funciona sin conexión
+• Audio, transcripciones y notas se quedan en tu biblioteca; bórralo todo cuando quieras
+• La opción adecuada para entrevistas de RR. HH., negociaciones con clientes, temas legales y reuniones de estrategia
+
+NOTAS, NO TRANSCRIPCIONES EN BRUTO
+• Resumen: la reunión en unas pocas frases
+• Decisiones: lo que se acordó de verdad
+• Tareas: pendientes con responsables y fechas
+• Cronología: momentos clave con marca de tiempo, un clic para volver a ese punto
+• La transcripción completa cuando necesites cada palabra
+
+IA PENSADA PARA EL CHINO
+Optimizada para alternar mandarín e inglés, el hueco que dejan las herramientas globales. Los modelos Whisper se descargan una vez y luego funcionan sin conexión.
+
+BIBLIOTECA DE REUNIONES
+Todas las reuniones son buscables en notas y transcripciones. Renombra, etiqueta por app de origen y exporta.
+
+LO QUE INCLUYE LA APP
+• Grabación y transcripción sin conexión ilimitadas, sin tope mensual
+• Los cuatro tamaños de modelo Whisper, desde base (150 MB) hasta large-v3 (3 GB)
+• Toda la biblioteca: búsqueda, etiquetas y exportación Markdown / TXT / SRT
+• 5 juegos de notas con IA por mes natural
+
+KINETMINUTES PRO: OPCIONAL, UN SOLO PAGO
+Pro elimina el límite mensual de notas: notas con IA ilimitadas, la misma app y los mismos archivos locales. Es una compra dentro de la app, no una suscripción, y no hay cuenta que crear. Todo lo que ya has grabado sigue funcionando, tanto si mejoras como si no.
+
+NATIVO EN LA BARRA DE MENÚS
+Vive en tu barra de menús. Inicio al encender el Mac, opcional. Diseño nativo de macOS: sin Electron, sin motor de navegador.
+
+PARA QUIÉN ES
+• Consultores, ventas y customer success que envían notas a su equipo
+• Managers que dirigen reuniones semanales y 1:1
+• RR. HH. y entrevistadores que no pueden arriesgar una grabación en la nube
+• Periodistas e investigadores
+
+Tus reuniones son tuyas. KinetMinutes se encarga de que siga así.

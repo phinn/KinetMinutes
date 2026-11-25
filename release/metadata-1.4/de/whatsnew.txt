@@ -1,0 +1,4 @@
+Neue Oberfläche: gruppierte Bibliothek, Tab-Leiste in Kapselform, Einstellungen, Statistiken und Datenschutz als Karten.
+Französisch, Deutsch, Spanisch und Koreanisch ergänzt — inklusive Beispiel-Meetings.
+Die Produktseite erklärt die Tarife jetzt klar: unbegrenztes Offline-Aufnehmen und -Transkribieren plus 5 KI-Notizen pro Monat; Pro ist ein optionaler Einmalkauf für unbegrenzte Notizen.
+Datum und Dauer wurden in englischer und japanischer Oberfläche auf Chinesisch angezeigt — behoben.

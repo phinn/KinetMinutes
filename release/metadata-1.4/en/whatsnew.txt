@@ -1,0 +1,1 @@
+The store page now explains the tiers plainly: the app includes unlimited recording and offline transcription, plus 5 AI note sets a month; Pro is an optional one-time unlock for unlimited notes. Also fixed date and duration text showing in Chinese for English and Japanese users.

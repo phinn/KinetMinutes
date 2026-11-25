@@ -1,0 +1,4 @@
+Nouvelle interface : bibliothèque groupée, onglets en capsules, réglages, statistiques et confidentialité en cartes.
+Ajout du français, de l'allemand, de l'espagnol et du coréen, y compris les réunions d'exemple.
+La page explique désormais clairement les formules : l'app inclut l'enregistrement et la transcription hors ligne illimités, plus 5 jeux de notes IA par mois ; Pro est un achat unique facultatif pour des notes illimitées.
+Correction des dates et durées affichées en chinois pour les interfaces anglaise et japonaise.

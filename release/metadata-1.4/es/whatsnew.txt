@@ -1,0 +1,4 @@
+Nueva interfaz: biblioteca agrupada, pestañas en cápsula, ajustes, estadísticas y privacidad en tarjetas.
+Se añaden francés, alemán, español y coreano, incluidas las reuniones de ejemplo.
+La ficha explica ahora con claridad los planes: la app incluye grabación y transcripción sin conexión ilimitadas, más 5 notas con IA al mes; Pro es una compra única opcional para notas ilimitadas.
+Corregidas las fechas y duraciones que aparecían en chino en las interfaces inglesa y japonesa.

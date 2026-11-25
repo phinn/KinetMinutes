@@ -1,0 +1,43 @@
+KinetMinutes macht aus Besprechungen strukturierte Notizen — automatisch, privat und vollständig auf deinem Mac.
+
+ERKENNEN · AUFNEHMEN · NOTIEREN
+Starte einen Anruf in Zoom, Tencent Meeting, Teams, Lark (Feishu), DingTalk, Discord oder Webex — KinetMinutes beginnt von selbst mit der Aufnahme. Danach schreibt eine lokale KI deine Notizen: eine klare Zusammenfassung, getroffene Entscheidungen und Aufgaben mit Verantwortlichen. Kein „Transkript speichern“, kein Upload.
+
+FÜR DATENSCHUTZ GEBAUT
+• 100 % auf dem Gerät: Whisper-Transkription und KI-Zusammenfassung laufen lokal
+• Keine Netzwerkanfragen für Audio und Notizen — funktioniert komplett offline
+• Audio, Transkripte und Notizen bleiben in deiner Bibliothek, jederzeit löschbar
+• Die Wahl für HR-Interviews, Kundengespräche, Legal und Strategie
+
+NOTIZEN STATT ROHES TRANSKRIPT
+• Zusammenfassung — das Meeting in wenigen Sätzen
+• Entscheidungen — was tatsächlich beschlossen wurde
+• Aufgaben — To-dos mit Verantwortlichen und Fristen
+• Zeitleiste — Zeitgestempelte Schlüsselmomente, ein Klick springt dorthin
+• Das vollständige Transkript, wenn du jedes Wort brauchst
+
+KI MIT CHINESISCH-FOKUS
+Optimiert für Mandarin + Englisch im Wechsel — genau die Lücke, die globale Tools lassen. Whisper-Modelle lädst du einmal herunter, danach laufen sie offline.
+
+MEETING-BIBLIOTHEK
+Jedes Meeting ist über Notizen und Transkript durchsuchbar. Umbenennen, nach Quell-App filtern, exportieren.
+
+WAS DIE APP ENTHÄLT
+• Unbegrenzte Aufnahme und Offline-Transkription — kein Monatslimit
+• Alle vier Whisper-Modellgrößen, von base (150 MB) bis large-v3 (3 GB)
+• Die volle Bibliothek: Suche, Tags, Export als Markdown / TXT / SRT
+• 5 KI-Notizensätze pro Kalendermonat
+
+KINETMINUTES PRO — OPTIONAL, EINMALIG
+Pro hebt das Monatslimit für Notizen auf: unbegrenzte KI-Notizen, gleiche App, gleiche lokale Dateien. Ein In-App-Kauf, kein Abo, kein Konto nötig. Alles bereits Aufgenommene funktioniert weiter, ob mit oder ohne Upgrade.
+
+NATIV IN DER MENÜLEISTE
+Lebt in deiner Menüleiste. Start beim Anmelden optional. Natives macOS-Design — kein Electron, keine Browser-Engine.
+
+FÜR WEN
+• Berater, Vertrieb und Customer Success, die Notizen an ihr Team schicken
+• Führungskräfte mit Wochensyncs und 1:1s
+• HR und Interviewer, die keine Cloud-Aufnahme riskieren dürfen
+• Journalisten und Forschende
+
+Deine Meetings gehören dir. KinetMinutes sorgt dafür.
